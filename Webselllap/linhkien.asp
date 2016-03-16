@@ -25,7 +25,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap"> 
 	<div class="pages-top">
 	        <div class="logo">
-				<a href="index.html"><img src="images/logo.png" alt=""/></a>
+				<a href="index.asp"><img src="images/logo.png" alt=""/></a>
 			 </div>
 		     <div class="h_menu4"><!-- start h_menu4 -->
 				<a class="toggleMenu" href="#">Menu</a>
