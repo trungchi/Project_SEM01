@@ -56,7 +56,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		     <div class="h_menu4"><!-- start h_menu4 -->
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-					<li class="active"><a href="index.asp">Trang chủ</a></li>
+					<li class="active"><a href="laptop.asp">Trang chủ</a></li>
 					<li><a href="laptop.asp">Laptop</a>
 						<ul>
 							<li><a href="laptop.asp">DELL</a></li>
