@@ -329,7 +329,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="f-logo">
 				     <a href="index.asp"><img src="images/f-logo.png" alt=""></a>
 			        </div>
-					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words</p>
+					<p>Mô tả cty</p>
 				</div>
 				<div class="footer-grid footer-grid2">
 					<h4>Liên hệ</h4>
