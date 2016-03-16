@@ -56,26 +56,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		     <div class="h_menu4"><!-- start h_menu4 -->
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-					<li class="active"><a href="index.html">Home</a></li>
-					<li><a href="pages.html">Pages</a>
+					<li class="active"><a href="index.html">Trang chủ</a></li>
+					<li><a href="laptop.asp">Laptop</a>
 						<ul>
-							<li><a href="pages.html">Dropdown</a></li>
-							<li><a href="pages.html">Structure</a></li>
-							<li><a href="pages.html">People</a></li>
+							<li><a href="laptop.asp">Dropdown</a></li>
+							<li><a href="laptop.asp">Structure</a></li>
+							<li><a href="laptop.asp">People</a></li>
 						</ul>
 					</li>
-					<li><a href="shortcodes.html">Shortcodes</a>
+					<li><a href="desktop.asp">Desktop</a>
 						<ul>
-							<li><a href="shortcodes.html">CSR</a></li>
-							<li><a href="shortcodes.html">Locations</a></li>
-							<li><a href="shortcodes.html">PPV</a></li>
+							<li><a href="desktop.asp">CSR</a></li>
+							<li><a href="desktop.asp">Locations</a></li>
+							<li><a href="desktop.asp">PPV</a></li>
 						</ul>
 					</li>
-					<li><a href="blog.html">Blog</a>
+					<li><a href="linhkien.asp">Linh kiện</a>
 						<ul>
-							<li><a href="blog.html">Dropdown</a></li>
-							<li><a href="blog.html">Structure</a></li>
-							<li><a href="blog.html">People</a></li>
+							<li><a href="linhkien.asp">Dropdown</a></li>
+							<li><a href="linhkien.asp">Structure</a></li>
+							<li><a href="linhkien.asp">People</a></li>
 						</ul>
 					</li>
 					<li><a href="portfolio.html">Portfolio</a>
