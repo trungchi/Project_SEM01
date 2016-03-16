@@ -27,8 +27,8 @@
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
 				  <li><a href="index.asp">Trang chủ</a></li>
-				  <li class="active"><a href="laptop.asp">Laptop</a></li>
-					<li><a href="desktop.asp">Desktop</a>
+				  <li><a href="desktop.asp">Desktop</a>
+					  <li class="active"><a href="desktop.asp">Laptop</a></li>
 						<ul>
 							<li><a href="desktop.asp">DELL</a></li>
 							<li><a href="desktop.asp">HP</a></li>
