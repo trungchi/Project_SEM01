@@ -28,16 +28,17 @@
 				<ul class="nav">
 					<li><a href="index.asp">Trang chủ</a></li>
 					<li><a href="laptop.asp">Laptop</a>
+					<ul>
+						<li><a href="laptop.asp">DELL</a></li>
+						<li><a href="laptop.asp">HP</a></li>
+						<li><a href="laptop.asp">APPLE</a></li>
+						<li><a href="laptop.asp">ACER</a></li>
+						<li><a href="laptop.asp">ASUS</a></li>
+						<li><a href="laptop.asp">LENOVO</a></li>
+						<li><a href="laptop.asp">VAIO</a></li>
+					</ul>
+					
 					<li class="active"><a href="desktop.asp">Desktop</a></li>
-						<ul>
-							<li><a href="laptop.asp">DELL</a></li>
-							<li><a href="laptop.asp">HP</a></li>
-							<li><a href="laptop.asp">APPLE</a></li>
-							<li><a href="laptop.asp">ACER</a></li>
-							<li><a href="laptop.asp">ASUS</a></li>
-							<li><a href="laptop.asp">LENOVO</a></li>
-							<li><a href="laptop.asp">VAIO</a></li>
-						</ul>
 					</li>
 					<li><a href="linhkien.asp">Linh kiện</a>
 						<ul>
