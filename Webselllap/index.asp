@@ -51,12 +51,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <div class="wrap"> 
 	<div class="header-top">
 	        <div class="logo">
-				<a href="index.html"><img src="images/logo.png" alt=""/></a>
+				<a href="index.asp"><img src="images/logo.png" alt=""/></a>
 			 </div>
 		     <div class="h_menu4"><!-- start h_menu4 -->
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-					<li class="active"><a href="index.html">Trang chủ</a></li>
+					<li class="active"><a href="index.asp">Trang chủ</a></li>
 					<li><a href="laptop.asp">Laptop</a>
 						<ul>
 							<li><a href="laptop.asp">DELL</a></li>
@@ -134,22 +134,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	 </div>
 	 <div class="main">
 	     <div class="wrap">
-	 	   <h2 class="m_1">dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</h2>
+	 	   <h2 class="m_1">Viết câu gì.</h2>
 	 	     <div class="content-top">
 	 	    	<div class="col_1_of_4 span_1_of_4">
 	 	    		<i class="settings"> </i>
 					<img src="images/pic.jpg" alt=""/>
 					<div class="desc">
-						<h3>Easy Customizable</h3>
-						<p>Lorem ipsum dolor sit amet,consect<br> adipiscing elit, sed diam nonummy nibh<br>euismod tincidunt ut laoreet dolore delenit.</p>
+						<h3>Sản phẩm 1</h3>
+						<p>Mô tả Sản phẩm <br> <br> </p>
 					</div>
 				</div>
 				<div class="col_1_of_4 span_1_of_4">
 	 	    		<i class="clock"> </i>
 					<img src="images/pic1.jpg" alt=""/>
 					<div class="desc">
-						<h3>Project Planning</h3>
-						<p>augue duis dolore te feugait nulla<br> adipiscing elit, sed diam nonummy nibh<br>euismod tincidunt ut laoreet dolore delenit.</p>
+						<h3>Sản phẩm 2</h3>
+						<p>Mô tả Sản phẩm <br> <br> </p>
 					</div>
 				</div>
 				<div class="col_1_of_4 span_1_of_4">
@@ -325,7 +325,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="wrap">
 				<div class="footer-grid footer-grid1">
 					<div class="f-logo">
-				     <a href="index.html"><img src="images/f-logo.png" alt=""></a>
+				     <a href="index.asp"><img src="images/f-logo.png" alt=""></a>
 			        </div>
 					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words</p>
 				</div>
