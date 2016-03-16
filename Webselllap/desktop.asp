@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Website bán máy tính | Laptop :: w3layouts</title>
+<title>Website bán máy tính | Desktop :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -26,17 +26,19 @@
 		     <div class="h_menu4"><!-- start h_menu4 -->
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-				  <li><a href="index.asp">Trang chủ</a></li>
-				  <li class="active"><a href="laptop.asp">Laptop</a></li>
-					<li><a href="desktop.asp">Desktop</a>
+					<li class="active"><a href="index.asp">Trang chủ</a></li>
+					<li><a href="laptop.asp">Laptop</a>
 						<ul>
-							<li><a href="desktop.asp">DELL</a></li>
-							<li><a href="desktop.asp">HP</a></li>
-							<li><a href="desktop.asp">APPLE</a></li>
-							<li><a href="desktop.asp">ACER</a></li>
-							<li><a href="desktop.asp">ASUS</a></li>
-							<li><a href="desktop.asp">LENOVO</a></li>
+							<li><a href="laptop.asp">DELL</a></li>
+							<li><a href="laptop.asp">HP</a></li>
+							<li><a href="laptop.asp">APPLE</a></li>
+							<li><a href="laptop.asp">ACER</a></li>
+							<li><a href="laptop.asp">ASUS</a></li>
+							<li><a href="laptop.asp">LENOVO</a></li>
+							<li><a href="laptop.asp">VAIO</a></li>
 						</ul>
+					</li>
+					<li><a href="desktop.asp">Desktop</a>
 					</li>
 					<li><a href="linhkien.asp">Linh kiện</a>
 						<ul>
@@ -60,8 +62,7 @@
 				<script type="text/javascript" src="js/nav.js"></script>
 			</div><!-- end h_menu4 -->
 			<div class="clear"></div>
-		</div>
-		<!-- end header_main4 -->
+		</div><!-- end header_main4 -->
      </div>
 	 <div class="main">
 	     <div class="wrap">
