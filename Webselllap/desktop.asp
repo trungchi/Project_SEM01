@@ -39,8 +39,6 @@
 							<li><a href="laptop.asp">VAIO</a></li>
 						</ul>
 					</li>
-					<li><a href="desktop.asp">Desktop</a>
-					</li>
 					<li><a href="linhkien.asp">Linh kiện</a>
 						<ul>
 							<li><a href="linhkien.asp">RAM</a></li>
