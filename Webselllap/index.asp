@@ -49,40 +49,40 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body>
 <div class="wrap"> 
-	<div class="pages-top">
+	<div class="header-top">
 	        <div class="logo">
-				<a href="index.asp"><img src="images/logo.png" alt=""/></a>
+				<a href="index.html"><img src="images/logo.png" alt=""/></a>
 			 </div>
 		     <div class="h_menu4"><!-- start h_menu4 -->
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-				  <li><a href="index.asp">Trang chủ</a></li>
-				  <li class="active"><a href="laptop.asp">Laptop</a></li>
+					<li class="active"><a href="index.html">Trang chủ</a></li>
+					<li><a href="laptop.asp">Laptop</a>
+						<ul>
+							<li><a href="laptop.asp">Dropdown</a></li>
+							<li><a href="laptop.asp">Structure</a></li>
+							<li><a href="laptop.asp">People</a></li>
+						</ul>
+					</li>
 					<li><a href="desktop.asp">Desktop</a>
 						<ul>
-							<li><a href="desktop.asp">DELL</a></li>
-							<li><a href="desktop.asp">HP</a></li>
-							<li><a href="desktop.asp">APPLE</a></li>
-							<li><a href="desktop.asp">ACER</a></li>
-							<li><a href="desktop.asp">ASUS</a></li>
-							<li><a href="desktop.asp">LENOVO</a></li>
+							<li><a href="desktop.asp">CSR</a></li>
+							<li><a href="desktop.asp">Locations</a></li>
+							<li><a href="desktop.asp">PPV</a></li>
 						</ul>
 					</li>
 					<li><a href="linhkien.asp">Linh kiện</a>
 						<ul>
-							<li><a href="linhkien.asp">RAM</a></li>
-							<li><a href="linhkien.asp">Card VGA</a></li>
-							<li><a href="linhkien.asp">Mainboard</a></li>
-							<li><a href="linhkien.asp">Sound card (card âm thanh)</a></li>
+							<li><a href="linhkien.asp">Dropdown</a></li>
+							<li><a href="linhkien.asp">Structure</a></li>
+							<li><a href="linhkien.asp">People</a></li>
 						</ul>
 					</li>
 					<li><a href="phukien.asp">Phụ kiện</a>
 						<ul>
-							<li><a href="phukien.asp">Headphones</a></li>
-							<li><a href="phukien.asp">Earphones</a></li>
-							<li><a href="phukien.asp">Chuột</a></li>
-							<li><a href="phukien.asp">Keyboard (bàn phím)</a></li>
-							<li><a href="phukien.asp">USB</a></li>
+							<li><a href="phukien.asp">Dropdown</a></li>
+							<li><a href="phukien.asp">Structure</a></li>
+							<li><a href="phukien.asp">People</a></li>
 						</ul>
 					</li>
 					<li><a href="lienhe.asp">Liên hệ</a></li>
