@@ -214,14 +214,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		                     <div id="small-dialog3" class="mfp-hide">
 							   <div class="pop_up2">
 							   	  <img src="images/pic3.jpg"/ alt=""/>
-							   	  <h3 class="m_4"><a href="#">augue duis dolore te feugait</a></h3>
-				                  <p class="m_5">Photography</p>
+							   	  <h3 class="m_4"><a href="#">Tiêu đề hiển thị 1</a></h3>
+				                  <p class="m_5">[Hiển Thị]</p>
 							   </div>
 							 </div>
                         </div>
                      </div> 
-					<h3 class="m_4"><a href="#">augue duis dolore te feugait</a></h3>
-				    <p class="m_5">Photography</p>
+					<h3 class="m_4"><a href="#">Tiêu đề hiển thị 1</a></h3>
+				    <p class="m_5">[Hiển Thị]</p>
 				  </a> </div>
 				 <div class="col_1_of_projects span_1_of_projects"><a href="#">
 				   <div class="view view-first">
