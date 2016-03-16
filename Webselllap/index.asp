@@ -171,11 +171,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				   <h3>diam nonummy nibh euismod tincidunt ut laoreet dolore</h3>
 	 	    	   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie</p>
 	 	    	   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam</p>
-	 	    	   <div class="btn"><a href="#">Learn More</a></div>
+	 	    	   <div class="btn"><a href="#">Chi tiết</a></div>
 	 	    	</div>
 				<div class="clear"></div>
 		     </div>
-		     <div class="content-middle-bottom">
+		     <!--- <div class="content-middle-bottom">
 	 	    	<div class="col_1_of_middle span_1_of_middle">
 	 	    	   <h3>diam nonummy nibh euismod tincidunt ut laoreet dolore</h3>
 	 	    	   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duisautem vel eum iriure dolor in hendrerit in vulputate velit esse molestie</p>
@@ -199,7 +199,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				    </ul>
 			    </div>
 				<div class="clear"></div>
-		     </div>
+		     </div> ----->
 		     <div class="m_3"><span class="left_line"></span> Our Projects<span class="right_line"> </span></div>
 		      <div class="content-top">
 				 <div class="col_1_of_projects span_1_of_projects"><a href="#">
