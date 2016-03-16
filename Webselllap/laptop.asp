@@ -30,7 +30,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		     <div class="h_menu4"><!-- start h_menu4 -->
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-					<li><a href="index.html">Trang Chủ</a></li>
+					<li><a href="index.asp">Trang Chủ</a></li>
 					<li class="active"><a href="laptop.asp">Laptop</a></li>
 					<li><a href="desktop.asp">Desktop</a>
 						<ul>
@@ -198,7 +198,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="wrap">
 				<div class="footer-grid footer-grid1">
 					<div class="f-logo">
-				     <a href="index.html"><img src="images/f-logo.png" alt=""></a>
+				     <a href="index.asp"><img src="images/f-logo.png" alt=""></a>
 			        </div>
 					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words</p>
 				</div>
