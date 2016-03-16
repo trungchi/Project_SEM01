@@ -1,18 +1,13 @@
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Free Emmeline Website Template | Shortcodes :: w3layouts</title>
+<title>Website bán máy tính | Desktop :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Lato:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <script src="js/jquery.min.js"></script>
+
 <script type="text/javascript" src="js/jquery.lightbox.js"></script>
 <link rel="stylesheet" type="text/css" href="css/lightbox.css" media="screen" />
   <script type="text/javascript">
@@ -21,11 +16,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     });
    </script>
 </head>
+
 <body>
 <div class="wrap"> 
 	<div class="pages-top">
 	        <div class="logo">
-				<a href="index.html"><img src="images/logo.png" alt=""/></a>
+				<a href="index.asp"><img src="images/logo.png" alt=""/></a>
 			 </div>
 		     <div class="h_menu4"><!-- start h_menu4 -->
 				<a class="toggleMenu" href="#">Menu</a>
