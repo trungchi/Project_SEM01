@@ -30,7 +30,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		     <div class="h_menu4"><!-- start h_menu4 -->
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-				  <li><a href="index.asp">Trang Chủ</a></li>
+				  <li><a href="index.asp">Trang chủ</a></li>
 				  <li class="active"><a href="laptop.asp">Laptop</a></li>
 					<li><a href="desktop.asp">Desktop</a>
 						<ul>
