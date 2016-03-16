@@ -110,7 +110,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<a href="#about" class="da-link">Chi tiết</a>
 				  </div>
 				  <div class="da-slide">
-					<a href="index.asp"><img src="images/logo.png" alt=""/></a>
+					<a href="images/t-pic8.jpg"><img src="images/pic8.jpg" alt=""/></a>
 					<p>Chèn tiếp theo...</p>
 					<a href="#about" class="da-link">Chi tiết</a>
 				  </div>
