@@ -320,7 +320,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words</p>
 				</div>
 				<div class="footer-grid footer-grid2">
-					<h4>Contact</h4>
+					<h4>Liên hệ</h4>
 				    <ul>
 						<li><i class="pin"> </i><div class="extra-wrap">
 							<p>2321 Street name,<br> City name,Country</p>
