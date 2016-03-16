@@ -85,7 +85,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<li><a href="phukien.asp">People</a></li>
 						</ul>
 					</li>
-					<li><a href="contact.html">Contact</a></li>
+					<li><a href="lienhe.asp">Liên hệ</a></li>
 				</ul>
 				<script type="text/javascript" src="js/nav.js"></script>
 			</div><!-- end h_menu4 -->
