@@ -49,25 +49,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body>
 <div class="wrap"> 
-	<div class="header-top">
+	<div class="pages-top">
 	        <div class="logo">
 				<a href="index.asp"><img src="images/logo.png" alt=""/></a>
 			 </div>
 		     <div class="h_menu4"><!-- start h_menu4 -->
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-					<li class="active"><a href="index.asp">Trang chủ</a></li>
-					<li><a href="laptop.asp">Laptop</a>
-						<ul>
-							<li><a href="laptop.asp">DELL</a></li>
-							<li><a href="laptop.asp">HP</a></li>
-							<li><a href="laptop.asp">APPLE</a></li>
-							<li><a href="laptop.asp">ACER</a></li>
-							<li><a href="laptop.asp">ASUS</a></li>
-							<li><a href="laptop.asp">LENOVO</a></li>
-							<li><a href="laptop.asp">VAIO</a></li>
-						</ul>
-					</li>
+				  <li><a href="index.asp">Trang Chủ</a></li>
+				  <li class="active"><a href="laptop.asp">Laptop</a></li>
 					<li><a href="desktop.asp">Desktop</a>
 						<ul>
 							<li><a href="desktop.asp">DELL</a></li>
