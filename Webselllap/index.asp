@@ -78,11 +78,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<li><a href="linhkien.asp">People</a></li>
 						</ul>
 					</li>
-					<li><a href="portfolio.html">Portfolio</a>
+					<li><a href="phukien.asp">Phụ kiện</a>
 						<ul>
-							<li><a href="portfolio.html">Dropdown</a></li>
-							<li><a href="portfolio.html">Structure</a></li>
-							<li><a href="portfolio.html">People</a></li>
+							<li><a href="phukien.asp">Dropdown</a></li>
+							<li><a href="phukien.asp">Structure</a></li>
+							<li><a href="phukien.asp">People</a></li>
 						</ul>
 					</li>
 					<li><a href="contact.html">Contact</a></li>
