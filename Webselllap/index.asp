@@ -1,18 +1,13 @@
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Free Emmeline Website Template | Home :: w3layouts</title>
+<title>Website bán máy tính | Home :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Lato:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <script src="js/jquery.min.js"></script>
+
 <!---strat-slider---->
 	    <link rel="stylesheet" type="text/css" href="css/slider.css" />
 		<script type="text/javascript" src="js/modernizr.custom.28468.js"></script>
@@ -27,7 +22,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				
 				});
 			</script>
-		<!---//strat-slider---->
+			
+<!---//strat-slider---->
 <script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
 <link href="css/magnific-popup.css" rel="stylesheet" type="text/css">
 		<script>
@@ -45,44 +41,54 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			});
 		});
 		</script>
-		
 </head>
+
 <body>
 <div class="wrap"> 
 	<div class="header-top">
 	        <div class="logo">
-				<a href="index.html"><img src="images/logo.png" alt=""/></a>
+				<a href="index.asp"><img src="images/logo.png" alt=""/></a>
 			 </div>
 		     <div class="h_menu4"><!-- start h_menu4 -->
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-					<li class="active"><a href="index.html">Trang chủ</a></li>
+					<li class="active"><a href="index.asp">Trang chủ</a></li>
 					<li><a href="laptop.asp">Laptop</a>
 						<ul>
-							<li><a href="laptop.asp">Dropdown</a></li>
-							<li><a href="laptop.asp">Structure</a></li>
-							<li><a href="laptop.asp">People</a></li>
+							<li><a href="laptop.asp">DELL</a></li>
+							<li><a href="laptop.asp">HP</a></li>
+							<li><a href="laptop.asp">APPLE</a></li>
+							<li><a href="laptop.asp">ACER</a></li>
+							<li><a href="laptop.asp">ASUS</a></li>
+							<li><a href="laptop.asp">LENOVO</a></li>
+							<li><a href="laptop.asp">VAIO</a></li>
 						</ul>
 					</li>
 					<li><a href="desktop.asp">Desktop</a>
 						<ul>
-							<li><a href="desktop.asp">CSR</a></li>
-							<li><a href="desktop.asp">Locations</a></li>
-							<li><a href="desktop.asp">PPV</a></li>
+							<li><a href="desktop.asp">DELL</a></li>
+							<li><a href="desktop.asp">HP</a></li>
+							<li><a href="desktop.asp">APPLE</a></li>
+							<li><a href="desktop.asp">ACER</a></li>
+							<li><a href="desktop.asp">ASUS</a></li>
+							<li><a href="desktop.asp">LENOVO</a></li>
 						</ul>
 					</li>
 					<li><a href="linhkien.asp">Linh kiện</a>
 						<ul>
-							<li><a href="linhkien.asp">Dropdown</a></li>
-							<li><a href="linhkien.asp">Structure</a></li>
-							<li><a href="linhkien.asp">People</a></li>
+							<li><a href="linhkien.asp">RAM</a></li>
+							<li><a href="linhkien.asp">Card VGA</a></li>
+							<li><a href="linhkien.asp">Mainboard</a></li>
+							<li><a href="linhkien.asp">Sound card (card âm thanh)</a></li>
 						</ul>
 					</li>
 					<li><a href="phukien.asp">Phụ kiện</a>
 						<ul>
-							<li><a href="phukien.asp">Dropdown</a></li>
-							<li><a href="phukien.asp">Structure</a></li>
-							<li><a href="phukien.asp">People</a></li>
+							<li><a href="phukien.asp">Headphones</a></li>
+							<li><a href="phukien.asp">Earphones</a></li>
+							<li><a href="phukien.asp">Chuột</a></li>
+							<li><a href="phukien.asp">Keyboard (bàn phím)</a></li>
+							<li><a href="phukien.asp">USB</a></li>
 						</ul>
 					</li>
 					<li><a href="lienhe.asp">Liên hệ</a></li>
