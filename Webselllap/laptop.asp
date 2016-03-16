@@ -58,7 +58,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<ul class="nav">
 					<li><a href="index.asp">Trang Chủ</a></li>
 					<li class="active"><a href="laptop.asp">Laptop</a></li>
-					<li><a href="desktop.asp">Desktop</a>
 						<ul>
 							<li><a href="laptop.asp">DELL</a></li>
 							<li><a href="laptop.asp">HP</a></li>
