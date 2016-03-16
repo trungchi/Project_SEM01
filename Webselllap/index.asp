@@ -156,30 +156,31 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	 	    		<i class="aeroplane"> </i>
 					<img src="images/pic2.jpg" alt=""/>
 					<div class="desc">
-						<h3>Fastest Workers</h3>
-						<p>soluta nobis eleifend option congue<br> adipiscing elit, sed diam nonummy nibh<br>euismod tincidunt ut laoreet dolore delenit.</p>
+						<h3>Sản phẩm 3</h3>
+						<p>Mô tả Sản phẩm <br> <br> </p>
 					</div>
 				</div>
 				<div class="clear"></div>
 		     </div>
-		     <div class="m_3"><span class="left_line"></span> Top Features<span class="right_line"> </span></div>
+		     <div class="m_3"><span class="left_line"></span> Sản Phẩm Mới<span class="right_line"> </span></div>
 		      <div class="content-middle">
 	 	    	<div class="col_1_of_middle span_1_of_middle">
 	 	    		<img src="images/mac_img1.png" alt=""/>
 	 	    	</div>
 				<div class="col_1_of_middle span_1_of_middle">
-				   <h3>diam nonummy nibh euismod tincidunt ut laoreet dolore</h3>
-	 	    	   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie</p>
-	 	    	   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam</p>
-	 	    	   <div class="btn"><a href="#">Chi tiết</a></div>
+				   <h3>Tiêu đề</h3>
+	 	    	   <p>Mô Tả 1</p>
+	 	    	   <p>Mô Tả 2</p>
+	 	    	   <div class="btn"><a href="#">Chi Tiết</a></div>
 	 	    	</div>
 				<div class="clear"></div>
 		     </div>
-		     <!--- <div class="content-middle-bottom">
+		     <!--- NOTICE
+		     <div class="content-middle-bottom">
 	 	    	<div class="col_1_of_middle span_1_of_middle">
-	 	    	   <h3>diam nonummy nibh euismod tincidunt ut laoreet dolore</h3>
-	 	    	   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duisautem vel eum iriure dolor in hendrerit in vulputate velit esse molestie</p>
-	 	    	   <div class="btn"><a href="#">Learn More</a></div>
+	 	    	   <h3>Tiêu đề</h3>
+	 	    	   <p>Mô tả</p>
+	 	    	   <div class="btn"><a href="#">Chi Tiết</a></div>
 	 	    	</div>
 				<div class="col_1_of_middle span_1_of_middle">
 					<ul class="progress vertical">
@@ -199,16 +200,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				    </ul>
 			    </div>
 				<div class="clear"></div>
-		     </div> ----->
-		     <div class="m_3"><span class="left_line"></span> Our Projects<span class="right_line"> </span></div>
+		     </div> 
+		     ----->
+		     <div class="m_3"><span class="left_line"></span> Sản Phẩm<span class="right_line"> </span></div>
 		      <div class="content-top">
 				 <div class="col_1_of_projects span_1_of_projects"><a href="#">
 				   <div class="view view-first">
                     <img src="images/pic3.jpg" alt=""/>
                       <div class="mask">
-                        <h2>Hover Style #1</h2>
-                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                         <a class="popup-with-zoom-anim" href="#small-dialog3"> <div class="info">Read More</div></a>
+                        <h2>Tiêu đề ẩn</h2>
+                        <p>Mô tả.</p>
+                         <a class="popup-with-zoom-anim" href="#small-dialog3"> <div class="info">Xem thêm...</div></a>
 		                     <div id="small-dialog3" class="mfp-hide">
 							   <div class="pop_up2">
 							   	  <img src="images/pic3.jpg"/ alt=""/>
@@ -225,58 +227,58 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				   <div class="view view-first">
                     <img src="images/pic6.jpg" alt=""/>
                       <div class="mask">
-                        <h2>Hover Style #1</h2>
-                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                         <a class="popup-with-zoom-anim" href="#small-dialog4"> <div class="info">Read More</div></a>
+                        <h2>Tiêu đề ẩn</h2>
+                        <p>Mô tả.</p>
+                         <a class="popup-with-zoom-anim" href="#small-dialog4"> <div class="info">Xem thêm...</div></a>
 		                     <div id="small-dialog4" class="mfp-hide">
 							   <div class="pop_up2">
 							   	  <img src="images/pic6.jpg"/ alt=""/>
-							   	   <h3 class="m_4"><a href="#">augue duis dolore te feugait</a></h3>
-				    				<p class="m_5">Branding</p>
+							   	   <h3 class="m_4"><a href="#">Tiêu đề hiển thị</a></h3>
+				    				<p class="m_5">[Hiển Thị]</p>
 							   </div>
 							 </div>
                         </div>
                      </div> 
-					<h3 class="m_4"><a href="#">augue duis dolore te feugait</a></h3>
-				    <p class="m_5">Branding</p>
+					<h3 class="m_4"><a href="#">Tiêu đề hiển thị</a></h3>
+				    <p class="m_5">[Hiển Thị]</p>
 				  </a> </div>
 				 <div class="col_1_of_projects span_1_of_projects"><a href="#">
 				   <div class="view view-first">
                     <img src="images/pic5.jpg" alt=""/>
                       <div class="mask">
-                        <h2>Hover Style #1</h2>
-                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                        <h2>Tiêu đề ẩn</h2>
+                        <p>Mô tả.</p>
                          <a class="popup-with-zoom-anim" href="#small-dialog5"> <div class="info">Read More</div></a>
 		                     <div id="small-dialog5" class="mfp-hide">
 							   <div class="pop_up2">
 							   	  <img src="images/pic5.jpg"/ alt=""/>
-							   	   <h3 class="m_4"><a href="#">augue duis dolore te feugait</a></h3>
-				    			   <p class="m_5">Web Design</p>
+							   	   <h3 class="m_4"><a href="#">Tiêu đề hiển thị</a></h3>
+				    			   <p class="m_5">[Hiển Thị]</p>
 							   </div>
 							 </div>
                         </div>
                      </div> 
-					<h3 class="m_4"><a href="#">augue duis dolore te feugait</a></h3>
-				    <p class="m_5">Web Design</p>
+					<h3 class="m_4"><a href="#">Tiêu đề hiển thị</a></h3>
+				    <p class="m_5">[Hiển Thị]</p>
 				  </a> </div>
 				 <div class="col_1_of_projects span_1_of_projects"><a href="#">
 				   <div class="view view-first">
                     <img src="images/pic4.jpg" alt=""/>
                       <div class="mask">
-                        <h2>Hover Style #1</h2>
-                        <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
-                         <a class="popup-with-zoom-anim" href="#small-dialog6"> <div class="info">Read More</div></a>
+                        <h2>Tiêu đề ẩn</h2>
+                        <p>Mô tả.</p>
+                         <a class="popup-with-zoom-anim" href="#small-dialog6"> <div class="info">Xem thêm...</div></a>
 		                     <div id="small-dialog6" class="mfp-hide">
 							   <div class="pop_up2">
 							   	  <img src="images/pic4.jpg"/ alt=""/>
-							   	   <h3 class="m_4"><a href="#">augue duis dolore te feugait</a></h3>
-				    				<p class="m_5">Marketing</p>
+							   	   <h3 class="m_4"><a href="#">Tiêu đề hiển thị</a></h3>
+				    				<p class="m_5">[Hiển Thị]</p>
 							   </div>
 							 </div>
                         </div>
                      </div> 
-					<h3 class="m_4"><a href="#">augue duis dolore te feugait</a></h3>
-				    <p class="m_5">Marketing</p>
+					<h3 class="m_4"><a href="#">Tiêu đề hiển thị</a></h3>
+				    <p class="m_5">[Hiển Thị]</p>
 				  </a> </div>
 				<div class="clear"></div>
 		 </div>
