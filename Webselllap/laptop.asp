@@ -60,7 +60,8 @@
 				<script type="text/javascript" src="js/nav.js"></script>
 			</div><!-- end h_menu4 -->
 			<div class="clear"></div>
-		</div><!-- end header_main4 -->
+		</div>
+		<!-- end header_main4 -->
      </div>
 	 <div class="main">
 	     <div class="wrap">
