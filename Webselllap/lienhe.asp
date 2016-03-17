@@ -79,7 +79,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	 <div class="main">
 	     <div class="wrap">
 	 	    <div class="contact">
-	          <div class="m_contact"><span class="left_line1"> </span>Contact<span class="right_line1"> </span></div>
+	          <div class="m_contact"><span class="left_line1"> </span>Liên hệ<span class="right_line1"> </span></div>
               <p class="m_12">dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
               <div class="contatct-top">
                <form method="post" action="contact-post.html">
@@ -114,7 +114,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words</p>
 				</div>
 				<div class="footer-grid footer-grid2">
-					<h4>Contact</h4>
+					<h4>Liên hệ</h4>
 				    <ul>
 						<li><i class="pin"> </i><div class="extra-wrap">
 							<p>2321 Street name,<br> City name,Country</p>
