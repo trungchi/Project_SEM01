@@ -244,7 +244,7 @@
                       <div class="mask">
                         <h2>Tiêu đề ẩn</h2>
                         <p>Mô tả.</p>
-                         <a class="popup-with-zoom-anim" href="#small-dialog5"> <div class="info">Read More</div></a>
+                         <a class="popup-with-zoom-anim" href="#small-dialog5"> <div class="info">Xem thêm...</div></a>
 		                     <div id="small-dialog5" class="mfp-hide">
 							   <div class="pop_up2">
 							   	  <img src="images/pic5.jpg"/ alt=""/>
