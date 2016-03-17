@@ -23,7 +23,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body>
 <div class="wrap"> 
-	<div class="header-top">
+	<div class="pages-top">
 	        <div class="logo">
 				<a href="index.asp"><img src="images/logo.png" alt=""/></a>
 			 </div>
