@@ -95,7 +95,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	                   <textarea value="Lời nhắn:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Lời nhắn:</textarea>
 	                </div>
 	                <div>
-	               		<input type="submit" value="Submit">
+	               		<input type="submit" value="Gửi">
 	                </div>
                </form>
                <div class="map">
