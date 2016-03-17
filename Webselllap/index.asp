@@ -167,7 +167,7 @@
 				   <h3>Tiêu đề</h3>
 	 	    	   <p>Mô Tả 1</p>
 	 	    	   <p>Mô Tả 2</p>
-	 	    	   <div class="btn"><a href="#">Chi Tiết</a></div>
+	 	    	   <div class="btn"><a href="#">Chi tiết</a></div>
 	 	    	</div>
 				<div class="clear"></div>
 		     </div>
@@ -176,7 +176,7 @@
 	 	    	<div class="col_1_of_middle span_1_of_middle">
 	 	    	   <h3>Tiêu đề</h3>
 	 	    	   <p>Mô tả</p>
-	 	    	   <div class="btn"><a href="#">Chi Tiết</a></div>
+	 	    	   <div class="btn"><a href="#">Chi tiết</a></div>
 	 	    	</div>
 				<div class="col_1_of_middle span_1_of_middle">
 					<ul class="progress vertical">
