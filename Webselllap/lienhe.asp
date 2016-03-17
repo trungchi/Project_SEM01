@@ -92,7 +92,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					 	<input type="text" class="text" value="Subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}" style="margin-left: 10px">
 					</div>
 					<div class="text">
-	                   <textarea value="Lời nhắn:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message:</textarea>
+	                   <textarea value="Lời nhắn:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Lời nhắn:</textarea>
 	                </div>
 	                <div>
 	               		<input type="submit" value="Submit">
