@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Website bán máy tính | Desktop :: w3layouts</title>
+<title>Website bán máy tính | Linhkien :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -19,7 +19,7 @@
 
 <body>
 <div class="wrap"> 
-	<div class="header-top">
+	<div class="pages-top">
 	        <div class="logo">
 				<a href="index.asp"><img src="images/logo.png" alt=""/></a>
 			 </div>
