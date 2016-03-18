@@ -130,45 +130,32 @@
 	 </div>
 	 <div class="main">
 	     <div class="wrap">
-	 	   <h2 class="m_1">Viết câu gì.</h2>
+	 	   <h2 class="m_1"><a href="product.asp">SẢN PHẨM MỚI</a></h2>
 	 	     <div class="content-top">
 	 	    	<div class="col_1_of_4 span_1_of_4">
-	 	    		<i class="settings"> </i>
-					<img src="images/pic.jpg" alt=""/>
+	 	    		
+					<a href="product.asp"><img src="images/sp_01_sony.jpg" alt=""/></a>                    
 					<div class="desc">
-						<h3>Sản phẩm 1</h3>
-						<p>Mô tả Sản phẩm <br> <br> </p>
+						<h3><a href="#">LAPTOP SONY</a></h3>
+						<p>SONY</p>
 					</div>
 				</div>
 				<div class="col_1_of_4 span_1_of_4">
-	 	    		<i class="clock"> </i>
-					<img src="images/pic1.jpg" alt=""/>
+	 	    		
+					<img src="images/sp_02_dell.jpg" alt=""/>
 					<div class="desc">
-						<h3>Sản phẩm 2</h3>
-						<p>Mô tả Sản phẩm <br> <br> </p>
+						<h3>LAPTOP DELL</h3>
+						<p>DELL</p>
 					</div>
 				</div>
 				<div class="col_1_of_4 span_1_of_4">
-	 	    		<i class="aeroplane"> </i>
-					<img src="images/pic2.jpg" alt=""/>
+	 	    		
+					<img src="images/sp_03_toshiba.jpg" alt=""/>
 					<div class="desc">
-						<h3>Sản phẩm 3</h3>
-						<p>Mô tả Sản phẩm <br> <br> </p>
+						<h3>LAPTOP TOSHIBA</h3>
+						<p>TOSHIBA</p>
 					</div>
 				</div>
-				<div class="clear"></div>
-		     </div>
-		     <div class="m_3"><span class="left_line"></span> Sản Phẩm Mới<span class="right_line"> </span></div>
-		      <div class="content-middle">
-	 	    	<div class="col_1_of_middle span_1_of_middle">
-	 	    		<img src="images/mac_img1.png" alt=""/>
-	 	    	</div>
-				<div class="col_1_of_middle span_1_of_middle">
-				   <h3>Tiêu đề</h3>
-	 	    	   <p>Mô Tả 1</p>
-	 	    	   <p>Mô Tả 2</p>
-	 	    	   <div class="btn"><a href="#">Chi tiết</a></div>
-	 	    	</div>
 				<div class="clear"></div>
 		     </div>
 		     <!--- NOTICE
