@@ -80,7 +80,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	     <div class="wrap">
 	 	    <div class="contact">
 	          <div class="m_contact"><span class="left_line1"> </span>Liên hệ<span class="right_line1"> </span></div>
-              <p class="m_12">dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+              <p class="m_12">Để được tư vấn, giải đáp thắc mắc về các sản phẩm, Quý khách hàng hãy liên hệ với chúng tôi ở Văn phòng Group4 tại TP.Hồ Chí Minh.</p>
               <div class="contatct-top">
                <form method="post" action="contact-post.html">
 					<div class="to">
