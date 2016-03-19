@@ -89,10 +89,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 					<div class="to">
                      	<input type="text" class="text" value="Địa chỉ" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Địa chỉ';}">
-					 	<input type="text" class="text" value="Subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}" style="margin-left: 10px">
+					 	<input type="text" class="text" value="Số điện thoại" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Số điện thoại';}" style="margin-left: 10px">
 					</div>
 					<div class="text">
-	                   <textarea value="Lời nhắn:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Lời nhắn:';}">Lời nhắn</textarea>
+	                   <textarea value="Lời nhắn..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Lời nhắn...';}">Lời nhắn...</textarea>
 	                </div>
 	                <div>
 	               		<input type="submit" value="Gửi">
