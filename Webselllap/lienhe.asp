@@ -84,15 +84,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
               <div class="contatct-top">
                <form method="post" action="contact-post.html">
 					<div class="to">
-                     	<input type="text" class="text" value="Tên" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
+                     	<input type="text" class="text" value="Tên" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Tên';}">
 					 	<input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" style="margin-left: 10px">
 					</div>
 					<div class="to">
-                     	<input type="text" class="text" value="Website của bạn" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Website';}">
+                     	<input type="text" class="text" value="Địa chỉ" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Địa chỉ';}">
 					 	<input type="text" class="text" value="Subject" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}" style="margin-left: 10px">
 					</div>
 					<div class="text">
-	                   <textarea value="Lời nhắn:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Lời nhắn:</textarea>
+	                   <textarea value="Lời nhắn:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Lời nhắn:';}">Lời nhắn</textarea>
 	                </div>
 	                <div>
 	               		<input type="submit" value="Gửi">
