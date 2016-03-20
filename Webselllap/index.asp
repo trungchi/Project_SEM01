@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
 <head>
 <title>Website bán máy tính | Home :: w3layouts</title>
@@ -101,24 +101,32 @@
 				<!---start-da-slider----->
 			  <div id="da-slider" class="da-slider">
 				  <div class="da-slide">
-					<h1>Chèn cái gì 1</h1>
-					<p>Chèn tiếp theo...</p>
-					<a href="#about" class="da-link">Chi tiết</a>
+					<li>
+                        <a href="dangnhap.html" target="_blank">
+                            <img src="images/131218hinh-nen-vu-tru-lua-cuc-hoang-trang.jpg" alt="" />
+                        </a>
+					</li>
 				  </div>
 				  <div class="da-slide">
-					<h1>Chèn cái gì 2</h1>
-					<p>Chèn tiếp theo...</p>
-					<a href="#about" class="da-link">Chi tiết</a>
+					<li>
+                        <a href="dangnhap.html" target="_blank">
+                            <img src="images/15-10bo-hinh-nen-3d-that-dep-va-that-hap-dan1.jpg" alt="" />
+                        </a>
+					</li>
 				  </div>
 				  <div class="da-slide">
-					<h1>Chèn cái gì 3</h1>
-					<p>Chèn tiếp theo...</p>
-					<a href="#about" class="da-link">Chi tiết</a>
+					<li>
+                        <a href="dangnhap.html" target="_blank">
+                            <img src="images/15-10bo-hinh-nen-may-tinh-de-thuong-nhat-hien-nay11.jpg" alt="" />
+                        </a>
+					</li>
 				  </div>
 				  <div class="da-slide">
-					<h1>Chèn cái gì 4</h1>
-					<p>Chèn tiếp theo...</p>
-					<a href="#about" class="da-link">Chi tiết</a>
+					<li>
+                        <a href="dangnhap.html" target="_blank">
+                            <img src="images/Hinhnendl.com---Hinh-nen-khong-gian-3d (19).jpg" alt="" />
+                        </a>
+					</li>
 				  </div>		
 				  <nav class="da-arrows">
 					<span class="da-arrows-prev"></span>
