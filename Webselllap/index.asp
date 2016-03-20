@@ -56,7 +56,7 @@
             <a rel="nofollow" href="#" style="color:dodgerblue">
                 <span>Đăng ký/</span>
             </a>
-            <a rel="nofollow" href="js/dangnhapform.html" style="color:dodgerblue">
+            <a rel="nofollow" href="dangnhapform.asp" style="color:dodgerblue">
                 <span>Đăng Nhập</span>
             </a>
         </div>
