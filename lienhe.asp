@@ -101,7 +101,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                <div class="map">
 			     <iframe src="https://www.google.com/maps/d/embed?mid=z1j46M5Vtics.kKEfvly1qvlw" width="100%" height="480"></iframe>
                    <small><a href="https://www.google.com/maps/d/embed?mid=z1j46M5Vtics.kKEfvly1qvlw" style="color:#666;text-align:left;font-size:12px">Xem trên Google Map</a></small>
-		       </div>		
+		       </div>			
             </div>
 		   </div>
 		</div>

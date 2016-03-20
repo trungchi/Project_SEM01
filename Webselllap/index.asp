@@ -41,10 +41,25 @@
 			});
 		});
 		</script>
+    <style>
+        .gocphaimanhinh {
+            text-align:right; 
+            line-height:20px;
+            margin: 5px 5px 7px 9px        
+                        }
+    </style>
 </head>
 
 <body>
 <div class="wrap"> 
+    <div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
+            <a rel="nofollow" href="#" style="color:dodgerblue">
+                <span>Đăng ký/</span>
+            </a>
+            <a rel="nofollow" href="js/dangnhapform.html" style="color:dodgerblue">
+                <span>Đăng Nhập</span>
+            </a>
+        </div>
 	<div class="header-top">
 	        <div class="logo">
 				<a href="index.asp"><img src="images/logo.png" alt=""/></a>

@@ -441,6 +441,8 @@
 		 *
 		 * @return Array Return an array with x,y page scroll values.
 		 */
+		
+            
 		function ___getPageScroll() {
 			var xScroll, yScroll;
 			if (self.pageYOffset) {
