@@ -30,7 +30,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		     <div class="h_menu4"><!-- start h_menu4 -->
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-					<li class="active"><a href="index.asp">Trang chủ</a></li>
+					<li><a href="index.asp">Trang chủ</a></li>
 					<li><a href="laptop.asp">Laptop</a>
 						<ul>
 							<li><a href="laptop.asp">DELL</a></li>
@@ -69,7 +69,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<li><a href="phukien.asp">USB</a></li>
 						</ul>
 					</li>
-					<li><a href="lienhe.asp">Liên hệ</a></li>
+					<li class="active"><a href="lienhe.asp">Liên hệ</a></li>
 				</ul>
 				<script type="text/javascript" src="js/nav.js"></script>
 			</div><!-- end h_menu4 -->
