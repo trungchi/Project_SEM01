@@ -30,7 +30,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		     <div class="h_menu4"><!-- start h_menu4 -->
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-					<li class="active"><a href="index.asp">Trang chủ</a></li>
+					<li><a href="index.asp">Trang chủ</a></li>
 					<li><a href="laptop.asp">Laptop</a>
 						<ul>
 							<li><a href="laptop.asp">DELL</a></li>
@@ -60,7 +60,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<li><a href="linhkien.asp">Sound card (card âm thanh)</a></li>
 						</ul>
 					</li>
-					<li><a href="phukien.asp">Phụ kiện</a>
+					<li class="active"><a href="phukien.asp">Phụ kiện</a>
 						<ul>
 							<li><a href="phukien.asp">Headphones</a></li>
 							<li><a href="phukien.asp">Earphones</a></li>
