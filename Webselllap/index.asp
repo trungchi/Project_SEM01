@@ -333,7 +333,7 @@
 			<div class="wrap">
 				<div class="footer-grid footer-grid1">
 					<div class="f-logo">
-				     <a href="index.html"><img src="images/group four.png" alt=""></a>
+				     <a href="index.html"><img src="images/logo.png" alt=""></a>
 			        </div>
 					<p>Nhóm gồm 4 thành viên sáng lập, mỗi thành viên điều rất nhiệt tình trong công việc mình đảm nhận.</p>
 				</div>
@@ -388,7 +388,7 @@
 					<h4>Nhận Tin Mới</h4>
 					<p>Nhập địa chỉ Email để nhận được những tin tức mới nhất về công nghệ</p>
 					<form>
-						<input type="text" value="Email Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address';}">
+						<input type="text" value="Địa chỉ Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Địa chỉ Email';}">
 						<input type="submit" value="">
 					</form>
 				</div>
