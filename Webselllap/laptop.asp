@@ -110,14 +110,14 @@
 		</div>
 		    <ul class="dc_pagination dc_paginationA dc_paginationA06">
 			  <li><a href="#" class="previous">Previous</a></li>
-			  <li><a href="#">1</a></li>
-			  <li><a href="#" class="current">2</a></li>
-			  <li><a href="#">3</a></li>
-			  <li><a href="#">4</a></li>
-			  <li><a href="#">5</a></li>
+			  <li><a href="#1" class="current">1</a></li>
+			  <li><a href="#2">2</a></li>
+			  <li><a href="#3">3</a></li>
+			  <li><a href="#4">4</a></li>
+			  <li><a href="#5">5</a></li>
 			  <li><a href="#">...</a></li>
-			  <li><a href="#">19</a></li>
-			  <li><a href="#">20</a></li>
+			  <li><a href="#19">19</a></li>
+			  <li><a href="#20">20</a></li>
 			  <li><a href="#" class="next">Next</a></li>
 		     </ul>
 		</div>
