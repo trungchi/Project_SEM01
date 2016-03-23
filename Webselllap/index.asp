@@ -53,13 +53,17 @@
 <body>
 <div class="wrap"> 
     <div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
+          <form class="thanh tìm kiếm" >
+    	  <input type="text" id="tìm kiếm" placeholder="Nhập từ khóa..." size="50"/>
+    	  <input type="submit" value="Tìm kiếm" id="submit" />
             <a rel="nofollow" href="#" style="color:dodgerblue">
                 <span>Đăng ký/</span>
             </a>
             <a rel="nofollow" href="dangnhapform.asp" style="color:dodgerblue">
                 <span>Đăng Nhập</span>
             </a>
-        </div>
+   	   </form>
+     </div>
 	<div class="header-top">
 	        <div class="logo">
 				<a href="index.asp"><img src="images/logo.png" alt=""/></a>
