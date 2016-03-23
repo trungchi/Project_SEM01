@@ -72,7 +72,7 @@
 			       <ul>
 						<li>
 							<a href="images/t-pic15.jpg"><img src="images/pic15.jpg" alt=""/></a>
-							<h3>Duis autem vel eumter</h3>
+							<h3>Duis autem vel eumter</h3>                            
 						</li>
 						<li>
 							<a href="images/t-pic8.jpg"><img src="images/pic8.jpg" alt=""/></a>

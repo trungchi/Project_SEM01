@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
 <title>Free Emmeline Website Template | Pages :: w3layouts</title>
