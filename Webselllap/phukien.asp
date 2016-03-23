@@ -5,8 +5,8 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
-=======
->>>>>>> origin/master
+<!--=======
+>>>>>>> origin/master-->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -23,9 +23,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         $('.gallery a').lightBox();
     });
    </script>
+    <style>
+			.thanh tìm kiếm{
+				width: 100px;
+				box-sizing: border-box;
+				padding: 5px 9px 0;
+				
+				}
+            .gocphaimanhinh {
+            text-align:right; 
+            line-height:20px;
+            margin: 5px 5px 7px 9px        
+                        }
+    </style>
 </head>
 <body>
-<div class="wrap"> 
+<div class="wrap">
+    <div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
+          <form class="thanh tìm kiếm" >
+    	  <input type="text" id="tìm kiếm" placeholder="Nhập từ khóa..." size="50"/>
+    	  <input type="submit" value="Tìm kiếm" id="submit" />
+            <a rel="nofollow" href="#" style="color:dodgerblue">
+                <span>Đăng ký/</span>
+            </a>
+            <a rel="nofollow" href="dangnhapform.asp" style="color:dodgerblue">
+                <span>Đăng Nhập</span>
+            </a>
+   	   </form>
+     </div>     
 	<div class="pages-top">
 	        <div class="logo">
 				<a href="index.asp"><img src="images/logo.png" alt=""/></a>
