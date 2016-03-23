@@ -4,9 +4,9 @@
 <title>Website bán máy tính | Laptop :: gr4</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Lato:400,300,600,700,800' rel='stylesheet' type='text/css'>
-<script src="js/jquery.min.js"></script>
+<script src="../js/jquery.min.js"></script>
 <script type="text/javascript" src="js/jquery.lightbox.js"></script>
 <link rel="stylesheet" type="text/css" href="css/lightbox.css" media="screen" />
   <script type="text/javascript">
@@ -20,41 +20,41 @@
 <div class="wrap"> 
 	<div class="pages-top">
 	        <div class="logo">
-				<a href="index.asp"><img src="images/logo.png" alt=""/></a>
+				<a href="../index.asp"><img src="../images/logo.png" alt=""/></a>
 			 </div>
 		     <div class="h_menu4"><!-- start h_menu4 -->
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-				  <li><a href="index.asp">Trang chủ</a></li>
+				  <li><a href="../index.asp">Trang chủ</a></li>
 				  <li class="active"><a href="laptop.asp">Laptop</a></li>
-					  <li><a href="desktop.asp">Desktop</a>
+					  <li><a href="../desktop/desktop.asp">Desktop</a>
 						<ul>
-							<li><a href="desktop.asp">DELL</a></li>
-							<li><a href="desktop.asp">HP</a></li>
-							<li><a href="desktop.asp">APPLE</a></li>
-							<li><a href="desktop.asp">ACER</a></li>
-							<li><a href="desktop.asp">ASUS</a></li>
-							<li><a href="desktop.asp">LENOVO</a></li>
+							<li><a href="../desktop/desktop.asp">DELL</a></li>
+							<li><a href="../desktop/desktop.asp">HP</a></li>
+							<li><a href="../desktop/desktop.asp">APPLE</a></li>
+							<li><a href="../desktop/desktop.asp">ACER</a></li>
+							<li><a href="../desktop/desktop.asp">ASUS</a></li>
+							<li><a href="../desktop/desktop.asp">LENOVO</a></li>
 						</ul>
 					</li>
-					<li><a href="linhkien.asp">Linh kiện</a>
+					<li><a href="../linhkien/linhkien.asp">Linh kiện</a>
 						<ul>
-							<li><a href="linhkien.asp">RAM</a></li>
-							<li><a href="linhkien.asp">Card VGA</a></li>
-							<li><a href="linhkien.asp">Mainboard</a></li>
-							<li><a href="linhkien.asp">Sound card (card âm thanh)</a></li>
+							<li><a href="../linhkien/linhkien.asp">RAM</a></li>
+							<li><a href="../linhkien/linhkien.asp">Card VGA</a></li>
+							<li><a href="../linhkien/linhkien.asp">Mainboard</a></li>
+							<li><a href="../linhkien/linhkien.asp">Sound card (card âm thanh)</a></li>
 						</ul>
 					</li>
-					<li><a href="phukien.asp">Phụ kiện</a>
+					<li><a href="../phukien/phukien.asp">Phụ kiện</a>
 						<ul>
-							<li><a href="phukien.asp">Headphones</a></li>
-							<li><a href="phukien.asp">Earphones</a></li>
-							<li><a href="phukien.asp">Chuột</a></li>
-							<li><a href="phukien.asp">Keyboard (bàn phím)</a></li>
-							<li><a href="phukien.asp">USB</a></li>
+							<li><a href="../phukien/phukien.asp">Headphones</a></li>
+							<li><a href="../phukien/phukien.asp">Earphones</a></li>
+							<li><a href="../phukien/phukien.asp">Chuột</a></li>
+							<li><a href="../phukien/phukien.asp">Keyboard (bàn phím)</a></li>
+							<li><a href="../phukien/phukien.asp">USB</a></li>
 						</ul>
 					</li>
-					<li><a href="lienhe.asp">Liên hệ</a></li>
+					<li><a href="../lienhe/lienhe.asp">Liên hệ</a></li>
 				</ul>
 				<script type="text/javascript" src="js/nav.js"></script>
 			</div><!-- end h_menu4 -->
@@ -69,35 +69,35 @@
 				      <div class="gallery">
 			       <ul>
 				<li class="active">
-					<a href="images/t-pic7.jpg"><img src="images/pic7.jpg" alt=""/></a>
+					<a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
 					<h3>Duis autem vel eumter</h3>
 				</li>
 				<li class="last">
-					<a href="images/t-pic9.jpg"><img src="images/pic9.jpg" alt=""/></a>
+					<a href="../images/t-pic9.jpg"><img src="../images/pic9.jpg" alt=""/></a>
 				  <h3>augue duis dolore te</h3>
 				</li>
 				<li>
-					<a href="images/t-pic10.jpg"><img src="images/pic10.jpg" alt=""/></a>
+					<a href="../images/t-pic10.jpg"><img src="../images/pic10.jpg" alt=""/></a>
 					<h3>parum claram, anteposuerit</h3>
 				</li>
 				<li>
-					<a href="images/pic11.jpg"><img src="images/pic11.jpg" alt=""/></a>
+					<a href="../images/pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>
 					<h3>seacula quarta decima</h3>
 				</li>
 				<li class="last">
-					<a href="images/pic12.jpg"><img src="images/pic12.jpg" alt=""/></a>
+					<a href="../images/pic12.jpg"><img src="../images/pic12.jpg" alt=""/></a>
 					<h3>mutationem consuetudium </h3>
 				</li>
 					<li>
-					<a href="images/t-pic13.jpg"><img src="images/pic13.jpg" alt=""/></a>
+					<a href="../images/t-pic13.jpg"><img src="../images/pic13.jpg" alt=""/></a>
 					<h3>eleifend option congue</h3>
 				</li>
 				<li>
-					<a href="images/t-pic14.jpg"><img src="images/pic14.jpg" alt=""/></a>
+					<a href="../images/t-pic14.jpg"><img src="../images/pic14.jpg" alt=""/></a>
 					<h3>imperdiet doming</h3>
 				</li>
 				<li class="last">
-					<a href="images/t-pic15.jpg"><img src="images/pic15.jpg" alt=""/></a>
+					<a href="../images/t-pic15.jpg"><img src="../images/pic15.jpg" alt=""/></a>
 					<h3>usto odio dignissim qui </h3>
 				</li>
 			   <div class="clear"></div>
@@ -179,7 +179,7 @@
 			<div class="wrap">
 				<div class="footer-grid footer-grid1">
 					<div class="f-logo">
-				     <a href="index.asp"><img src="images/f-logo.png" alt=""></a>
+				     <a href="../index.asp"><img src="../images/f-logo.png" alt=""></a>
 			        </div>
 					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words</p>
 				</div>
