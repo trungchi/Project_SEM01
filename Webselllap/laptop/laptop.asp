@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
 <head>
 <title>Website bán máy tính | Laptop :: gr4</title>
@@ -175,39 +175,39 @@
 		  </div>
 		  </div>
 		</div>
-	    <div class="footer">
+	   <div class="footer">
 			<div class="wrap">
 				<div class="footer-grid footer-grid1">
 					<div class="f-logo">
-				     <a href="../index.asp"><img src="../images/f-logo.png" alt=""></a>
+				     <a href="index.html"><img src="images/group four.png" alt=""></a>
 			        </div>
-					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words</p>
+					<p>Nhóm gồm 4 thành viên sáng lập, mỗi thành viên điều rất nhiệt tình trong công việc mình đảm nhận.</p>
 				</div>
 				<div class="footer-grid footer-grid2">
-					<h4>Contact</h4>
+					<h4>Liên Hệ</h4>
 				    <ul>
 						<li><i class="pin"> </i><div class="extra-wrap">
-							<p>2321 Street name,<br> City name,Country</p>
+							<p>392-394 Hoàng Văn Thụ, P.4<br> TP.HCM</p>
 						</div></li>
 						<li><i class="phone"> </i><div class="extra-wrap">
-							<p>+2321 256 652</p>
+							<p>+849 3939 3423</p>
 						</div></li>
 						<li><i class="mail"> </i><div class="extra-wrap1">
-							<p>info@comapnay name.com</p>
+							<p>lopaccp1508@gmail.com</p>
 						</div></li>
 						<li><i class="earth"> </i><div class="extra-wrap1">
-							<p>info@comapnay name.com</p>
+							<p>nhom4@abc.com</p>
 						</div></li>
 					</ul>
 				</div>
 				<div class="footer-grid footer-grid3">
-					<h4>Latest Tweets</h4>
+					<h4>Tiêu Chí</h4>
 					<div class="recent-tweet">
 						<div class="recent-tweet-icon">
 							<span> </span>
 						</div>
 						<div class="recent-tweet-info">
-							<p>Ds which don't look even slightly believable. If you are going to use a passage <a href="#"> 3 Hours Ago</a></p>
+							<p>Uy Tín</p>
 						</div>
 						<div class="clear"> </div>
 					</div>
@@ -216,16 +216,25 @@
 							<span> </span>
 						</div>
 						<div class="recent-tweet-info">
-							<p>Ds which don't look even slightly believable. If you are going to use a passage <a href="#"> 3 Hours Ago</a></p>
+							<p>Chất Lượng</p>
+						</div>
+						<div class="clear"> </div>
+					</div><br />
+                    <div class="recent-tweet2">
+						<div class="recent-tweet-icon">
+							<span> </span>
+						</div>
+						<div class="recent-tweet-info">
+							<p>Chuyên Nghiệp</p>
 						</div>
 						<div class="clear"> </div>
 					</div>
 				</div>
 				<div class="footer-grid footer-grid4">
-					<h4>News Letter</h4>
-					<p>Randomised words which don't look even slightly believable. If you are going to use a passage</p>
+					<h4>Nhận Tin Mới</h4>
+					<p>Nhập địa chỉ Email để nhận được những tin tức mới nhất về công nghệ</p>
 					<form>
-						<input type="text" value="Địa chỉ Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Địa chỉ Email';}">
+						<input type="text" value="Email Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address';}">
 						<input type="submit" value="">
 					</form>
 				</div>
@@ -235,7 +244,7 @@
 		<div class="footer-bottom">
 	 		  <div class="wrap">
 	     	  	<div class="copy">
-				   <p>© 2014 Template by <a href="http://gr4.com" target="_blank"> gr4</a></p>
+				   <p>© 2016 Group Four Computer</p>
 			    </div>
 			    <div class="social">	
 				   <ul>	

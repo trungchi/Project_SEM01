@@ -46,6 +46,9 @@
                                     <input class="loginbutton" tabindex="104" value="Ðăng nhập" title="Nhập username và mật khẩu đã cung cấp để đăng nhập, hoặc ấn vào 'đăng ký' để tao 1 tài khoản" accesskey="s" type="submit">
                                     <a href="login.php?do=lostpw" rel="nofollow" class="forgotbutton">Quên mật khẩu</a>
                                 </div>
+                                <div class="quaylai">
+                                    <a href="index.asp" value="quay lại trang chủ" style="margin: 0px 0px 0px 100px; color:black; line-break:initial; border: 1px solid black;" >Quay lại trang chủ</a>
+                                </div>
                                 <input name="s" value="" type="hidden">
                                 <input name="securitytoken" value="guest" type="hidden">
                                 <input name="do" value="login" type="hidden">
