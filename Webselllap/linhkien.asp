@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Website bán máy tính | Linhkien :: w3layouts</title>
+<title>Website bán máy tính | Linh kiện :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -72,8 +72,8 @@
 	 	   <div class="pages">
 	 	   	 <div class="blog-top">
 			  <div class="col_1_of_b span_1_of_b">
-					<h3><a href="single.html">Lorem Ipsum is simply</a></h3>
-					<a href="single.html"><img src="images/b1.jpg" alt=""></a>
+					<h3><a href="single.asp">Lorem Ipsum is simply</a></h3>
+					<a href="single.asp"><img src="images/b1.jpg" alt=""></a>
 					<div class="blog-poast-admin">
 						<a href="#"><img src="images/b1_small.jpg" title="admin"></a>
 					</div>
@@ -88,8 +88,8 @@
 					<div class="button"><a href="#">Read More</a></div>
 				</div>
 				<div class="col_1_of_b span_1_of_b">
-					<h3><a href="single.html">Lorem Ipsum is simply</a></h3>
-					<a href="single.html"><img src="images/b2.jpg" alt=""></a>
+					<h3><a href="single.asp">Lorem Ipsum is simply</a></h3>
+					<a href="single.asp"><img src="images/b2.jpg" alt=""></a>
 					<div class="blog-poast-admin">
 						<a href="#"><img src="images/b2_small.jpg" title="admin"></a>
 					</div>
@@ -107,8 +107,8 @@
 			  </div>
 			  <div class="blog-top">
 			  <div class="col_1_of_b span_1_of_b">
-					<h3><a href="single.html">Lorem Ipsum is simply</a></h3>
-					<a href="single.html"><img src="images/b3.jpg" alt=""></a>
+					<h3><a href="single.asp">Lorem Ipsum is simply</a></h3>
+					<a href="single.asp"><img src="images/b3.jpg" alt=""></a>
 					<div class="blog-poast-admin">
 						<a href="#"><img src="images/b3_small.jpg" title="admin"></a>
 					</div>
@@ -123,8 +123,8 @@
 					<div class="button"><a href="#">Read More</a></div>
 				</div>
 				<div class="col_1_of_b span_1_of_b">
-					<h3><a href="single.html">Lorem Ipsum is simply</a></h3>
-					<a href="single.html"><img src="images/b4.jpg" alt=""></a>
+					<h3><a href="single.asp">Lorem Ipsum is simply</a></h3>
+					<a href="single.asp"><img src="images/b4.jpg" alt=""></a>
 					<div class="blog-poast-admin">
 						<a href="#"><img src="images/b4_small.jpg" title="admin"></a>
 					</div>
@@ -142,8 +142,8 @@
 			  </div>
 			  <div class="blog-top">
 			  <div class="col_1_of_b span_1_of_b">
-					<h3><a href="single.html">Lorem Ipsum is simply</a></h3>
-					<a href="single.html"><img src="images/b5.jpg" alt=""></a>
+					<h3><a href="single.asp">Lorem Ipsum is simply</a></h3>
+					<a href="single.asp"><img src="images/b5.jpg" alt=""></a>
 					<div class="blog-poast-admin">
 						<a href="#"><img src="images/b5_small.jpg" title="admin"></a>
 					</div>
@@ -158,8 +158,8 @@
 					<div class="button"><a href="#">Read More</a></div>
 				</div>
 				<div class="col_1_of_b span_1_of_b">
-					<h3><a href="single.html">Lorem Ipsum is simply</a></h3>
-					<a href="single.html"><img src="images/b6.jpg" alt=""></a>
+					<h3><a href="single.asp">Lorem Ipsum is simply</a></h3>
+					<a href="single.asp"><img src="images/b6.jpg" alt=""></a>
 					<div class="blog-poast-admin">
 						<a href="#"><img src="images/b6_small.jpg" title="admin"></a>
 					</div>

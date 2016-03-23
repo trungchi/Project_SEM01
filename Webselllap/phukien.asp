@@ -1,13 +1,7 @@
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Free Emmeline Website Template | Pages :: w3layouts</title>
+<title>Website bán máy tính | Phukien :: gr4</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -21,6 +15,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     });
    </script>
 </head>
+
 <body>
 <div class="wrap"> 
 	<div class="pages-top">
@@ -79,7 +74,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	 <div class="main">
 	     <div class="wrap">
 	 	   <div class="pages">
-			 <div class="gallery1">
+			 <div class="gallery">
 			   <ul>
 				<li>
 					<a href="images/p5.jpg"><img src="images/p5.jpg" alt=""/></a>
@@ -186,7 +181,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<h4>News Letter</h4>
 					<p>Randomised words which don't look even slightly believable. If you are going to use a passage</p>
 					<form>
-						<input type="text" value="Email Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address';}">
+						<input type="text" value="Địa chỉ Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Địa chỉ Email';}">
 						<input type="submit" value="">
 					</form>
 				</div>
@@ -196,7 +191,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="footer-bottom">
 	 		  <div class="wrap">
 	     	  	<div class="copy">
-				   <p>© 2014 Template by <a href="http://w3layouts.com" target="_blank"> w3layouts</a></p>
+				   <p>© 2014 Template by <a href="http://gr4.com" target="_blank"> gr4</a></p>
 			    </div>
 			    <div class="social">	
 				   <ul>	
