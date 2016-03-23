@@ -9,7 +9,7 @@
 <script src="../js/jquery.min.js"></script>
 
 <script type="text/javascript" src="../js/jquery.lightbox.js"></script>
-<link rel="stylesheet" type="text/css" href="css/lightbox.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="../css/lightbox.css" media="screen" />
   <script type="text/javascript">
     $(function() {
         $('.gallery a').lightBox();
