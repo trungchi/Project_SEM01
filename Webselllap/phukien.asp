@@ -10,7 +10,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Free Emmeline Website Template | Pages :: w3layouts</title>
+<title>Website bán máy tính | Phukien :: gr4</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -37,6 +37,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         }
     </style>
 </head>
+
 <body>
 <div class="wrap">
     <div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
@@ -107,7 +108,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	 <div class="main">
 	     <div class="wrap">
 	 	   <div class="pages">
-			 <div class="gallery1">
+			 <div class="gallery">
 			   <ul>
 				<li>
 					<a href="images/p5.jpg"><img src="images/p5.jpg" alt=""/></a>
@@ -223,7 +224,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<h4>Nhận Tin Mới</h4>
 					<p>Nhập địa chỉ Email để nhận được những tin tức mới nhất về công nghệ</p>
 					<form>
-						<input type="text" value="Email Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address';}">
+						<input type="text" value="Địa chỉ Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Địa chỉ Email';}">
 						<input type="submit" value="">
 					</form>
 				</div>
@@ -233,7 +234,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="footer-bottom">
 	 		  <div class="wrap">
 	     	  	<div class="copy">
+<<<<<<< HEAD
 				   <p>© 2016 Group Four Computer</p>
+=======
+				   <p>© 2014 Template by <a href="http://gr4.com" target="_blank"> gr4</a></p>
+>>>>>>> origin/master
 			    </div>
 			    <div class="social">	
 				   <ul>	

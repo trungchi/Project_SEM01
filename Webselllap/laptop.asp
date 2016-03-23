@@ -1,13 +1,12 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-<title>Website bán máy tính | Laptop :: w3layouts</title>
+<title>Website bán máy tính | Laptop :: gr4</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Lato:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <script src="js/jquery.min.js"></script>
-
 <script type="text/javascript" src="js/jquery.lightbox.js"></script>
 <link rel="stylesheet" type="text/css" href="css/lightbox.css" media="screen" />
   <script type="text/javascript">
@@ -88,17 +87,13 @@
 				 <div class="cont1 span_2_of_g1">
 				      <div class="gallery">
 			       <ul>
-				<li>
+				<li class="active">
 					<a href="images/t-pic7.jpg"><img src="images/pic7.jpg" alt=""/></a>
 					<h3>Duis autem vel eumter</h3>
 				</li>
-				<li>
-					<a href="images/t-pic8.jpg"><img src="images/pic8.jpg" alt=""/></a>
-					<h3>uffered alteration</h3>
-				</li>
 				<li class="last">
 					<a href="images/t-pic9.jpg"><img src="images/pic9.jpg" alt=""/></a>
-					<h3>augue duis dolore te</h3>
+				  <h3>augue duis dolore te</h3>
 				</li>
 				<li>
 					<a href="images/t-pic10.jpg"><img src="images/pic10.jpg" alt=""/></a>
@@ -129,14 +124,14 @@
 		</div>
 		    <ul class="dc_pagination dc_paginationA dc_paginationA06">
 			  <li><a href="#" class="previous">Previous</a></li>
-			  <li><a href="#1" class="current">1</a></li>
-			  <li><a href="#2">2</a></li>
-			  <li><a href="#3">3</a></li>
-			  <li><a href="#4">4</a></li>
-			  <li><a href="#5">5</a></li>
-			  <li><a href="#">...</a></li>
-			  <li><a href="#19">19</a></li>
-			  <li><a href="#20">20</a></li>
+			  <li><a href="laptop.asp-fc=1.htm" class="current">1</a></li>
+			  <li><a href="laptop.asp-fc=2.htm">2</a></li>
+			  <li><a href="laptop.asp-fc=3.htm">3</a></li>
+			  <li><a href="laptop.asp-fc=4.htm">4</a></li>
+			  <li><a href="laptop.asp-fc=5.htm">5</a></li>
+			  <li><a href="laptop.asp-fc=.htm">...</a></li>
+			  <li><a href="laptop.asp-fc=19.htm">19</a></li>
+			  <li><a href="laptop.asp-fc=20.htm">20</a></li>
 			  <li><a href="#" class="next">Next</a></li>
 		     </ul>
 		</div>
@@ -258,7 +253,7 @@
 					<h4>Nhận Tin Mới</h4>
 					<p>Nhập địa chỉ Email để nhận được những tin tức mới nhất về công nghệ</p>
 					<form>
-						<input type="text" value="Email Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address';}">
+						<input type="text" value="Địa chỉ Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Địa chỉ Email';}">
 						<input type="submit" value="">
 					</form>
 				</div>
@@ -268,7 +263,11 @@
 		<div class="footer-bottom">
 	 		  <div class="wrap">
 	     	  	<div class="copy">
+<<<<<<< HEAD
 				   <p>© 2016 Group Four Computer</p>
+=======
+				   <p>© 2014 Template by <a href="http://gr4.com" target="_blank"> gr4</a></p>
+>>>>>>> origin/master
 			    </div>
 			    <div class="social">	
 				   <ul>	
