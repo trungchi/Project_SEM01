@@ -66,56 +66,61 @@
 	 <div class="main">
 	     <div class="wrap">
 	 	   <div class="pages">
-				 <div class="cont1 span_2_of_g1">
-				      <div class="gallery">
-			       <ul>
-				<li class="active">
-					<a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
-					<h3>Duis autem vel eumter</h3>
-				</li>
-				<li class="last">
-					<a href="../images/t-pic9.jpg"><img src="../images/pic9.jpg" alt=""/></a>
-				  <h3>augue duis dolore te</h3>
-				</li>
-				<li>
-					<a href="../images/t-pic10.jpg"><img src="../images/pic10.jpg" alt=""/></a>
-					<h3>parum claram, anteposuerit</h3>
-				</li>
-				<li>
-					<a href="../images/pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>
-					<h3>seacula quarta decima</h3>
-				</li>
-				<li class="last">
-					<a href="../images/pic12.jpg"><img src="../images/pic12.jpg" alt=""/></a>
-					<h3>mutationem consuetudium </h3>
-				</li>
-					<li>
-					<a href="../images/t-pic13.jpg"><img src="../images/pic13.jpg" alt=""/></a>
-					<h3>eleifend option congue</h3>
-				</li>
-				<li>
-					<a href="../images/t-pic14.jpg"><img src="../images/pic14.jpg" alt=""/></a>
-					<h3>imperdiet doming</h3>
-				</li>
-				<li class="last">
-					<a href="../images/t-pic15.jpg"><img src="../images/pic15.jpg" alt=""/></a>
-					<h3>usto odio dignissim qui </h3>
-				</li>
-			   <div class="clear"></div>
-			</ul>
+			 <div class="cont1 span_2_of_g1">
+		       <div class="gallery">
+		         <ul>
+						<li>
+							<a href="../images/t-pic15.jpg"><img src="../images/pic15.jpg" alt=""/></a>
+							<h3>Duis autem vel eumter</h3>
+						</li>
+						<li>
+							<a href="../images/t-pic8.jpg"><img src="../images/pic8.jpg" alt=""/></a>
+							<h3>uffered alteration</h3>
+						</li>
+						<li class="last">
+							<a href="../images/t-pic9.jpg"><img src="../images/pic9.jpg" alt=""/></a>
+							<h3>augue duis dolore te</h3>
+						</li>
+						<li>
+							<a href="../images/t-pic10.jpg"><img src="../images/pic10.jpg" alt=""/></a>
+							<h3>parum claram, anteposuerit</h3>
+						</li>
+						<li>
+							<a href="../images/pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>
+							<h3>seacula quarta decima</h3>
+						</li>
+						<li class="last">
+							<a href="../images/pic12.jpg"><img src="../images/pic12.jpg" alt=""/></a>
+							<h3>mutationem consuetudium </h3>
+						</li>
+							<li>
+							<a href="../images/t-pic13.jpg"><img src="../images/pic13.jpg" alt=""/></a>
+							<h3>eleifend option congue</h3>
+						</li>
+						<li>
+							<a href="../images/t-pic14.jpg"><img src="../images/pic14.jpg" alt=""/></a>
+							<h3>imperdiet doming</h3>
+						</li>
+						<li class="last">
+							<a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
+							<h3>usto odio dignissim qui </h3>
+						</li>
+					   <div class="clear"></div>
+				</ul>
 		</div>
-		    <ul class="dc_pagination dc_paginationA dc_paginationA06">
-			  <li><a href="#" class="previous">Previous</a></li>
-			  <li><a href="laptop.asp-fc=1.htm" class="current">1</a></li>
-			  <li><a href="laptop.asp-fc=2.htm">2</a></li>
-			  <li><a href="laptop.asp-fc=3.htm">3</a></li>
-			  <li><a href="laptop.asp-fc=4.htm">4</a></li>
-			  <li><a href="laptop.asp-fc=5.htm">5</a></li>
-			  <li><a href="laptop.asp-fc=.htm">...</a></li>
-			  <li><a href="laptop.asp-fc=19.htm">19</a></li>
-			  <li><a href="laptop.asp-fc=20.htm">20</a></li>
-			  <li><a href="#" class="next">Next</a></li>
+		    <ul class="dc_pagination dc_paginationA06">
+			  <li><strong><a href="#" class="previous">Previous</a></strong></li>
+			  <li><strong><a href="?page=1" class="current">1</a></strong></li>
+			  <li><strong><a href="?page=2">2</a></strong></li>
+			  <li><strong><a href="?page=3">3</a></strong></li>
+			  <li><strong><a href="#4">4</a></strong></li>
+			  <li><strong><a href="#5">5</a></strong></li>
+			  <li><strong><a href="#">...</a></strong></li>
+			  <li><strong><a href="#19">19</a></strong></li>
+			  <li><strong><a href="#20">20</a></strong></li>
+			  <li><strong><a href="#" class="next">Next</a></strong></li>
 		     </ul>
+             
 		</div>
         <div class="labout span_1_of_g1">
 		  <div class="project-list">
