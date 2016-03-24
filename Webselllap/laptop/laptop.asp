@@ -1,8 +1,7 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
 <head>
-<title>Website bán máy tính | Laptop :: Groupfour</title>
-<link rel="shortcut icon" href="../images/icon.ico">
+<title>Website bán máy tính | Laptop :: gr4</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -66,61 +65,56 @@
 	 <div class="main">
 	     <div class="wrap">
 	 	   <div class="pages">
-			 <div class="cont1 span_2_of_g1">
-		       <div class="gallery">
-		         <ul>
-						<li>
-							<a href="../images/t-pic15.jpg"><img src="../images/pic15.jpg" alt=""/></a>
-							<h3>Duis autem vel eumter</h3>
-						</li>
-						<li>
-							<a href="../images/t-pic8.jpg"><img src="../images/pic8.jpg" alt=""/></a>
-							<h3>uffered alteration</h3>
-						</li>
-						<li class="last">
-							<a href="../images/t-pic9.jpg"><img src="../images/pic9.jpg" alt=""/></a>
-							<h3>augue duis dolore te</h3>
-						</li>
-						<li>
-							<a href="../images/t-pic10.jpg"><img src="../images/pic10.jpg" alt=""/></a>
-							<h3>parum claram, anteposuerit</h3>
-						</li>
-						<li>
-							<a href="../images/pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>
-							<h3>seacula quarta decima</h3>
-						</li>
-						<li class="last">
-							<a href="../images/pic12.jpg"><img src="../images/pic12.jpg" alt=""/></a>
-							<h3>mutationem consuetudium </h3>
-						</li>
-							<li>
-							<a href="../images/t-pic13.jpg"><img src="../images/pic13.jpg" alt=""/></a>
-							<h3>eleifend option congue</h3>
-						</li>
-						<li>
-							<a href="../images/t-pic14.jpg"><img src="../images/pic14.jpg" alt=""/></a>
-							<h3>imperdiet doming</h3>
-						</li>
-						<li class="last">
-							<a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
-							<h3>usto odio dignissim qui </h3>
-						</li>
-					   <div class="clear"></div>
-				</ul>
+				 <div class="cont1 span_2_of_g1">
+				      <div class="gallery">
+			       <ul>
+				<li class="active">
+					<a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
+					<h3>Duis autem vel eumter</h3>
+				</li>
+				<li class="last">
+					<a href="../images/t-pic9.jpg"><img src="../images/pic9.jpg" alt=""/></a>
+				  <h3>augue duis dolore te</h3>
+				</li>
+				<li>
+					<a href="../images/t-pic10.jpg"><img src="../images/pic10.jpg" alt=""/></a>
+					<h3>parum claram, anteposuerit</h3>
+				</li>
+				<li>
+					<a href="../images/pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>
+					<h3>seacula quarta decima</h3>
+				</li>
+				<li class="last">
+					<a href="../images/pic12.jpg"><img src="../images/pic12.jpg" alt=""/></a>
+					<h3>mutationem consuetudium </h3>
+				</li>
+					<li>
+					<a href="../images/t-pic13.jpg"><img src="../images/pic13.jpg" alt=""/></a>
+					<h3>eleifend option congue</h3>
+				</li>
+				<li>
+					<a href="../images/t-pic14.jpg"><img src="../images/pic14.jpg" alt=""/></a>
+					<h3>imperdiet doming</h3>
+				</li>
+				<li class="last">
+					<a href="../images/t-pic15.jpg"><img src="../images/pic15.jpg" alt=""/></a>
+					<h3>usto odio dignissim qui </h3>
+				</li>
+			   <div class="clear"></div>
+			</ul>
 		</div>
-		    <ul class="dc_pagination dc_paginationA06">
-			  <li><strong><a href="#" class="previous">Previous</a></strong></li>
-			  <li><strong><a href="?page=1" class="current">1</a></strong></li>
-			  <li><strong><a href="?page=2">2</a></strong></li>
-			  <li><strong><a href="?page=3">3</a></strong></li>
-			  <li><strong><a href="#4">4</a></strong></li>
-			  <li><strong><a href="#5">5</a></strong></li>
-			  <li><strong><a href="#">...</a></strong></li>
-			  <li><strong><a href="#19">19</a></strong></li>
-			  <li><strong><a href="#20">20</a></strong></li>
-			  <li><strong><a href="#" class="next">Next</a></strong></li>
+		    <ul class="dc_pagination dc_paginationA dc_paginationA06">
+			  <li><a href="#" class="previous">Previous</a></li>
+			  <li><a href="#1" class="current">1</a></li>
+			  <li><a href="#2">2</a></li>
+			  <li><a href="#3">3</a></li>
+			  <li><a href="#4">4</a></li>
+			  <li><a href="#5">5</a><		/li>
+			  <li><a href="#">...</a></li>
+			  <li><a href="#19">19</a></li>
+			  <li><a href="#20.htm">20</a></li>
+			  <li><a href="#" class="next">Next</a></li>
 		     </ul>
-             
 		</div>
         <div class="labout span_1_of_g1">
 		  <div class="project-list">
@@ -181,39 +175,39 @@
 		  </div>
 		  </div>
 		</div>
-	    <div class="footer">
+	   <div class="footer">
 			<div class="wrap">
 				<div class="footer-grid footer-grid1">
 					<div class="f-logo">
-				     <a href="../index.asp"><img src="../images/f-logo.png" alt=""></a>
+				     <a href="index.html"><img src="images/group four.png" alt=""></a>
 			        </div>
-					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words</p>
+					<p>Nhóm gồm 4 thành viên sáng lập, mỗi thành viên điều rất nhiệt tình trong công việc mình đảm nhận.</p>
 				</div>
 				<div class="footer-grid footer-grid2">
-					<h4>Contact</h4>
+					<h4>Liên Hệ</h4>
 				    <ul>
 						<li><i class="pin"> </i><div class="extra-wrap">
-							<p>2321 Street name,<br> City name,Country</p>
+							<p>392-394 Hoàng Văn Thụ, P.4<br> TP.HCM</p>
 						</div></li>
 						<li><i class="phone"> </i><div class="extra-wrap">
-							<p>+2321 256 652</p>
+							<p>+849 3939 3423</p>
 						</div></li>
 						<li><i class="mail"> </i><div class="extra-wrap1">
-							<p>info@comapnay name.com</p>
+							<p>lopaccp1508@gmail.com</p>
 						</div></li>
 						<li><i class="earth"> </i><div class="extra-wrap1">
-							<p>info@comapnay name.com</p>
+							<p>nhom4@abc.com</p>
 						</div></li>
 					</ul>
 				</div>
 				<div class="footer-grid footer-grid3">
-					<h4>Latest Tweets</h4>
+					<h4>Tiêu Chí</h4>
 					<div class="recent-tweet">
 						<div class="recent-tweet-icon">
 							<span> </span>
 						</div>
 						<div class="recent-tweet-info">
-							<p>Ds which don't look even slightly believable. If you are going to use a passage <a href="#"> 3 Hours Ago</a></p>
+							<p>Uy Tín</p>
 						</div>
 						<div class="clear"> </div>
 					</div>
@@ -222,16 +216,25 @@
 							<span> </span>
 						</div>
 						<div class="recent-tweet-info">
-							<p>Ds which don't look even slightly believable. If you are going to use a passage <a href="#"> 3 Hours Ago</a></p>
+							<p>Chất Lượng</p>
+						</div>
+						<div class="clear"> </div>
+					</div><br />
+                    <div class="recent-tweet2">
+						<div class="recent-tweet-icon">
+							<span> </span>
+						</div>
+						<div class="recent-tweet-info">
+							<p>Chuyên Nghiệp</p>
 						</div>
 						<div class="clear"> </div>
 					</div>
 				</div>
 				<div class="footer-grid footer-grid4">
-					<h4>News Letter</h4>
-					<p>Randomised words which don't look even slightly believable. If you are going to use a passage</p>
+					<h4>Nhận Tin Mới</h4>
+					<p>Nhập địa chỉ Email để nhận được những tin tức mới nhất về công nghệ</p>
 					<form>
-						<input type="text" value="Địa chỉ Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Địa chỉ Email';}">
+						<input type="text" value="Email Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address';}">
 						<input type="submit" value="">
 					</form>
 				</div>
@@ -241,7 +244,7 @@
 		<div class="footer-bottom">
 	 		  <div class="wrap">
 	     	  	<div class="copy">
-				   <p>© 2014 Template by <a href="http://gr4.com" target="_blank"> gr4</a></p>
+				   <p>© 2016 Group Four Computer</p>
 			    </div>
 			    <div class="social">	
 				   <ul>	
