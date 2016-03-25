@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-<title>Website bán máy tính | Laptop :: gr4</title>
+<title>Website bán máy tính | Laptop :: Groupfour</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -68,37 +68,41 @@
 				 <div class="cont1 span_2_of_g1">
 				      <div class="gallery">
 			       <ul>
-				<li class="active">
+				<li>
 					<a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
 					<h3>Duis autem vel eumter</h3>
 				</li>
-				<li class="last">
+				<li>
+					<a href="../images/t-pic8.jpg"><img src="../images/pic8.jpg" alt=""/></a>
+				  <h3>Duis autem vel eumter</h3>
+				</li>
+                <li class="last">
 					<a href="../images/t-pic9.jpg"><img src="../images/pic9.jpg" alt=""/></a>
-				  <h3>augue duis dolore te</h3>
+					<h3>Duis autem vel eumter</h3>
 				</li>
 				<li>
 					<a href="../images/t-pic10.jpg"><img src="../images/pic10.jpg" alt=""/></a>
-					<h3>parum claram, anteposuerit</h3>
+					<h3>Duis autem vel eumter</h3>
 				</li>
 				<li>
-					<a href="../images/pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>
-					<h3>seacula quarta decima</h3>
+					<a href="../images/t-pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>
+					<h3>Duis autem vel eumter</h3>
 				</li>
 				<li class="last">
-					<a href="../images/pic12.jpg"><img src="../images/pic12.jpg" alt=""/></a>
-					<h3>mutationem consuetudium </h3>
+					<a href="../images/t-pic12.jpg"><img src="../images/pic12.jpg" alt=""/></a>
+					<h3>Duis autem vel eumter</h3>
 				</li>
-					<li>
+				<li>
 					<a href="../images/t-pic13.jpg"><img src="../images/pic13.jpg" alt=""/></a>
-					<h3>eleifend option congue</h3>
+					<h3>Duis autem vel eumter</h3>
 				</li>
 				<li>
 					<a href="../images/t-pic14.jpg"><img src="../images/pic14.jpg" alt=""/></a>
-					<h3>imperdiet doming</h3>
+					<h3>Duis autem vel eumter</h3>
 				</li>
 				<li class="last">
 					<a href="../images/t-pic15.jpg"><img src="../images/pic15.jpg" alt=""/></a>
-					<h3>usto odio dignissim qui </h3>
+					<h3>Duis autem vel eumter</h3>
 				</li>
 			   <div class="clear"></div>
 			</ul>

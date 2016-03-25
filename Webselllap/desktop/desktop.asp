@@ -71,48 +71,48 @@
 				 <div class="gallery">
 			       <ul>
 						<li>
-							<a href="../images/t-pic15.jpg"><img src="../images/pic15.jpg" alt=""/></a>
-							<h3>Duis autem vel eumter</h3>
-						</li>
-						<li>
-							<a href="../images/t-pic8.jpg"><img src="../images/pic8.jpg" alt=""/></a>
-							<h3>uffered alteration</h3>
-						</li>
-						<li class="last">
-							<a href="../images/t-pic9.jpg"><img src="../images/pic9.jpg" alt=""/></a>
-							<h3>augue duis dolore te</h3>
-						</li>
-						<li>
-							<a href="../images/t-pic10.jpg"><img src="../images/pic10.jpg" alt=""/></a>
-							<h3>parum claram, anteposuerit</h3>
-						</li>
-						<li>
-							<a href="../images/pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>
-							<h3>seacula quarta decima</h3>
-						</li>
-						<li class="last">
-							<a href="../images/pic12.jpg"><img src="../images/pic12.jpg" alt=""/></a>
-							<h3>mutationem consuetudium </h3>
-						</li>
-							<li>
-							<a href="../images/t-pic13.jpg"><img src="../images/pic13.jpg" alt=""/></a>
-							<h3>eleifend option congue</h3>
-						</li>
-						<li>
-							<a href="../images/t-pic14.jpg"><img src="../images/pic14.jpg" alt=""/></a>
-							<h3>imperdiet doming</h3>
-						</li>
-						<li class="last">
-							<a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
-							<h3>usto odio dignissim qui </h3>
-						</li>
+					<a href="../images/t-pic10.jpg"><img src="../images/pic10.jpg" alt=""/></a>
+					<h3>Duis autem vel eumter</h3>
+				</li>
+				<li>
+					<a href="../images/t-pic15.jpg"><img src="../images/pic15.jpg" alt=""/></a>
+				  <h3>Duis autem vel eumter</h3>
+				</li>
+                <li class="last">
+					<a href="../images/t-pic13.jpg"><img src="../images/pic13.jpg" alt=""/></a>
+					<h3>Duis autem vel eumter</h3>
+				</li>
+				<li>
+					<a href="../images/t-pic8.jpg"><img src="../images/pic8.jpg" alt=""/></a>
+					<h3>Duis autem vel eumter</h3>
+				</li>
+				<li>
+					<a href="../images/t-pic12.jpg"><img src="../images/pic12.jpg" alt=""/></a>
+					<h3>Duis autem vel eumter</h3>
+				</li>
+				<li class="last">
+					<a href="../images/t-pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>
+					<h3>Duis autem vel eumter</h3>
+				</li>
+				<li>
+					<a href="../images/t-pic9.jpg"><img src="../images/pic9.jpg" alt=""/></a>
+					<h3>Duis autem vel eumter</h3>
+				</li>
+				<li>
+					<a href="../images/t-pic14.jpg"><img src="../images/pic14.jpg" alt=""/></a>
+					<h3>Duis autem vel eumter</h3>
+				</li>
+				<li class="last">
+					<a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
+					<h3>Duis autem vel eumter</h3>
+				</li>
 					   <div class="clear"></div>
 				</ul>
 		</div>
 		    <ul class="dc_pagination dc_paginationA dc_paginationA06">
 			  <li><a href="#" class="previous">Previous</a></li>
-			  <li><a href="#">1</a></li>
-			  <li><a href="#" class="current">2</a></li>
+			  <li><a href="#" class="current">1</a></li>
+			  <li><a href="#">2</a></li>
 			  <li><a href="#">3</a></li>
 			  <li><a href="#">4</a></li>
 			  <li><a href="#">5</a></li>
@@ -124,24 +124,20 @@
 		</div>
         <div class="labout span_1_of_g1">
 		  <div class="project-list">
-	     	<h4>Categories</h4>
+	     	<h4>Thể loại</h4>
 			<ul class="blog-list">
-				<li><a href="#">idignissim </a></li>
-				<li><a href="#">usto odio </a></li>
-				<li><a href="#">anteposformas</a></li>
-				<li><a href="#">litterarum</a></li>
-				<li><a href="#">humanitatis</a></li>
+				<li><a href="#">Dell</a></li>
+				<li><a href="#">HP</a></li>
+				<li><a href="#">Apple</a></li>
+				<li><a href="#">Acer</a></li>
+				<li><a href="#">Asus</a></li>
 			</ul>
 			<ul class="blog-list">
-				<li><a href="#">litterarum</a></li>
-				<li><a href="#">humanitatis</a></li>
-				<li><a href="#">idignissim </a></li>
-				<li><a href="#">usto odio </a></li>
-				<li><a href="#">anteposformas</a></li>
+				<li><a href="#">Lenovo</a></li>
 			</ul>
 			<div class="clear"></div>
 		   </div>
-		   <div class="project-list1">
+		   <!--<div class="project-list1">
 	     	<h4>Archives</h4>
 			<ul class="blog-list">
 				<li><a href="#">idignissim </a></li>
@@ -158,7 +154,7 @@
 				<li><a href="#">anteposformas</a></li>
 			</ul>
 			<div class="clear"></div>
-		   </div>
+		   </div>-->
 		   <div class="project-list2">
 	     	<h4>Tags</h4>
 			<ul>
