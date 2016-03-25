@@ -113,7 +113,7 @@
 			  <li><a href="#2">2</a></li>
 			  <li><a href="#3">3</a></li>
 			  <li><a href="#4">4</a></li>
-			  <li><a href="#5">5</a><		/li>
+			  <li><a href="#5">5</a></li>
 			  <li><a href="#">...</a></li>
 			  <li><a href="#19">19</a></li>
 			  <li><a href="#20.htm">20</a></li>
@@ -122,24 +122,21 @@
 		</div>
         <div class="labout span_1_of_g1">
 		  <div class="project-list">
-	     	<h4>Categories</h4>
+	     	<h4>Thể loại</h4>
 			<ul class="blog-list">
-				<li><a href="#">idignissim </a></li>
-				<li><a href="#">usto odio </a></li>
-				<li><a href="#">anteposformas</a></li>
-				<li><a href="#">litterarum</a></li>
-				<li><a href="#">humanitatis</a></li>
+				<li><a href="#">Dell</a></li>
+				<li><a href="#">HP</a></li>
+				<li><a href="#">Apple</a></li>
+				<li><a href="#">Acer</a></li>
+				<li><a href="#">Asus</a></li>
 			</ul>
 			<ul class="blog-list">
-				<li><a href="#">litterarum</a></li>
-				<li><a href="#">humanitatis</a></li>
-				<li><a href="#">idignissim </a></li>
-				<li><a href="#">usto odio </a></li>
-				<li><a href="#">anteposformas</a></li>
+				<li><a href="#">Lenovo</a></li>
+                <li><a href="#">Vaio</a></li>
 			</ul>
 			<div class="clear"></div>
 		   </div>
-		   <div class="project-list1">
+		  <!-- <div class="project-list1">
 	     	<h4>Archives</h4>
 			<ul class="blog-list">
 				<li><a href="#">idignissim </a></li>
@@ -156,7 +153,7 @@
 				<li><a href="#">anteposformas</a></li>
 			</ul>
 			<div class="clear"></div>
-		   </div>
+		   </div>-->
 		   <div class="project-list2">
 	     	<h4>Tags</h4>
 			<ul>
