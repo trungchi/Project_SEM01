@@ -70,8 +70,8 @@
 				      <div class="gallery">
 			       <ul>
 				<li>
-					<a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
-					<h3>Duis autem vel eumter</h3>
+					<a class="thumb" href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
+					<h3>Dell đỏ</h3>
 				</li>
 				<li>
 					<a href="../images/t-pic8.jpg"><img src="../images/pic8.jpg" alt=""/></a>
