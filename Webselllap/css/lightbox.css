@@ -11,6 +11,19 @@
  * @license CCAttribution-ShareAlike 2.5 Brazil - http://creativecommons.org/licenses/by-sa/2.5/br/deed.en_US
  * @example Visit http://leandrovieira.com/projects/jquery/lightbox/ for more informations about this jQuery plugin
  */
+ #caibang 
+ {		
+ 	
+	
+ }
+ #info_product 
+ {
+	 border:#009;
+	 font-size:18px;
+	 color:#F60;
+	 margin:auto;
+	 padding-right: 500px;
+ }
 #jquery-overlay {
 	position: absolute;
 	top: 0;
