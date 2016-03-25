@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-﻿<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-=======
->>>>>>> origin/master
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -78,35 +69,35 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="wrap">
 				<div class="footer-grid footer-grid1">
 					<div class="f-logo">
-				     <a href="index.html"><img src="images/group four.png" alt=""></a>
+				     <a href="index.html"><img src="images/f-logo.png" alt=""></a>
 			        </div>
-					<p>Nhóm gồm 4 thành viên sáng lập, mỗi thành viên điều rất nhiệt tình trong công việc mình đảm nhận.</p>
+					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words</p>
 				</div>
 				<div class="footer-grid footer-grid2">
-					<h4>Liên Hệ</h4>
+					<h4>Contact</h4>
 				    <ul>
 						<li><i class="pin"> </i><div class="extra-wrap">
-							<p>392-394 Hoàng Văn Thụ, P.4<br> TP.HCM</p>
+							<p>2321 Street name,<br> City name,Country</p>
 						</div></li>
 						<li><i class="phone"> </i><div class="extra-wrap">
-							<p>+849 3939 3423</p>
+							<p>+2321 256 652</p>
 						</div></li>
 						<li><i class="mail"> </i><div class="extra-wrap1">
-							<p>lopaccp1508@gmail.com</p>
+							<p>info@comapnay name.com</p>
 						</div></li>
 						<li><i class="earth"> </i><div class="extra-wrap1">
-							<p>nhom4@abc.com</p>
+							<p>info@comapnay name.com</p>
 						</div></li>
 					</ul>
 				</div>
 				<div class="footer-grid footer-grid3">
-					<h4>Tiêu Chí</h4>
+					<h4>Latest Tweets</h4>
 					<div class="recent-tweet">
 						<div class="recent-tweet-icon">
 							<span> </span>
 						</div>
 						<div class="recent-tweet-info">
-							<p>Uy Tín</p>
+							<p>Ds which don't look even slightly believable. If you are going to use a passage <a href="#"> 3 Hours Ago</a></p>
 						</div>
 						<div class="clear"> </div>
 					</div>
@@ -115,23 +106,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<span> </span>
 						</div>
 						<div class="recent-tweet-info">
-							<p>Chất Lượng</p>
-						</div>
-						<div class="clear"> </div>
-					</div><br />
-                    <div class="recent-tweet2">
-						<div class="recent-tweet-icon">
-							<span> </span>
-						</div>
-						<div class="recent-tweet-info">
-							<p>Chuyên Nghiệp</p>
+							<p>Ds which don't look even slightly believable. If you are going to use a passage <a href="#"> 3 Hours Ago</a></p>
 						</div>
 						<div class="clear"> </div>
 					</div>
 				</div>
 				<div class="footer-grid footer-grid4">
-					<h4>Nhận Tin Mới</h4>
-					<p>Nhập địa chỉ Email để nhận được những tin tức mới nhất về công nghệ</p>
+					<h4>News Letter</h4>
+					<p>Randomised words which don't look even slightly believable. If you are going to use a passage</p>
 					<form>
 						<input type="text" value="Email Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address';}">
 						<input type="submit" value="">
@@ -143,7 +125,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="footer-bottom">
 	 		  <div class="wrap">
 	     	  	<div class="copy">
-				   <p>© 2016 Group Four Computer</p>
+				   <p>© 2014 Template by <a href="http://w3layouts.com" target="_blank"> w3layouts</a></p>
 			    </div>
 			    <div class="social">	
 				   <ul>	

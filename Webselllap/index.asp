@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-<title>Website bán máy tính | Home :: w3layouts</title>
+<title>Website bán máy tính | Trang chủ</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -52,18 +52,15 @@
 
 <body>
 <div class="wrap"> 
+	
     <div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
-          <form class="thanh tìm kiếm" >
-    	  <input type="text" id="tìm kiếm" placeholder="Nhập từ khóa..." size="50"/>
-    	  <input type="submit" value="Tìm kiếm" id="submit" />
             <a rel="nofollow" href="#" style="color:dodgerblue">
                 <span>Đăng ký/</span>
             </a>
             <a rel="nofollow" href="dangnhapform.asp" style="color:dodgerblue">
                 <span>Đăng Nhập</span>
             </a>
-   	   </form>
-     </div>
+        </div>
 	<div class="header-top">
 	        <div class="logo">
 				<a href="index.asp"><img src="images/logo.png" alt=""/></a>
@@ -72,45 +69,45 @@
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
 					<li class="active"><a href="index.asp">Trang chủ</a></li>
-					<li><a href="laptop.asp">Laptop</a>
+					<li><a href="laptop/laptop.asp">Laptop</a>
 						<ul>
-							<li><a href="laptop.asp">DELL</a></li>
-							<li><a href="laptop.asp">HP</a></li>
-							<li><a href="laptop.asp">APPLE</a></li>
-							<li><a href="laptop.asp">ACER</a></li>
-							<li><a href="laptop.asp">ASUS</a></li>
-							<li><a href="laptop.asp">LENOVO</a></li>
-							<li><a href="laptop.asp">VAIO</a></li>
+							<li><a href="laptop/laptop.asp">DELL</a></li>
+							<li><a href="laptop/laptop.asp">HP</a></li>
+							<li><a href="laptop/laptop.asp">APPLE</a></li>
+							<li><a href="laptop/laptop.asp">ACER</a></li>
+							<li><a href="laptop/laptop.asp">ASUS</a></li>
+							<li><a href="laptop/laptop.asp">LENOVO</a></li>
+							<li><a href="laptop/laptop.asp">VAIO</a></li>
 						</ul>
 					</li>
-					<li><a href="desktop.asp">Desktop</a>
+					<li><a href="desktop/desktop.asp">Desktop</a>
 						<ul>
-							<li><a href="desktop.asp">DELL</a></li>
-							<li><a href="desktop.asp">HP</a></li>
-							<li><a href="desktop.asp">APPLE</a></li>
-							<li><a href="desktop.asp">ACER</a></li>
-							<li><a href="desktop.asp">ASUS</a></li>
-							<li><a href="desktop.asp">LENOVO</a></li>
+							<li><a href="desktop/desktop.asp">DELL</a></li>
+							<li><a href="desktop/desktop.asp">HP</a></li>
+							<li><a href="desktop/desktop.asp">APPLE</a></li>
+							<li><a href="desktop/desktop.asp">ACER</a></li>
+							<li><a href="desktop/desktop.asp">ASUS</a></li>
+							<li><a href="desktop/desktop.asp">LENOVO</a></li>
 						</ul>
 					</li>
-					<li><a href="linhkien.asp">Linh kiện</a>
+					<li><a href="linhkien/linhkien.asp">Linh kiện</a>
 						<ul>
-							<li><a href="linhkien.asp">RAM</a></li>
-							<li><a href="linhkien.asp">Card VGA</a></li>
-							<li><a href="linhkien.asp">Mainboard</a></li>
-							<li><a href="linhkien.asp">Sound card (card âm thanh)</a></li>
+							<li><a href="linhkien/linhkien.asp">RAM</a></li>
+							<li><a href="linhkien/linhkien.asp">Card VGA</a></li>
+							<li><a href="linhkien/linhkien.asp">Mainboard</a></li>
+							<li><a href="linhkien/linhkien.asp">Sound card (card âm thanh)</a></li>
 						</ul>
 					</li>
-					<li><a href="phukien.asp">Phụ kiện</a>
+					<li><a href="phukien/phukien.asp">Phụ kiện</a>
 						<ul>
-							<li><a href="phukien.asp">Headphones</a></li>
-							<li><a href="phukien.asp">Earphones</a></li>
-							<li><a href="phukien.asp">Chuột</a></li>
-							<li><a href="phukien.asp">Keyboard (bàn phím)</a></li>
-							<li><a href="phukien.asp">USB</a></li>
+							<li><a href="phukien/phukien.asp">Headphones</a></li>
+							<li><a href="phukien/phukien.asp">Earphones</a></li>
+							<li><a href="phukien/phukien.asp">Chuột</a></li>
+							<li><a href="phukien/phukien.asp">Keyboard (bàn phím)</a></li>
+							<li><a href="phukien/phukien.asp">USB</a></li>
 						</ul>
 					</li>
-					<li><a href="lienhe.asp">Liên hệ</a></li>
+					<li><a href="lienhe/lienhe.asp">Liên hệ</a></li>
 				</ul>
 				<script type="text/javascript" src="js/nav.js"></script>
 			</div><!-- end h_menu4 -->
@@ -392,7 +389,7 @@
 					<h4>Nhận Tin Mới</h4>
 					<p>Nhập địa chỉ Email để nhận được những tin tức mới nhất về công nghệ</p>
 					<form>
-						<input type="text" value="Địa chỉ Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Địa chỉ Email';}">
+						<input type="text" value="Địa chỉ Email" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Địa chỉ Email';}">
 						<input type="submit" value="">
 					</form>
 				</div>
@@ -414,5 +411,6 @@
 			    <div class="clear"></div>
 			  </div>
        </div>
+       
 </body>
 </html>

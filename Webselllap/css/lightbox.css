@@ -32,9 +32,22 @@
 #lightbox-container-image-box {
 	position: relative;
 	background-color: #fff;
-	width: 250px;
+	width: 300px;
 	height: 250px;
 	margin: 0 auto;
+}
+#button-muahang
+{
+	color:#00F;
+	margin: 20px;
+}
+
+#button-muahang button
+{
+	color:#FFF;
+	width: 150px;
+	height: 30px;
+	background-color: #900;
 }
 #lightbox-container-image { padding: 10px; }
 #lightbox-loading {
