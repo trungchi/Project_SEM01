@@ -1,68 +1,87 @@
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
 <head>
-<title>Website bán máy tính | Linh kiện :: w3layouts</title>
+<title>Website bán máy tính | Linhkien :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Lato:400,300,600,700,800' rel='stylesheet' type='text/css'>
-<script src="../js/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
 
-<script type="text/javascript" src="../js/jquery.lightbox.js"></script>
+<script type="text/javascript" src="js/jquery.lightbox.js"></script>
 <link rel="stylesheet" type="text/css" href="css/lightbox.css" media="screen" />
   <script type="text/javascript">
     $(function() {
         $('.gallery a').lightBox();
     });
    </script>
+    <style>
+        .gocphaimanhinh {
+            text-align:right; 
+            line-height:20px;
+            margin: 5px 5px 7px 9px        
+                        }
+    </style>
 </head>
 
 <body>
-<div class="wrap"> 
+<div class="wrap">
+    <div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
+          <form class="thanh tìm kiếm" >
+    	  <input type="text" id="tìm kiếm" placeholder="Nhập từ khóa..." size="50"/>
+    	  <input type="submit" value="Tìm kiếm" id="submit" />
+            <a rel="nofollow" href="#" style="color:dodgerblue">
+                <span>Đăng ký/</span>
+            </a>
+            <a rel="nofollow" href="dangnhapform.asp" style="color:dodgerblue">
+                <span>Đăng Nhập</span>
+            </a>
+   	   </form>
+     </div> 
 	<div class="pages-top">
 	        <div class="logo">
-				<a href="../index.asp"><img src="../images/logo.png" alt=""/></a>
+				<a href="index.asp"><img src="images/logo.png" alt=""/></a>
 			 </div>
 		     <div class="h_menu4"><!-- start h_menu4 -->
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-					<li><a href="../index.asp">Trang chủ</a></li>
-					<li><a href="../laptop/laptop.asp">Laptop</a>
+					<li><a href="index.asp">Trang chủ</a></li>
+					<li><a href="laptop.asp">Laptop</a>
 						<ul>
-							<li><a href="../laptop/laptop.asp">DELL</a></li>
-							<li><a href="../laptop/laptop.asp">HP</a></li>
-							<li><a href="../laptop/laptop.asp">APPLE</a></li>
-							<li><a href="../laptop/laptop.asp">ACER</a></li>
-							<li><a href="../laptop/laptop.asp">ASUS</a></li>
-							<li><a href="../laptop/laptop.asp">LENOVO</a></li>
-							<li><a href="../laptop/laptop.asp">VAIO</a></li>
+							<li><a href="laptop.asp">DELL</a></li>
+							<li><a href="laptop.asp">HP</a></li>
+							<li><a href="laptop.asp">APPLE</a></li>
+							<li><a href="laptop.asp">ACER</a></li>
+							<li><a href="laptop.asp">ASUS</a></li>
+							<li><a href="laptop.asp">LENOVO</a></li>
+							<li><a href="laptop.asp">VAIO</a></li>
 						</ul>
 					</li>
-					<li><a href="../desktop/desktop.asp">Desktop</a>
+					<li><a href="desktop.asp">Desktop</a>
 						<ul>
-							<li><a href="../desktop/desktop.asp">DELL</a></li>
-							<li><a href="../desktop/desktop.asp">HP</a></li>
-							<li><a href="../desktop/desktop.asp">APPLE</a></li>
-							<li><a href="../desktop/desktop.asp">ACER</a></li>
-							<li><a href="../desktop/desktop.asp">ASUS</a></li>
-							<li><a href="../desktop/desktop.asp">LENOVO</a></li>
+							<li><a href="desktop.asp">DELL</a></li>
+							<li><a href="desktop.asp">HP</a></li>
+							<li><a href="desktop.asp">APPLE</a></li>
+							<li><a href="desktop.asp">ACER</a></li>
+							<li><a href="desktop.asp">ASUS</a></li>
+							<li><a href="desktop.asp">LENOVO</a></li>
 						</ul>
 					</li>
-					<li class="active"><a href="../linhkien/linhkien.asp">Linh kiện</a>
+					<li class="active"><a href="linhkien.asp">Linh kiện</a>
 					
 					</li>
-					<li><a href="../phukien/phukien.asp">Phụ kiện</a>
+					<li><a href="phukien.asp">Phụ kiện</a>
 						<ul>
-							<li><a href="../phukien/phukien.asp">Headphones</a></li>
-							<li><a href="../phukien/phukien.asp">Earphones</a></li>
-							<li><a href="../phukien/phukien.asp">Chuột</a></li>
-							<li><a href="../phukien/phukien.asp">Keyboard (bàn phím)</a></li>
-							<li><a href="../phukien/phukien.asp">USB</a></li>
+							<li><a href="phukien.asp">Headphones</a></li>
+							<li><a href="phukien.asp">Earphones</a></li>
+							<li><a href="phukien.asp">Chuột</a></li>
+							<li><a href="phukien.asp">Keyboard (bàn phím)</a></li>
+							<li><a href="phukien.asp">USB</a></li>
 						</ul>
 					</li>
-					<li><a href="../lienhe/lienhe.asp">Liên hệ</a></li>
+					<li><a href="lienhe.asp">Liên hệ</a></li>
 				</ul>
-				<script type="text/javascript" src="../js/nav.js"></script>
+				<script type="text/javascript" src="js/nav.js"></script>
 			</div><!-- end h_menu4 -->
 			<div class="clear"></div>
 		</div><!-- end header_main4 -->
@@ -72,10 +91,10 @@
 	 	   <div class="pages">
 	 	   	 <div class="blog-top">
 			  <div class="col_1_of_b span_1_of_b">
-					<h3><a href="single.asp">Lorem Ipsum is simply</a></h3>
-					<a href="single.asp"><img src="../images/b1.jpg" alt=""></a>
+					<h3><a href="single.html">Lorem Ipsum is simply</a></h3>
+					<a href="single.html"><img src="images/b1.jpg" alt=""></a>
 					<div class="blog-poast-admin">
-						<a href="#"><img src="../images/b1_small.jpg" title="admin"></a>
+						<a href="#"><img src="images/b1_small.jpg" title="admin"></a>
 					</div>
 					<div class="blog-poast-info">
 						<ul>
@@ -88,10 +107,10 @@
 					<div class="button"><a href="#">Read More</a></div>
 				</div>
 				<div class="col_1_of_b span_1_of_b">
-					<h3><a href="single.asp">Lorem Ipsum is simply</a></h3>
-					<a href="single.asp"><img src="../images/b2.jpg" alt=""></a>
+					<h3><a href="single.html">Lorem Ipsum is simply</a></h3>
+					<a href="single.html"><img src="images/b2.jpg" alt=""></a>
 					<div class="blog-poast-admin">
-						<a href="#"><img src="../images/b2_small.jpg" title="admin"></a>
+						<a href="#"><img src="images/b2_small.jpg" title="admin"></a>
 					</div>
 					<div class="blog-poast-info">
 						<ul>
@@ -107,10 +126,10 @@
 			  </div>
 			  <div class="blog-top">
 			  <div class="col_1_of_b span_1_of_b">
-					<h3><a href="single.asp">Lorem Ipsum is simply</a></h3>
-					<a href="single.asp"><img src="../images/b3.jpg" alt=""></a>
+					<h3><a href="single.html">Lorem Ipsum is simply</a></h3>
+					<a href="single.html"><img src="images/b3.jpg" alt=""></a>
 					<div class="blog-poast-admin">
-						<a href="#"><img src="../images/b3_small.jpg" title="admin"></a>
+						<a href="#"><img src="images/b3_small.jpg" title="admin"></a>
 					</div>
 					<div class="blog-poast-info">
 						<ul>
@@ -123,10 +142,10 @@
 					<div class="button"><a href="#">Read More</a></div>
 				</div>
 				<div class="col_1_of_b span_1_of_b">
-					<h3><a href="single.asp">Lorem Ipsum is simply</a></h3>
-					<a href="single.asp"><img src="../images/b4.jpg" alt=""></a>
+					<h3><a href="single.html">Lorem Ipsum is simply</a></h3>
+					<a href="single.html"><img src="images/b4.jpg" alt=""></a>
 					<div class="blog-poast-admin">
-						<a href="#"><img src="../images/b4_small.jpg" title="admin"></a>
+						<a href="#"><img src="images/b4_small.jpg" title="admin"></a>
 					</div>
 					<div class="blog-poast-info">
 						<ul>
@@ -142,10 +161,10 @@
 			  </div>
 			  <div class="blog-top">
 			  <div class="col_1_of_b span_1_of_b">
-					<h3><a href="single.asp">Lorem Ipsum is simply</a></h3>
-					<a href="single.asp"><img src="../images/b5.jpg" alt=""></a>
+					<h3><a href="single.html">Lorem Ipsum is simply</a></h3>
+					<a href="single.html"><img src="images/b5.jpg" alt=""></a>
 					<div class="blog-poast-admin">
-						<a href="#"><img src="../images/b5_small.jpg" title="admin"></a>
+						<a href="#"><img src="images/b5_small.jpg" title="admin"></a>
 					</div>
 					<div class="blog-poast-info">
 						<ul>
@@ -158,10 +177,10 @@
 					<div class="button"><a href="#">Read More</a></div>
 				</div>
 				<div class="col_1_of_b span_1_of_b">
-					<h3><a href="single.asp">Lorem Ipsum is simply</a></h3>
-					<a href="single.asp"><img src="../images/b6.jpg" alt=""></a>
+					<h3><a href="single.html">Lorem Ipsum is simply</a></h3>
+					<a href="single.html"><img src="images/b6.jpg" alt=""></a>
 					<div class="blog-poast-admin">
-						<a href="#"><img src="../images/b6_small.jpg" title="admin"></a>
+						<a href="#"><img src="images/b6_small.jpg" title="admin"></a>
 					</div>
 					<div class="blog-poast-info">
 						<ul>
@@ -182,35 +201,35 @@
 			<div class="wrap">
 				<div class="footer-grid footer-grid1">
 					<div class="f-logo">
-				     <a href="index.html"><img src="../images/f-logo.png" alt=""></a>
+				     <a href="index.html"><img src="images/group four.png" alt=""></a>
 			        </div>
-					<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words</p>
+					<p>Nhóm gồm 4 thành viên sáng lập, mỗi thành viên điều rất nhiệt tình trong công việc mình đảm nhận.</p>
 				</div>
 				<div class="footer-grid footer-grid2">
-					<h4>Contact</h4>
+					<h4>Liên Hệ</h4>
 				    <ul>
 						<li><i class="pin"> </i><div class="extra-wrap">
-							<p>2321 Street name,<br> City name,Country</p>
+							<p>392-394 Hoàng Văn Thụ, P.4<br> TP.HCM</p>
 						</div></li>
 						<li><i class="phone"> </i><div class="extra-wrap">
-							<p>+2321 256 652</p>
+							<p>+849 3939 3423</p>
 						</div></li>
 						<li><i class="mail"> </i><div class="extra-wrap1">
-							<p>info@comapnay name.com</p>
+							<p>lopaccp1508@gmail.com</p>
 						</div></li>
 						<li><i class="earth"> </i><div class="extra-wrap1">
-							<p>info@comapnay name.com</p>
+							<p>nhom4@abc.com</p>
 						</div></li>
 					</ul>
 				</div>
 				<div class="footer-grid footer-grid3">
-					<h4>Latest Tweets</h4>
+					<h4>Tiêu Chí</h4>
 					<div class="recent-tweet">
 						<div class="recent-tweet-icon">
 							<span> </span>
 						</div>
 						<div class="recent-tweet-info">
-							<p>Ds which don't look even slightly believable. If you are going to use a passage <a href="#"> 3 Hours Ago</a></p>
+							<p>Uy Tín</p>
 						</div>
 						<div class="clear"> </div>
 					</div>
@@ -219,14 +238,23 @@
 							<span> </span>
 						</div>
 						<div class="recent-tweet-info">
-							<p>Ds which don't look even slightly believable. If you are going to use a passage <a href="#"> 3 Hours Ago</a></p>
+							<p>Chất Lượng</p>
+						</div>
+						<div class="clear"> </div>
+					</div><br />
+                    <div class="recent-tweet2">
+						<div class="recent-tweet-icon">
+							<span> </span>
+						</div>
+						<div class="recent-tweet-info">
+							<p>Chuyên Nghiệp</p>
 						</div>
 						<div class="clear"> </div>
 					</div>
 				</div>
 				<div class="footer-grid footer-grid4">
-					<h4>News Letter</h4>
-					<p>Randomised words which don't look even slightly believable. If you are going to use a passage</p>
+					<h4>Nhận Tin Mới</h4>
+					<p>Nhập địa chỉ Email để nhận được những tin tức mới nhất về công nghệ</p>
 					<form>
 						<input type="text" value="Email Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address';}">
 						<input type="submit" value="">
@@ -238,7 +266,7 @@
 		<div class="footer-bottom">
 	 		  <div class="wrap">
 	     	  	<div class="copy">
-				   <p>© 2014 Template by <a href="http://w3layouts.com" target="_blank"> w3layouts</a></p>
+				   <p>© 2016 Group Four Computer</p>
 			    </div>
 			    <div class="social">	
 				   <ul>	
