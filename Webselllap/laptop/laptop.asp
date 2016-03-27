@@ -76,11 +76,11 @@
 					<a href="../images/t-pic9.jpg"><img src="../images/pic9.jpg" alt=""/></a>
 				  <h3>augue duis dolore te</h3>
 				</li>
-				<li>
+				<li class="last">
 					<a href="../images/t-pic10.jpg"><img src="../images/pic10.jpg" alt=""/></a>
 					<h3>parum claram, anteposuerit</h3>
 				</li>
-				<li>
+				<li class="last">
 					<a href="../images/pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>
 					<h3>seacula quarta decima</h3>
 				</li>
@@ -88,11 +88,11 @@
 					<a href="../images/pic12.jpg"><img src="../images/pic12.jpg" alt=""/></a>
 					<h3>mutationem consuetudium </h3>
 				</li>
-					<li>
+					<li class="last">
 					<a href="../images/t-pic13.jpg"><img src="../images/pic13.jpg" alt=""/></a>
 					<h3>eleifend option congue</h3>
 				</li>
-				<li>
+				<li class="last">
 					<a href="../images/t-pic14.jpg"><img src="../images/pic14.jpg" alt=""/></a>
 					<h3>imperdiet doming</h3>
 				</li>
@@ -225,7 +225,7 @@
 					<h4>News Letter</h4>
 					<p>Randomised words which don't look even slightly believable. If you are going to use a passage</p>
 					<form>
-						<input type="text" value="Địa chỉ Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Địa chỉ Email';}">
+						<input type="text" value="Địa chỉ Email" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Địa chỉ Email';}">
 						<input type="submit" value="">
 					</form>
 				</div>

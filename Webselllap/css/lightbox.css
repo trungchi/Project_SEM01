@@ -40,6 +40,7 @@
 {
 	color:#00F;
 	margin: 20px;
+	padding-bottom: 0px;
 }
 
 #button-muahang button
@@ -49,7 +50,10 @@
 	height: 30px;
 	background-color: #900;
 }
-#lightbox-container-image { padding: 10px; }
+#lightbox-container-image 
+{
+	
+}
 #lightbox-loading {
 	position: absolute;
 	top: 40%;
