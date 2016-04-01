@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-<title>Free Emmeline Website Template | Pages :: w3layouts</title>
+<title>Website bán máy tính | Phukien :: Groupfour</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -18,67 +18,72 @@
         .gocphaimanhinh {
             text-align:right; 
             line-height:20px;
-            margin: 5px 5px 7px 9px;     
+            margin: 5px 5px 7px 9px;
+            color:gold     
                         }
     </style>
 </head>
+
 <body>
 <div class="wrap"> 
     <div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
-            <a rel="nofollow" href="create.asp" style="color:red ">
-                <span><ins>Đăng ký</ins></span> /
-            </a>
-            <a rel="nofollow" href="login.asp" style="color:red ">
-                <span><ins>Đăng Nhập</ins></span>
-            </a>
-        </div>
+            <%
+'Check if user is logged in
+if Session("name") = "" then
+	'If not, go to login page
+	Response.Redirect("login.asp")
+else
+	'If, build page
+	Response.write("Chào " & Session("name") & "," & "&nbsp;" & "<a href=index.asp style=color:red><ins>Thoát<ins></a>")
+end if
+%>
 	<div class="pages-top">
 	        <div class="logo">
-				<a href="../index.asp"><img src="../images/logo.png" alt=""/></a>
+				<a href="../indexTV.asp"><img src="../images/logo.png" alt=""/></a>
 			 </div>
 		     <div class="h_menu4"><!-- start h_menu4 -->
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-					<li><a href="../index.asp">Trang chủ</a></li>
-					<li><a href="../laptop/laptop.asp">Laptop</a>
+					<li><a href="../indexTV.asp">Trang chủ</a></li>
+					<li><a href="../laptop/laptopTV.asp">Laptop</a>
 						<ul>
-							<li><a href="../laptop/laptop.asp">DELL</a></li>
-							<li><a href="../laptop/laptop.asp">HP</a></li>
-							<li><a href="../laptop/laptop.asp">APPLE</a></li>
-							<li><a href="../laptop/laptop.asp">ACER</a></li>
-							<li><a href="../laptop/laptop.asp">ASUS</a></li>
-							<li><a href="../laptop/laptop.asp">LENOVO</a></li>
-							<li><a href="../laptop/laptop.asp">VAIO</a></li>
+							<li><a href="../laptop/laptopTV.asp">DELL</a></li>
+							<li><a href="../laptop/laptopTV.asp">HP</a></li>
+							<li><a href="../laptop/laptopTV.asp">APPLE</a></li>
+							<li><a href="../laptop/laptopTV.asp">ACER</a></li>
+							<li><a href="../laptop/laptopTV.asp">ASUS</a></li>
+							<li><a href="../laptop/laptopTV.asp">LENOVO</a></li>
+							<li><a href="../laptop/laptopTV.asp">VAIO</a></li>
 						</ul>
 					</li>
-					<li><a href="../desktop/desktop.asp">Desktop</a>
+					<li><a href="../desktop/desktopTV.asp">Desktop</a>
 						<ul>
-							<li><a href="../desktop/desktop.asp">DELL</a></li>
-							<li><a href="../desktop/desktop.asp">HP</a></li>
-							<li><a href="../desktop/desktop.asp">APPLE</a></li>
-							<li><a href="../desktop/desktop.asp">ACER</a></li>
-							<li><a href="../desktop/desktop.asp">ASUS</a></li>
-							<li><a href="../desktop/desktop.asp">LENOVO</a></li>
+							<li><a href="../desktop/desktopTV.asp">DELL</a></li>
+							<li><a href="../desktop/desktopTV.asp">HP</a></li>
+							<li><a href="../desktop/desktopTV.asp">APPLE</a></li>
+							<li><a href="../desktop/desktopTV.asp">ACER</a></li>
+							<li><a href="../desktop/desktopTV.asp">ASUS</a></li>
+							<li><a href="../desktop/desktopTV.asp">LENOVO</a></li>
 						</ul>
 					</li>
-					<li><a href="../linhkien/linhkien.asp">Linh kiện</a>
+					<li><a href="../linhkien/linhkienTV.asp">Linh kiện</a>
 						<ul>
-							<li><a href="../linhkien/linhkien.asp">RAM</a></li>
-							<li><a href="../linhkien/linhkien.asp">Card VGA</a></li>
-							<li><a href="../linhkien/linhkien.asp">Mainboard</a></li>
-							<li><a href="../linhkien/linhkien.asp">Sound card (card âm thanh)</a></li>
+							<li><a href="../linhkien/linhkienTV.asp">RAM</a></li>
+							<li><a href="../linhkien/linhkienTV.asp">Card VGA</a></li>
+							<li><a href="../linhkien/linhkienTV.asp">Mainboard</a></li>
+							<li><a href="../linhkien/linhkienTV.asp">Sound card (card âm thanh)</a></li>
 						</ul>
 					</li>
-					<li><a href="../phukien/phukien.asp">Phụ kiện</a>
+					<li class="active"><a href="phukienTV.asp">Phụ kiện</a>
 						<ul>
-							<li><a href="../phukien/phukien.asp">Headphones</a></li>
-							<li><a href="../phukien/phukien.asp">Earphones</a></li>
-							<li><a href="../phukien/phukien.asp">Chuột</a></li>
-							<li><a href="../phukien/phukien.asp">Keyboard (bàn phím)</a></li>
-							<li><a href="../phukien/phukien.asp">USB</a></li>
+							<li><a href="../phukien/phukienTV.asp">Headphones</a></li>
+							<li><a href="../phukien/phukienTV.asp">Earphones</a></li>
+							<li><a href="../phukien/phukienTV.asp">Chuột</a></li>
+							<li><a href="../phukien/phukienTV.asp">Keyboard (bàn phím)</a></li>
+							<li><a href="../phukien/phukienTV.asp">USB</a></li>
 						</ul>
 					</li>
-					<li class="active"><a href="../lienhe/lienhe.asp">Liên hệ</a></li>
+					<li><a href="../lienhe/lienheTV.asp">Liên hệ</a></li>
 				</ul>
 				<script type="text/javascript" src="../js/nav.js"></script>
 			</div><!-- end h_menu4 -->
@@ -87,33 +92,63 @@
      </div>
 	 <div class="main">
 	     <div class="wrap">
-	 	    <div class="contact">
-	          <div class="m_contact"><span class="left_line1"> </span>Liên hệ<span class="right_line1"> </span></div>
-              <p class="m_12">Để được tư vấn, giải đáp thắc mắc về các sản phẩm, Quý khách hàng hãy liên hệ với chúng tôi ở Văn phòng Group4 tại TP.Hồ Chí Minh.</p>
-              <div class="contatct-top">
-               <form method="post" action="contact-post.html">
-					<div class="to">
-                     	<input type="text" class="text" value="Tên" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Tên';}">
-					 	<input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" style="margin-left: 10px">
-					</div>
-					<div class="to">
-                     	<input type="text" class="text" value="Địa chỉ" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Địa chỉ';}">
-					 	<input type="text" class="text" value="Số điện thoại" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Số điện thoại';}" style="margin-left: 10px">
-					</div>
-					<div class="text">
-	                   <textarea value="Lời nhắn..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Lời nhắn...';}">Lời nhắn...</textarea>
-	                </div>
-	                <div>
-	               		<input type="submit" value="Gửi">
-	                </div>
-               </form>
-               <div class="map">
-			     <iframe src="https://www.google.com/maps/d/embed?mid=z1j46M5Vtics.kKEfvly1qvlw" width="100%" height="480"></iframe>
-                   <small><a href="https://www.google.com/maps/d/embed?mid=z1j46M5Vtics.kKEfvly1qvlw" style="color:#666;text-align:left;font-size:12px">Xem trên Google Map</a></small>
-		       </div>		
-            </div>
+	 	   <div class="pages">
+			 <div class="gallery">
+			   <ul>
+				<li>
+					<a href="../images/p5.jpg"><img src="../images/p5.jpg" alt=""/></a>
+					<h3>Duis autem vel eumter</h3>
+				</li>
+				<li>
+					<a href="../images/p2.jpg"><img src="../images/p2.jpg" alt=""/></a>
+					<h3>uffered alteration</h3>
+				</li>
+				<li class="last">
+					<a href="../images/p6.jpg"><img src="../images/p6.jpg" alt=""/></a>
+					<h3>augue duis dolore te</h3>
+				</li>
+				<li>
+					<a href="../images/p4.jpg"><img src="../images/p4.jpg" alt=""/></a>
+					<h3>parum claram, anteposuerit</h3>
+				</li>
+				<li>
+					<a href="../images/p1.jpg"><img src="../images/p1.jpg" alt=""/></a>
+					<h3>seacula quarta decima</h3>
+				</li>
+				<li class="last">
+					<a href="../images/p3.jpg"><img src="../images/p3.jpg" alt=""/></a>
+					<h3>mutationem consuetudium </h3>
+				</li>
+					<li>
+					<a href="../images/p7.jpg"><img src="../images/p7.jpg" alt=""/></a>
+					<h3>eleifend option congue</h3>
+				</li>
+				<li>
+					<a href="../images/p8.jpg"><img src="../images/p8.jpg" alt=""/></a>
+					<h3>imperdiet doming</h3>
+				</li>
+				<li class="last">
+					<a href="../images/p9.jpg"><img src="../images/p9.jpg" alt=""/></a>
+					<h3>usto odio dignissim qui </h3>
+				</li>
+			   <div class="clear"></div>
+			</ul>
 		   </div>
-		</div>
+		    <ul class="dc_pagination dc_paginationA dc_paginationA06">
+			  <li><a href="#" class="previous">Previous</a></li>
+			  <li><a href="#">1</a></li>
+			  <li><a href="#" class="current">2</a></li>
+			  <li><a href="#">3</a></li>
+			  <li><a href="#">4</a></li>
+			  <li><a href="#">5</a></li>
+			  <li><a href="#">...</a></li>
+			  <li><a href="#">19</a></li>
+			  <li><a href="#">20</a></li>
+			  <li><a href="#" class="next">Next</a></li>
+		     </ul>
+		    </div>
+            <div class="clear"></div>	
+		  </div>
 		</div>
 		<div class="footer">
 			<div class="wrap">

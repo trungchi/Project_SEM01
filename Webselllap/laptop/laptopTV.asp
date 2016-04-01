@@ -18,7 +18,8 @@
         .gocphaimanhinh {
             text-align:right; 
             line-height:20px;
-            margin: 5px 5px 7px 9px;     
+            margin: 5px 5px 7px 9px;
+            color:gold     
                         }
     </style>
 </head>
@@ -26,50 +27,53 @@
 <body>
 <div class="wrap">
     <div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
-            <a rel="nofollow" href="create.asp" style="color:red ">
-                <span><ins>Đăng ký</ins></span> /
-            </a>
-            <a rel="nofollow" href="login.asp" style="color:red ">
-                <span><ins>Đăng Nhập</ins></span>
-            </a>
-        </div> 
+            <%
+'Check if user is logged in
+if Session("name") = "" then
+	'If not, go to login page
+	Response.Redirect("login.asp")
+else
+	'If, build page
+	Response.write("Chào " & Session("name") & "," & "&nbsp;" & "<a href=index.asp style=color:red><ins>Thoát<ins></a>")
+end if
+%>
 	<div class="pages-top">
 	        <div class="logo">
-				<a href="../index.asp"><img src="../images/logo.png" alt=""/></a>
+				<a href="../indexTV.asp"><img src="../images/logo.png" alt=""/></a>
 			 </div>
 		     <div class="h_menu4"><!-- start h_menu4 -->
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-				  <li><a href="../index.asp">Trang chủ</a></li>
-				  <li class="active"><a href="laptop.asp">Laptop</a></li>
-					  <li><a href="../desktop/desktop.asp">Desktop</a>
+				  <li><a href="../indexTV.asp">Trang chủ</a></li>
+				  <li class="active"><a href="laptopTV.asp">Laptop</a></li>
+					  <li><a href="../desktop/desktopTV.asp">Desktop</a>
 						<ul>
-							<li><a href="../desktop/desktop.asp">DELL</a></li>
-							<li><a href="../desktop/desktop.asp">HP</a></li>
-							<li><a href="../desktop/desktop.asp">APPLE</a></li>
-							<li><a href="../desktop/desktop.asp">ACER</a></li>
-							<li><a href="../desktop/desktop.asp">ASUS</a></li>
-							<li><a href="../desktop/desktop.asp">LENOVO</a></li>
+							<li><a href="../desktop/desktopTV.asp">DELL</a></li>
+							<li><a href="../desktop/desktopTV.asp">HP</a></li>
+							<li><a href="../desktop/desktopTV.asp">APPLE</a></li>
+							<li><a href="../desktop/desktopTV.asp">ACER</a></li>
+							<li><a href="../desktop/desktopTV.asp">ASUS</a></li>
+							<li><a href="../desktop/desktopTV.asp">LENOVO</a></li>
 						</ul>
 					</li>
-					<li><a href="../linhkien/linhkien.asp">Linh kiện</a>
+					<li><a href="../linhkien/linhkienTV.asp">Linh kiện</a>
 						<ul>
-							<li><a href="../linhkien/linhkien.asp">RAM</a></li>
-							<li><a href="../linhkien/linhkien.asp">Card VGA</a></li>
-							<li><a href="../linhkien/linhkien.asp">Mainboard</a></li>
-							<li><a href="../linhkien/linhkien.asp">Sound card (card âm thanh)</a></li>
+							<li><a href="../linhkien/linhkienTV.asp">RAM</a></li>
+							<li><a href="../linhkien/linhkienTV.asp">Card VGA</a></li>
+							<li><a href="../linhkien/linhkienTV.asp">Mainboard</a></li>
+							<li><a href="../linhkien/linhkienTV.asp">Sound card (card âm thanh)</a></li>
 						</ul>
 					</li>
-					<li><a href="../phukien/phukien.asp">Phụ kiện</a>
+					<li><a href="../phukien/phukienTV.asp">Phụ kiện</a>
 						<ul>
-							<li><a href="../phukien/phukien.asp">Headphones</a></li>
-							<li><a href="../phukien/phukien.asp">Earphones</a></li>
-							<li><a href="../phukien/phukien.asp">Chuột</a></li>
-							<li><a href="../phukien/phukien.asp">Keyboard (bàn phím)</a></li>
-							<li><a href="../phukien/phukien.asp">USB</a></li>
+							<li><a href="../phukien/phukienTV.asp">Headphones</a></li>
+							<li><a href="../phukien/phukienTV.asp">Earphones</a></li>
+							<li><a href="../phukien/phukienTV.asp">Chuột</a></li>
+							<li><a href="../phukien/phukienTV.asp">Keyboard (bàn phím)</a></li>
+							<li><a href="../phukien/phukienTV.asp">USB</a></li>
 						</ul>
 					</li>
-					<li><a href="../lienhe/lienhe.asp">Liên hệ</a></li>
+					<li><a href="../lienhe/lienheTV.asp">Liên hệ</a></li>
 				</ul>
 				<script type="text/javascript" src="../js/nav.js"></script>
 			</div><!-- end h_menu4 -->

@@ -1,12 +1,13 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-<title>Website bán máy tính | Laptop :: gr4</title>
+<title>Website bán máy tính | Desktop :: Groupfour</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Lato:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <script src="../js/jquery.min.js"></script>
+
 <script type="text/javascript" src="../js/jquery.lightbox.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/lightbox.css" media="screen" />
   <script type="text/javascript">
@@ -18,116 +19,125 @@
         .gocphaimanhinh {
             text-align:right; 
             line-height:20px;
-            margin: 5px 5px 7px 9px;     
+            margin: 5px 5px 7px 9px;
+            color:gold     
                         }
     </style>
 </head>
 
 <body>
-<div class="wrap">
+<div class="wrap"> 
     <div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
-            <a rel="nofollow" href="create.asp" style="color:red ">
-                <span><ins>Đăng ký</ins></span> /
-            </a>
-            <a rel="nofollow" href="login.asp" style="color:red ">
-                <span><ins>Đăng Nhập</ins></span>
-            </a>
-        </div> 
+            <%
+'Check if user is logged in
+if Session("name") = "" then
+	'If not, go to login page
+	Response.Redirect("login.asp")
+else
+	'If, build page
+	Response.write("Chào " & Session("name") & "," & "&nbsp;" & "<a href=index.asp style=color:red><ins>Thoát<ins></a>")
+end if
+%>
 	<div class="pages-top">
 	        <div class="logo">
-				<a href="../index.asp"><img src="../images/logo.png" alt=""/></a>
+				<a href="../indexTV.asp"><img src="../images/logo.png" alt=""/></a>
 			 </div>
 		     <div class="h_menu4"><!-- start h_menu4 -->
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-				  <li><a href="../index.asp">Trang chủ</a></li>
-				  <li class="active"><a href="laptop.asp">Laptop</a></li>
-					  <li><a href="../desktop/desktop.asp">Desktop</a>
+					<li><a href="../indexTV.asp">Trang chủ</a></li>
+					<li><a href="../laptop/laptopTV.asp">Laptop</a>
+					<ul>
+						<li><a href="../laptop/laptopTV.asp">DELL</a></li>
+						<li><a href="../laptop/laptopTV.asp">HP</a></li>
+						<li><a href="../laptop/laptopTV.asp">APPLE</a></li>
+						<li><a href="../laptop/laptopTV.asp">ACER</a></li>
+						<li><a href="../laptop/laptopTV.asp">ASUS</a></li>
+						<li><a href="../laptop/laptopTV.asp">LENOVO</a></li>
+						<li><a href="../laptop/laptopTV.asp">VAIO</a></li>
+					</ul>
+					
+					<li class="active"><a href="desktopTV.asp">Desktop</a></li>
+					</li>
+					<li><a href="../linhkien/linhkienTV.asp">Linh kiện</a>
 						<ul>
-							<li><a href="../desktop/desktop.asp">DELL</a></li>
-							<li><a href="../desktop/desktop.asp">HP</a></li>
-							<li><a href="../desktop/desktop.asp">APPLE</a></li>
-							<li><a href="../desktop/desktop.asp">ACER</a></li>
-							<li><a href="../desktop/desktop.asp">ASUS</a></li>
-							<li><a href="../desktop/desktop.asp">LENOVO</a></li>
+							<li><a href="../linhkien/linhkienTV.asp">RAM</a></li>
+							<li><a href="../linhkien/linhkienTV.asp">Card VGA</a></li>
+							<li><a href="../inhkien/linhkienTV.asp">Mainboard</a></li>
+							<li><a href="../linhkien/linhkienTV.asp">Sound card (card âm thanh)</a></li>
 						</ul>
 					</li>
-					<li><a href="../linhkien/linhkien.asp">Linh kiện</a>
+					<li><a href="../phukien/phukienTV.asp">Phụ kiện</a>
 						<ul>
-							<li><a href="../linhkien/linhkien.asp">RAM</a></li>
-							<li><a href="../linhkien/linhkien.asp">Card VGA</a></li>
-							<li><a href="../linhkien/linhkien.asp">Mainboard</a></li>
-							<li><a href="../linhkien/linhkien.asp">Sound card (card âm thanh)</a></li>
+							<li><a href="../phukien/phukienTV.asp">Headphones</a></li>
+							<li><a href="../phukien/phukienTV.asp">Earphones</a></li>
+							<li><a href="../phukien/phukienTV.asp">Chuột</a></li>
+							<li><a href="../phukien/phukienTV.asp">Keyboard (bàn phím)</a></li>
+							<li><a href="../phukien/phukienTV.asp">USB</a></li>
 						</ul>
 					</li>
-					<li><a href="../phukien/phukien.asp">Phụ kiện</a>
-						<ul>
-							<li><a href="../phukien/phukien.asp">Headphones</a></li>
-							<li><a href="../phukien/phukien.asp">Earphones</a></li>
-							<li><a href="../phukien/phukien.asp">Chuột</a></li>
-							<li><a href="../phukien/phukien.asp">Keyboard (bàn phím)</a></li>
-							<li><a href="../phukien/phukien.asp">USB</a></li>
-						</ul>
-					</li>
-					<li><a href="../lienhe/lienhe.asp">Liên hệ</a></li>
+					<li><a href="../lienhe/lienheTV.asp">Liên hệ</a></li>
 				</ul>
 				<script type="text/javascript" src="../js/nav.js"></script>
 			</div><!-- end h_menu4 -->
 			<div class="clear"></div>
-		</div>
-		<!-- end header_main4 -->
+		</div><!-- end header_main4 -->
      </div>
 	 <div class="main">
 	     <div class="wrap">
 	 	   <div class="pages">
-				 <div class="cont1 span_2_of_g1">
-				      <div class="gallery">
+			  <div class="cont1 span_2_of_g1">
+				 <div class="gallery">
 			       <ul>
-				<li class="active">
-					<a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
-					<h3>Duis autem vel eumter</h3>
-				</li>
-				<li class="last">
-					<a href="../images/t-pic9.jpg"><img src="../images/pic9.jpg" alt=""/></a>
-				  <h3>augue duis dolore te</h3>
-				</li>
-				<li>
-					<a href="../images/t-pic10.jpg"><img src="../images/pic10.jpg" alt=""/></a>
-					<h3>parum claram, anteposuerit</h3>
-				</li>
-				<li>
-					<a href="../images/pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>
-					<h3>seacula quarta decima</h3>
-				</li>
-				<li class="last">
-					<a href="../images/pic12.jpg"><img src="../images/pic12.jpg" alt=""/></a>
-					<h3>mutationem consuetudium </h3>
-				</li>
-					<li>
-					<a href="../images/t-pic13.jpg"><img src="../images/pic13.jpg" alt=""/></a>
-					<h3>eleifend option congue</h3>
-				</li>
-				<li>
-					<a href="../images/t-pic14.jpg"><img src="../images/pic14.jpg" alt=""/></a>
-					<h3>imperdiet doming</h3>
-				</li>
-				<li class="last">
-					<a href="../images/t-pic15.jpg"><img src="../images/pic15.jpg" alt=""/></a>
-					<h3>usto odio dignissim qui </h3>
-				</li>
-			   <div class="clear"></div>
-			</ul>
+						<li>
+							<a href="../images/t-pic15.jpg"><img src="../images/pic15.jpg" alt=""/></a>
+							<h3>Duis autem vel eumter</h3>
+						</li>
+						<li>
+							<a href="../images/t-pic8.jpg"><img src="../images/pic8.jpg" alt=""/></a>
+							<h3>uffered alteration</h3>
+						</li>
+						<li class="last">
+							<a href="../images/t-pic9.jpg"><img src="../images/pic9.jpg" alt=""/></a>
+							<h3>augue duis dolore te</h3>
+						</li>
+						<li>
+							<a href="../images/t-pic10.jpg"><img src="../images/pic10.jpg" alt=""/></a>
+							<h3>parum claram, anteposuerit</h3>
+						</li>
+						<li>
+							<a href="../images/pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>
+							<h3>seacula quarta decima</h3>
+						</li>
+						<li class="last">
+							<a href="../images/pic12.jpg"><img src="../images/pic12.jpg" alt=""/></a>
+							<h3>mutationem consuetudium </h3>
+						</li>
+							<li>
+							<a href="../images/t-pic13.jpg"><img src="../images/pic13.jpg" alt=""/></a>
+							<h3>eleifend option congue</h3>
+						</li>
+						<li>
+							<a href="../images/t-pic14.jpg"><img src="../images/pic14.jpg" alt=""/></a>
+							<h3>imperdiet doming</h3>
+						</li>
+						<li class="last">
+							<a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
+							<h3>usto odio dignissim qui </h3>
+						</li>
+					   <div class="clear"></div>
+				</ul>
 		</div>
 		    <ul class="dc_pagination dc_paginationA dc_paginationA06">
 			  <li><a href="#" class="previous">Previous</a></li>
-			  <li><a href="laptop.asp-fc=1.htm" class="current">1</a></li>
-			  <li><a href="laptop.asp-fc=2.htm">2</a></li>
-			  <li><a href="laptop.asp-fc=3.htm">3</a></li>
-			  <li><a href="laptop.asp-fc=4.htm">4</a></li>
-			  <li><a href="laptop.asp-fc=5.htm">5</a></li>
-			  <li><a href="laptop.asp-fc=.htm">...</a></li>
-			  <li><a href="laptop.asp-fc=19.htm">19</a></li>
-			  <li><a href="laptop.asp-fc=20.htm">20</a></li>
+			  <li><a href="#">1</a></li>
+			  <li><a href="#" class="current">2</a></li>
+			  <li><a href="#">3</a></li>
+			  <li><a href="#">4</a></li>
+			  <li><a href="#">5</a></li>
+			  <li><a href="#">...</a></li>
+			  <li><a href="#">19</a></li>
+			  <li><a href="#">20</a></li>
 			  <li><a href="#" class="next">Next</a></li>
 		     </ul>
 		</div>
@@ -190,7 +200,7 @@
 		  </div>
 		  </div>
 		</div>
-	   <div class="footer">
+	    <div class="footer">
 			<div class="wrap">
 				<div class="footer-grid footer-grid1">
 					<div class="f-logo">
