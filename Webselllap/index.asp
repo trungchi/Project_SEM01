@@ -46,7 +46,7 @@
         .gocphaimanhinh {
             text-align:right; 
             line-height:20px;
-            margin: 5px 5px 7px 9px        
+            margin: 5px 5px 7px 9px;     
                         }
     </style>
 </head>
@@ -54,11 +54,11 @@
 <body>
 <div class="wrap"> 
     <div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
-            <a rel="nofollow" href="#" style="color:dodgerblue">
-                <span>Đăng ký/</span>
+            <a rel="nofollow" href="create.asp" style="color:red ">
+                <span><ins>Đăng ký</ins></span> /
             </a>
-            <a rel="nofollow" href="dangnhapform.asp" style="color:dodgerblue">
-                <span>Đăng Nhập</span>
+            <a rel="nofollow" href="login.asp" style="color:red ">
+                <span><ins>Đăng Nhập</ins></span>
             </a>
         </div>
 	<div class="header-top">
