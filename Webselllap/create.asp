@@ -41,3 +41,30 @@
 
 	Response.Redirect("login.asp?login=creatednew")
 %>
+<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%><% 
+  'Copyright © Captcha, Inc. (formerly Lanapsoft, Inc.) 2004-2014. All rights reserved.
+  'BotDetect, BotDetect CAPTCHA, Lanap, Lanap CAPTCHA, Lanap BotDetect, Lanap BotDetect CAPTCHA, Lanapsoft, Lanapsoft CAPTCHA, Lanapsoft BotDetect, Lanapsoft BotDetect CAPTCHA, and Lanap Software are trademarks or registered trademarks of Captcha, Inc.
+%><!-- #include file ="BotDetect\CaptchaIncludes.asp" --><!-- #include file ="BotDetect\CaptchaHandler.asp" --><%
+
+' BotDetect Url prefix (base Url of the BotDetect public resources)
+Dim BDC_Url_Root : BDC_Url_Root = "BotDetect/Public/"
+
+' process optional config override
+Dim BotDetect
+Dim BDC_CurrentCaptchaId
+
+Function BDC_GetSettings(CaptchaId)
+  Set BotDetect = New BDC_CaptchaConfiguration
+  BDC_CurrentCaptchaId = CaptchaId
+  Call BDC_ExecuteIfExists("CaptchaConfig.asp")
+  Set BDC_GetSettings = BotDetect
+  Set BotDetect = Nothing
+End Function
+
+' determine is this file included in a form/class, or requested directly
+If ("BotDetect" = BDC_ScriptName()) Then
+  ' direct access, proceed as Captcha handler (serving images and sounds)
+  Call BDC_ProcessRequest
+End If
+
+%>

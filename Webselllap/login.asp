@@ -38,7 +38,7 @@
 		Content = Content & "<tr><td valign=top bordercolor="& BackgroundColor &" align=left><br>Username: &nbsp;<input type=text name=txtUsername></td></tr>"
 		Content = Content & "<tr><td valign=top bordercolor="& BackgroundColor &" align=left>Password: &nbsp; <input type=password name=txtPassword></td></tr>"
 		Content = Content & "<tr><td valign=top bordercolor="& BackgroundColor &" align=left>Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type=text name=txtEmail></td></tr>"
-    Content = Content & "<tr><td valign=top bordercolor="& BackgroundColor &" align=left>Phone: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type=password name=txtSDT></td></tr>"
+        Content = Content & "<tr><td valign=top bordercolor="& BackgroundColor &" align=left>Phone: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type=password name=txtSDT></td></tr>"
 		Content = Content & "<tr><td valign=top bordercolor="& BackgroundColor &" align=center><input type=submit name=cmdSubmit value=Register></td></tr>"
 		Content = Content & "</form>"
 	else
