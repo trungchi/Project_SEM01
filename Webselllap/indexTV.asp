@@ -46,20 +46,28 @@
         .gocphaimanhinh {
             text-align:right; 
             line-height:20px;
-            margin: 5px 5px 7px 9px;     
+            margin: 5px 5px 7px 9px;
+            color:gold;
                         }
+       
     </style>
 </head>
 
 <body>
 <div class="wrap"> 
     <div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
-            <a rel="nofollow" href="create.asp" style="color:red ">
-                <span><ins>Đăng ký</ins></span> /
-            </a>
-            <a rel="nofollow" href="login.asp" style="color:red ">
-                <span><ins>Đăng Nhập</ins></span>
-            </a>
+           <%
+'Check if user is logged in
+if Session("name") = "" then
+	'If not, go to login page
+	Response.Redirect("login.asp")
+else
+	'If, build page
+	Response.write("Chào " & Session("name") & "," & "&nbsp;" & "<a href=index.asp style=color:red><ins>Thoát<ins></a>")
+end if
+%>
+
+
         </div>
 	<div class="header-top">
 	        <div class="logo">
