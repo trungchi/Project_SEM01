@@ -86,20 +86,20 @@
 				 <div class="gallery">
 			       <ul>
 						<li>
-							<a href="../images/t-pic15.jpg"><img src="../images/pic15.jpg" alt=""/></a>
-							<h3>Duis autem vel eumter</h3>
+							<a href="../images/pic15.jpg"><img src="../images/pic15.jpg" alt=""/></a>
+							<h3>Cấu hình Duel-Core</h3>
 						</li>
 						<li>
 							<a href="../images/t-pic8.jpg"><img src="../images/pic8.jpg" alt=""/></a>
-							<h3>uffered alteration</h3>
+							<h3>Cầu hình Core i3</h3>
 						</li>
 						<li class="last">
 							<a href="../images/t-pic9.jpg"><img src="../images/pic9.jpg" alt=""/></a>
-							<h3>augue duis dolore te</h3>
+							<h3>Cấu hình Core i5</h3>
 						</li>
 						<li>
 							<a href="../images/t-pic10.jpg"><img src="../images/pic10.jpg" alt=""/></a>
-							<h3>parum claram, anteposuerit</h3>
+							<h3>Cầu hình core i7</h3>
 						</li>
 						<li>
 							<a href="../images/pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>

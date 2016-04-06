@@ -87,6 +87,10 @@
 					<a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
 					<h3>Duis autem vel eumter</h3>
 				</li>
+                <li>
+					<a href="../images/t-pic8.jpg"><img src="../images/pic8.jpg" alt=""/></a>
+					<h3>Duis autem vel eumter</h3>
+				</li>
 				<li class="last">
 					<a href="../images/t-pic9.jpg"><img src="../images/pic9.jpg" alt=""/></a>
 				  <h3>augue duis dolore te</h3>
@@ -96,11 +100,11 @@
 					<h3>parum claram, anteposuerit</h3>
 				</li>
 				<li>
-					<a href="../images/pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>
+					<a href="../images/t-pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>
 					<h3>seacula quarta decima</h3>
 				</li>
 				<li class="last">
-					<a href="../images/pic12.jpg"><img src="../images/pic12.jpg" alt=""/></a>
+					<a href="../images/t-pic12.jpg"><img src="../images/pic12.jpg" alt=""/></a>
 					<h3>mutationem consuetudium </h3>
 				</li>
 					<li>
