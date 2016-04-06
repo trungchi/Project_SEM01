@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Website bán máy tính | Desktop :: Groupfour</title>
+<link rel="shortcut icon" href="../images/icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -143,43 +144,24 @@ end if
 		</div>
         <div class="labout span_1_of_g1">
 		  <div class="project-list">
-	     	<h4>Categories</h4>
+	     	<h4>Loại</h4>
 			<ul class="blog-list">
-				<li><a href="#">idignissim </a></li>
-				<li><a href="#">usto odio </a></li>
-				<li><a href="#">anteposformas</a></li>
-				<li><a href="#">litterarum</a></li>
-				<li><a href="#">humanitatis</a></li>
+				<li><a href="#">DELL </a></li>
+				<li><a href="#">HP</a></li>
+				<li><a href="#">APPLE</a></li>
+				<li><a href="#">ASUS</a></li>
+				<li><a href="#">ACER</a></li>
 			</ul>
 			<ul class="blog-list">
-				<li><a href="#">litterarum</a></li>
-				<li><a href="#">humanitatis</a></li>
-				<li><a href="#">idignissim </a></li>
-				<li><a href="#">usto odio </a></li>
-				<li><a href="#">anteposformas</a></li>
+				<li><a href="#">LENOVO</a></li>
 			</ul>
 			<div class="clear"></div>
 		   </div>
 		   <div class="project-list1">
-	     	<h4>Archives</h4>
-			<ul class="blog-list">
-				<li><a href="#">idignissim </a></li>
-				<li><a href="#">usto odio </a></li>
-				<li><a href="#">anteposformas</a></li>
-				<li><a href="#">litterarum</a></li>
-				<li><a href="#">humanitatis</a></li>
-			</ul>
-			<ul class="blog-list">
-				<li><a href="#">litterarum</a></li>
-				<li><a href="#">humanitatis</a></li>
-				<li><a href="#">idignissim </a></li>
-				<li><a href="#">usto odio </a></li>
-				<li><a href="#">anteposformas</a></li>
-			</ul>
 			<div class="clear"></div>
 		   </div>
 		   <div class="project-list2">
-	     	<h4>Tags</h4>
+	     	<h4>Các thẻ chọn</h4>
 			<ul>
 				<li><a href="#">Web Design</a></li>
 				<li><a href="#">Html5</a></li>
