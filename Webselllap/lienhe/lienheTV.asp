@@ -33,7 +33,7 @@ if Session("name") = "" then
 	Response.Redirect("login.asp")
 else
 	'If, build page
-	Response.write("Chào " & Session("name") & "," & "&nbsp;" & "<a href=index.asp style=color:red><ins>Thoát<ins></a>")
+	Response.write("Chào " & Session("name") & "," & "&nbsp;" & "<a href=../index.asp style=color:red><ins>Thoát<ins></a>")
 end if
 %>
 	<div class="pages-top">
