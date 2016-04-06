@@ -8,6 +8,7 @@
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Lato:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <script src="js/jquery.min.js"></script>
+<script src="prefixfree.js" type="text/javascript"></script>
 
 <!---strat-slider---->
 	    <link rel="stylesheet" type="text/css" href="css/slider.css" />
@@ -52,19 +53,30 @@
 </head>
 
 <body>
+<div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
+    <a rel="nofollow" href="create.asp" style="color:red ">
+        <span><ins>Đăng ký</ins></span> |
+    </a>
+    <a rel="nofollow" href="login.asp" style="color:red ">
+        <span><ins>Đăng Nhập</ins></span>
+    </a>
+</div>
+<div class="cntr">
+	<div class="cntr-innr">
+	  <label class="search" for="inpt_search">
+			<input id="inpt_search" type="text" />
+		</label>
+		<p>Sờ vào để tìm thứ bạn cần.</p>
+	</div>
+</div>
 <div class="wrap"> 
-    <div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
-            <a rel="nofollow" href="create.asp" style="color:red ">
-                <span><ins>Đăng ký</ins></span> |
-            </a>
-            <a rel="nofollow" href="login.asp" style="color:red ">
-                <span><ins>Đăng Nhập</ins></span>
-            </a>
-        </div>
-	<div class="header-top">
-	        <div class="logo">
-				<a href="index.asp"><img src="images/logo.png" alt=""/></a>
-			 </div>
+
+
+<div class="header-top">
+    <div class="logo">
+        <a href="index.asp"><img src="images/logo.png" alt=""/></a>
+    </div>
+             
 		     <div class="h_menu4"><!-- start h_menu4 -->
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">

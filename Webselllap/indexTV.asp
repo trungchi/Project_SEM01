@@ -67,6 +67,15 @@ else
 end if
 %>
 
+<div class="cntr">
+	<div class="cntr-innr">
+	  <label class="search" for="inpt_search">
+			<input id="inpt_search" type="text" />
+		</label>
+		<p>Sờ vào để tìm thứ bạn cần.</p>
+	</div>
+</div>
+<div class="wrap"> 
 
         </div>
 	<div class="header-top">
