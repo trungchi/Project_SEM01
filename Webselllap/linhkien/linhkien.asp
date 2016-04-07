@@ -95,115 +95,118 @@
 	 <div class="main">
 	     <div class="wrap">
 	 	   <div class="pages">
-	 	   	 <div class="blog-top">
-			  <div class="col_1_of_b span_1_of_b">
-					<h3><a href="single.asp">Lorem Ipsum is simply</a></h3>
-					<a href="single.asp"><img src="../images/b1.jpg" alt=""></a>
-					<div class="blog-poast-admin">
-						<a href="#"><img src="../images/b1_small.jpg" title="admin"></a>
-					</div>
-					<div class="blog-poast-info">
-						<ul>
-							<li><i class="admin"> </i><a class="admin" href="#"><span> </span> Admin </a></li>
-							<li><i class="date"> </i><a class="p-date" href="#"><span> </span>12-04-2014 </a></li>
-							<li><i class="comment"> </i><a class="p-blog" href="#"><span> </span>No Comments</a></li>
-						</ul>
-				    </div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					<div class="button"><a href="#">Read More</a></div>
-				</div>
-				<div class="col_1_of_b span_1_of_b">
-					<h3><a href="single.asp">Lorem Ipsum is simply</a></h3>
-					<a href="single.asp"><img src="../images/b2.jpg" alt=""></a>
-					<div class="blog-poast-admin">
-						<a href="#"><img src="../images/b2_small.jpg" title="admin"></a>
-					</div>
-					<div class="blog-poast-info">
-						<ul>
-							<li><i class="admin"> </i><a class="admin" href="#"><span> </span> Admin </a></li>
-							<li><i class="date"> </i><a class="p-date" href="#"><span> </span>12-04-2014 </a></li>
-							<li><i class="comment"> </i><a class="p-blog" href="#"><span> </span>No Comments</a></li>
-						</ul>
-				    </div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					<div class="button"><a href="#">Read More</a></div>
-				</div>
+				 <div class="cont1 span_2_of_g1">
+				      <div class="gallery">
+			       <ul>
+				<li class="active">
+					<a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
+					<h3 align="center">Dell đỏ</h3>
+				</li>
+                <li>
+					<a href="../images/t-pic8.jpg"><img src="../images/pic8.jpg" alt=""/></a>
+					<h3 align="center">Dell bạc</h3>
+				</li>
+				<li class="last">
+					<a href="../images/t-pic9.jpg"><img src="../images/pic9.jpg" alt=""/></a>
+				  	<h3 align="center">Dell ba màu</h3>
+				</li>
+				<li>
+					<a href="../images/t-pic10.jpg"><img src="../images/pic10.jpg" alt=""/></a>
+					<h3 align="center">Asus xoay màn hình</h3>
+				</li>
+				<li>
+					<a href="../images/t-pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>
+					<h3 align="center">Asus đa màu</h3>
+				</li>
+				<li class="last">
+					<a href="../images/t-pic12.jpg"><img src="../images/pic12.jpg" alt=""/></a>
+					<h3 align="center">Asus màn hình rời</h3>
+				</li>
+					<li>
+					<a href="../images/t-pic13.jpg"><img src="../images/pic13.jpg" alt=""/></a>
+					<h3 align="center">Hp đen</h3>
+				</li>
+				<li>
+					<a href="../images/t-pic14.jpg"><img src="../images/pic14.jpg" alt=""/></a>
+					<h3 align="center">Hp xoay màn hình</h3>
+				</li>
+				<li class="last">
+					<a href="../images/t-pic15.jpg"><img src="../images/pic15.jpg" alt=""/></a>
+					<h3 align="center">Hp màn hình rời</h3>
+				</li>
+			   <div class="clear"></div>
+			</ul>
+		</div>
+		    <ul class="dc_pagination dc_paginationA dc_paginationA06">
+			  <li><a href="#" class="previous">Previous</a></li>
+			  <li><a href="laptop.asp#1.htm" class="current">1</a></li>
+			  <li><a href="laptop.asp#2.htm">2</a></li>
+			  <li><a href="laptop.asp#3.htm">3</a></li>
+			  <li><a href="laptop.asp#4.htm">4</a></li>
+			  <li><a href="laptop.asp#5.htm">5</a></li>
+			  <li><a href="laptop.asp#.htm">...</a></li>
+			  <li><a href="laptop.asp#19.htm">19</a></li>
+			  <li><a href="laptop.asp#20.htm">20</a></li>
+			  <li><a href="#" class="next">Next</a></li>
+		     </ul>
+		</div>
+        <div class="labout span_1_of_g1">
+		  <div class="project-list">
+	     	<h4>Loại</h4>
+			<ul class="blog-list">
+				<li><a href="#">DELL </a></li>
+				<li><a href="#">HP</a></li>
+				<li><a href="#">APPLE</a></li>
+				<li><a href="#">ASUS</a></li>
+				<li><a href="#">ACER</a></li>
+			</ul>
+			<ul class="blog-list">
+				<li><a href="#">LENOVO</a></li>
+				<li><a href="#">VAIO</a></li>
+			</ul>
+			<div class="clear"></div>
+		   </div>
+		   <div class="project-list1">
+	     	<!--<h4>Archives</h4>
+			<ul class="blog-list">
+				<li><a href="#">idignissim </a></li>
+				<li><a href="#">usto odio </a></li>
+				<li><a href="#">anteposformas</a></li>
+				<li><a href="#">litterarum</a></li>
+				<li><a href="#">humanitatis</a></li>
+			</ul>
+			<ul class="blog-list">
+				<li><a href="#">litterarum</a></li>
+				<li><a href="#">humanitatis</a></li>
+				<li><a href="#">idignissim </a></li>
+				<li><a href="#">usto odio </a></li>
+				<li><a href="#">anteposformas</a></li>
+			</ul>-->
+			<div class="clear"></div>
+		   </div>
+		   <div class="project-list2">
+	     	<h4>Các thẻ chọn</h4>
+			<ul>
+				<li><a href="#">Web Design</a></li>
+				<li><a href="#">Html5</a></li>
+				<li><a href="#">Wordpress</a></li>
+				<li><a href="#">Logo</a></li>
+				<li><a href="#">Web Design</a></li>
+				<li><a href="#">Web Design</a></li>
+				<li><a href="#">Wordpress</a></li>
+				<li><a href="#">Web Design</a></li>
+				<li><a href="#">Html5</a></li>
+				<li><a href="#">Wordpress</a></li>
+				<li><a href="#">Logo</a></li>
 				<div class="clear"></div>
-			  </div>
-			  <div class="blog-top">
-			  <div class="col_1_of_b span_1_of_b">
-					<h3><a href="single.asp">Lorem Ipsum is simply</a></h3>
-					<a href="single.asp"><img src="../images/b3.jpg" alt=""></a>
-					<div class="blog-poast-admin">
-						<a href="#"><img src="../images/b3_small.jpg" title="admin"></a>
-					</div>
-					<div class="blog-poast-info">
-						<ul>
-							<li><i class="admin"> </i><a class="admin" href="#"><span> </span> Admin </a></li>
-							<li><i class="date"> </i><a class="p-date" href="#"><span> </span>12-04-2014 </a></li>
-							<li><i class="comment"> </i><a class="p-blog" href="#"><span> </span>No Comments</a></li>
-						</ul>
-				    </div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					<div class="button"><a href="#">Read More</a></div>
-				</div>
-				<div class="col_1_of_b span_1_of_b">
-					<h3><a href="single.asp">Lorem Ipsum is simply</a></h3>
-					<a href="single.asp"><img src="../images/b4.jpg" alt=""></a>
-					<div class="blog-poast-admin">
-						<a href="#"><img src="../images/b4_small.jpg" title="admin"></a>
-					</div>
-					<div class="blog-poast-info">
-						<ul>
-							<li><i class="admin"> </i><a class="admin" href="#"><span> </span> Admin </a></li>
-							<li><i class="date"> </i><a class="p-date" href="#"><span> </span>12-04-2014 </a></li>
-							<li><i class="comment"> </i><a class="p-blog" href="#"><span> </span>No Comments</a></li>
-						</ul>
-				    </div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					<div class="button"><a href="#">Read More</a></div>
-				</div>
-				<div class="clear"></div>
-			  </div>
-			  <div class="blog-top">
-			  <div class="col_1_of_b span_1_of_b">
-					<h3><a href="single.asp">Lorem Ipsum is simply</a></h3>
-					<a href="single.asp"><img src="../images/b5.jpg" alt=""></a>
-					<div class="blog-poast-admin">
-						<a href="#"><img src="../images/b5_small.jpg" title="admin"></a>
-					</div>
-					<div class="blog-poast-info">
-						<ul>
-							<li><i class="admin"> </i><a class="admin" href="#"><span> </span> Admin </a></li>
-							<li><i class="date"> </i><a class="p-date" href="#"><span> </span>12-04-2014 </a></li>
-							<li><i class="comment"> </i><a class="p-blog" href="#"><span> </span>No Comments</a></li>
-						</ul>
-				    </div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					<div class="button"><a href="#">Read More</a></div>
-				</div>
-				<div class="col_1_of_b span_1_of_b">
-					<h3><a href="single.asp">Lorem Ipsum is simply</a></h3>
-					<a href="single.asp"><img src="../images/b6.jpg" alt=""></a>
-					<div class="blog-poast-admin">
-						<a href="#"><img src="../images/b6_small.jpg" title="admin"></a>
-					</div>
-					<div class="blog-poast-info">
-						<ul>
-							<li><i class="admin"> </i><a class="admin" href="#"><span> </span> Admin </a></li>
-							<li><i class="date"> </i><a class="p-date" href="#"><span> </span>12-04-2014 </a></li>
-							<li><i class="comment"> </i><a class="p-blog" href="#"><span> </span>No Comments</a></li>
-						</ul>
-				    </div>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					<div class="button"><a href="#">Read More</a></div>
-				</div>
-				<div class="clear"></div>
-			  </div>
-		     </div>
+			</ul>
+		   </div>
+		 </div>
+		   <div class="clear"></div>	
+		  </div>
 		  </div>
 		</div>
-		<div class="footer">
+	   <div class="footer">
 			<div class="wrap">
 				<div class="footer-grid footer-grid1">
 					<div class="f-logo">

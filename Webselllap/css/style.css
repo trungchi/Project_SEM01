@@ -2427,11 +2427,11 @@ body {
   color: #ffffff;
 }
 p {
-  margin-top: 30px;
+  margin-top: 5px;
 }
 .cntr {
 	font-family:Tahoma, arial;
-	color:gold;
+	color:#f90;
 	font-size:13pt;
 	display: table;
 	width: 100%;
@@ -2534,7 +2534,7 @@ p {
 	text-transform: capitalize;
 	font-size:13pt;
 	font-weight:bolder;
-	color:gold;
+	color:#fffc08;
 	font-style:normal;
 	text-indent:0.2in;
 	line-height:20px;

@@ -138,21 +138,21 @@
 				  <div class="da-slide">
 					<li>
                         <a href="dangnhap.html" target="_blank">
-                            <img src="images/131218hinh-nen-vu-tru-lua-cuc-hoang-trang.jpg" alt="" />
+                            <img src="images/Slide1.jpg" alt="" />
                         </a>
 					</li>
 				  </div>
 				  <div class="da-slide">
 					<li>
                         <a href="dangnhap.html" target="_blank">
-                            <img src="images/15-10bo-hinh-nen-3d-that-dep-va-that-hap-dan1.jpg" alt="" />
+                            <img src="images/Slide2.jpg" alt="" />
                         </a>
 					</li>
 				  </div>
 				  <div class="da-slide">
 					<li>
                         <a href="dangnhap.html" target="_blank">
-                            <img src="images/15-10bo-hinh-nen-may-tinh-de-thuong-nhat-hien-nay11.jpg" alt="" />
+                            <img src="images/Slide3.jpg" alt="" />
                         </a>
 					</li>
 				  </div>
@@ -364,7 +364,6 @@
         </div>
     </div>
            <!--END CLOCK-->
-	    </div>
         
     <!---------------------------
                 BOTTOM

@@ -27,7 +27,7 @@ if Session("name") = "" then
 	Response.Redirect("login.asp")
 else
 	'If, build page
-	Response.write("Chào " & Session("name") & "," & "&nbsp;" & "<a href=../index.asp style=color:red><ins>Thoát<ins></a>")
+	Response.write("Xin chào " & Session("name") & "," & "&nbsp;" & "<a href=../index.asp style=color:red><ins>Thoát<ins></a>")
 end if
 %>
 	</div>
@@ -85,13 +85,6 @@ end if
 						</ul>
 					</li>
 					<li class="active"><a href="phukienTV.asp">Phụ kiện</a>
-						<ul>
-							<li><a href="../phukien/phukienTV.asp">Headphones</a></li>
-							<li><a href="../phukien/phukienTV.asp">Earphones</a></li>
-							<li><a href="../phukien/phukienTV.asp">Chuột</a></li>
-							<li><a href="../phukien/phukienTV.asp">Keyboard (bàn phím)</a></li>
-							<li><a href="../phukien/phukienTV.asp">USB</a></li>
-						</ul>
 					</li>
 					<li><a href="../lienhe/lienheTV.asp">Liên hệ</a></li>
 				</ul>
@@ -103,47 +96,48 @@ end if
 	 <div class="main">
 	     <div class="wrap">
 	 	   <div class="pages">
-			 <div class="gallery">
-			   <ul>
-				<li>
-					<a href="../images/p5.jpg"><img src="../images/p5.jpg" alt=""/></a>
-					<h3>Duis autem vel eumter</h3>
-				</li>
-				<li>
-					<a href="../images/p2.jpg"><img src="../images/p2.jpg" alt=""/></a>
-					<h3>uffered alteration</h3>
-				</li>
-				<li class="last">
-					<a href="../images/p6.jpg"><img src="../images/p6.jpg" alt=""/></a>
-					<h3>augue duis dolore te</h3>
-				</li>
-				<li>
-					<a href="../images/p4.jpg"><img src="../images/p4.jpg" alt=""/></a>
-					<h3>parum claram, anteposuerit</h3>
-				</li>
-				<li>
-					<a href="../images/p1.jpg"><img src="../images/p1.jpg" alt=""/></a>
-					<h3>seacula quarta decima</h3>
-				</li>
-				<li class="last">
-					<a href="../images/p3.jpg"><img src="../images/p3.jpg" alt=""/></a>
-					<h3>mutationem consuetudium </h3>
-				</li>
-					<li>
-					<a href="../images/p7.jpg"><img src="../images/p7.jpg" alt=""/></a>
-					<h3>eleifend option congue</h3>
-				</li>
-				<li>
-					<a href="../images/p8.jpg"><img src="../images/p8.jpg" alt=""/></a>
-					<h3>imperdiet doming</h3>
-				</li>
-				<li class="last">
-					<a href="../images/p9.jpg"><img src="../images/p9.jpg" alt=""/></a>
-					<h3>usto odio dignissim qui </h3>
-				</li>
-			   <div class="clear"></div>
-			</ul>
-		   </div>
+			  <div class="cont1 span_2_of_g1">
+				 <div class="gallery">
+			       <ul>
+						<li>
+							<a href="../images/t-pic15.jpg"><img src="../images/p1.jpg" alt=""/></a>
+							<h3 align="center">Tai nghe hồng</h3>
+						</li>
+						<li>
+							<a href="../images/t-pic8.jpg"><img src="../images/p2.jpg" alt=""/></a>
+							<h3 align="center">Tai nghe bluetooth</h3>
+						</li>
+						<li class="last">
+							<a href="../images/t-pic9.jpg"><img src="../images/p3.jpg" alt=""/></a>
+							<h3 align="center">Tai nghe đỏ</h3>
+						</li>
+						<li>
+							<a href="../images/t-pic10.jpg"><img src="../images/p4.jpg" alt=""/></a>
+							<h3 align="center">Tai nghe hình tai mèo có đèn led</h3>
+						</li>
+						<li>
+							<a href="../images/pic11.jpg"><img src="../images/p5.jpg" alt=""/></a>
+							<h3 align="center">Bàn phím đen có đèn led</h3>
+						</li>
+						<li class="last">
+							<a href="../images/pic12.jpg"><img src="../images/p6.jpg" alt=""/></a>
+							<h3 align="center">Bàn phím trắng có đèn led</h3>
+						</li>
+							<li>
+							<a href="../images/t-pic13.jpg"><img src="../images/p7.jpg" alt=""/></a>
+							<h3 align="center">Chuột quang</h3>
+						</li>
+						<li>
+							<a href="../images/t-pic14.jpg"><img src="../images/p8.jpg" alt=""/></a>
+							<h3 align="center">Chuột quang</h3>
+						</li>
+						<li class="last">
+							<a href="../images/t-pic7.jpg"><img src="../images/p9.jpg" alt=""/></a>
+							<h3 align="center">Lót chuột có đèn led</h3>
+						</li>
+					   <div class="clear"></div>
+				</ul>
+		</div>
 		    <ul class="dc_pagination dc_paginationA dc_paginationA06">
 			  <li><a href="#" class="previous">Previous</a></li>
 			  <li><a href="#">1</a></li>
@@ -156,15 +150,56 @@ end if
 			  <li><a href="#">20</a></li>
 			  <li><a href="#" class="next">Next</a></li>
 		     </ul>
-		    </div>
-            <div class="clear"></div>	
+		</div>
+        <div class="labout span_1_of_g1">
+		  <div class="project-list">
+	     	<h4>Loại</h4>
+			<ul class="blog-list">
+				<li><a href="#">DELL </a></li>
+				<li><a href="#">HP</a></li>
+				<li><a href="#">APPLE</a></li>
+				<li><a href="#">ASUS</a></li>
+				<li><a href="#">ACER</a></li>
+			</ul>
+			<ul class="blog-list">
+				<li><a href="#">LENOVO</a></li>
+			</ul>
+			<div class="clear"></div>
+		   </div>
+		   <div class="project-list1">
+			<div class="clear"></div>
+		   </div>
+		   <div class="project-list2">
+	     	<h4>Các thẻ chọn</h4>
+			<ul>
+				<li><a href="#">Web Design</a></li>
+				<li><a href="#">Html5</a></li>
+				<li><a href="#">Wordpress</a></li>
+				<li><a href="#">Logo</a></li>
+				<li><a href="#">Web Design</a></li>
+				<li><a href="#">Web Design</a></li>
+				<li><a href="#">Wordpress</a></li>
+				<li><a href="#">Web Design</a></li>
+				<li><a href="#">Html5</a></li>
+				<li><a href="#">Wordpress</a></li>
+				<li><a href="#">Logo</a></li>
+				<div class="clear"></div>
+			</ul>
+		   </div>
+		 </div>
+		   <div class="clear"></div>	
+		  </div>
 		  </div>
 		</div>
-		<div class="footer">
+
+    <!---------------------------
+                BOTTOM
+    ---------------------------->
+        <div class="footer">
 			<div class="wrap">
 				<div class="footer-grid footer-grid1">
 					<div class="f-logo">
-				     <a href="index.html"><img src="images/group four.png" alt=""></a>
+				     <a href="index.html"><img src="images/logo.png" alt=""></a>
 			        </div>
 					<p>Nhóm gồm 4 thành viên sáng lập, mỗi thành viên điều rất nhiệt tình trong công việc mình đảm nhận.</p>
 				</div>
@@ -187,29 +222,29 @@ end if
 				</div>
 				<div class="footer-grid footer-grid3">
 					<h4>Tiêu Chí</h4>
-					<div class="recent-tweet">
-						<div class="recent-tweet-icon">
+					<div class="recent-f">
+						<div class="recent-f-icon">
 							<span> </span>
 						</div>
-						<div class="recent-tweet-info">
+						<div class="recent-f-info">
 							<p>Uy Tín</p>
 						</div>
 						<div class="clear"> </div>
 					</div>
-					<div class="recent-tweet1">
-						<div class="recent-tweet-icon">
+					<div class="recent-f1">
+						<div class="recent-f-icon">
 							<span> </span>
 						</div>
-						<div class="recent-tweet-info">
+						<div class="recent-f-info">
 							<p>Chất Lượng</p>
 						</div>
 						<div class="clear"> </div>
 					</div><br />
-                    <div class="recent-tweet2">
-						<div class="recent-tweet-icon">
+                    <div class="recent-f2">
+						<div class="recent-f-icon">
 							<span> </span>
 						</div>
-						<div class="recent-tweet-info">
+						<div class="recent-f-info">
 							<p>Chuyên Nghiệp</p>
 						</div>
 						<div class="clear"> </div>
@@ -219,7 +254,7 @@ end if
 					<h4>Nhận Tin Mới</h4>
 					<p>Nhập địa chỉ Email để nhận được những tin tức mới nhất về công nghệ</p>
 					<form>
-						<input type="text" value="Email Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address';}">
+						<input type="text" value="Địa chỉ Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Địa chỉ Email';}">
 						<input type="submit" value="">
 					</form>
 				</div>
@@ -241,5 +276,6 @@ end if
 			    <div class="clear"></div>
 			  </div>
        </div>
+       
 </body>
 </html>
