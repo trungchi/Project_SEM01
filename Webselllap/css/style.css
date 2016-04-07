@@ -671,20 +671,24 @@ span.bg1{
 	margin-right: 2%;
 }
 .footer-grid1 p, .footer-grid2 p {
+	margin:0 auto 0;
 	color: #919295;
 	font-size: 0.875em;
 	line-height: 1.5em;
 }
 .f-logo{
+	margin:0 auto;
 	margin-bottom:5%;
 }
 .footer-grid2 h4 {
+	margin:0 auto;
 	font-size: 1.2em;
 	text-transform: uppercase;
 	color: #FFF;
 	padding-bottom:1.5em;
 }
 i.pin{
+	margin:0 auto 0;
 	width: 20px;
 	height: 20px;
 	float:left;
@@ -693,6 +697,7 @@ i.pin{
 	margin:0px 6px 6px 0px;
 }
 i.phone{
+	margin:0 auto 0;
 	width: 20px;
 	height: 20px;
 	float:left;
@@ -701,6 +706,7 @@ i.phone{
 	margin:0px 6px 6px 0px;
 }
 i.mail{
+	margin:0 auto 0;
 	width: 20px;
 	height: 20px;
 	float:left;
@@ -709,6 +715,7 @@ i.mail{
 	margin:0px 6px 6px 0px;
 }
 i.earth{
+	margin:0 auto 0;
 	width: 20px;
 	height: 20px;
 	float:left;
@@ -717,54 +724,65 @@ i.earth{
 	margin:0px 6px 6px 0px;
 }
 .footer-grid2 ul li label {
+	margin:0 auto 0;
 	color: #FFF;
 	font-size: 0.875em;
 }
 .extra-wrap{
+	margin:0 auto;
 	overflow:hidden;
 }
 .footer-grid2 ul li{
+	margin:0 auto 0;
 	margin-bottom:4%;
 }
 .extra-wrap1 p{
+	margin:0 auto;
 	color:#fff;
 	font-size: 0.875em;
 	font-weight: 100;
 	cursor: pointer;
 }
 .extra-wrap1 p:hover{
+	margin:0 auto;
 	text-decoration:underline;
 }
-.recent-tweet {
+.recent-f {
+	margin:0 auto;
 	margin-bottom: 1em;
 }
-.recent-tweet-icon {
+.recent-f-icon {
+	margin:0 auto;
 	float: left;
 	width: 10%;
 	margin-top: 1%;
 }
-.recent-tweet-icon span {
+.recent-f-icon span {
+	margin:0 auto;
 	width: 20px;
 	height: 20px;
 	display: block;
 	background: url(../images/img-sprite.png) no-repeat -136px -111px;
 }
-.recent-tweet-info p {
+.recent-f-info p {
+	margin:0 auto;
 	color: #919295;
 	font-size: 0.875em;
 	line-height: 1.5em;
 }
 .footer-grid3 h4 {
+	margin:0 auto;
 	font-size: 1.2em;
 	text-transform: uppercase;
 	color: #FFF;
 	padding-bottom:1.2em;
 }
-.recent-tweet-info {
+.recent-f-info {
+	margin:0 auto;
 	float: right;
 	width: 88%;
 }
-.recent-tweet-info a {
+.recent-f-info a {
 	display: block;
 	color:#919295;
 	transition: 0.5s all;
@@ -773,16 +791,19 @@ i.earth{
 	-o-transition: 0.5s all;
 	font-style: italic;
 }
-.recent-tweet-info a:hover {
+.recent-f-info a:hover {
+	margin:0 auto;
 	color:#FFA540;
 }
 .footer-grid4 h4 {
+	margin:0 auto;
 	font-size: 1.2em;
 	text-transform: uppercase;
 	color: #FFF;
 	padding-bottom: 0.5em;
 }
 .footer-grid4 p {
+	margin:0 auto;
 	color:#919295;
 	font-size: 0.875em;
 	margin-bottom: 0.5em;
@@ -841,13 +862,16 @@ i.earth{
 	margin-top:7px;
 }
 .copy p{
+	margin:0 auto;
 	color:#919295;
 	font-size: 0.875em;
 }
 .copy p a{
+	margin:0 auto;
 	color:#FFA540;
 }
 .copy p a:hover{
+	margin:0 auto;
 	color:#919295;
 }
 .social {
@@ -1597,7 +1621,7 @@ span.right_line1 {
 		font-size: 1.1em;
 		padding: 15px 40px;
 	}
-	.recent-tweet-info {
+	.recent-f-info {
 		width: 86%;
 	}
 	.pages-top {
@@ -1774,7 +1798,7 @@ span.right_line1 {
 		font-size: 1.1em;
 		padding: 15px 40px;
 	}
-	.recent-tweet-info {
+	.recent-f-info {
 		width: 86%;
 	}
 	.pages-top {
@@ -2013,7 +2037,7 @@ span.right_line1 {
 		font-size: 1.1em;
 		padding: 15px 40px;
 	}
-	.recent-tweet-info {
+	.recent-f-info {
 		width: 86%;
 	}
 	.pages-top {
@@ -2270,7 +2294,7 @@ span.right_line1 {
 		font-size: 1em;
 		padding: 12px 30px;
 	}
-	.recent-tweet-info {
+	.recent-f-info {
 		width: 86%;
 	}
 	.pages-top {
@@ -2392,6 +2416,7 @@ span.right_line1 {
 	}
 }
 
+/*** SEARCH ***/
 body {
   height: 100%;
   margin: 0;
@@ -2405,9 +2430,12 @@ p {
   margin-top: 30px;
 }
 .cntr {
-  display: table;
-  width: 100%;
-  height: 100%;
+	font-family:Tahoma, arial;
+	color:gold;
+	font-size:13pt;
+	display: table;
+	width: 100%;
+	height: 100%;
 }
 .cntr .cntr-innr {
   display: table-cell;
@@ -2498,14 +2526,32 @@ p {
     color: #E62600;
 }
 
+/*-------------------------
+		Góc bên phải
+--------------------------*/
+.gocphaimanhinhTV {
+	font-family:Tahoma, arial;
+	text-transform: capitalize;
+	font-size:13pt;
+	font-weight:bolder;
+	color:gold;
+	font-style:normal;
+	text-indent:0.2in;
+	line-height:20px;
+	text-align:right; 
+	margin: 5px 5px 7px 9px;
+}
+.gocphaimanhinh {
+	font-family:Tahoma, arial;
+	text-transform: capitalize;
+	font-size:13pt;
+	font-weight:bolder;
 
-
-
-
-
-
-
-
-
+	font-style:normal;
+	text-indent:0.2in;
+	line-height:20px;
+	text-align:right; 
+	margin: 5px 5px 7px 9px;
+}
 
 

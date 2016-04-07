@@ -7,9 +7,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Lato:400,300,600,700,800' rel='stylesheet' type='text/css'>
-<script src="js/jquery.min.js"></script>
-<script src="prefixfree.js" type="text/javascript"></script>
 
+        <!---------------------------
+                     CLOCK
+        ---------------------------->
+    <link href="css/style2.css" rel="stylesheet" />
+                <!-- JavaScript Includes -->
+            <script src="js/jquery.min(v1.10.1).js"></script>
+            <script src="js/moment.min.js"></script>
+            <script src="js/script.js"></script>
+
+<script src="js/jquery.min.js"></script>
 <!---strat-slider---->
 	    <link rel="stylesheet" type="text/css" href="css/slider.css" />
 		<script type="text/javascript" src="js/modernizr.custom.28468.js"></script>
@@ -43,13 +51,6 @@
 			});
 		});
 		</script>
-    <style>
-        .gocphaimanhinh {
-            text-align:right; 
-            line-height:20px;
-            margin: 5px 5px 7px 9px;     
-                        }
-    </style>
 </head>
 
 <body>
@@ -61,18 +62,23 @@
         <span><ins>Đăng Nhập</ins></span>
     </a>
 </div>
-<div class="cntr">
-	<div class="cntr-innr">
-	  <label class="search" for="inpt_search">
-			<input id="inpt_search" type="text" />
-		</label>
-		<p>Sờ vào để tìm thứ bạn cần.</p>
-	</div>
-</div>
-<div class="wrap"> 
 
+    <!---------------------------
+                SEARCH
+    ---------------------------->
+    <div class="cntr">
+        <div class="cntr-innr">
+          <label class="search" for="inpt_search">
+                <input id="inpt_search" type="text" />
+            </label>
+            <p>Sờ vào để tìm thứ bạn cần.</p>
+        </div>
+    </div>
 
-<div class="header-top">
+    <!---------------------------
+                MENU
+    ---------------------------->  
+<div class="pages-top">
     <div class="logo">
         <a href="index.asp"><img src="images/logo.png" alt=""/></a>
     </div>
@@ -123,7 +129,8 @@
 				</ul>
 				<script type="text/javascript" src="js/nav.js"></script>
 			</div><!-- end h_menu4 -->
-			<div class="clear"></div>
+ 
+ 			<div class="clear"></div>
 		</div><!-- end header_main4 -->
         <div class="slider">
 				<!---start-da-slider----->
@@ -301,32 +308,35 @@
 				  </a> </div>
 				<div class="clear"></div>
 		 </div>
-		 <div class="m_3"><span class="left_line"></span>Testimonials<span class="right_line"> </span></div>
+<!---------------------------
+             NOTE
+---------------------------->
+		 <div class="m_3"><span class="left_line"></span>NOTE<span class="right_line"> </span></div>
 		      <div class="wmuSlider example">
 			    <div class="wmuSliderWrapper">
 				   <article style="position: absolute; width: 100%; opacity: 0;"> 
 				   	   <div class="banner-text">
-						  <p>diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud <br>exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor<br> in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
+						  <p>NOTE 1<br>NOTE 2</p>
 					   </div>
-					   <h3 class="m_6">Ut wisienim, <span class="bg1">Company name</span></h3>
+					   <h3 class="m_6">Cửa hàng máy tính, <br><span class="bg1">Cty Group Four</span></h3>
 				   </article>
 				   <article style="position: relative; width: 100%; opacity: 1;"> 
 				   	   <div class="banner-text">
-						  <p>claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me  <br>exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor<br> in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
+						  <p>NOTE 3<br>NOTE 4</p>
 					   </div>
-					   <h3 class="m_6">Ut wisienim, <span class="bg1">Company name</span></h3>
+					   <h3 class="m_6">Cửa hàng máy tính, <br><span class="bg1">Cty Group Four</span></h3>
 				   </article>
 				   <article style="position: absolute; width: 100%; opacity: 0;">
 				       <div class="banner-text">
-						  <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta <br> in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
+						  <p>NOTE 5<br>NOTE 6</p>
 					   </div>
-					    <h3 class="m_6">Ut wisienim, <span class="bg1">Company name</span></h3>
+					    <h3 class="m_6">Cửa hàng máy tính, <br><span class="bg1">Cty Group Four</span></h3>
 				   </article>
 				   <article style="position: absolute; width: 100%; opacity: 0;">
 				        <div class="banner-text">
-						  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam<br>exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor<br> in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
+						  <p>NOTE 7<br>NOTE 8</p>
 					   </div>
-					    <h3 class="m_6">Ut wisienim, <span class="bg1">Company name</span></h3>
+					    <h3 class="m_6">Cửa hàng máy tính, <br><span class="bg1">Cty Group Four</span></h3>
 				   </article>
 				  </div>
                  <ul class="wmuSliderPagination">
@@ -341,8 +351,25 @@
        					$('.example').wmuSlider();         
    				   </script> 	
 			</div>
+            <!--END NOTE-->
+        <!---------------------------
+                     CLOCK
+        ---------------------------->
+    <div id="clock" class="light">
+        <div class="display">
+            <div class="weekdays"></div>
+            <div class="ampm"></div>
+            <div class="alarm"></div>
+            <div class="digits"></div>
+        </div>
+    </div>
+           <!--END CLOCK-->
 	    </div>
-	    <div class="footer">
+        
+    <!---------------------------
+                BOTTOM
+    ---------------------------->
+        <div class="footer">
 			<div class="wrap">
 				<div class="footer-grid footer-grid1">
 					<div class="f-logo">
@@ -369,29 +396,29 @@
 				</div>
 				<div class="footer-grid footer-grid3">
 					<h4>Tiêu Chí</h4>
-					<div class="recent-tweet">
-						<div class="recent-tweet-icon">
+					<div class="recent-f">
+						<div class="recent-f-icon">
 							<span> </span>
 						</div>
-						<div class="recent-tweet-info">
+						<div class="recent-f-info">
 							<p>Uy Tín</p>
 						</div>
 						<div class="clear"> </div>
 					</div>
-					<div class="recent-tweet1">
-						<div class="recent-tweet-icon">
+					<div class="recent-f1">
+						<div class="recent-f-icon">
 							<span> </span>
 						</div>
-						<div class="recent-tweet-info">
+						<div class="recent-f-info">
 							<p>Chất Lượng</p>
 						</div>
 						<div class="clear"> </div>
 					</div><br />
-                    <div class="recent-tweet2">
-						<div class="recent-tweet-icon">
+                    <div class="recent-f2">
+						<div class="recent-f-icon">
 							<span> </span>
 						</div>
-						<div class="recent-tweet-info">
+						<div class="recent-f-info">
 							<p>Chuyên Nghiệp</p>
 						</div>
 						<div class="clear"> </div>
@@ -423,5 +450,6 @@
 			    <div class="clear"></div>
 			  </div>
        </div>
+       
 </body>
 </html>

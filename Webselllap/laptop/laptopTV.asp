@@ -8,6 +8,9 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Lato:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <script src="../js/jquery.min.js"></script>
+        <!---------------------------
+                  LIGHTBOX
+        ---------------------------->
 <script type="text/javascript" src="../js/jquery.lightbox.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/lightbox.css" media="screen" />
   <script type="text/javascript">
@@ -15,20 +18,12 @@
         $('.gallery a').lightBox();
     });
    </script>
-    <style>
-        .gocphaimanhinh {
-            text-align:right; 
-            line-height:20px;
-            margin: 5px 5px 7px 9px;
-            color:gold     
-                        }
-    </style>
 </head>
 
 <body>
 <div class="wrap">
-    <div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
-            <%
+    <div class="gocphaimanhinhTV"> <!-- bắt đầu đăng kí đăng nhập -->
+           <%
 'Check if user is logged in
 if Session("name") = "" then
 	'If not, go to login page
@@ -38,6 +33,23 @@ else
 	Response.write("Chào " & Session("name") & "," & "&nbsp;" & "<a href=../index.asp style=color:red><ins>Thoát<ins></a>")
 end if
 %>
+	</div>
+</div>
+    <!---------------------------
+                SEARCH
+    ---------------------------->
+    <div class="cntr">
+        <div class="cntr-innr">
+          <label class="search" for="inpt_search">
+                <input id="inpt_search" type="text" />
+            </label>
+            <p>Sờ vào để tìm thứ bạn cần.</p>
+        </div>
+    </div>
+
+    <!---------------------------
+                MENU
+    ---------------------------->
 	<div class="pages-top">
 	        <div class="logo">
 				<a href="../indexTV.asp"><img src="../images/logo.png" alt=""/></a>
@@ -196,11 +208,15 @@ end if
 		  </div>
 		  </div>
 		</div>
-	   <div class="footer">
+
+    <!---------------------------
+                BOTTOM
+    ---------------------------->
+        <div class="footer">
 			<div class="wrap">
 				<div class="footer-grid footer-grid1">
 					<div class="f-logo">
-				     <a href="index.html"><img src="images/group four.png" alt=""></a>
+				     <a href="index.html"><img src="images/logo.png" alt=""></a>
 			        </div>
 					<p>Nhóm gồm 4 thành viên sáng lập, mỗi thành viên điều rất nhiệt tình trong công việc mình đảm nhận.</p>
 				</div>
@@ -223,29 +239,29 @@ end if
 				</div>
 				<div class="footer-grid footer-grid3">
 					<h4>Tiêu Chí</h4>
-					<div class="recent-tweet">
-						<div class="recent-tweet-icon">
+					<div class="recent-f">
+						<div class="recent-f-icon">
 							<span> </span>
 						</div>
-						<div class="recent-tweet-info">
+						<div class="recent-f-info">
 							<p>Uy Tín</p>
 						</div>
 						<div class="clear"> </div>
 					</div>
-					<div class="recent-tweet1">
-						<div class="recent-tweet-icon">
+					<div class="recent-f1">
+						<div class="recent-f-icon">
 							<span> </span>
 						</div>
-						<div class="recent-tweet-info">
+						<div class="recent-f-info">
 							<p>Chất Lượng</p>
 						</div>
 						<div class="clear"> </div>
 					</div><br />
-                    <div class="recent-tweet2">
-						<div class="recent-tweet-icon">
+                    <div class="recent-f2">
+						<div class="recent-f-icon">
 							<span> </span>
 						</div>
-						<div class="recent-tweet-info">
+						<div class="recent-f-info">
 							<p>Chuyên Nghiệp</p>
 						</div>
 						<div class="clear"> </div>
@@ -255,7 +271,7 @@ end if
 					<h4>Nhận Tin Mới</h4>
 					<p>Nhập địa chỉ Email để nhận được những tin tức mới nhất về công nghệ</p>
 					<form>
-						<input type="text" value="Email Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address';}">
+						<input type="text" value="Địa chỉ Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Địa chỉ Email';}">
 						<input type="submit" value="">
 					</form>
 				</div>
@@ -277,5 +293,6 @@ end if
 			    <div class="clear"></div>
 			  </div>
        </div>
+       
 </body>
 </html>

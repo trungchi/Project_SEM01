@@ -15,18 +15,10 @@
         $('.gallery a').lightBox();
     });
    </script>
-    <style>
-        .gocphaimanhinh {
-            text-align:right; 
-            line-height:20px;
-            margin: 5px 5px 7px 9px;
-            color:gold     
-                        }
-    </style>
 </head>
 <body>
 <div class="wrap"> 
-    <div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
+    <div class="gocphaimanhinhTV"> <!-- bắt đầu đăng kí đăng nhập -->
             <%
 'Check if user is logged in
 if Session("name") = "" then
@@ -37,6 +29,23 @@ else
 	Response.write("Chào " & Session("name") & "," & "&nbsp;" & "<a href=../index.asp style=color:red><ins>Thoát<ins></a>")
 end if
 %>
+	</div>
+</div>
+    <!---------------------------
+                SEARCH
+    ---------------------------->
+    <div class="cntr">
+        <div class="cntr-innr">
+          <label class="search" for="inpt_search">
+                <input id="inpt_search" type="text" />
+            </label>
+            <p>Sờ vào để tìm thứ bạn cần.</p>
+        </div>
+    </div>
+
+    <!---------------------------
+                MENU
+    ---------------------------->
 	<div class="pages-top">
 	        <div class="logo">
 				<a href="../indexTV.asp"><img src="../images/logo.png" alt=""/></a>

@@ -16,13 +16,6 @@
         $('.gallery a').lightBox();
     });
    </script>
-    <style>
-        .gocphaimanhinh {
-            text-align:right; 
-            line-height:20px;
-            margin: 5px 5px 7px 9px;     
-                        }
-    </style>
 </head>
 
 <body>
@@ -34,7 +27,23 @@
             <a rel="nofollow" href="../login.asp" style="color:red ">
                 <span><ins>Đăng Nhập</ins></span>
             </a>
+    </div>
+</div>
+    <!---------------------------
+                SEARCH
+    ---------------------------->
+    <div class="cntr">
+        <div class="cntr-innr">
+          <label class="search" for="inpt_search">
+                <input id="inpt_search" type="text" />
+            </label>
+            <p>Sờ vào để tìm thứ bạn cần.</p>
         </div>
+    </div>
+
+    <!---------------------------
+                MENU
+    ---------------------------->
 	<div class="pages-top">
 	        <div class="logo">
 				<a href="../index.asp"><img src="../images/logo.png" alt=""/></a>
