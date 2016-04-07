@@ -1,8 +1,8 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-<title>Website bán máy tính | Laptop :: Groupfour</title>
-<link rel="shortcut icon" href="../images/icon.ico">
+<title>Cửa hàng máy tính | Laptop :: groupfour</title>
+<link rel="shortcut icon" href="../images/icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -19,6 +19,30 @@
 
 <body>
 <div class="wrap"> 
+    <div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
+            <a rel="nofollow" href="../create.asp" style="color:red ">
+                <span><ins>Đăng ký</ins></span> /
+            </a>
+            <a rel="nofollow" href="../login.asp" style="color:red ">
+                <span><ins>Đăng Nhập</ins></span>
+            </a>
+    </div>
+</div>
+    <!---------------------------
+                SEARCH
+    ---------------------------->
+    <div class="cntr">
+        <div class="cntr-innr">
+          <label class="search" for="inpt_search">
+                <input id="inpt_search" type="text" />
+            </label>
+            <p>Sờ vào để tìm thứ bạn cần.</p>
+        </div>
+    </div>
+
+    <!---------------------------
+                MENU
+    ---------------------------->
 	<div class="pages-top">
 	        <div class="logo">
 				<a href="../index.asp"><img src="../images/logo.png" alt=""/></a>
@@ -69,76 +93,76 @@
 				 <div class="cont1 span_2_of_g1">
 				      <div class="gallery">
 			       <ul>
-				<li>
-					<a class="thumb" href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
-					<h3>Dell đỏ</h3>
+				<li class="active">
+					<a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
+					<h3 align="center">Dell đỏ</h3>
 				</li>
-				<li>
+                <li>
 					<a href="../images/t-pic8.jpg"><img src="../images/pic8.jpg" alt=""/></a>
-				  <h3>Duis autem vel eumter</h3>
+					<h3 align="center">Dell bạc</h3>
 				</li>
-                <li class="last">
+				<li class="last">
 					<a href="../images/t-pic9.jpg"><img src="../images/pic9.jpg" alt=""/></a>
-					<h3>Duis autem vel eumter</h3>
+				  	<h3 align="center">Dell ba màu</h3>
 				</li>
 				<li>
 					<a href="../images/t-pic10.jpg"><img src="../images/pic10.jpg" alt=""/></a>
-					<h3>Duis autem vel eumter</h3>
+					<h3 align="center">Asus xoay màn hình</h3>
 				</li>
 				<li>
 					<a href="../images/t-pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>
-					<h3>Duis autem vel eumter</h3>
+					<h3 align="center">Asus đa màu</h3>
 				</li>
 				<li class="last">
 					<a href="../images/t-pic12.jpg"><img src="../images/pic12.jpg" alt=""/></a>
-					<h3>Duis autem vel eumter</h3>
+					<h3 align="center">Asus màn hình rời</h3>
 				</li>
-				<li>
+					<li>
 					<a href="../images/t-pic13.jpg"><img src="../images/pic13.jpg" alt=""/></a>
-					<h3>Duis autem vel eumter</h3>
+					<h3 align="center">Hp đen</h3>
 				</li>
 				<li>
 					<a href="../images/t-pic14.jpg"><img src="../images/pic14.jpg" alt=""/></a>
-					<h3>Duis autem vel eumter</h3>
+					<h3 align="center">Hp xoay màn hình</h3>
 				</li>
 				<li class="last">
 					<a href="../images/t-pic15.jpg"><img src="../images/pic15.jpg" alt=""/></a>
-					<h3>Duis autem vel eumter</h3>
+					<h3 align="center">Hp màn hình rời</h3>
 				</li>
 			   <div class="clear"></div>
 			</ul>
 		</div>
 		    <ul class="dc_pagination dc_paginationA dc_paginationA06">
 			  <li><a href="#" class="previous">Previous</a></li>
-			  <li><a href="#1" class="current">1</a></li>
-			  <li><a href="#2">2</a></li>
-			  <li><a href="#3">3</a></li>
-			  <li><a href="#4">4</a></li>
-			  <li><a href="#5">5</a></li>
-			  <li><a href="#">...</a></li>
-			  <li><a href="#19">19</a></li>
-			  <li><a href="#20.htm">20</a></li>
+			  <li><a href="laptop.asp#1.htm" class="current">1</a></li>
+			  <li><a href="laptop.asp#2.htm">2</a></li>
+			  <li><a href="laptop.asp#3.htm">3</a></li>
+			  <li><a href="laptop.asp#4.htm">4</a></li>
+			  <li><a href="laptop.asp#5.htm">5</a></li>
+			  <li><a href="laptop.asp#.htm">...</a></li>
+			  <li><a href="laptop.asp#19.htm">19</a></li>
+			  <li><a href="laptop.asp#20.htm">20</a></li>
 			  <li><a href="#" class="next">Next</a></li>
 		     </ul>
 		</div>
         <div class="labout span_1_of_g1">
 		  <div class="project-list">
-	     	<h4>Thể loại</h4>
+	     	<h4>Loại</h4>
 			<ul class="blog-list">
-				<li><a href="#">Dell</a></li>
+				<li><a href="#">DELL </a></li>
 				<li><a href="#">HP</a></li>
-				<li><a href="#">Apple</a></li>
-				<li><a href="#">Acer</a></li>
-				<li><a href="#">Asus</a></li>
+				<li><a href="#">APPLE</a></li>
+				<li><a href="#">ASUS</a></li>
+				<li><a href="#">ACER</a></li>
 			</ul>
 			<ul class="blog-list">
-				<li><a href="#">Lenovo</a></li>
-                <li><a href="#">Vaio</a></li>
+				<li><a href="#">LENOVO</a></li>
+				<li><a href="#">VAIO</a></li>
 			</ul>
 			<div class="clear"></div>
 		   </div>
-		  <!-- <div class="project-list1">
-	     	<h4>Archives</h4>
+		   <div class="project-list1">
+	     	<!--<h4>Archives</h4>
 			<ul class="blog-list">
 				<li><a href="#">idignissim </a></li>
 				<li><a href="#">usto odio </a></li>
@@ -152,11 +176,11 @@
 				<li><a href="#">idignissim </a></li>
 				<li><a href="#">usto odio </a></li>
 				<li><a href="#">anteposformas</a></li>
-			</ul>
+			</ul>-->
 			<div class="clear"></div>
-		   </div>-->
+		   </div>
 		   <div class="project-list2">
-	     	<h4>Tags</h4>
+	     	<h4>Các thẻ chọn</h4>
 			<ul>
 				<li><a href="#">Web Design</a></li>
 				<li><a href="#">Html5</a></li>

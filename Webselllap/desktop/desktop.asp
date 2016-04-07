@@ -1,8 +1,8 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-<title>Website bán máy tính | Desktop :: Groupfour</title>
-<link rel="shortcut icon" href="../images/icon.ico">
+<title>Cửa hàng máy tính | Desktop :: Groupfour</title>
+<link rel="shortcut icon" href="../images/icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -20,6 +20,30 @@
 
 <body>
 <div class="wrap"> 
+    <div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
+            <a rel="nofollow" href="../create.asp" style="color:red ">
+                <span><ins>Đăng ký</ins></span> /
+            </a>
+            <a rel="nofollow" href="../login.asp" style="color:red ">
+                <span><ins>Đăng Nhập</ins></span>
+            </a>
+    </div>
+</div>
+    <!---------------------------
+                SEARCH
+    ---------------------------->
+    <div class="cntr">
+        <div class="cntr-innr">
+          <label class="search" for="inpt_search">
+                <input id="inpt_search" type="text" />
+            </label>
+            <p>Sờ vào để tìm thứ bạn cần.</p>
+        </div>
+    </div>
+
+    <!---------------------------
+                MENU
+    ---------------------------->
 	<div class="pages-top">
 	        <div class="logo">
 				<a href="../index.asp"><img src="../images/logo.png" alt=""/></a>
@@ -72,48 +96,48 @@
 				 <div class="gallery">
 			       <ul>
 						<li>
-					<a href="../images/t-pic10.jpg"><img src="../images/pic10.jpg" alt=""/></a>
-					<h3>Duis autem vel eumter</h3>
-				</li>
-				<li>
-					<a href="../images/t-pic15.jpg"><img src="../images/pic15.jpg" alt=""/></a>
-				  <h3>Duis autem vel eumter</h3>
-				</li>
-                <li class="last">
-					<a href="../images/t-pic13.jpg"><img src="../images/pic13.jpg" alt=""/></a>
-					<h3>Duis autem vel eumter</h3>
-				</li>
-				<li>
-					<a href="../images/t-pic8.jpg"><img src="../images/pic8.jpg" alt=""/></a>
-					<h3>Duis autem vel eumter</h3>
-				</li>
-				<li>
-					<a href="../images/t-pic12.jpg"><img src="../images/pic12.jpg" alt=""/></a>
-					<h3>Duis autem vel eumter</h3>
-				</li>
-				<li class="last">
-					<a href="../images/t-pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>
-					<h3>Duis autem vel eumter</h3>
-				</li>
-				<li>
-					<a href="../images/t-pic9.jpg"><img src="../images/pic9.jpg" alt=""/></a>
-					<h3>Duis autem vel eumter</h3>
-				</li>
-				<li>
-					<a href="../images/t-pic14.jpg"><img src="../images/pic14.jpg" alt=""/></a>
-					<h3>Duis autem vel eumter</h3>
-				</li>
-				<li class="last">
-					<a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
-					<h3>Duis autem vel eumter</h3>
-				</li>
+							<a href="../images/pic15.jpg"><img src="../images/pic15.jpg" alt=""/></a>
+							<h3>Cấu hình Duel-Core</h3>
+						</li>
+						<li>
+							<a href="../images/t-pic8.jpg"><img src="../images/pic8.jpg" alt=""/></a>
+							<h3>Cầu hình Core i3</h3>
+						</li>
+						<li class="last">
+							<a href="../images/t-pic9.jpg"><img src="../images/pic9.jpg" alt=""/></a>
+							<h3>Cấu hình Core i5</h3>
+						</li>
+						<li>
+							<a href="../images/t-pic10.jpg"><img src="../images/pic10.jpg" alt=""/></a>
+							<h3>Cầu hình core i7</h3>
+						</li>
+						<li>
+							<a href="../images/pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>
+							<h3>seacula quarta decima</h3>
+						</li>
+						<li class="last">
+							<a href="../images/pic12.jpg"><img src="../images/pic12.jpg" alt=""/></a>
+							<h3>mutationem consuetudium </h3>
+						</li>
+							<li>
+							<a href="../images/t-pic13.jpg"><img src="../images/pic13.jpg" alt=""/></a>
+							<h3>eleifend option congue</h3>
+						</li>
+						<li>
+							<a href="../images/t-pic14.jpg"><img src="../images/pic14.jpg" alt=""/></a>
+							<h3>imperdiet doming</h3>
+						</li>
+						<li class="last">
+							<a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
+							<h3>usto odio dignissim qui </h3>
+						</li>
 					   <div class="clear"></div>
 				</ul>
 		</div>
 		    <ul class="dc_pagination dc_paginationA dc_paginationA06">
 			  <li><a href="#" class="previous">Previous</a></li>
-			  <li><a href="#" class="current">1</a></li>
-			  <li><a href="#">2</a></li>
+			  <li><a href="#">1</a></li>
+			  <li><a href="#" class="current">2</a></li>
 			  <li><a href="#">3</a></li>
 			  <li><a href="#">4</a></li>
 			  <li><a href="#">5</a></li>
@@ -125,39 +149,24 @@
 		</div>
         <div class="labout span_1_of_g1">
 		  <div class="project-list">
-	     	<h4>Thể loại</h4>
+	     	<h4>Loại</h4>
 			<ul class="blog-list">
-				<li><a href="#">Dell</a></li>
+				<li><a href="#">DELL </a></li>
 				<li><a href="#">HP</a></li>
-				<li><a href="#">Apple</a></li>
-				<li><a href="#">Acer</a></li>
-				<li><a href="#">Asus</a></li>
+				<li><a href="#">APPLE</a></li>
+				<li><a href="#">ASUS</a></li>
+				<li><a href="#">ACER</a></li>
 			</ul>
 			<ul class="blog-list">
-				<li><a href="#">Lenovo</a></li>
+				<li><a href="#">LENOVO</a></li>
 			</ul>
 			<div class="clear"></div>
 		   </div>
-		   <!--<div class="project-list1">
-	     	<h4>Archives</h4>
-			<ul class="blog-list">
-				<li><a href="#">idignissim </a></li>
-				<li><a href="#">usto odio </a></li>
-				<li><a href="#">anteposformas</a></li>
-				<li><a href="#">litterarum</a></li>
-				<li><a href="#">humanitatis</a></li>
-			</ul>
-			<ul class="blog-list">
-				<li><a href="#">litterarum</a></li>
-				<li><a href="#">humanitatis</a></li>
-				<li><a href="#">idignissim </a></li>
-				<li><a href="#">usto odio </a></li>
-				<li><a href="#">anteposformas</a></li>
-			</ul>
+		   <div class="project-list1">
 			<div class="clear"></div>
-		   </div>-->
+		   </div>
 		   <div class="project-list2">
-	     	<h4>Tags</h4>
+	     	<h4>Các thẻ chọn</h4>
 			<ul>
 				<li><a href="#">Web Design</a></li>
 				<li><a href="#">Html5</a></li>

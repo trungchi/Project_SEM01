@@ -1,13 +1,21 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-<title>Website bán máy tính | Trang chủ :: Groupfour</title>
-<link rel="shortcut icon" href="images/icon.ico">
+<title>Cửa hàng máy tính | Trang chủ :: Groupfour</title>
+<link rel="shortcut icon" href="images/icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Lato:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <script src="js/jquery.min.js"></script>
+        <!---------------------------
+                     CLOCK
+        ---------------------------->
+    <link href="css/style2.css" rel="stylesheet" />
+                <!-- JavaScript Includes -->
+            <script src="js/jquery.min(v1.10.1).js"></script>
+            <script src="js/moment.min.js"></script>
+            <script src="js/script.js"></script>
 
 <!---strat-slider---->
 	    <link rel="stylesheet" type="text/css" href="css/slider.css" />
@@ -42,20 +50,11 @@
 			});
 		});
 		</script>
-    <style>
-        .gocphaimanhinh {
-            text-align:right; 
-            line-height:20px;
-            margin: 5px 5px 7px 9px;
-            color:gold;
-                        }
-       
-    </style>
 </head>
 
 <body>
 <div class="wrap"> 
-    <div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
+    <div class="gocphaimanhinhTV"> <!-- bắt đầu đăng kí đăng nhập -->
            <%
 'Check if user is logged in
 if Session("name") = "" then
@@ -66,56 +65,70 @@ else
 	Response.write("Chào " & Session("name") & "," & "&nbsp;" & "<a href=index.asp style=color:red><ins>Thoát<ins></a>")
 end if
 %>
-
-
+	</div>
+</div>
+    <!---------------------------
+                SEARCH
+    ---------------------------->
+    <div class="cntr">
+        <div class="cntr-innr">
+          <label class="search" for="inpt_search">
+                <input id="inpt_search" type="text" />
+            </label>
+            <p>Sờ vào để tìm thứ bạn cần.</p>
         </div>
-	<div class="header-top">
+    </div>
+
+    <!---------------------------
+                MENU
+    ---------------------------->
+	<div class="pages-top">
 	        <div class="logo">
-				<a href="index.asp"><img src="images/logo.png" alt=""/></a>
+				<a href="indexTV.asp"><img src="images/logo.png" alt=""/></a>
 			 </div>
 		     <div class="h_menu4"><!-- start h_menu4 -->
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-					<li class="active"><a href="index.asp">Trang chủ</a></li>
-					<li><a href="laptop/laptop.asp">Laptop</a>
+					<li class="active"><a href="indexTV.asp">Trang chủ</a></li>
+					<li><a href="laptop/laptopTV.asp">Laptop</a>
 						<ul>
-							<li><a href="laptop/laptop.asp">DELL</a></li>
-							<li><a href="laptop/laptop.asp">HP</a></li>
-							<li><a href="laptop/laptop.asp">APPLE</a></li>
-							<li><a href="laptop/laptop.asp">ACER</a></li>
-							<li><a href="laptop/laptop.asp">ASUS</a></li>
-							<li><a href="laptop/laptop.asp">LENOVO</a></li>
-							<li><a href="laptop/laptop.asp">VAIO</a></li>
+							<li><a href="laptop/laptopTV.asp">DELL</a></li>
+							<li><a href="laptop/laptopTV.asp">HP</a></li>
+							<li><a href="laptop/laptopTV.asp">APPLE</a></li>
+							<li><a href="laptop/laptopTV.asp">ACER</a></li>
+							<li><a href="laptop/laptopTV.asp">ASUS</a></li>
+							<li><a href="laptop/laptopTV.asp">LENOVO</a></li>
+							<li><a href="laptop/laptopTV.asp">VAIO</a></li>
 						</ul>
 					</li>
-					<li><a href="desktop/desktop.asp">Desktop</a>
+					<li><a href="desktop/desktopTV.asp">Desktop</a>
 						<ul>
-							<li><a href="desktop/desktop.asp">DELL</a></li>
-							<li><a href="desktop/desktop.asp">HP</a></li>
-							<li><a href="desktop/desktop.asp">APPLE</a></li>
-							<li><a href="desktop/desktop.asp">ACER</a></li>
-							<li><a href="desktop/desktop.asp">ASUS</a></li>
-							<li><a href="desktop/desktop.asp">LENOVO</a></li>
+							<li><a href="desktop/desktopTV.asp">DELL</a></li>
+							<li><a href="desktop/desktopTV.asp">HP</a></li>
+							<li><a href="desktop/desktopTV.asp">APPLE</a></li>
+							<li><a href="desktop/desktopTV.asp">ACER</a></li>
+							<li><a href="desktop/desktopTV.asp">ASUS</a></li>
+							<li><a href="desktop/desktopTV.asp">LENOVO</a></li>
 						</ul>
 					</li>
-					<li><a href="linhkien/linhkien.asp">Linh kiện</a>
+					<li><a href="linhkien/linhkienTV.asp">Linh kiện</a>
 						<ul>
-							<li><a href="linhkien/linhkien.asp">RAM</a></li>
-							<li><a href="linhkien/linhkien.asp">Card VGA</a></li>
-							<li><a href="linhkien/linhkien.asp">Mainboard</a></li>
-							<li><a href="linhkien/linhkien.asp">Sound card (card âm thanh)</a></li>
+							<li><a href="linhkien/linhkienTV.asp">RAM</a></li>
+							<li><a href="linhkien/linhkienTV.asp">Card VGA</a></li>
+							<li><a href="linhkien/linhkienTV.asp">Mainboard</a></li>
+							<li><a href="linhkien/linhkienTV.asp">Sound card (card âm thanh)</a></li>
 						</ul>
 					</li>
-					<li><a href="phukien/phukien.asp">Phụ kiện</a>
+					<li><a href="phukien/phukienTV.asp">Phụ kiện</a>
 						<ul>
-							<li><a href="phukien/phukien.asp">Headphones</a></li>
-							<li><a href="phukien/phukien.asp">Earphones</a></li>
-							<li><a href="phukien/phukien.asp">Chuột</a></li>
-							<li><a href="phukien/phukien.asp">Keyboard (bàn phím)</a></li>
-							<li><a href="phukien/phukien.asp">USB</a></li>
+							<li><a href="phukien/phukienTV.asp">Headphones</a></li>
+							<li><a href="phukien/phukienTV.asp">Earphones</a></li>
+							<li><a href="phukien/phukienTV.asp">Chuột</a></li>
+							<li><a href="phukien/phukienTV.asp">Keyboard (bàn phím)</a></li>
+							<li><a href="phukien/phukienTV.asp">USB</a></li>
 						</ul>
 					</li>
-					<li><a href="lienhe/lienhe.asp">Liên hệ</a></li>
+					<li><a href="lienhe/lienheTV.asp">Liên hệ</a></li>
 				</ul>
 				<script type="text/javascript" src="js/nav.js"></script>
 			</div><!-- end h_menu4 -->
@@ -297,32 +310,50 @@ end if
 				  </a> </div>
 				<div class="clear"></div>
 		 </div>
-		 <div class="m_3"><span class="left_line"></span>Testimonials<span class="right_line"> </span></div>
+         
+         
+        <!---------------------------
+                     CLOCK
+        ---------------------------->
+    <div id="clock" class="light">
+        <div class="display">
+            <div class="weekdays"></div>
+            <div class="ampm"></div>
+            <div class="alarm"></div>
+            <div class="digits"></div>
+        </div>
+    </div>
+           <!--END CLOCK-->
+        
+<!---------------------------
+             NOTE
+---------------------------->
+		 <div class="m_3"><span class="left_line"></span>NOTE<span class="right_line"> </span></div>
 		      <div class="wmuSlider example">
 			    <div class="wmuSliderWrapper">
 				   <article style="position: absolute; width: 100%; opacity: 0;"> 
 				   	   <div class="banner-text">
-						  <p>diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud <br>exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor<br> in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
+						  <p>NOTE 1<br>NOTE 2</p>
 					   </div>
-					   <h3 class="m_6">Ut wisienim, <span class="bg1">Company name</span></h3>
+					   <h3 class="m_6">Cửa hàng máy tính, <br><span class="bg1">Cty Group Four</span></h3>
 				   </article>
 				   <article style="position: relative; width: 100%; opacity: 1;"> 
 				   	   <div class="banner-text">
-						  <p>claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me  <br>exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor<br> in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
+						  <p>NOTE 3<br>NOTE 4</p>
 					   </div>
-					   <h3 class="m_6">Ut wisienim, <span class="bg1">Company name</span></h3>
+					   <h3 class="m_6">Cửa hàng máy tính, <br><span class="bg1">Cty Group Four</span></h3>
 				   </article>
 				   <article style="position: absolute; width: 100%; opacity: 0;">
 				       <div class="banner-text">
-						  <p>Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta <br> in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
+						  <p>NOTE 5<br>NOTE 6</p>
 					   </div>
-					    <h3 class="m_6">Ut wisienim, <span class="bg1">Company name</span></h3>
+					    <h3 class="m_6">Cửa hàng máy tính, <br><span class="bg1">Cty Group Four</span></h3>
 				   </article>
 				   <article style="position: absolute; width: 100%; opacity: 0;">
 				        <div class="banner-text">
-						  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam<br>exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor<br> in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis</p>
+						  <p>NOTE 7<br>NOTE 8</p>
 					   </div>
-					    <h3 class="m_6">Ut wisienim, <span class="bg1">Company name</span></h3>
+					    <h3 class="m_6">Cửa hàng máy tính, <br><span class="bg1">Cty Group Four</span></h3>
 				   </article>
 				  </div>
                  <ul class="wmuSliderPagination">
@@ -337,8 +368,13 @@ end if
        					$('.example').wmuSlider();         
    				   </script> 	
 			</div>
-	    </div>
-	    <div class="footer">
+            <!--END NOTE-->
+	    </div>    
+
+    <!---------------------------
+                BOTTOM
+    ---------------------------->
+        <div class="footer">
 			<div class="wrap">
 				<div class="footer-grid footer-grid1">
 					<div class="f-logo">
@@ -365,29 +401,29 @@ end if
 				</div>
 				<div class="footer-grid footer-grid3">
 					<h4>Tiêu Chí</h4>
-					<div class="recent-tweet">
-						<div class="recent-tweet-icon">
+					<div class="recent-f">
+						<div class="recent-f-icon">
 							<span> </span>
 						</div>
-						<div class="recent-tweet-info">
+						<div class="recent-f-info">
 							<p>Uy Tín</p>
 						</div>
 						<div class="clear"> </div>
 					</div>
-					<div class="recent-tweet1">
-						<div class="recent-tweet-icon">
+					<div class="recent-f1">
+						<div class="recent-f-icon">
 							<span> </span>
 						</div>
-						<div class="recent-tweet-info">
+						<div class="recent-f-info">
 							<p>Chất Lượng</p>
 						</div>
 						<div class="clear"> </div>
 					</div><br />
-                    <div class="recent-tweet2">
-						<div class="recent-tweet-icon">
+                    <div class="recent-f2">
+						<div class="recent-f-icon">
 							<span> </span>
 						</div>
-						<div class="recent-tweet-info">
+						<div class="recent-f-info">
 							<p>Chuyên Nghiệp</p>
 						</div>
 						<div class="clear"> </div>
@@ -419,5 +455,6 @@ end if
 			    <div class="clear"></div>
 			  </div>
        </div>
+       
 </body>
 </html>

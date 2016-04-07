@@ -5,7 +5,7 @@
 	
 	'Build connection with database
 	set conn = server.CreateObject ("ADODB.Connection")		
-	conn.Open "DRIVER={SQL Server};SERVER=localhost;UID=sa;PWD=skywaysthiendao;DATABASE=WEBSITE_BAN_MAY_TINH;"
+	conn.Open "DRIVER={SQL Server};SERVER=localhost;UID=sa;PWD=123456;DATABASE=WEBSITE_BAN_MAY_TINH;"
 	set rs = server.CreateObject ("ADODB.Recordset")		
 	'Open record with entered username
 	rs.Open "SELECT * FROM TaikhoanKH where taikhoandangnhap='"& Username &"'", conn, 1 

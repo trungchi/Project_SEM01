@@ -1,8 +1,8 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-<title>Website bán máy tính | Liên hệ :: Groupfour</title>
-<link rel="shortcut icon" href="../images/icon.ico">
+<title>Cửa hàng máy tính | Liên hệ :: Groupfour</title>
+<link rel="shortcut icon" href="../images/icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -18,6 +18,30 @@
 </head>
 <body>
 <div class="wrap"> 
+    <div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
+            <a rel="nofollow" href="../create.asp" style="color:red ">
+                <span><ins>Đăng ký</ins></span> /
+            </a>
+            <a rel="nofollow" href="../login.asp" style="color:red ">
+                <span><ins>Đăng Nhập</ins></span>
+            </a>
+    </div>
+</div>
+    <!---------------------------
+                SEARCH
+    ---------------------------->
+    <div class="cntr">
+        <div class="cntr-innr">
+          <label class="search" for="inpt_search">
+                <input id="inpt_search" type="text" />
+            </label>
+            <p>Sờ vào để tìm thứ bạn cần.</p>
+        </div>
+    </div>
+
+    <!---------------------------
+                MENU
+    ---------------------------->
 	<div class="pages-top">
 	        <div class="logo">
 				<a href="../index.asp"><img src="../images/logo.png" alt=""/></a>
@@ -101,6 +125,8 @@
 		   </div>
 		</div>
 		</div>
+        
+        <!--BOTTOM-->
 		<div class="footer">
 			<div class="wrap">
 				<div class="footer-grid footer-grid1">
@@ -182,5 +208,7 @@
 			    <div class="clear"></div>
 			  </div>
        </div>
+       
+       
 </body>
 </html>
