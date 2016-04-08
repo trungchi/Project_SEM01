@@ -22,15 +22,13 @@
 </head>
 
 <body>
-<div class="wrap"> 
-    <div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
-            <a rel="nofollow" href="../create.asp" style="color:red ">
-                <span><ins>Đăng ký</ins></span> /
-            </a>
-            <a rel="nofollow" href="../login.asp" style="color:red ">
-                <span><ins>Đăng Nhập</ins></span>
-            </a>
-    </div>
+<div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
+    <a rel="nofollow" href="create.asp" style="color:red ">
+        <span><ins>Đăng ký</ins></span> |
+    </a>
+    <a rel="nofollow" href="login.asp" style="color:red ">
+        <span><ins>Đăng Nhập</ins></span>
+    </a>
 </div>
     <!---------------------------
                 SEARCH
