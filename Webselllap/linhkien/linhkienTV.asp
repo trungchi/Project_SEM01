@@ -141,19 +141,20 @@ end if
 				<li class="last">
 					<a href="../images/t-lk3.jpg"><img src="../images/lk3.jpg" alt=""/></a>
 					<h3 align="center">Card màn hình 3</h3>
-			   <div class="clear"></div>
-			</ul>
-		</div>
+			   </li>
+			  				<div class="clear"></div>
+						</ul>
+					</div>
 		    <ul class="dc_pagination dc_paginationA dc_paginationA06">
 			  <li><a href="#" class="previous">Previous</a></li>
-			  <li><a href="laptop.asp-fc=1.htm" class="current">1</a></li>
-			  <li><a href="laptop.asp-fc=2.htm">2</a></li>
-			  <li><a href="laptop.asp-fc=3.htm">3</a></li>
-			  <li><a href="laptop.asp-fc=4.htm">4</a></li>
-			  <li><a href="laptop.asp-fc=5.htm">5</a></li>
-			  <li><a href="laptop.asp-fc=.htm">...</a></li>
-			  <li><a href="laptop.asp-fc=19.htm">19</a></li>
-			  <li><a href="laptop.asp-fc=20.htm">20</a></li>
+			  <li><a href="#" class="current">1</a></li>
+			  <li><a href="#">2</a></li>
+			  <li><a href="#">3</a></li>
+			  <li><a href="#">4</a></li>
+			  <li><a href="#">5</a></li>
+			  <li><a href="#">...</a></li>
+			  <li><a href="#">19</a></li>
+			  <li><a href="#">20</a></li>
 			  <li><a href="#" class="next">Next</a></li>
 		     </ul>
 		</div>

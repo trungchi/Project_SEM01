@@ -23,10 +23,10 @@
 
 <body>
 <div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
-    <a rel="nofollow" href="create.asp" style="color:red ">
+    <a rel="nofollow" href="../login.asp" style="color:red ">
         <span><ins>Đăng ký</ins></span> |
     </a>
-    <a rel="nofollow" href="login.asp" style="color:red ">
+    <a rel="nofollow" href="../login.asp" style="color:red ">
         <span><ins>Đăng Nhập</ins></span>
     </a>
 </div>
@@ -137,20 +137,16 @@
 					</div>
 		    <ul class="dc_pagination dc_paginationA dc_paginationA06">
 			  <li><a href="#" class="previous">Previous</a></li>
-			  <li><a href="laptop.asp#1.htm" class="current">1</a></li>
-			  <li><a href="laptop.asp#2.htm">2</a></li>
-			  <li><a href="laptop.asp#3.htm">3</a></li>
-			  <li><a href="laptop.asp#4.htm">4</a></li>
-			  <li><a href="laptop.asp#5.htm">5</a></li>
-			  <li><a href="laptop.asp#.htm">...</a></li>
-			  <li><a href="laptop.asp#19.htm">19</a></li>
-			  <li><a href="laptop.asp#20.htm">20</a></li>
+			  <li><a href="#" class="current">1</a></li>
+			  <li><a href="#">2</a></li>
+			  <li><a href="#">3</a></li>
+			  <li><a href="#">4</a></li>
+			  <li><a href="#">5</a></li>
+			  <li><a href="#">...</a></li>
+			  <li><a href="#">19</a></li>
+			  <li><a href="#">20</a></li>
 			  <li><a href="#" class="next">Next</a></li>
 		     </ul>
-
-
-
-
 		</div>
         <div class="labout span_1_of_g1">
 		  <div class="project-list">
