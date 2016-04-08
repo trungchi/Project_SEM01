@@ -10,12 +10,16 @@
 <script src="../js/jquery.min.js"></script>
 <script type="text/javascript" src="../js/jquery.lightbox.js"></script>
 <link rel="stylesheet" type="text/css" href="css/lightbox.css" media="screen" />
+        <!---------------------------
+                  LIGHTBOX
+        ---------------------------->
+<script type="text/javascript" src="../js/jquery.lightbox.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/lightbox.css" media="screen" />
   <script type="text/javascript">
     $(function() {
         $('.gallery a').lightBox();
     });
    </script>
-</head>
 
 <body>
 <div class="wrap"> 
@@ -100,39 +104,39 @@ end if
 				 <div class="gallery">
 			       <ul>
 						<li>
-							<a href="../images/t-pic15.jpg"><img src="../images/p1.jpg" alt=""/></a>
+							<a href="../images/t-p1.jpg"><img src="../images/p1.jpg" alt=""/></a>
 							<h3 align="center">Tai nghe hồng</h3>
 						</li>
 						<li>
-							<a href="../images/t-pic8.jpg"><img src="../images/p2.jpg" alt=""/></a>
+							<a href="../images/t-p2.jpg"><img src="../images/p2.jpg" alt=""/></a>
 							<h3 align="center">Tai nghe bluetooth</h3>
 						</li>
 						<li class="last">
-							<a href="../images/t-pic9.jpg"><img src="../images/p3.jpg" alt=""/></a>
+							<a href="../images/t-p3.jpg"><img src="../images/p3.jpg" alt=""/></a>
 							<h3 align="center">Tai nghe đỏ</h3>
 						</li>
 						<li>
-							<a href="../images/t-pic10.jpg"><img src="../images/p4.jpg" alt=""/></a>
+							<a href="../images/t-p4.jpg"><img src="../images/p4.jpg" alt=""/></a>
 							<h3 align="center">Tai nghe hình tai mèo có đèn led</h3>
 						</li>
 						<li>
-							<a href="../images/pic11.jpg"><img src="../images/p5.jpg" alt=""/></a>
+							<a href="../images/t-p5.jpg"><img src="../images/p5.jpg" alt=""/></a>
 							<h3 align="center">Bàn phím đen có đèn led</h3>
 						</li>
 						<li class="last">
-							<a href="../images/pic12.jpg"><img src="../images/p6.jpg" alt=""/></a>
+							<a href="../images/t-p6.jpg"><img src="../images/p6.jpg" alt=""/></a>
 							<h3 align="center">Bàn phím trắng có đèn led</h3>
 						</li>
 							<li>
-							<a href="../images/t-pic13.jpg"><img src="../images/p7.jpg" alt=""/></a>
+							<a href="../images/t-p7.jpg"><img src="../images/p7.jpg" alt=""/></a>
 							<h3 align="center">Chuột quang</h3>
 						</li>
 						<li>
-							<a href="../images/t-pic14.jpg"><img src="../images/p8.jpg" alt=""/></a>
+							<a href="../images/t-p8.jpg"><img src="../images/p8.jpg" alt=""/></a>
 							<h3 align="center">Chuột quang</h3>
 						</li>
 						<li class="last">
-							<a href="../images/t-pic7.jpg"><img src="../images/p9.jpg" alt=""/></a>
+							<a href="../images/t-p9.jpg"><img src="../images/p9.jpg" alt=""/></a>
 							<h3 align="center">Lót chuột có đèn led</h3>
 						</li>
 					   <div class="clear"></div>

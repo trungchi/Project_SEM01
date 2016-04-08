@@ -179,6 +179,10 @@
  		       <!---//End-da-slider----->
 	      </div>
 	 </div>
+     
+    <!-----------------
+		SẢN PHẨM MỚI
+    ------------------>
 	 <div class="main">
 	     <div class="wrap">
 	 	   <h2 class="m_1"><a href="product.asp">SẢN PHẨM MỚI</a></h2>
@@ -237,7 +241,11 @@
 				<div class="clear"></div>
 		     </div> 
 		     ----->
-		     <div class="m_3"><span class="left_line"></span> Sản Phẩm<span class="right_line"> </span></div>
+             
+	<!----------------------
+		SẢN PHẨM NỔI BẬT
+	----------------------->
+		     <div class="m_3"><span class="left_line"></span> Sản Phẩm Nổi Bật<span class="right_line"> </span></div>
 		      <div class="content-top">
 				 <div class="col_1_of_projects span_1_of_projects"><a href="#">
 				   <div class="view view-first">

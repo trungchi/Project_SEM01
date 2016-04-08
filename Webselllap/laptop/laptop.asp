@@ -1,14 +1,16 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-<title>Cửa hàng máy tính | Laptop :: groupfour</title>
+<title>Cửa hàng máy tính | Laptop :: Groupfour</title>
 <link rel="shortcut icon" href="../images/icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Lato:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <script src="../js/jquery.min.js"></script>
-	<!--jquery lightbox-->
+        <!---------------------------
+                  LIGHTBOX
+        ---------------------------->
 <script type="text/javascript" src="../js/jquery.lightbox.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/lightbox.css" media="screen" />
   <script type="text/javascript">
@@ -16,9 +18,11 @@
         $('.gallery a').lightBox();
     });
    </script>
+
 </head>
 
 <body>
+
 <div class="wrap"> 
     <div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
             <a rel="nofollow" href="../create.asp" style="color:red ">
@@ -87,52 +91,53 @@
 			<div class="clear"></div>
 		</div>
 		<!-- end header_main4 -->
-     </div>
+<!--gallary-->
+
 	 <div class="main">
-	     <div class="wrap">
-	 	   <div class="pages">
-				 <div class="cont1 span_2_of_g1">
-				      <div class="gallery">
-			       <ul>
-				<li class="active">
-					<a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
-					<h3 align="center">Dell đỏ</h3>
-				</li>
-                <li>
-					<a href="../images/t-pic8.jpg"><img src="../images/pic8.jpg" alt=""/></a>
-					<h3 align="center">Dell bạc</h3>
-				</li>
-				<li class="last">
-					<a href="../images/t-pic9.jpg"><img src="../images/pic9.jpg" alt=""/></a>
-				  	<h3 align="center">Dell ba màu</h3>
-				</li>
-				<li>
-					<a href="../images/t-pic10.jpg"><img src="../images/pic10.jpg" alt=""/></a>
-					<h3 align="center">Asus xoay màn hình</h3>
-				</li>
-				<li>
-					<a href="../images/t-pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>
-					<h3 align="center">Asus đa màu</h3>
-				</li>
-				<li class="last">
-					<a href="../images/t-pic12.jpg"><img src="../images/pic12.jpg" alt=""/></a>
-					<h3 align="center">Asus màn hình rời</h3>
-				</li>
-					<li>
-					<a href="../images/t-pic13.jpg"><img src="../images/pic13.jpg" alt=""/></a>
-					<h3 align="center">Hp đen</h3>
-				</li>
-				<li>
-					<a href="../images/t-pic14.jpg"><img src="../images/pic14.jpg" alt=""/></a>
-					<h3 align="center">Hp xoay màn hình</h3>
-				</li>
-				<li class="last">
-					<a href="../images/t-pic15.jpg"><img src="../images/pic15.jpg" alt=""/></a>
-					<h3 align="center">Hp màn hình rời</h3>
-				</li>
-			   <div class="clear"></div>
-			</ul>
-		</div>
+	 	<div class="wrap">
+	 		<div class="pages">
+				<div class="cont1 span_2_of_g1">
+					<div class="gallery">
+						<ul>
+                            <li class="active">
+                                <a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
+                                <h3 align="center">Dell đỏ</h3>
+                            </li>
+                            <li>
+                                <a href="../images/t-pic8.jpg"><img src="../images/pic8.jpg" alt=""/></a>
+                                <h3 align="center">Dell bạc</h3>
+                            </li>
+                            <li class="last">
+                                <a href="../images/t-pic9.jpg"><img src="../images/pic9.jpg" alt=""/></a>
+                                <h3 align="center">Dell ba màu</h3>
+                            </li>
+                            <li>
+                                <a href="../images/t-pic10.jpg"><img src="../images/pic10.jpg" alt=""/></a>
+                                <h3 align="center">Asus xoay màn hình</h3>
+                            </li>
+                            <li>
+                                <a href="../images/t-pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>
+                                <h3 align="center">Asus đa màu</h3>
+                            </li>
+                            <li class="last">
+                                <a href="../images/t-pic12.jpg"><img src="../images/pic12.jpg" alt=""/></a>
+                                <h3 align="center">Asus màn hình rời</h3>
+                            </li>
+                            <li>
+                                <a href="../images/t-pic13.jpg"><img src="../images/pic13.jpg" alt=""/></a>
+                                <h3 align="center">Hp đen</h3>
+                            </li>
+                            <li>
+                                <a href="../images/t-pic14.jpg"><img src="../images/pic14.jpg" alt=""/></a>
+                                <h3 align="center">Hp xoay màn hình</h3>
+                            </li>
+                            <li class="last">
+                                <a href="../images/t-pic15.jpg"><img src="../images/pic15.jpg" alt=""/></a>
+                                <h3 align="center">Hp màn hình rời</h3>
+                            </li>
+			  				<div class="clear"></div>
+						</ul>
+					</div>
 		    <ul class="dc_pagination dc_paginationA dc_paginationA06">
 			  <li><a href="#" class="previous">Previous</a></li>
 			  <li><a href="laptop.asp#1.htm" class="current">1</a></li>
@@ -145,6 +150,10 @@
 			  <li><a href="laptop.asp#20.htm">20</a></li>
 			  <li><a href="#" class="next">Next</a></li>
 		     </ul>
+
+
+
+
 		</div>
         <div class="labout span_1_of_g1">
 		  <div class="project-list">
@@ -202,11 +211,14 @@
 		  </div>
 		  </div>
 		</div>
-	   <div class="footer">
+    <!---------------------------
+                BOTTOM
+    ---------------------------->
+        <div class="footer">
 			<div class="wrap">
 				<div class="footer-grid footer-grid1">
 					<div class="f-logo">
-				     <a href="index.html"><img src="images/group four.png" alt=""></a>
+				     <a href="index.html"><img src="images/logo.png" alt=""></a>
 			        </div>
 					<p>Nhóm gồm 4 thành viên sáng lập, mỗi thành viên điều rất nhiệt tình trong công việc mình đảm nhận.</p>
 				</div>
@@ -229,29 +241,29 @@
 				</div>
 				<div class="footer-grid footer-grid3">
 					<h4>Tiêu Chí</h4>
-					<div class="recent-tweet">
-						<div class="recent-tweet-icon">
+					<div class="recent-f">
+						<div class="recent-f-icon">
 							<span> </span>
 						</div>
-						<div class="recent-tweet-info">
+						<div class="recent-f-info">
 							<p>Uy Tín</p>
 						</div>
 						<div class="clear"> </div>
 					</div>
-					<div class="recent-tweet1">
-						<div class="recent-tweet-icon">
+					<div class="recent-f1">
+						<div class="recent-f-icon">
 							<span> </span>
 						</div>
-						<div class="recent-tweet-info">
+						<div class="recent-f-info">
 							<p>Chất Lượng</p>
 						</div>
 						<div class="clear"> </div>
 					</div><br />
-                    <div class="recent-tweet2">
-						<div class="recent-tweet-icon">
+                    <div class="recent-f2">
+						<div class="recent-f-icon">
 							<span> </span>
 						</div>
-						<div class="recent-tweet-info">
+						<div class="recent-f-info">
 							<p>Chuyên Nghiệp</p>
 						</div>
 						<div class="clear"> </div>
@@ -261,7 +273,7 @@
 					<h4>Nhận Tin Mới</h4>
 					<p>Nhập địa chỉ Email để nhận được những tin tức mới nhất về công nghệ</p>
 					<form>
-						<input type="text" value="Email Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address';}">
+						<input type="text" value="Địa chỉ Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Địa chỉ Email';}">
 						<input type="submit" value="">
 					</form>
 				</div>
@@ -283,5 +295,6 @@
 			    <div class="clear"></div>
 			  </div>
        </div>
+       
 </body>
 </html>

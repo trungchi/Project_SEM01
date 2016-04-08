@@ -9,8 +9,11 @@
 <link href='http://fonts.googleapis.com/css?family=Lato:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <script src="../js/jquery.min.js"></script>
 
+        <!---------------------------
+                  LIGHTBOX
+        ---------------------------->
 <script type="text/javascript" src="../js/jquery.lightbox.js"></script>
-<link rel="stylesheet" type="text/css" href="css/lightbox.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="../css/lightbox.css" media="screen" />
   <script type="text/javascript">
     $(function() {
         $('.gallery a').lightBox();
@@ -99,41 +102,41 @@
 				      <div class="gallery">
 			       <ul>
 				<li class="active">
-					<a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
-					<h3 align="center">Dell đỏ</h3>
+					<a href="../images/t-lk1.jpg"><img src="../images/lk1.jpg" alt=""/></a>
+					<h3 align="center">Card âm thanh</h3>
 				</li>
                 <li>
-					<a href="../images/t-pic8.jpg"><img src="../images/pic8.jpg" alt=""/></a>
-					<h3 align="center">Dell bạc</h3>
+					<a href="../images/t-lk9.jpg"><img src="../images/lk9.jpg" alt=""/></a>
+					<h3 align="center">Card âm thanh 2</h3>
 				</li>
 				<li class="last">
-					<a href="../images/t-pic9.jpg"><img src="../images/pic9.jpg" alt=""/></a>
-				  	<h3 align="center">Dell ba màu</h3>
-				</li>
-				<li>
-					<a href="../images/t-pic10.jpg"><img src="../images/pic10.jpg" alt=""/></a>
-					<h3 align="center">Asus xoay màn hình</h3>
-				</li>
-				<li>
-					<a href="../images/t-pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>
-					<h3 align="center">Asus đa màu</h3>
-				</li>
-				<li class="last">
-					<a href="../images/t-pic12.jpg"><img src="../images/pic12.jpg" alt=""/></a>
-					<h3 align="center">Asus màn hình rời</h3>
+					<a href="../images/t-lk2.jpg"><img src="../images/lk2.jpg" alt=""/></a>
+				  	<h3 align="center">RAM</h3>
 				</li>
 					<li>
-					<a href="../images/t-pic13.jpg"><img src="../images/pic13.jpg" alt=""/></a>
-					<h3 align="center">Hp đen</h3>
+					<a href="../images/t-lk7.jpg"><img src="../images/lk7.jpg" alt=""/></a>
+					<h3 align="center">Mainboard</h3>
 				</li>
 				<li>
-					<a href="../images/t-pic14.jpg"><img src="../images/pic14.jpg" alt=""/></a>
-					<h3 align="center">Hp xoay màn hình</h3>
+					<a href="../images/t-lk4.jpg"><img src="../images/lk4.jpg" alt=""/></a>
+					<h3 align="center">Mainboard 2</h3>
 				</li>
 				<li class="last">
-					<a href="../images/t-pic15.jpg"><img src="../images/pic15.jpg" alt=""/></a>
-					<h3 align="center">Hp màn hình rời</h3>
+					<a href="../images/t-lk8.jpg"><img src="../images/lk8.jpg" alt=""/></a>
+					<h3 align="center">RAM 2</h3>
 				</li>
+				</li>
+				<li>
+					<a href="../images/t-lk5.jpg"><img src="../images/lk5.jpg" alt=""/></a>
+					<h3 align="center">Card màn hình</h3>
+				</li>
+				<li>
+					<a href="../images/t-lk6.jpg"><img src="../images/lk6.jpg" alt=""/></a>
+					<h3 align="center">Card màn hình 2</h3>
+				</li>
+				<li class="last">
+					<a href="../images/t-lk3.jpg"><img src="../images/lk3.jpg" alt=""/></a>
+					<h3 align="center">Card màn hình 3</h3>
 			   <div class="clear"></div>
 			</ul>
 		</div>
@@ -206,11 +209,14 @@
 		  </div>
 		  </div>
 		</div>
-	   <div class="footer">
+	<!---------------------------
+                BOTTOM
+    ---------------------------->
+        <div class="footer">
 			<div class="wrap">
 				<div class="footer-grid footer-grid1">
 					<div class="f-logo">
-				     <a href="index.html"><img src="images/group four.png" alt=""></a>
+				     <a href="index.html"><img src="images/logo.png" alt=""></a>
 			        </div>
 					<p>Nhóm gồm 4 thành viên sáng lập, mỗi thành viên điều rất nhiệt tình trong công việc mình đảm nhận.</p>
 				</div>
@@ -233,29 +239,29 @@
 				</div>
 				<div class="footer-grid footer-grid3">
 					<h4>Tiêu Chí</h4>
-					<div class="recent-tweet">
-						<div class="recent-tweet-icon">
+					<div class="recent-f">
+						<div class="recent-f-icon">
 							<span> </span>
 						</div>
-						<div class="recent-tweet-info">
+						<div class="recent-f-info">
 							<p>Uy Tín</p>
 						</div>
 						<div class="clear"> </div>
 					</div>
-					<div class="recent-tweet1">
-						<div class="recent-tweet-icon">
+					<div class="recent-f1">
+						<div class="recent-f-icon">
 							<span> </span>
 						</div>
-						<div class="recent-tweet-info">
+						<div class="recent-f-info">
 							<p>Chất Lượng</p>
 						</div>
 						<div class="clear"> </div>
 					</div><br />
-                    <div class="recent-tweet2">
-						<div class="recent-tweet-icon">
+                    <div class="recent-f2">
+						<div class="recent-f-icon">
 							<span> </span>
 						</div>
-						<div class="recent-tweet-info">
+						<div class="recent-f-info">
 							<p>Chuyên Nghiệp</p>
 						</div>
 						<div class="clear"> </div>
@@ -265,7 +271,7 @@
 					<h4>Nhận Tin Mới</h4>
 					<p>Nhập địa chỉ Email để nhận được những tin tức mới nhất về công nghệ</p>
 					<form>
-						<input type="text" value="Email Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address';}">
+						<input type="text" value="Địa chỉ Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Địa chỉ Email';}">
 						<input type="submit" value="">
 					</form>
 				</div>
@@ -287,5 +293,6 @@
 			    <div class="clear"></div>
 			  </div>
        </div>
+       
 </body>
 </html>

@@ -10,11 +10,17 @@
 <script src="../js/jquery.min.js"></script>
 <script type="text/javascript" src="../js/jquery.lightbox.js"></script>
 <link rel="stylesheet" type="text/css" href="css/lightbox.css" media="screen" />
+        <!---------------------------
+                  LIGHTBOX
+        ---------------------------->
+<script type="text/javascript" src="../js/jquery.lightbox.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/lightbox.css" media="screen" />
   <script type="text/javascript">
     $(function() {
         $('.gallery a').lightBox();
     });
    </script>
+
 </head>
 
 <body>
@@ -96,40 +102,40 @@
 				 <div class="gallery">
 			       <ul>
 						<li>
-							<a href="../images/pic15.jpg"><img src="../images/pic15.jpg" alt=""/></a>
-							<h3 align="center">Cấu hình Duel-Core</h3>
+							<a href="../images/t-p1.jpg"><img src="../images/p1.jpg" alt=""/></a>
+							<h3 align="center">Tai nghe hồng</h3>
 						</li>
 						<li>
-							<a href="../images/t-pic8.jpg"><img src="../images/pic8.jpg" alt=""/></a>
-							<h3 align="center">Cầu hình Core i3</h3>
+							<a href="../images/t-p2.jpg"><img src="../images/p2.jpg" alt=""/></a>
+							<h3 align="center">Tai nghe bluetooth</h3>
 						</li>
 						<li class="last">
-							<a href="../images/t-pic9.jpg"><img src="../images/pic9.jpg" alt=""/></a>
-							<h3 align="center">Cấu hình Core i5</h3>
+							<a href="../images/t-p3.jpg"><img src="../images/p3.jpg" alt=""/></a>
+							<h3 align="center">Tai nghe đỏ</h3>
 						</li>
 						<li>
-							<a href="../images/t-pic10.jpg"><img src="../images/pic10.jpg" alt=""/></a>
-							<h3 align="center">Cầu hình core i7</h3>
+							<a href="../images/t-p4.jpg"><img src="../images/p4.jpg" alt=""/></a>
+							<h3 align="center">Tai nghe hình tai mèo có đèn led</h3>
 						</li>
 						<li>
-							<a href="../images/pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>
-							<h3 align="center">seacula quarta decima</h3>
+							<a href="../images/t-p5.jpg"><img src="../images/p5.jpg" alt=""/></a>
+							<h3 align="center">Bàn phím đen có đèn led</h3>
 						</li>
 						<li class="last">
-							<a href="../images/pic12.jpg"><img src="../images/pic12.jpg" alt=""/></a>
-							<h3 align="center">mutationem consuetudium </h3>
+							<a href="../images/t-p6.jpg"><img src="../images/p6.jpg" alt=""/></a>
+							<h3 align="center">Bàn phím trắng có đèn led</h3>
 						</li>
 							<li>
-							<a href="../images/t-pic13.jpg"><img src="../images/pic13.jpg" alt=""/></a>
-							<h3 align="center">eleifend option congue</h3>
+							<a href="../images/t-p7.jpg"><img src="../images/p7.jpg" alt=""/></a>
+							<h3 align="center">Chuột quang</h3>
 						</li>
 						<li>
-							<a href="../images/t-pic14.jpg"><img src="../images/pic14.jpg" alt=""/></a>
-							<h3 align="center">imperdiet doming</h3>
+							<a href="../images/t-p8.jpg"><img src="../images/p8.jpg" alt=""/></a>
+							<h3 align="center">Chuột quang</h3>
 						</li>
 						<li class="last">
-							<a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
-							<h3 align="center">usto odio dignissim qui </h3>
+							<a href="../images/t-p9.jpg"><img src="../images/p9.jpg" alt=""/></a>
+							<h3 align="center">Lót chuột có đèn led</h3>
 						</li>
 					   <div class="clear"></div>
 				</ul>
@@ -187,11 +193,14 @@
 		  </div>
 		  </div>
 		</div>
-	    <div class="footer">
+	<!---------------------------
+                BOTTOM
+    ---------------------------->
+        <div class="footer">
 			<div class="wrap">
 				<div class="footer-grid footer-grid1">
 					<div class="f-logo">
-				     <a href="index.html"><img src="images/group four.png" alt=""></a>
+				     <a href="index.html"><img src="images/logo.png" alt=""></a>
 			        </div>
 					<p>Nhóm gồm 4 thành viên sáng lập, mỗi thành viên điều rất nhiệt tình trong công việc mình đảm nhận.</p>
 				</div>
@@ -214,29 +223,29 @@
 				</div>
 				<div class="footer-grid footer-grid3">
 					<h4>Tiêu Chí</h4>
-					<div class="recent-tweet">
-						<div class="recent-tweet-icon">
+					<div class="recent-f">
+						<div class="recent-f-icon">
 							<span> </span>
 						</div>
-						<div class="recent-tweet-info">
+						<div class="recent-f-info">
 							<p>Uy Tín</p>
 						</div>
 						<div class="clear"> </div>
 					</div>
-					<div class="recent-tweet1">
-						<div class="recent-tweet-icon">
+					<div class="recent-f1">
+						<div class="recent-f-icon">
 							<span> </span>
 						</div>
-						<div class="recent-tweet-info">
+						<div class="recent-f-info">
 							<p>Chất Lượng</p>
 						</div>
 						<div class="clear"> </div>
 					</div><br />
-                    <div class="recent-tweet2">
-						<div class="recent-tweet-icon">
+                    <div class="recent-f2">
+						<div class="recent-f-icon">
 							<span> </span>
 						</div>
-						<div class="recent-tweet-info">
+						<div class="recent-f-info">
 							<p>Chuyên Nghiệp</p>
 						</div>
 						<div class="clear"> </div>
@@ -246,7 +255,7 @@
 					<h4>Nhận Tin Mới</h4>
 					<p>Nhập địa chỉ Email để nhận được những tin tức mới nhất về công nghệ</p>
 					<form>
-						<input type="text" value="Email Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email Address';}">
+						<input type="text" value="Địa chỉ Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Địa chỉ Email';}">
 						<input type="submit" value="">
 					</form>
 				</div>
@@ -268,5 +277,6 @@
 			    <div class="clear"></div>
 			  </div>
        </div>
+       
 </body>
 </html>

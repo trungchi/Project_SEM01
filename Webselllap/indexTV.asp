@@ -231,83 +231,88 @@ end if
 				<div class="clear"></div>
 		     </div> 
 		     ----->
-		     <div class="m_3"><span class="left_line"></span> Sản Phẩm<span class="right_line"> </span></div>
+
+             
+	<!----------------------
+		SẢN PHẨM NỔI BẬT
+	----------------------->
+		     <div class="m_3"><span class="left_line"></span> Sản Phẩm Nổi Bật<span class="right_line"> </span></div>
 		      <div class="content-top">
 				 <div class="col_1_of_projects span_1_of_projects"><a href="#">
 				   <div class="view view-first">
                     <img src="images/pic3.jpg" alt=""/>
                       <div class="mask">
-                        <h2>Tiêu đề ẩn</h2>
-                        <p>Mô tả.</p>
+                        <h2>Chuột quang</h2>
+                        <p>Chuột phát ra ánh hào quang.</p>
                          <a class="popup-with-zoom-anim" href="#small-dialog3"> <div class="info">Xem thêm...</div></a>
 		                     <div id="small-dialog3" class="mfp-hide">
 							   <div class="pop_up2">
 							   	  <img src="images/pic3.jpg"/ alt=""/>
-							   	  <h3 class="m_4"><a href="#">Tiêu đề hiển thị 1</a></h3>
-				                  <p class="m_5">[Hiển Thị]</p>
+							   	  <h3 class="m_4"><a href="#">Chuột quang</a></h3>
+				                  <p class="m_5">Chuột phát ra ánh hào quang.</p>
 							   </div>
 							 </div>
                         </div>
                      </div> 
-					<h3 class="m_4"><a href="#">Tiêu đề hiển thị 1</a></h3>
-				    <p class="m_5">[Hiển Thị]</p>
+					<h3 class="m_4"><a href="#">Phụ kiện</a></h3>
+				    <p class="m_5">Chuột quang</p>
 				  </a> </div>
 				 <div class="col_1_of_projects span_1_of_projects"><a href="#">
 				   <div class="view view-first">
                     <img src="images/pic6.jpg" alt=""/>
                       <div class="mask">
-                        <h2>Tiêu đề ẩn</h2>
-                        <p>Mô tả.</p>
+                        <h2>Headphones</h2>
+                        <p>Tai nghe hình tai mèo.</p>
                          <a class="popup-with-zoom-anim" href="#small-dialog4"> <div class="info">Xem thêm...</div></a>
 		                     <div id="small-dialog4" class="mfp-hide">
 							   <div class="pop_up2">
 							   	  <img src="images/pic6.jpg"/ alt=""/>
-							   	   <h3 class="m_4"><a href="#">Tiêu đề hiển thị</a></h3>
-				    				<p class="m_5">[Hiển Thị]</p>
+							   	   <h3 class="m_4"><a href="#">Headphones</a></h3>
+				    				<p class="m_5">Tai nghe hình tai mèo.<br>Hàng chính hãng.<br>Tem bảo hành đầy đủ.</p>
 							   </div>
 							 </div>
                         </div>
                      </div> 
-					<h3 class="m_4"><a href="#">Tiêu đề hiển thị</a></h3>
-				    <p class="m_5">[Hiển Thị]</p>
+					<h3 class="m_4"><a href="#">Phụ kiện</a></h3>
+				    <p class="m_5">Tai nghe có tai mèo</p>
 				  </a> </div>
 				 <div class="col_1_of_projects span_1_of_projects"><a href="#">
 				   <div class="view view-first">
                     <img src="images/pic5.jpg" alt=""/>
                       <div class="mask">
-                        <h2>Tiêu đề ẩn</h2>
-                        <p>Mô tả.</p>
+                        <h2>Laptop HP</h2>
+                        <p>Một chiếc laptop hãng HP có màu đỏ mới...</p>
                          <a class="popup-with-zoom-anim" href="#small-dialog5"> <div class="info">Xem thêm...</div></a>
 		                     <div id="small-dialog5" class="mfp-hide">
 							   <div class="pop_up2">
 							   	  <img src="images/pic5.jpg"/ alt=""/>
-							   	   <h3 class="m_4"><a href="#">Tiêu đề hiển thị</a></h3>
-				    			   <p class="m_5">[Hiển Thị]</p>
+							   	   <h3 class="m_4"><a href="#">Laptop HP màn hình rời</a></h3>
+				    			   <p class="m_5">Một chiếc laptop hãng HP có màu đỏ mới cứng.<br>Hàng chính hãng.<br>Tem bảo hành đầy đủ.</p>
 							   </div>
 							 </div>
                         </div>
                      </div> 
-					<h3 class="m_4"><a href="#">Tiêu đề hiển thị</a></h3>
-				    <p class="m_5">[Hiển Thị]</p>
+					<h3 class="m_4"><a href="#">Laptop</a></h3>
+				    <p class="m_5">Laptop màn hình rời</p>
 				  </a> </div>
 				 <div class="col_1_of_projects span_1_of_projects"><a href="#">
 				   <div class="view view-first">
                     <img src="images/pic4.jpg" alt=""/>
                       <div class="mask">
-                        <h2>Tiêu đề ẩn</h2>
-                        <p>Mô tả.</p>
+                        <h2>Laptop</h2>
+                        <p>Một chiếc laptop có thể xoay màn hình...</p>
                          <a class="popup-with-zoom-anim" href="#small-dialog6"> <div class="info">Xem thêm...</div></a>
 		                     <div id="small-dialog6" class="mfp-hide">
 							   <div class="pop_up2">
 							   	  <img src="images/pic4.jpg"/ alt=""/>
 							   	   <h3 class="m_4"><a href="#">Tiêu đề hiển thị</a></h3>
-				    				<p class="m_5">[Hiển Thị]</p>
+				    				<p class="m_5">Một chiếc laptop có thể xoay màn hình 360 độ.<br>Hàng chính hãng.<br>Tem bảo hành đầy đủ.</p>
 							   </div>
 							 </div>
                         </div>
                      </div> 
-					<h3 class="m_4"><a href="#">Tiêu đề hiển thị</a></h3>
-				    <p class="m_5">[Hiển Thị]</p>
+					<h3 class="m_4"><a href="#">Laptop</a></h3>
+				    <p class="m_5">Laptop màn hình xoay</p>
 				  </a> </div>
 				<div class="clear"></div>
 		 </div>

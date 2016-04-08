@@ -100,40 +100,40 @@ end if
 				 <div class="gallery">
 			       <ul>
 						<li>
-							<a href="../images/t-pic15.jpg"><img src="../images/pic15.jpg" alt=""/></a>
-							<h3>Duis autem vel eumter</h3>
+							<a href="../images/desktop/t-d_ap1.jpg"><img src="../images/desktop/d_ap1.jpg" alt=""/></a>
+							<h3 align="center">Desktop apple</h3>
 						</li>
 						<li>
-							<a href="../images/t-pic8.jpg"><img src="../images/pic8.jpg" alt=""/></a>
-							<h3>uffered alteration</h3>
+							<a href="../images/desktop/t-d_ap2.jpg"><img src="../images/desktop/d_ap2.jpg" alt=""/></a>
+							<h3 align="center">Desktop apple 2</h3>
 						</li>
 						<li class="last">
-							<a href="../images/t-pic9.jpg"><img src="../images/pic9.jpg" alt=""/></a>
-							<h3>augue duis dolore te</h3>
+							<a href="../images/desktop/t-d_ap3.jpg"><img src="../images/desktop/d_ap3.jpg" alt=""/></a>
+							<h3 align="center">Desktop apple 3</h3>
 						</li>
 						<li>
-							<a href="../images/t-pic10.jpg"><img src="../images/pic10.jpg" alt=""/></a>
-							<h3>parum claram, anteposuerit</h3>
+							<a href="../images/desktop/t-d_ap4.jpg"><img src="../images/desktop/d_ap4.jpg" alt=""/></a>
+							<h3 align="center">Desktop apple 4</h3>
 						</li>
 						<li>
-							<a href="../images/pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>
-							<h3>seacula quarta decima</h3>
+							<a href="../images/desktop/t-d_de1.jpg"><img src="../images/desktop/d_de1.jpg" alt=""/></a>
+							<h3 align="center">Desktop Dell</h3>
 						</li>
 						<li class="last">
-							<a href="../images/pic12.jpg"><img src="../images/pic12.jpg" alt=""/></a>
-							<h3>mutationem consuetudium </h3>
+							<a href="../images/desktop/t-d_hp1.jpg"><img src="../images/desktop/d_hp1.jpg" alt=""/></a>
+							<h3 align="center">Desktop HP</h3>
 						</li>
 							<li>
-							<a href="../images/t-pic13.jpg"><img src="../images/pic13.jpg" alt=""/></a>
-							<h3>eleifend option congue</h3>
+							<a href="../images/desktop/t-d_hp2.jpg"><img src="../images/desktop/d_hp2.jpg" alt=""/></a>
+							<h3 align="center">Desktop HP 2</h3>
 						</li>
 						<li>
-							<a href="../images/t-pic14.jpg"><img src="../images/pic14.jpg" alt=""/></a>
-							<h3>imperdiet doming</h3>
+							<a href="../images/desktop/t-d_hp3.jpg"><img src="../images/desktop/d_hp3.jpg" alt=""/></a>
+							<h3 align="center">Desktop HP 3</h3>
 						</li>
 						<li class="last">
-							<a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
-							<h3>usto odio dignissim qui </h3>
+							<a href="../images/desktop/t-d_le1.jpg"><img src="../images/desktop/d_le1.jpg" alt=""/></a>
+							<h3 align="center">Desktop Lenovo</h3>
 						</li>
 					   <div class="clear"></div>
 				</ul>
