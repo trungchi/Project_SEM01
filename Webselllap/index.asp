@@ -7,6 +7,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Lato:400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<!--jquery lightbox-->
+<script type="text/javascript" src="../js/jquery.lightbox.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/lightbox.css" media="screen" />
+  <script type="text/javascript">
+    $(function() {
+        $('.gallery a').lightBox();
+    });
+   </script>
 
         <!---------------------------
                      CLOCK
@@ -136,32 +144,32 @@
 				<!---start-da-slider----->
 			  <div id="da-slider" class="da-slider">
 				  <div class="da-slide">
-					<li>
-                        <a href="dangnhap.html" target="_blank">
+					<div align="center">
+                        <a href="laptop/laptop.asp" target="_blank">
                             <img src="images/Slide1.jpg" alt="" />
                         </a>
-					</li>
+					</div>
 				  </div>
 				  <div class="da-slide">
-					<li>
-                        <a href="dangnhap.html" target="_blank">
+					<div align="center">
+                        <a href="laptop/laptop.asp" target="_blank">
                             <img src="images/Slide2.jpg" alt="" />
                         </a>
-					</li>
+					</div>
 				  </div>
 				  <div class="da-slide">
-					<li>
-                        <a href="dangnhap.html" target="_blank">
+					<div align="center">
+                        <a href="laptop/laptop.asp" target="_blank">
                             <img src="images/Slide3.jpg" alt="" />
                         </a>
-					</li>
+					</div>
 				  </div>
 				  <div class="da-slide">
-					<li>
-                        <a href="dangnhap.html" target="_blank">
-                            <img src="images/Hinhnendl.com---Hinh-nen-khong-gian-3d (19).jpg" alt="" />
+					<div align="center">
+                        <a href="phukien/phukien.asp" target="_blank">
+                            <img src="images/Slide4.jpg" alt="" />
                         </a>
-					</li>
+					</div>
 				  </div>		
 				  <nav class="da-arrows">
 					<span class="da-arrows-prev"></span>
@@ -177,30 +185,31 @@
 	 	     <div class="content-top">
 	 	    	<div class="col_1_of_4 span_1_of_4">
 	 	    		
-					<a href="product.asp"><img src="images/sp_01_sony.jpg" alt=""/></a>                    
+					<a href="product.asp"><img src="images/pic13.jpg" alt=""/></a>                    
 					<div class="desc">
-						<h3><a href="#">LAPTOP SONY</a></h3>
+						<h3><a href="#">LAPTOP HP</a></h3>
 						<p>SONY</p>
 					</div>
 				</div>
 				<div class="col_1_of_4 span_1_of_4">
 	 	    		
-					<img src="images/sp_02_dell.jpg" alt=""/>
+					<img src="images/pic7.jpg" alt=""/>
 					<div class="desc">
-						<h3>LAPTOP DELL</h3>
+						<h3><a href="#">LAPTOP DELL</a></h3>
 						<p>DELL</p>
 					</div>
 				</div>
 				<div class="col_1_of_4 span_1_of_4">
 	 	    		
-					<img src="images/sp_03_toshiba.jpg" alt=""/>
+					<img src="images/pic12.jpg" alt=""/>
 					<div class="desc">
-						<h3>LAPTOP TOSHIBA</h3>
-						<p>TOSHIBA</p>
+						<h3><a href="#">LAPTOP ASUS</a></h3>
+						<p>ASUS</p>
 					</div>
 				</div>
 				<div class="clear"></div>
 		     </div>
+             
 		     <!--- NOTICE
 		     <div class="content-middle-bottom">
 	 	    	<div class="col_1_of_middle span_1_of_middle">
@@ -234,77 +243,77 @@
 				   <div class="view view-first">
                     <img src="images/pic3.jpg" alt=""/>
                       <div class="mask">
-                        <h2>Tiêu đề ẩn</h2>
-                        <p>Mô tả.</p>
+                        <h2>Chuột quang</h2>
+                        <p>Chuột phát ra ánh hào quang.</p>
                          <a class="popup-with-zoom-anim" href="#small-dialog3"> <div class="info">Xem thêm...</div></a>
 		                     <div id="small-dialog3" class="mfp-hide">
 							   <div class="pop_up2">
 							   	  <img src="images/pic3.jpg"/ alt=""/>
-							   	  <h3 class="m_4"><a href="#">Tiêu đề hiển thị 1</a></h3>
-				                  <p class="m_5">[Hiển Thị]</p>
+							   	  <h3 class="m_4"><a href="#">Chuột quang</a></h3>
+				                  <p class="m_5">Chuột phát ra ánh hào quang.</p>
 							   </div>
 							 </div>
                         </div>
                      </div> 
-					<h3 class="m_4"><a href="#">Tiêu đề hiển thị 1</a></h3>
-				    <p class="m_5">[Hiển Thị]</p>
+					<h3 class="m_4"><a href="#">Phụ kiện</a></h3>
+				    <p class="m_5">Chuột quang</p>
 				  </a> </div>
 				 <div class="col_1_of_projects span_1_of_projects"><a href="#">
 				   <div class="view view-first">
                     <img src="images/pic6.jpg" alt=""/>
                       <div class="mask">
-                        <h2>Tiêu đề ẩn</h2>
-                        <p>Mô tả.</p>
+                        <h2>Headphones</h2>
+                        <p>Tai nghe hình tai mèo.</p>
                          <a class="popup-with-zoom-anim" href="#small-dialog4"> <div class="info">Xem thêm...</div></a>
 		                     <div id="small-dialog4" class="mfp-hide">
 							   <div class="pop_up2">
 							   	  <img src="images/pic6.jpg"/ alt=""/>
-							   	   <h3 class="m_4"><a href="#">Tiêu đề hiển thị</a></h3>
-				    				<p class="m_5">[Hiển Thị]</p>
+							   	   <h3 class="m_4"><a href="#">Headphones</a></h3>
+				    				<p class="m_5">Tai nghe hình tai mèo.<br>Hàng chính hãng.<br>Tem bảo hành đầy đủ.</p>
 							   </div>
 							 </div>
                         </div>
                      </div> 
-					<h3 class="m_4"><a href="#">Tiêu đề hiển thị</a></h3>
-				    <p class="m_5">[Hiển Thị]</p>
+					<h3 class="m_4"><a href="#">Phụ kiện</a></h3>
+				    <p class="m_5">Tai nghe có tai mèo</p>
 				  </a> </div>
 				 <div class="col_1_of_projects span_1_of_projects"><a href="#">
 				   <div class="view view-first">
                     <img src="images/pic5.jpg" alt=""/>
                       <div class="mask">
-                        <h2>Tiêu đề ẩn</h2>
-                        <p>Mô tả.</p>
+                        <h2>Laptop HP</h2>
+                        <p>Một chiếc laptop hãng HP có màu đỏ mới...</p>
                          <a class="popup-with-zoom-anim" href="#small-dialog5"> <div class="info">Xem thêm...</div></a>
 		                     <div id="small-dialog5" class="mfp-hide">
 							   <div class="pop_up2">
 							   	  <img src="images/pic5.jpg"/ alt=""/>
-							   	   <h3 class="m_4"><a href="#">Tiêu đề hiển thị</a></h3>
-				    			   <p class="m_5">[Hiển Thị]</p>
+							   	   <h3 class="m_4"><a href="#">Laptop HP màn hình rời</a></h3>
+				    			   <p class="m_5">Một chiếc laptop hãng HP có màu đỏ mới cứng.<br>Hàng chính hãng.<br>Tem bảo hành đầy đủ.</p>
 							   </div>
 							 </div>
                         </div>
                      </div> 
-					<h3 class="m_4"><a href="#">Tiêu đề hiển thị</a></h3>
-				    <p class="m_5">[Hiển Thị]</p>
+					<h3 class="m_4"><a href="#">Laptop</a></h3>
+				    <p class="m_5">Laptop màn hình rời</p>
 				  </a> </div>
 				 <div class="col_1_of_projects span_1_of_projects"><a href="#">
 				   <div class="view view-first">
                     <img src="images/pic4.jpg" alt=""/>
                       <div class="mask">
-                        <h2>Tiêu đề ẩn</h2>
-                        <p>Mô tả.</p>
+                        <h2>Laptop</h2>
+                        <p>Một chiếc laptop có thể xoay màn hình...</p>
                          <a class="popup-with-zoom-anim" href="#small-dialog6"> <div class="info">Xem thêm...</div></a>
 		                     <div id="small-dialog6" class="mfp-hide">
 							   <div class="pop_up2">
 							   	  <img src="images/pic4.jpg"/ alt=""/>
 							   	   <h3 class="m_4"><a href="#">Tiêu đề hiển thị</a></h3>
-				    				<p class="m_5">[Hiển Thị]</p>
+				    				<p class="m_5">Một chiếc laptop có thể xoay màn hình 360 độ.<br>Hàng chính hãng.<br>Tem bảo hành đầy đủ.</p>
 							   </div>
 							 </div>
                         </div>
                      </div> 
-					<h3 class="m_4"><a href="#">Tiêu đề hiển thị</a></h3>
-				    <p class="m_5">[Hiển Thị]</p>
+					<h3 class="m_4"><a href="#">Laptop</a></h3>
+				    <p class="m_5">Laptop màn hình xoay</p>
 				  </a> </div>
 				<div class="clear"></div>
 		 </div>

@@ -138,32 +138,32 @@ end if
 				<!---start-da-slider----->
 			  <div id="da-slider" class="da-slider">
 				  <div class="da-slide">
-					<li>
-                        <a href="dangnhap.html" target="_blank">
+					<div align="center">
+                        <a href="laptop/laptop.asp" target="_blank">
                             <img src="images/Slide1.jpg" alt="" />
                         </a>
-					</li>
+					</div>
 				  </div>
 				  <div class="da-slide">
-					<li>
-                        <a href="dangnhap.html" target="_blank">
+					<div align="center">
+                        <a href="laptop/laptop.asp" target="_blank">
                             <img src="images/Slide2.jpg" alt="" />
                         </a>
-					</li>
+					</div>
 				  </div>
 				  <div class="da-slide">
-					<li>
-                        <a href="dangnhap.html" target="_blank">
+					<div align="center">
+                        <a href="laptop/laptop.asp" target="_blank">
                             <img src="images/Slide3.jpg" alt="" />
                         </a>
-					</li>
+					</div>
 				  </div>
 				  <div class="da-slide">
-					<li>
-                        <a href="dangnhap.html" target="_blank">
+					<div align="center">
+                        <a href="phukien/phukien.asp" target="_blank">
                             <img src="images/Slide4.jpg" alt="" />
                         </a>
-					</li>
+					</div>
 				  </div>		
 				  <nav class="da-arrows">
 					<span class="da-arrows-prev"></span>
@@ -179,30 +179,31 @@ end if
 	 	     <div class="content-top">
 	 	    	<div class="col_1_of_4 span_1_of_4">
 	 	    		
-					<a href="product.asp"><img src="images/sp_01_sony.jpg" alt=""/></a>                    
+					<a href="product.asp"><img src="images/pic13.jpg" alt=""/></a>                    
 					<div class="desc">
-						<h3><a href="#">LAPTOP SONY</a></h3>
+						<h3><a href="#">LAPTOP HP</a></h3>
 						<p>SONY</p>
 					</div>
 				</div>
 				<div class="col_1_of_4 span_1_of_4">
 	 	    		
-					<img src="images/sp_02_dell.jpg" alt=""/>
+					<img src="images/pic7.jpg" alt=""/>
 					<div class="desc">
-						<h3>LAPTOP DELL</h3>
+						<h3><a href="#">LAPTOP DELL</a></h3>
 						<p>DELL</p>
 					</div>
 				</div>
 				<div class="col_1_of_4 span_1_of_4">
 	 	    		
-					<img src="images/sp_03_toshiba.jpg" alt=""/>
+					<img src="images/pic12.jpg" alt=""/>
 					<div class="desc">
-						<h3>LAPTOP TOSHIBA</h3>
-						<p>TOSHIBA</p>
+						<h3><a href="#">LAPTOP ASUS</a></h3>
+						<p>ASUS</p>
 					</div>
 				</div>
 				<div class="clear"></div>
 		     </div>
+             
 		     <!--- NOTICE
 		     <div class="content-middle-bottom">
 	 	    	<div class="col_1_of_middle span_1_of_middle">
@@ -310,21 +311,6 @@ end if
 				  </a> </div>
 				<div class="clear"></div>
 		 </div>
-         
-         
-        <!---------------------------
-                     CLOCK
-        ---------------------------->
-    <div id="clock" class="light">
-        <div class="display">
-            <div class="weekdays"></div>
-            <div class="ampm"></div>
-            <div class="alarm"></div>
-            <div class="digits"></div>
-        </div>
-    </div>
-           <!--END CLOCK-->
-        
 <!---------------------------
              NOTE
 ---------------------------->
@@ -369,8 +355,19 @@ end if
    				   </script> 	
 			</div>
             <!--END NOTE-->
-	    </div>    
-
+        <!---------------------------
+                     CLOCK
+        ---------------------------->
+    <div id="clock" class="light">
+        <div class="display">
+            <div class="weekdays"></div>
+            <div class="ampm"></div>
+            <div class="alarm"></div>
+            <div class="digits"></div>
+        </div>
+    </div>
+           <!--END CLOCK-->
+        
     <!---------------------------
                 BOTTOM
     ---------------------------->
