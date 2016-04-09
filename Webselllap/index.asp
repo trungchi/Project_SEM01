@@ -59,6 +59,8 @@
 			});
 		});
 		</script>
+
+<style>HTML,BODY{cursor: url("images/monkeyani.cur"), url("images/monkey-ani.gif"), auto;}</style>
 </head>
 
 <body>
@@ -200,7 +202,7 @@
 					<img src="images/pic7.jpg" alt=""/>
 					<div class="desc">
 						<h3><a href="#">LAPTOP DELL</a></h3>
-						<p>DELL</p>
+					  <p>DELL</p>
 					</div>
 				</div>
 				<div class="col_1_of_4 span_1_of_4">

@@ -19,6 +19,8 @@
         $('.gallery a').lightBox();
     });
    </script>
+
+<style>HTML,BODY{cursor: url("../images/monkeyani.cur"), url("../images/monkey-ani.gif"), auto;}</style>
 </head>
 
 <body>

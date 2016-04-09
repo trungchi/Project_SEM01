@@ -19,6 +19,7 @@
     });
    </script>
 
+<style>HTML,BODY{cursor: url("../images/monkeyani.cur"), url("../images/monkey-ani.gif"), auto;}</style>
 </head>
 
 <body>
@@ -97,8 +98,8 @@
 					<div class="gallery">
 						<ul>
                             <li class="active">
-                                <a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
-                                <h3 align="center">Dell đỏ</h3>
+                              <a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
+                              <h3 align="center">Dell đỏ</h3>
                             </li>
                             <li>
                                 <a href="../images/t-pic8.jpg"><img src="../images/pic8.jpg" alt=""/></a>
@@ -136,17 +137,9 @@
 						</ul>
 					</div>
 		    <ul class="dc_pagination dc_paginationA dc_paginationA06">
-			  <li><a href="#" class="previous">Previous</a></li>
-			  <li><a href="#" class="current">1</a></li>
-			  <li><a href="#">2</a></li>
-			  <li><a href="#">3</a></li>
-			  <li><a href="#">4</a></li>
-			  <li><a href="#">5</a></li>
-			  <li><a href="#">...</a></li>
-			  <li><a href="#">19</a></li>
-			  <li><a href="#">20</a></li>
-			  <li><a href="#" class="next">Next</a></li>
+
 		     </ul>
+
 		</div>
         <div class="labout span_1_of_g1">
 		  <div class="project-list">
@@ -288,6 +281,5 @@
 			    <div class="clear"></div>
 			  </div>
        </div>
-       
 </body>
 </html>

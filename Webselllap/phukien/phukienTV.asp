@@ -21,6 +21,8 @@
     });
    </script>
 
+<style>HTML,BODY{cursor: url("../images/monkeyani.cur"), url("../images/monkey-ani.gif"), auto;}</style>
+</head>
 <body>
 <div class="wrap"> 
     <div class="gocphaimanhinhTV"> <!-- bắt đầu đăng kí đăng nhập -->

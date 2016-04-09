@@ -15,6 +15,8 @@
            background-image: url("./images/131218hinh-nen-vu-tru-lua-cuc-hoang-trang.jpg");
         }
     </style>
+
+<style>HTML,BODY{cursor: url("images/monkeyani.cur"), url("images/monkey-ani.gif"), auto;}</style>
 </head>
 <body>
     <div style="opacity: 0.9; cursor: pointer;" id="cboxOverlay"></div>

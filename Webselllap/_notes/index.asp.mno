@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_HASP" value="name:MaHASP;datatype:varchar,name:MaSP;datatype:varchar,name:DuongDan;datatype:varchar,name:GhiChu;datatype:" />
+	<infoitem key="UD_khachhang" value="name:MSKH;datatype:int,name:TenKH;datatype:varchar,name:NgaySinh;datatype:smalldatetime,name:GioiTinh;datatype:varchar,name:DiaChi;datatype:varchar,name:Email;datatype:varchar,name:SDT;datatype:varchar,name:TienKM;datatype:float,name:HinhAnh;datatype:varchar,name:GhiChu;datatype:" />
+	<infoitem key="UD_Recordset1" value="name:MSKH;datatype:int,name:TenKH;datatype:varchar,name:NgaySinh;datatype:smalldatetime,name:GioiTinh;datatype:varchar,name:DiaChi;datatype:varchar,name:Email;datatype:varchar,name:SDT;datatype:varchar,name:TienKM;datatype:float,name:HinhAnh;datatype:varchar,name:GhiChu;datatype:" />
+	<infoitem key="UD_HA" value="name:MaHASP;datatype:varchar,name:MaSP;datatype:varchar,name:DuongDan;datatype:varchar,name:GhiChu;datatype:" />
+</info>
