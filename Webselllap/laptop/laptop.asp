@@ -136,9 +136,39 @@
 			  				<div class="clear"></div>
 						</ul>
 					</div>
-		    <ul class="dc_pagination dc_paginationA dc_paginationA06">
-
-		     </ul>
+		    <%@LANGUAGE="VBSCRIPT" %> 
+                    <%     dim x 'biến này dùng để xác định xem cần hiển thị trang nào     
+                        x=request.querystring("PageNumber") 'nhận lại PageNumber khi ngườidùng nhấn vào các nút "Trước" và "Tiếp"     
+                        if x="" then 'đầu tiên sẽ hiển thị trang 1         
+                        x=1     
+                        end if     
+                        dim conn     
+                        set conn=server.createObject("ADODB.connection")     
+                        stringconn="DRIVER={SQL Server};SERVER=localhost;UID=sa;PWD=123456;DATABASE=WEBSITE_BAN_MAY_TINH;"     
+                        conn.open stringconn     
+                        Dim RS     
+                        set rs=server.createObject("ADODB.recordset")    
+                        SQLstring="select * from HINHANHSP"     
+                        rs.pagesize= 4 'chỉ hiển thị 4 bản ghi/1 trang     
+                        rs.open SQLstring ,conn,3,3     
+                        rs.AbsolutePage=x 'trang cần hiển thị     
+                        dem=0 'biến này để đảm bảo vòng lặp chỉ thực hiện tối đa 4 lần lặp     
+                        do while not rs.EOF and dem<rs.pagesize    
+                        response.write RS("DuongDan")         
+                        dem=dem+1     
+                        rs.movenext     
+                        loop 
+                        %> 
+                    <% 'Hiển thị nút "Trước"     
+                        if x>1 then %>     
+                    <a href="laptop.asp?pageNumber=<%=x-1%>">Trước</a>     
+                    <%end if%> 
+                    <% 'Hiển thị nút "Tiếp"     
+                        if not RS.EOF then %>         
+                    <a href="laptop.asp?pageNumber=<%=x+1%>">Tiếp</a>     
+                    <%end if     
+                        rs.close 'đóng recordset     
+                        %>   
 
 		</div>
         <div class="labout span_1_of_g1">
