@@ -97,7 +97,7 @@
 				<div class="cont1 span_2_of_g1">
 					<div class="gallery">
 						<ul>
-                            <li class="active">
+                            <!--<li class="active">
                               <a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
                               <h3 align="center">Dell đỏ</h3>
                             </li>
@@ -134,8 +134,8 @@
                                 <h3 align="center">Hp màn hình rời</h3>
                             </li>
 			  				<div class="clear"></div>
-						</ul>
-					</div>
+
+					-->
 		    <%@LANGUAGE="VBSCRIPT" %> 
                     <%     dim x 'biến này dùng để xác định xem cần hiển thị trang nào     
                         x=request.querystring("PageNumber") 'nhận lại PageNumber khi ngườidùng nhấn vào các nút "Trước" và "Tiếp"     
@@ -153,8 +153,8 @@
                         rs.open SQLstring ,conn,3,3     
                         rs.AbsolutePage=x 'trang cần hiển thị     
                         dem=0 'biến này để đảm bảo vòng lặp chỉ thực hiện tối đa 4 lần lặp     
-                        do while not rs.EOF and dem<rs.pagesize    
-                        response.write RS("DuongDan")         
+                        do while not rs.EOF and dem<rs.pagesize
+                        Response.Write("<li><a href="&RS("DuongDan")&"><img src="&RS("DuongDan")&"></img></li>")     
                         dem=dem+1     
                         rs.movenext     
                         loop 
@@ -169,7 +169,8 @@
                     <%end if     
                         rs.close 'đóng recordset     
                         %>   
-
+				</ul>
+			</div>
 		</div>
         <div class="labout span_1_of_g1">
 		  <div class="project-list">
@@ -234,7 +235,7 @@
 			<div class="wrap">
 				<div class="footer-grid footer-grid1">
 					<div class="f-logo">
-				     <a href="index.html"><img src="images/logo.png" alt=""></a>
+				     <a href="../index.asp"><img src="../images/logo.png" alt=""></a>
 			        </div>
 					<p>Nhóm gồm 4 thành viên sáng lập, mỗi thành viên điều rất nhiệt tình trong công việc mình đảm nhận.</p>
 				</div>

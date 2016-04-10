@@ -198,7 +198,7 @@
 			<div class="wrap">
 				<div class="footer-grid footer-grid1">
 					<div class="f-logo">
-				     <a href="index.html"><img src="images/logo.png" alt=""></a>
+				     <a href="../index.asp"><img src="../images/logo.png" alt=""></a>
 			        </div>
 					<p>Nhóm gồm 4 thành viên sáng lập, mỗi thành viên điều rất nhiệt tình trong công việc mình đảm nhận.</p>
 				</div>
