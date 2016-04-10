@@ -8,8 +8,12 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Lato:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <script src="../js/jquery.min.js"></script>
+
+        <!---------------------------
+                  LIGHTBOX
+        ---------------------------->
 <script type="text/javascript" src="../js/jquery.lightbox.js"></script>
-<link rel="stylesheet" type="text/css" href="css/lightbox.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="../css/lightbox.css" media="screen" />
   <script type="text/javascript">
     $(function() {
         $('.gallery a').lightBox();
@@ -18,10 +22,12 @@
 
 <style>HTML,BODY{cursor: url("../images/monkeyani.cur"), url("../images/monkey-ani.gif"), auto;}</style>
 </head>
+
 <body>
 <div class="wrap"> 
     <div class="gocphaimanhinhTV"> <!-- bắt đầu đăng kí đăng nhập -->
-            <%
+<%@LANGUAGE="VBSCRIPT" %>
+<%
 'Check if user is logged in
 if Session("name") = "" then
 	'If not, go to login page

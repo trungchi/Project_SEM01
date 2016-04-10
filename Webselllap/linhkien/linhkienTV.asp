@@ -24,9 +24,10 @@
 </head>
 
 <body>
-<div class="wrap">
+<div class="wrap"> 
     <div class="gocphaimanhinhTV"> <!-- bắt đầu đăng kí đăng nhập -->
-            <%
+<%@LANGUAGE="VBSCRIPT" %>
+<%
 'Check if user is logged in
 if Session("name") = "" then
 	'If not, go to login page
@@ -101,65 +102,54 @@ end if
 			<div class="clear"></div>
 		</div><!-- end header_main4 -->
      </div>
+<!--gallary-->
+
 	 <div class="main">
-	     <div class="wrap">
-	 	   <div class="pages">
-				 <div class="cont1 span_2_of_g1">
-				      <div class="gallery">
-			       <ul>
-				<li class="active">
-					<a href="../images/t-lk1.jpg"><img src="../images/lk1.jpg" alt=""/></a>
-					<h3 align="center">Card âm thanh</h3>
-				</li>
-                <li>
-					<a href="../images/t-lk9.jpg"><img src="../images/lk9.jpg" alt=""/></a>
-					<h3 align="center">Card âm thanh 2</h3>
-				</li>
-				<li class="last">
-					<a href="../images/t-lk2.jpg"><img src="../images/lk2.jpg" alt=""/></a>
-				  	<h3 align="center">RAM</h3>
-				</li>
-					<li>
-					<a href="../images/t-lk7.jpg"><img src="../images/lk7.jpg" alt=""/></a>
-					<h3 align="center">Mainboard</h3>
-				</li>
-				<li>
-					<a href="../images/t-lk4.jpg"><img src="../images/lk4.jpg" alt=""/></a>
-					<h3 align="center">Mainboard 2</h3>
-				</li>
-				<li class="last">
-					<a href="../images/t-lk8.jpg"><img src="../images/lk8.jpg" alt=""/></a>
-					<h3 align="center">RAM 2</h3>
-				</li>
-				</li>
-				<li>
-					<a href="../images/t-lk5.jpg"><img src="../images/lk5.jpg" alt=""/></a>
-					<h3 align="center">Card màn hình</h3>
-				</li>
-				<li>
-					<a href="../images/t-lk6.jpg"><img src="../images/lk6.jpg" alt=""/></a>
-					<h3 align="center">Card màn hình 2</h3>
-				</li>
-				<li class="last">
-					<a href="../images/t-lk3.jpg"><img src="../images/lk3.jpg" alt=""/></a>
-					<h3 align="center">Card màn hình 3</h3>
-			   </li>
-			  				<div class="clear"></div>
-						</ul>
-					</div>
-		    <ul class="dc_pagination dc_paginationA dc_paginationA06">
-			  <li><a href="#" class="previous">Previous</a></li>
-			  <li><a href="#" class="current">1</a></li>
-			  <li><a href="#">2</a></li>
-			  <li><a href="#">3</a></li>
-			  <li><a href="#">4</a></li>
-			  <li><a href="#">5</a></li>
-			  <li><a href="#">...</a></li>
-			  <li><a href="#">19</a></li>
-			  <li><a href="#">20</a></li>
-			  <li><a href="#" class="next">Next</a></li>
-		     </ul>
-		</div>
+	 	<div class="wrap">
+	 		<div class="pages">
+				<div class="cont1 span_2_of_g1">
+					<div class="gallery">
+                    <%     dim x 'biến này dùng để xác định xem cần hiển thị trang nào     
+                        x=request.querystring("PageNumber") 'nhận lại PageNumber khi ngườidùng nhấn vào các nút "Trước" và "Tiếp"     
+                        if x="" then 'đầu tiên sẽ hiển thị trang 1         
+                        x=1     
+                        end if     
+                        dim conn     
+                        set conn=server.createObject("ADODB.connection")     
+                        stringconn="DRIVER={SQL Server};SERVER=localhost;UID=sa;PWD=123456;DATABASE=WEBSITE_BAN_MAY_TINH;"     
+                        conn.open stringconn     
+                        Dim RS     
+                        set rs=server.createObject("ADODB.recordset")    
+                        SQLstring="select * from HINHANHSP where MaHASP LIKE 'LK%'"     
+                        rs.pagesize= 9 'chỉ hiển thị 4 bản ghi/1 trang     
+                        rs.open SQLstring ,conn,3,3     
+                        rs.AbsolutePage=x 'trang cần hiển thị     
+                        dem=0 'biến này để đảm bảo vòng lặp chỉ thực hiện tối đa 4 lần lặp     
+                        do while not rs.EOF and dem<rs.pagesize
+                        if dem=2 or dem=5 or dem=8 then 
+                        Response.Write("<li class=last><a href="&RS("DuongDan")&"><img src="&RS("DuongDan")&"></img></a><h3 align=center>"&RS("GhiChu")&"</h3></li>")
+                        else
+                        Response.Write("<li><a href="&RS("DuongDan")&"><img src="&RS("DuongDan")&"></img></a><h3 align=center>"&RS("GhiChu")&"</h3></li>") 
+                        end if
+                        dem=dem+1     
+                        rs.movenext     
+                        loop 
+                        %> 
+				    </div>
+                    <div class="phantrang">
+                    <% 'Hiển thị nút "Trước"     
+                        if x>1 then %>     
+                    <a href="linhkienTV.asp?pageNumber=<%=x-1%>">Trước</a>     
+                    <%end if%> 
+                    <% 'Hiển thị nút "Tiếp"     
+                        if not RS.EOF then %>        
+                    <a style="padding-left: 800px;" href="linhkienTV.asp?pageNumber=<%=x+1%>">Tiếp</a>     
+                    <%end if     
+                        rs.close 'đóng recordset     
+                        %>   
+                    </div>
+		       </div>
+<!-- END gallary-->
         <div class="labout span_1_of_g1">
 		  <div class="project-list">
 	     	<h4>Loại</h4>

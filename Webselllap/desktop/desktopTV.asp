@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-<title>Website bán máy tính | Desktop :: Groupfour</title>
+<title>Cửa hàng máy tính | Desktop :: Groupfour</title>
 <link rel="shortcut icon" href="../images/icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -9,6 +9,9 @@
 <link href='http://fonts.googleapis.com/css?family=Lato:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <script src="../js/jquery.min.js"></script>
 
+        <!---------------------------
+                  LIGHTBOX
+        ---------------------------->
 <script type="text/javascript" src="../js/jquery.lightbox.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/lightbox.css" media="screen" />
   <script type="text/javascript">
@@ -23,7 +26,8 @@
 <body>
 <div class="wrap"> 
     <div class="gocphaimanhinhTV"> <!-- bắt đầu đăng kí đăng nhập -->
-            <%
+<%@LANGUAGE="VBSCRIPT" %>
+<%
 'Check if user is logged in
 if Session("name") = "" then
 	'If not, go to login page
@@ -59,16 +63,15 @@ end if
 				<ul class="nav">
 					<li><a href="../indexTV.asp">Trang chủ</a></li>
 					<li><a href="../laptop/laptopTV.asp">Laptop</a>
-					<ul>
-						<li><a href="../laptop/laptopTV.asp">DELL</a></li>
-						<li><a href="../laptop/laptopTV.asp">HP</a></li>
-						<li><a href="../laptop/laptopTV.asp">APPLE</a></li>
-						<li><a href="../laptop/laptopTV.asp">ACER</a></li>
-						<li><a href="../laptop/laptopTV.asp">ASUS</a></li>
-						<li><a href="../laptop/laptopTV.asp">LENOVO</a></li>
-						<li><a href="../laptop/laptopTV.asp">VAIO</a></li>
-					</ul>
-					
+                        <ul>
+                            <li><a href="../laptop/laptopTV.asp">DELL</a></li>
+                            <li><a href="../laptop/laptopTV.asp">HP</a></li>
+                            <li><a href="../laptop/laptopTV.asp">APPLE</a></li>
+                            <li><a href="../laptop/laptopTV.asp">ACER</a></li>
+                            <li><a href="../laptop/laptopTV.asp">ASUS</a></li>
+                            <li><a href="../laptop/laptopTV.asp">LENOVO</a></li>
+                            <li><a href="../laptop/laptopTV.asp">VAIO</a></li>
+                        </ul>
 					<li class="active"><a href="desktopTV.asp">Desktop</a></li>
 					</li>
 					<li><a href="../linhkien/linhkienTV.asp">Linh kiện</a>
@@ -102,7 +105,6 @@ end if
 	 		<div class="pages">
 				<div class="cont1 span_2_of_g1">
 					<div class="gallery">
-		    <%@LANGUAGE="VBSCRIPT" %> 
                     <%     dim x 'biến này dùng để xác định xem cần hiển thị trang nào     
                         x=request.querystring("PageNumber") 'nhận lại PageNumber khi ngườidùng nhấn vào các nút "Trước" và "Tiếp"     
                         if x="" then 'đầu tiên sẽ hiển thị trang 1         
@@ -133,11 +135,11 @@ end if
                     <div class="phantrang">
                     <% 'Hiển thị nút "Trước"     
                         if x>1 then %>     
-                    <a href="desktop.asp?pageNumber=<%=x-1%>">Trước</a>     
+                    <a href="desktopTV.asp?pageNumber=<%=x-1%>">Trước</a>     
                     <%end if%> 
                     <% 'Hiển thị nút "Tiếp"     
                         if not RS.EOF then %>        
-                    <a style="padding-left: 800px;" href="desktop.asp?pageNumber=<%=x+1%>">Tiếp</a>     
+                    <a style="padding-left: 800px;" href="desktopTV.asp?pageNumber=<%=x+1%>">Tiếp</a>     
                     <%end if     
                         rs.close 'đóng recordset     
                         %>   
@@ -184,8 +186,7 @@ end if
 		  </div>
 		  </div>
 		</div>
-
-    <!---------------------------
+	<!---------------------------
                 BOTTOM
     ---------------------------->
         <div class="footer">
