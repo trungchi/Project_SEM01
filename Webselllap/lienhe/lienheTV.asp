@@ -7,18 +7,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Lato:400,300,600,700,800' rel='stylesheet' type='text/css'>
-<script src="../js/jquery.min.js"></script>
-
-        <!---------------------------
-                  LIGHTBOX
-        ---------------------------->
-<script type="text/javascript" src="../js/jquery.lightbox.js"></script>
-<link rel="stylesheet" type="text/css" href="../css/lightbox.css" media="screen" />
-  <script type="text/javascript">
-    $(function() {
-        $('.gallery a').lightBox();
-    });
-   </script>
 
 <style>HTML,BODY{cursor: url("../images/monkeyani.cur"), url("../images/monkey-ani.gif"), auto;}</style>
 </head>
