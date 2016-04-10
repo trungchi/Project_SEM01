@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_HINHANHSP" value="name:MaHASP;datatype:varchar,name:MaSP;datatype:varchar,name:DuongDan;datatype:varchar,name:GhiChu;datatype:varchar,name:HinhAnh;datatype:" />
+</info>

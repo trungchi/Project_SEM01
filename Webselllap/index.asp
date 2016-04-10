@@ -81,6 +81,7 @@
           <label class="search" for="inpt_search">
                 <input id="inpt_search" type="text" />
             </label>
+            <form name="Search" method="post" action="Search.asp">
             <p>Sờ vào để tìm thứ bạn cần.</p>
         </div>
     </div>

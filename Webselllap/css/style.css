@@ -1182,27 +1182,9 @@ p.m_11{
 	background:#555;
 }
 /*--portfolio--*/
-.gallery1 li {
-	float: left;
-	display: inline;
-	width: 31.8%;
-	margin-right: 2%;
-	border:1px solid #f0f0f0;
-	background: #FFF;
-}
-.gallery1 li a img {
-	display: block;
-}
-.gallery1 li.last{
-	margin-right:0;
-}
-.gallery1 li h3 {
-	padding: 5%;
-	color: #555;
-	font-size: 1em;
-}
-.gallery1 li.last {
-	margin: 0 0 30px 0;
+.item{
+	height:500px;
+	width: 500px;
 }
 /*--contact--*/
 form div {

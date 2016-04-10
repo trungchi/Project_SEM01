@@ -149,34 +149,42 @@ end if
 		  <div class="project-list">
 	     	<h4>Loại</h4>
 			<ul class="blog-list">
-				<li><a href="#">DELL </a></li>
-				<li><a href="#">HP</a></li>
-				<li><a href="#">APPLE</a></li>
-				<li><a href="#">ASUS</a></li>
-				<li><a href="#">ACER</a></li>
+				<li>
+                    <form name="frmDell" method="post" action=Dell.asp>
+                    <a href="Dell.asp">DELL</a>
+                    </form>
+                </li>
+                <li>
+                    <form name="frmHp" method="post" action=Hp.asp>
+                    <a href="Hp.asp">HP</a>
+                    </form>
+                </li>
+				<li>
+                    <form name="frmApple" method="post" action=Apple.asp>
+                    <a href="Apple.asp">APPLE</a>
+                    </form>
+                </li>
+				<li>
+                    <form name="frmAsus" method="post" action=Asus.asp>
+                    <a href="Asus.asp">ASUS</a>
+                    </form>
+                </li>
+                <li>
+                    <form name="frmAcer" method="post" action=Acer.asp>
+                    <a href="Acer.asp">ACER</a>
+                    </form>
+                </li>
+                <li>
+                    <form name="Lenovo" method="post" action=Lenovo.asp>
+                    <a href="Lenovo.asp">LENOVO</a>
+                    </form>
+                </li>
+                <li>
+                    <form name="frmVaio" method="post" action=Vaio.asp>
+                    <a href="Vaio.asp">VAIO</a>
+                    </form>
+                </li>
 			</ul>
-			<ul class="blog-list">
-				<li><a href="#">LENOVO</a></li>
-				<li><a href="#">VAIO</a></li>
-			</ul>
-			<div class="clear"></div>
-		   </div>
-		   <div class="project-list1">
-	     	<!--<h4>Archives</h4>
-			<ul class="blog-list">
-				<li><a href="#">idignissim </a></li>
-				<li><a href="#">usto odio </a></li>
-				<li><a href="#">anteposformas</a></li>
-				<li><a href="#">litterarum</a></li>
-				<li><a href="#">humanitatis</a></li>
-			</ul>
-			<ul class="blog-list">
-				<li><a href="#">litterarum</a></li>
-				<li><a href="#">humanitatis</a></li>
-				<li><a href="#">idignissim </a></li>
-				<li><a href="#">usto odio </a></li>
-				<li><a href="#">anteposformas</a></li>
-			</ul>-->
 			<div class="clear"></div>
 		   </div>
 		   <div class="project-list2">
