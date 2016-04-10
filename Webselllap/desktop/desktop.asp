@@ -9,6 +9,9 @@
 <link href='http://fonts.googleapis.com/css?family=Lato:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <script src="../js/jquery.min.js"></script>
 
+        <!---------------------------
+                  LIGHTBOX
+        ---------------------------->
 <script type="text/javascript" src="../js/jquery.lightbox.js"></script>
 <link rel="stylesheet" type="text/css" href="../css/lightbox.css" media="screen" />
   <script type="text/javascript">
@@ -53,16 +56,15 @@
 				<ul class="nav">
 					<li><a href="../index.asp">Trang chủ</a></li>
 					<li><a href="../laptop/laptop.asp">Laptop</a>
-					<ul>
-						<li><a href="../laptop/laptop.asp">DELL</a></li>
-						<li><a href="../laptop/laptop.asp">HP</a></li>
-						<li><a href="../laptop/laptop.asp">APPLE</a></li>
-						<li><a href="../laptop/laptop.asp">ACER</a></li>
-						<li><a href="../laptop/laptop.asp">ASUS</a></li>
-						<li><a href="../laptop/laptop.asp">LENOVO</a></li>
-						<li><a href="../laptop/laptop.asp">VAIO</a></li>
-					</ul>
-					
+                        <ul>
+                            <li><a href="../laptop/laptop.asp">DELL</a></li>
+                            <li><a href="../laptop/laptop.asp">HP</a></li>
+                            <li><a href="../laptop/laptop.asp">APPLE</a></li>
+                            <li><a href="../laptop/laptop.asp">ACER</a></li>
+                            <li><a href="../laptop/laptop.asp">ASUS</a></li>
+                            <li><a href="../laptop/laptop.asp">LENOVO</a></li>
+                            <li><a href="../laptop/laptop.asp">VAIO</a></li>
+                        </ul>
 					<li class="active"><a href="desktop.asp">Desktop</a></li>
 					</li>
 					<li><a href="../linhkien/linhkien.asp">Linh kiện</a>
@@ -127,11 +129,11 @@
                     <div class="phantrang">
                     <% 'Hiển thị nút "Trước"     
                         if x>1 then %>     
-                    <a href="laptop.asp?pageNumber=<%=x-1%>">Trước</a>     
+                    <a href="desktop.asp?pageNumber=<%=x-1%>">Trước</a>     
                     <%end if%> 
                     <% 'Hiển thị nút "Tiếp"     
                         if not RS.EOF then %>        
-                    <a style="padding-left: 800px;" href="laptop.asp?pageNumber=<%=x+1%>">Tiếp</a>     
+                    <a style="padding-left: 800px;" href="desktop.asp?pageNumber=<%=x+1%>">Tiếp</a>     
                     <%end if     
                         rs.close 'đóng recordset     
                         %>   

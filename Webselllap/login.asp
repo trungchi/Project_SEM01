@@ -33,7 +33,7 @@
         elseif QStr="createnamefailed" then
             Content = Content & "<tr><td><P>Tên tài khoản không hợp lệ!</P><A HREF=Javascript:history.go(-1)>Quay lại</A><A HREF=login.asp>Hủy đăng ký</A></td></tr>"
         elseif QStr="creatednew" then
-            Content = Content & "<tr><td><P>Tạo tài khoản thành công!</P><A HREF=href=Javascript:history.go(-1)>Đăng nhập</A></td></tr>"
+            Content = Content & "<tr><td><P>Tạo tài khoản thành công!</P><A HREF=login.asp>Đăng nhập</A></td></tr>"
         elseif QStr="createnew" then
             Content = Content & "<form name=frmCreate method=POST action=create.asp>"
             Content = Content & "<tr><td>Tên đăng nhập<input type=text name=txtUsername></td></tr>"

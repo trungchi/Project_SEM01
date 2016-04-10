@@ -95,64 +95,55 @@ end if
 			<div class="clear"></div>
 		</div><!-- end header_main4 -->
      </div>
+<!--gallary-->
+
 	 <div class="main">
-	     <div class="wrap">
-	 	   <div class="pages">
-			  <div class="cont1 span_2_of_g1">
-				 <div class="gallery">
-			       <ul>
-						<li>
-							<a href="../images/desktop/t-d_ap1.jpg"><img src="../images/desktop/d_ap1.jpg" alt=""/></a>
-							<h3 align="center">Desktop apple</h3>
-						</li>
-						<li>
-							<a href="../images/desktop/t-d_ap2.jpg"><img src="../images/desktop/d_ap2.jpg" alt=""/></a>
-							<h3 align="center">Desktop apple 2</h3>
-						</li>
-						<li class="last">
-							<a href="../images/desktop/t-d_ap3.jpg"><img src="../images/desktop/d_ap3.jpg" alt=""/></a>
-							<h3 align="center">Desktop apple 3</h3>
-						</li>
-						<li>
-							<a href="../images/desktop/t-d_ap4.jpg"><img src="../images/desktop/d_ap4.jpg" alt=""/></a>
-							<h3 align="center">Desktop apple 4</h3>
-						</li>
-						<li>
-							<a href="../images/desktop/t-d_de1.jpg"><img src="../images/desktop/d_de1.jpg" alt=""/></a>
-							<h3 align="center">Desktop Dell</h3>
-						</li>
-						<li class="last">
-							<a href="../images/desktop/t-d_hp1.jpg"><img src="../images/desktop/d_hp1.jpg" alt=""/></a>
-							<h3 align="center">Desktop HP</h3>
-						</li>
-							<li>
-							<a href="../images/desktop/t-d_hp2.jpg"><img src="../images/desktop/d_hp2.jpg" alt=""/></a>
-							<h3 align="center">Desktop HP 2</h3>
-						</li>
-						<li>
-							<a href="../images/desktop/t-d_hp3.jpg"><img src="../images/desktop/d_hp3.jpg" alt=""/></a>
-							<h3 align="center">Desktop HP 3</h3>
-						</li>
-						<li class="last">
-							<a href="../images/desktop/t-d_le1.jpg"><img src="../images/desktop/d_le1.jpg" alt=""/></a>
-							<h3 align="center">Desktop Lenovo</h3>
-						</li>
-					   <div class="clear"></div>
-				</ul>
-		</div>
-		    <ul class="dc_pagination dc_paginationA dc_paginationA06">
-			  <li><a href="#" class="previous">Previous</a></li>
-			  <li><a href="#">1</a></li>
-			  <li><a href="#" class="current">2</a></li>
-			  <li><a href="#">3</a></li>
-			  <li><a href="#">4</a></li>
-			  <li><a href="#">5</a></li>
-			  <li><a href="#">...</a></li>
-			  <li><a href="#">19</a></li>
-			  <li><a href="#">20</a></li>
-			  <li><a href="#" class="next">Next</a></li>
-		     </ul>
-		</div>
+	 	<div class="wrap">
+	 		<div class="pages">
+				<div class="cont1 span_2_of_g1">
+					<div class="gallery">
+		    <%@LANGUAGE="VBSCRIPT" %> 
+                    <%     dim x 'biến này dùng để xác định xem cần hiển thị trang nào     
+                        x=request.querystring("PageNumber") 'nhận lại PageNumber khi ngườidùng nhấn vào các nút "Trước" và "Tiếp"     
+                        if x="" then 'đầu tiên sẽ hiển thị trang 1         
+                        x=1     
+                        end if     
+                        dim conn     
+                        set conn=server.createObject("ADODB.connection")     
+                        stringconn="DRIVER={SQL Server};SERVER=localhost;UID=sa;PWD=123456;DATABASE=WEBSITE_BAN_MAY_TINH;"     
+                        conn.open stringconn     
+                        Dim RS     
+                        set rs=server.createObject("ADODB.recordset")    
+                        SQLstring="select * from HINHANHSP where MaHASP LIKE 'DES%'"     
+                        rs.pagesize= 9 'chỉ hiển thị 4 bản ghi/1 trang     
+                        rs.open SQLstring ,conn,3,3     
+                        rs.AbsolutePage=x 'trang cần hiển thị     
+                        dem=0 'biến này để đảm bảo vòng lặp chỉ thực hiện tối đa 4 lần lặp     
+                        do while not rs.EOF and dem<rs.pagesize
+                        if dem=2 or dem=5 or dem=8 then 
+                        Response.Write("<li class=last><a href="&RS("DuongDan")&"><img src="&RS("DuongDan")&"></img></a><h3 align=center>"&RS("GhiChu")&"</h3></li>")
+                        else
+                        Response.Write("<li><a href="&RS("DuongDan")&"><img src="&RS("DuongDan")&"></img></a><h3 align=center>"&RS("GhiChu")&"</h3></li>") 
+                        end if
+                        dem=dem+1     
+                        rs.movenext     
+                        loop 
+                        %> 
+				    </div>
+                    <div class="phantrang">
+                    <% 'Hiển thị nút "Trước"     
+                        if x>1 then %>     
+                    <a href="desktop.asp?pageNumber=<%=x-1%>">Trước</a>     
+                    <%end if%> 
+                    <% 'Hiển thị nút "Tiếp"     
+                        if not RS.EOF then %>        
+                    <a style="padding-left: 800px;" href="desktop.asp?pageNumber=<%=x+1%>">Tiếp</a>     
+                    <%end if     
+                        rs.close 'đóng recordset     
+                        %>   
+                    </div>
+		       </div>
+<!-- END gallary-->
         <div class="labout span_1_of_g1">
 		  <div class="project-list">
 	     	<h4>Loại</h4>

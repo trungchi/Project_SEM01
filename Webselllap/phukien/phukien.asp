@@ -8,8 +8,7 @@
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href='http://fonts.googleapis.com/css?family=Lato:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <script src="../js/jquery.min.js"></script>
-<script type="text/javascript" src="../js/jquery.lightbox.js"></script>
-<link rel="stylesheet" type="text/css" href="css/lightbox.css" media="screen" />
+
         <!---------------------------
                   LIGHTBOX
         ---------------------------->
@@ -23,6 +22,7 @@
 
 <style>HTML,BODY{cursor: url("../images/monkeyani.cur"), url("../images/monkey-ani.gif"), auto;}</style>
 </head>
+
 <body>
 <div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
     <a rel="nofollow" href="../login.asp" style="color:red ">
@@ -93,64 +93,55 @@
 			<div class="clear"></div>
 		</div><!-- end header_main4 -->
      </div>
+<!--gallary-->
+
 	 <div class="main">
-	     <div class="wrap">
-	 	   <div class="pages">
-			  <div class="cont1 span_2_of_g1">
-				 <div class="gallery">
-			       <ul>
-						<li>
-							<a href="../images/t-p1.jpg"><img src="../images/p1.jpg" alt=""/></a>
-							<h3 align="center">Tai nghe hồng</h3>
-						</li>
-						<li>
-							<a href="../images/t-p2.jpg"><img src="../images/p2.jpg" alt=""/></a>
-							<h3 align="center">Tai nghe bluetooth</h3>
-						</li>
-						<li class="last">
-							<a href="../images/t-p3.jpg"><img src="../images/p3.jpg" alt=""/></a>
-							<h3 align="center">Tai nghe đỏ</h3>
-						</li>
-						<li>
-							<a href="../images/t-p4.jpg"><img src="../images/p4.jpg" alt=""/></a>
-							<h3 align="center">Tai nghe hình tai mèo có đèn led</h3>
-						</li>
-						<li>
-							<a href="../images/t-p5.jpg"><img src="../images/p5.jpg" alt=""/></a>
-							<h3 align="center">Bàn phím đen có đèn led</h3>
-						</li>
-						<li class="last">
-							<a href="../images/t-p6.jpg"><img src="../images/p6.jpg" alt=""/></a>
-							<h3 align="center">Bàn phím trắng có đèn led</h3>
-						</li>
-							<li>
-							<a href="../images/t-p7.jpg"><img src="../images/p7.jpg" alt=""/></a>
-							<h3 align="center">Chuột quang</h3>
-						</li>
-						<li>
-							<a href="../images/t-p8.jpg"><img src="../images/p8.jpg" alt=""/></a>
-							<h3 align="center">Chuột quang</h3>
-						</li>
-						<li class="last">
-							<a href="../images/t-p9.jpg"><img src="../images/p9.jpg" alt=""/></a>
-							<h3 align="center">Lót chuột có đèn led</h3>
-						</li>
-					   <div class="clear"></div>
-				</ul>
-		</div>
-		    <ul class="dc_pagination dc_paginationA dc_paginationA06">
-			  <li><a href="#" class="previous">Previous</a></li>
-			  <li><a href="#">1</a></li>
-			  <li><a href="#" class="current">2</a></li>
-			  <li><a href="#">3</a></li>
-			  <li><a href="#">4</a></li>
-			  <li><a href="#">5</a></li>
-			  <li><a href="#">...</a></li>
-			  <li><a href="#">19</a></li>
-			  <li><a href="#">20</a></li>
-			  <li><a href="#" class="next">Next</a></li>
-		     </ul>
-		</div>
+	 	<div class="wrap">
+	 		<div class="pages">
+				<div class="cont1 span_2_of_g1">
+					<div class="gallery">
+		    <%@LANGUAGE="VBSCRIPT" %> 
+                    <%     dim x 'biến này dùng để xác định xem cần hiển thị trang nào     
+                        x=request.querystring("PageNumber") 'nhận lại PageNumber khi ngườidùng nhấn vào các nút "Trước" và "Tiếp"     
+                        if x="" then 'đầu tiên sẽ hiển thị trang 1         
+                        x=1     
+                        end if     
+                        dim conn     
+                        set conn=server.createObject("ADODB.connection")     
+                        stringconn="DRIVER={SQL Server};SERVER=localhost;UID=sa;PWD=123456;DATABASE=WEBSITE_BAN_MAY_TINH;"     
+                        conn.open stringconn     
+                        Dim RS     
+                        set rs=server.createObject("ADODB.recordset")    
+                        SQLstring="select * from HINHANHSP where MaHASP LIKE 'PK%'"     
+                        rs.pagesize= 9 'chỉ hiển thị 4 bản ghi/1 trang     
+                        rs.open SQLstring ,conn,3,3     
+                        rs.AbsolutePage=x 'trang cần hiển thị     
+                        dem=0 'biến này để đảm bảo vòng lặp chỉ thực hiện tối đa 4 lần lặp     
+                        do while not rs.EOF and dem<rs.pagesize
+                        if dem=2 or dem=5 or dem=8 then 
+                        Response.Write("<li class=last><a href="&RS("DuongDan")&"><img src="&RS("DuongDan")&"></img></a><h3 align=center>"&RS("GhiChu")&"</h3></li>")
+                        else
+                        Response.Write("<li><a href="&RS("DuongDan")&"><img src="&RS("DuongDan")&"></img></a><h3 align=center>"&RS("GhiChu")&"</h3></li>") 
+                        end if
+                        dem=dem+1     
+                        rs.movenext     
+                        loop 
+                        %> 
+				    </div>
+                    <div class="phantrang">
+                    <% 'Hiển thị nút "Trước"     
+                        if x>1 then %>     
+                    <a href="phukien.asp?pageNumber=<%=x-1%>">Trước</a>     
+                    <%end if%> 
+                    <% 'Hiển thị nút "Tiếp"     
+                        if not RS.EOF then %>        
+                    <a style="padding-left: 800px;" href="phukien.asp?pageNumber=<%=x+1%>">Tiếp</a>     
+                    <%end if     
+                        rs.close 'đóng recordset     
+                        %>   
+                    </div>
+		       </div>
+<!-- END gallary-->
         <div class="labout span_1_of_g1">
 		  <div class="project-list">
 	     	<h4>Loại</h4>
