@@ -96,46 +96,6 @@
 	 		<div class="pages">
 				<div class="cont1 span_2_of_g1">
 					<div class="gallery">
-						<ul>
-                            <!--<li class="active">
-                              <a href="../images/t-pic7.jpg"><img src="../images/pic7.jpg" alt=""/></a>
-                              <h3 align="center">Dell đỏ</h3>
-                            </li>
-                            <li>
-                                <a href="../images/t-pic8.jpg"><img src="../images/pic8.jpg" alt=""/></a>
-                                <h3 align="center">Dell bạc</h3>
-                            </li>
-                            <li class="last">
-                                <a href="../images/t-pic9.jpg"><img src="../images/pic9.jpg" alt=""/></a>
-                                <h3 align="center">Dell ba màu</h3>
-                            </li>
-                            <li>
-                                <a href="../images/t-pic10.jpg"><img src="../images/pic10.jpg" alt=""/></a>
-                                <h3 align="center">Asus xoay màn hình</h3>
-                            </li>
-                            <li>
-                                <a href="../images/t-pic11.jpg"><img src="../images/pic11.jpg" alt=""/></a>
-                                <h3 align="center">Asus đa màu</h3>
-                            </li>
-                            <li class="last">
-                                <a href="../images/t-pic12.jpg"><img src="../images/pic12.jpg" alt=""/></a>
-                                <h3 align="center">Asus màn hình rời</h3>
-                            </li>
-                            <li>
-                                <a href="../images/t-pic13.jpg"><img src="../images/pic13.jpg" alt=""/></a>
-                                <h3 align="center">Hp đen</h3>
-                            </li>
-                            <li>
-                                <a href="../images/t-pic14.jpg"><img src="../images/pic14.jpg" alt=""/></a>
-                                <h3 align="center">Hp xoay màn hình</h3>
-                            </li>
-                            <li class="last">
-                                <a href="../images/t-pic15.jpg"><img src="../images/pic15.jpg" alt=""/></a>
-                                <h3 align="center">Hp màn hình rời</h3>
-                            </li>
-			  				<div class="clear"></div>
-
-					-->
 		    <%@LANGUAGE="VBSCRIPT" %> 
                     <%     dim x 'biến này dùng để xác định xem cần hiển thị trang nào     
                         x=request.querystring("PageNumber") 'nhận lại PageNumber khi ngườidùng nhấn vào các nút "Trước" và "Tiếp"     
@@ -148,30 +108,36 @@
                         conn.open stringconn     
                         Dim RS     
                         set rs=server.createObject("ADODB.recordset")    
-                        SQLstring="select * from HINHANHSP"     
-                        rs.pagesize= 4 'chỉ hiển thị 4 bản ghi/1 trang     
+                        SQLstring="select * from HINHANHSP where MaHASP LIKE 'LAP%'"     
+                        rs.pagesize= 9 'chỉ hiển thị 4 bản ghi/1 trang     
                         rs.open SQLstring ,conn,3,3     
                         rs.AbsolutePage=x 'trang cần hiển thị     
                         dem=0 'biến này để đảm bảo vòng lặp chỉ thực hiện tối đa 4 lần lặp     
                         do while not rs.EOF and dem<rs.pagesize
-                        Response.Write("<li><a href="&RS("DuongDan")&"><img src="&RS("DuongDan")&"></img></li>")     
+                        if dem=2 or dem=5 or dem=8 then 
+                        Response.Write("<li class=last><a href="&RS("DuongDan")&"><img src="&RS("DuongDan")&"></img></a><h3 align=center>"&RS("GhiChu")&"</h3></li>")
+                        else
+                        Response.Write("<li><a href="&RS("DuongDan")&"><img src="&RS("DuongDan")&"></img></a><h3 align=center>"&RS("GhiChu")&"</h3></li>") 
+                        end if
                         dem=dem+1     
                         rs.movenext     
                         loop 
                         %> 
+				    </div>
+                    <div class="phantrang">
                     <% 'Hiển thị nút "Trước"     
                         if x>1 then %>     
                     <a href="laptop.asp?pageNumber=<%=x-1%>">Trước</a>     
                     <%end if%> 
                     <% 'Hiển thị nút "Tiếp"     
-                        if not RS.EOF then %>         
-                    <a href="laptop.asp?pageNumber=<%=x+1%>">Tiếp</a>     
+                        if not RS.EOF then %>        
+                    <a style="padding-left: 800px;" href="laptop.asp?pageNumber=<%=x+1%>">Tiếp</a>     
                     <%end if     
                         rs.close 'đóng recordset     
                         %>   
-				</ul>
-			</div>
-		</div>
+                    </div>
+		       </div>
+<!-- END gallary-->
         <div class="labout span_1_of_g1">
 		  <div class="project-list">
 	     	<h4>Loại</h4>
