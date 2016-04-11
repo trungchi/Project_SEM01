@@ -1,4 +1,5 @@
-﻿<!DOCTYPE HTML>
+﻿<%@LANGUAGE="VBSCRIPT" %> 
+<!DOCTYPE HTML>
 <html>
 <head>
 <title>Cửa hàng máy tính | Phụ kiện :: Groupfour</title>
@@ -23,14 +24,18 @@
 </head>
 
 <body>
-<div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
-    <a rel="nofollow" href="../login.asp" style="color:red ">
-        <span><ins>Đăng ký</ins></span> |
-    </a>
-    <a rel="nofollow" href="../login.asp" style="color:red ">
-        <span><ins>Đăng Nhập</ins></span>
-    </a>
+<div class="wrap"> 
+    <div class="gocphaimanhinhTV">
+<%
+if Session("name") = "" then
+	Response.write("<a rel=nofollow href=../login.asp class=colorlink2 <span><ins>Đăng ký</ins></span></a>|<a rel=nofollow href=../login.asp class=colorlink2 <span><ins>Đăng Nhập</ins></span>")
+else
+	Response.write("Xin chào " & Session("name") & "," & "&nbsp;" & "<a href=../logout.asp class=colorlink2 <ins>Thoát<ins></a>")
+end if
+%>
+	</div>
 </div>
+
     <!---------------------------
                 SEARCH
     ---------------------------->
@@ -42,53 +47,120 @@
             <p>Sờ vào để tìm thứ bạn cần.</p>
         </div>
     </div>
-
-    <!---------------------------
-                MENU
-    ---------------------------->
 	<div class="pages-top">
 	        <div class="logo">
 				<a href="../index.asp"><img src="../images/logo.png" alt=""/></a>
 			 </div>
-		     <div class="h_menu4"><!-- start h_menu4 -->
-				<a class="toggleMenu" href="#">Menu</a>
+		     <div class="h_menu4">
+   <!---------------------------
+                MENU
+    ---------------------------->
 				<ul class="nav">
 					<li><a href="../index.asp">Trang chủ</a></li>
-					<li><a href="../laptop/laptop.asp">Laptop</a>
-						<ul>
-							<li><a href="../laptop/laptop.asp">DELL</a></li>
-							<li><a href="../laptop/laptop.asp">HP</a></li>
-							<li><a href="../laptop/laptop.asp">APPLE</a></li>
-							<li><a href="../laptop/laptop.asp">ACER</a></li>
-							<li><a href="../laptop/laptop.asp">ASUS</a></li>
-							<li><a href="../laptop/laptop.asp">LENOVO</a></li>
-							<li><a href="../laptop/laptop.asp">VAIO</a></li>
+					<li><a href="../Laptop/Laptop.asp">Laptop</a>
+						<ul class="listmenu">
+							<li>
+                                <form name="frmDell" method="post" action=laptop/Dell.asp>
+                                <a href="../Laptop/Dell.asp">DELL</a>
+                                </form>
+                            </li>
+                            <li>
+                                <form name="frmHp" method="post" action=laptop/Hp.asp>
+                                <a href="../Laptop/Hp.asp">HP</a>
+                                </form>
+                            </li>
+                            <li>
+                                <form name="frmApple" method="post" action=laptop/Apple.asp>
+                                <a href="../Laptop/Apple.asp">APPLE</a>
+                                </form>
+                            </li>
+                            <li>
+                                <form name="frmAsus" method="post" action=laptop/sus.asp>
+                                <a href="../Laptop/Asus.asp">ASUS</a>
+                                </form>
+                            </li>
+                            <li>
+                                <form name="frmAcer" method="post" action=laptop/Acer.asp>
+                                <a href="../Laptop/Acer.asp">ACER</a>
+                                </form>
+                            </li>
+                            <li>
+                                <form name="Lenovo" method="post" action=laptop/Lenovo.asp>
+                                <a href="../Laptop/Lenovo.asp">LENOVO</a>
+                                </form>
+                            </li>
+                            <li>
+                                <form name="frmVaio" method="post" action=laptop/Vaio.asp>
+                                <a href="../Laptop/Vaio.asp">VAIO</a>
+                                </form>
+                            </li>
 						</ul>
 					</li>
-					<li><a href="../desktop/desktop.asp">Desktop</a>
-						<ul>
-							<li><a href="../desktop/desktop.asp">DELL</a></li>
-							<li><a href="../desktop/desktop.asp">HP</a></li>
-							<li><a href="../desktop/desktop.asp">APPLE</a></li>
-							<li><a href="../desktop/desktop.asp">ACER</a></li>
-							<li><a href="../desktop/desktop.asp">ASUS</a></li>
-							<li><a href="../desktop/desktop.asp">LENOVO</a></li>
+					<li><a href="../Desktop/Desktop.asp">Desktop</a>
+						<ul class="listmenu">
+							<li>
+                                <form name="frmDell" method="post" action=Desktop/Dell.asp>
+                                <a href="../Desktop/Dell.asp">DELL</a>
+                                </form>
+                            </li>
+							<li>
+                                <form name="frmHp" method="post" action=Desktop/Hp.asp>
+                                <a href="../Desktop/Hp.asp">HP</a>
+                                </form>
+                            </li>
+							<li>
+                                <form name="frmApple" method="post" action=Desktop/Apple.asp>
+                                <a href="../Desktop/Apple.asp">APPLE</a>
+                                </form>
+                            </li>
+                            <li>
+                                <form name="frmAsus" method="post" action=Desktop/Asus.asp>
+                                <a href="../Desktop/Asus.asp">ASUS</a>
+                                </form>
+                            </li>
+                            <li>
+                                <form name="frmAcer" method="post" action=Desktop/Acer.asp>
+                                <a href="../Desktop/Acer.asp">ACER</a>
+                                </form>
+                            </li>
+                            <li>
+                                <form name="Lenovo" method="post" action=Desktop/Lenovo.asp>
+                                <a href="../Desktop/Lenovo.asp">LENOVO</a>
+                         	   </form>
+							</li>
+         			   </ul>
+					</li>
+					<li><a href="../Linhkien/Linhkien.asp">Linh kiện</a>
+						<ul class="listmenu">
+                        	<li>
+                                <form name="frmRAM" method="post" action=Linhkien/RAM.asp>
+                                <a href="../Linhkien/RAM.asp">RAM</a>
+                                </form>
+                            </li>
+							<li>
+                                <form name="frmVGA" method="post" action=Linhkien/RAM.asp>
+                                <a href="../Linhkien/VGA.asp">Card VGA</a>
+                                </form>
+                            </li>
+                            <li>
+                                <form name="frmM" method="post" action=Linhkien/RAM.asp>
+                                <a href="../Linhkien/M.asp">Mainboard</a>
+                                </form>
+                            </li>
+                            <li>
+                                <form name="frmSC" method="post" action=Linhkien/RAM.asp>
+                                <a href="../Linhkien/SC.asp">Card âm thanh</a>
+                                </form>
+                            </li>
 						</ul>
 					</li>
-					<li><a href="../linhkien/linhkien.asp">Linh kiện</a>
-						<ul>
-							<li><a href="../linhkien/linhkien.asp">RAM</a></li>
-							<li><a href="../linhkien/linhkien.asp">Card VGA</a></li>
-							<li><a href="../linhkien/linhkien.asp">Mainboard</a></li>
-							<li><a href="../linhkien/linhkien.asp">Sound card (card âm thanh)</a></li>
-						</ul>
+					<li class="active"><a href="../Phukien/Phukien.asp">Phụ kiện</a>
 					</li>
-					<li class="active"><a href="phukien.asp">Phụ kiện</a>
-					</li>
-					<li><a href="../lienhe/lienhe.asp">Liên hệ</a></li>
+					<li><a href="../Lienhe/Lienhe.asp">Liên hệ</a></li>
 				</ul>
 				<script type="text/javascript" src="../js/nav.js"></script>
-			</div><!-- end h_menu4 -->
+			</div>
+            <!-- END MENU -->
 			<div class="clear"></div>
 		</div><!-- end header_main4 -->
      </div>
@@ -99,7 +171,6 @@
 	 		<div class="pages">
 				<div class="cont1 span_2_of_g1">
 					<div class="gallery">
-		    <%@LANGUAGE="VBSCRIPT" %> 
                     <%     dim x 'biến này dùng để xác định xem cần hiển thị trang nào     
                         x=request.querystring("PageNumber") 'nhận lại PageNumber khi ngườidùng nhấn vào các nút "Trước" và "Tiếp"     
                         if x="" then 'đầu tiên sẽ hiển thị trang 1         
@@ -145,14 +216,33 @@
 		  <div class="project-list">
 	     	<h4>Loại</h4>
 			<ul class="blog-list">
-				<li><a href="#">DELL </a></li>
-				<li><a href="#">HP</a></li>
-				<li><a href="#">APPLE</a></li>
-				<li><a href="#">ASUS</a></li>
-				<li><a href="#">ACER</a></li>
-			</ul>
-			<ul class="blog-list">
-				<li><a href="#">LENOVO</a></li>
+				<li>
+					<form name="frmHP" method="post" action=HP.asp>
+                    <a href="HP.asp">HEADPHONES</a>
+                    </form>
+                </li>
+                <li>
+					<form name="frmEP" method="post" action=EP.asp>
+                    <a href="EP.asp">EARPHONES</a>
+                    </form>
+                </li>
+                <li>
+					<form name="frmCQ" method="post" action=CQ.asp>
+                    <a href="CQ.asp">CHUỘT</a>
+                    </form>
+                </li><li>
+					<form name="frmBP" method="post" action=BP.asp>
+                    <a href="BP.asp">BÀN PHÍM</a>
+                    </form>
+                </li><li>
+					<form name="frmUSB" method="post" action=USB.asp>
+                    <a href="USB.asp">USB</a>
+                    </form>
+                </li><li>
+					<form name="frmLC" method="post" action=LC.asp>
+                    <a href="LC.asp">LÓT CHUỘT</a>
+                    </form>
+                </li>
 			</ul>
 			<div class="clear"></div>
 		   </div>

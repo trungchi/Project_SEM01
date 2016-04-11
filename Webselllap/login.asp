@@ -1,3 +1,4 @@
+<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
 <head>
     <title>Cửa hàng máy tính | Đăng nhập :: Groupfour</title>
     <link rel="shortcut icon" href="images/icon.png">
@@ -14,7 +15,6 @@
     </div>
 </div>
 <div class="cntr">
-	<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
     <%
         Content = ""							
         QStr = Request.QueryString("login")		

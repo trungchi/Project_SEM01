@@ -1,4 +1,5 @@
-﻿<!DOCTYPE HTML>
+﻿<%@LANGUAGE="VBSCRIPT" %> 
+<!DOCTYPE HTML>
 <html>
 <head>
 <title>Cửa hàng máy tính | Linh kiện :: Groupfour</title>
@@ -7,6 +8,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
 <script src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/nav.js"></script>
 
         <!---------------------------
                   LIGHTBOX
@@ -23,14 +25,19 @@
 </head>
 
 <body>
-<div class="gocphaimanhinh"> <!-- bắt đầu đăng kí đăng nhập -->
-    <a rel="nofollow" href="../login.asp" style="color:red ">
-        <span><ins>Đăng ký</ins></span> |
-    </a>
-    <a rel="nofollow" href="../login.asp" style="color:red ">
-        <span><ins>Đăng Nhập</ins></span>
-    </a>
+<div class="wrap"> 
+    <div class="gocphaimanhinhTV">
+<%
+if Session("name") = "" then
+	Response.write("<a rel=nofollow href=../login.asp class=colorlink2 <span><ins>Đăng ký</ins></span></a>|<a rel=nofollow href=../login.asp class=colorlink2 <span><ins>Đăng Nhập</ins></span>")
+else
+	Response.write("Xin chào " & Session("name") & "," & "&nbsp;" & "<a href=../logout.asp class=colorlink2 <ins>Thoát<ins></a>")
+
+end if
+%>
+	</div>
 </div>
+
     <!---------------------------
                 SEARCH
     ---------------------------->
@@ -42,16 +49,14 @@
             <p>Sờ vào để tìm thứ bạn cần.</p>
         </div>
     </div>
-
-    <!---------------------------
-                MENU
-    ---------------------------->
 	<div class="pages-top">
 	        <div class="logo">
 				<a href="../index.asp"><img src="../images/logo.png" alt=""/></a>
 			 </div>
-		     <div class="h_menu4"><!-- start h_menu4 -->
-				<a class="toggleMenu" href="#">Menu</a>
+		     <div class="h_menu4">
+    <!---------------------------
+                MENU
+    ---------------------------->
 				<ul class="nav">
 					<li><a href="../index.asp">Trang chủ</a></li>
 					<li><a href="../laptop/laptop.asp">Laptop</a>
@@ -89,11 +94,12 @@
 					</li>
 					<li><a href="../lienhe/lienhe.asp">Liên hệ</a></li>
 				</ul>
-				<script type="text/javascript" src="../js/nav.js"></script>
-			</div><!-- end h_menu4 -->
+			</div>
+            <!--End menu-->
 			<div class="clear"></div>
 		</div><!-- end header_main4 -->
      </div>
+     
 <!--gallary-->
 
 	 <div class="main">
@@ -101,7 +107,6 @@
 	 		<div class="pages">
 				<div class="cont1 span_2_of_g1">
 					<div class="gallery">
-		    <%@LANGUAGE="VBSCRIPT" %> 
                     <%     dim x 'biến này dùng để xác định xem cần hiển thị trang nào     
                         x=request.querystring("PageNumber") 'nhận lại PageNumber khi ngườidùng nhấn vào các nút "Trước" và "Tiếp"     
                         if x="" then 'đầu tiên sẽ hiển thị trang 1         
@@ -147,34 +152,30 @@
 		  <div class="project-list">
 	     	<h4>Loại</h4>
 			<ul class="blog-list">
-				<li><a href="#">DELL </a></li>
-				<li><a href="#">HP</a></li>
-				<li><a href="#">APPLE</a></li>
-				<li><a href="#">ASUS</a></li>
-				<li><a href="#">ACER</a></li>
-			</ul>
-			<ul class="blog-list">
-				<li><a href="#">LENOVO</a></li>
-				<li><a href="#">VAIO</a></li>
-			</ul>
+				<li>
+                    <form name="frmDell" method="post" action=Dell.asp>
+                    <a href="RAM.asp">RAM</a>
+                    </form>
+                </li>
+                <li>
+                    <form name="frmApple" method="post" action=Apple.asp>
+                    <a href="VGA.asp">Card màn hình</a>
+                    </form>
+                </li>
+                <li>
+                    <form name="frmHp" method="post" action=Hp.asp>
+                    <a href="M.asp">Mainboard</a>
+                    </form>
+                </li>
+				<li>
+                    <form name="frmApple" method="post" action=Apple.asp>
+                    <a href="SC.asp">Card âm thanh</a>
+                    </form>
+                </li>
+            </ul>
 			<div class="clear"></div>
 		   </div>
 		   <div class="project-list1">
-	     	<!--<h4>Archives</h4>
-			<ul class="blog-list">
-				<li><a href="#">idignissim </a></li>
-				<li><a href="#">usto odio </a></li>
-				<li><a href="#">anteposformas</a></li>
-				<li><a href="#">litterarum</a></li>
-				<li><a href="#">humanitatis</a></li>
-			</ul>
-			<ul class="blog-list">
-				<li><a href="#">litterarum</a></li>
-				<li><a href="#">humanitatis</a></li>
-				<li><a href="#">idignissim </a></li>
-				<li><a href="#">usto odio </a></li>
-				<li><a href="#">anteposformas</a></li>
-			</ul>-->
 			<div class="clear"></div>
 		   </div>
 		   <div class="project-list2">

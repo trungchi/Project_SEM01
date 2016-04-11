@@ -970,29 +970,6 @@ li.twitter a span {
 	margin-bottom:7%;
 	text-transform: uppercase;
 }
-ul.blog-list {
-	width: 50%;
-	float: left;
-}
-.project-list li, .project-list1 li {
-	margin-bottom: 20px;
-}
-.project-list li img, .project-list1 li img {
-	float: left;
-	margin-right: 20px;
-}
-ul.blog-list li {
-	list-style-image: url(../images/arrow.png);
-	margin: 0 35px 10px;
-}
-ul.blog-list li a {
-	font-size:0.9em;
-	color:#555;
-	vertical-align: super;
-}
-ul.blog-list li a:hover {
-	color:#000;
-}
 .pages{
 	padding:5% 0;
 }
@@ -2540,7 +2517,7 @@ p {
 --------------------------*/
 a.colorlink:link, a.colorlink:visited
 {
-color:orange;
+color:#ff6300;
 text-decoration:none;
 }
  
@@ -2549,9 +2526,25 @@ a.colorlink:hover
 color:#F09;
 }
  
-a.colorlink:active
+.colorlink:active
 {
 background:yellow;
+}
+/*Màu 2*/
+.colorlink2:link, a.colorlink2:visited
+{
+color:red;
+text-decoration:none;
+}
+ 
+.colorlink2:hover
+{
+color:#F09;
+}
+ 
+.colorlink2:active
+{
+background:#F96;
 }
 
 /*-------------------------
@@ -2560,4 +2553,41 @@ background:yellow;
 .phantrang {
     height : 650px;
     width: 300px;
+}
+/*-------------------------
+		List menu
+--------------------------*/
+ul.listmenu {
+}
+ul.listmenu li a {
+	vertical-align: super;
+	text-transform:uppercase;
+}
+
+/*-------------------------
+		List SP
+--------------------------*/
+ul.blog-list {
+	width: 50% auto;
+	float: left;
+}
+.project-list li, .project-list1 li {
+	margin-bottom: 20px;
+}
+.project-list li img, .project-list1 li img {
+	float: left;
+	margin-right: 20px;
+}
+ul.blog-list li {
+	list-style-image: url(../images/arrow.png);
+	margin: 0 35px 10px;
+}
+ul.blog-list li a {
+	font-size:1em;
+	color:#03F;
+	vertical-align: super;
+	text-transform:uppercase;
+}
+ul.blog-list li a:hover {
+	color:#F90;
 }

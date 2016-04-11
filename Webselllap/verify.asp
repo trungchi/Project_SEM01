@@ -27,7 +27,7 @@
 		conn.Close
 		set rs=nothing
 		set conn=nothing
-		Response.Redirect("indexTV.asp")
+		Response.Redirect("index.asp")
 	'If entered password is wrong, close connection 
 	'and return to login with QueryString
 	else

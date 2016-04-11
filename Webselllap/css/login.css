@@ -18,15 +18,18 @@ input {
 	margin: 10px 10px;
 	width: 200px;
 	display: block;
-	border: none;
+	border: ridge;
 	padding: 0 auto;
-	border-bottom: solid 1px #1abc9c;
+	border-bottom: solid 1px yellow;
+	border-top: solid 2px yellow;
+	border-left: solid 2px yellow;
+	border-right: solid 2px yellow;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 90%, yellow 10%);
 	transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
-	background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #1abc9c 4%);
 	background-position: -200px 0;
 	background-size: 200px 100%;
 	background-repeat: no-repeat;
-	color: black;
+	color: #9500e3;
 	font-size:20px;
 }
 input:focus, input:valid {
@@ -46,10 +49,11 @@ button {
   background: #1abc9c;
   cursor: pointer;
   border-radius: 3px;
-  padding: 6px;
+  padding: 10px;
   width: 200px;
   color: white;
-  margin-left: 25px;
+  font-size:16px;
+  margin-left: 10px;
   box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
 }
 button:hover {
