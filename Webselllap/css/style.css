@@ -2546,6 +2546,22 @@ color:#F09;
 {
 background:#F96;
 }
+/*Màu 3*/
+.colorlink3:link, a.colorlink3:visited
+{
+color:Blue;
+text-decoration:none;
+}
+ 
+.colorlink3:hover
+{
+color:red;
+}
+ 
+.colorlink3:active
+{
+background:#F96;
+}
 
 /*-------------------------
 		Phân Trang

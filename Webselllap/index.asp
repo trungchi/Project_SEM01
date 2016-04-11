@@ -281,29 +281,29 @@ end if
     ------------------>
 	 <div class="main">
 	     <div class="wrap">
-	 	   <h2 class="m_1"><a href="product.asp">SẢN PHẨM MỚI</a></h2>
+	 	   <h2 class="m_1"><a href="Laptop/Laptop.asp" class="colorlink3">SẢN PHẨM MỚI</a></h2>
 	 	     <div class="content-top">
 	 	    	<div class="col_1_of_4 span_1_of_4">
 	 	    		
-					<a href="product.asp"><img src="images/pic13.jpg" alt=""/></a>                    
+					<a href="Laptop/Laptop.asp"><img src="Images\Laptop\t-lap10.jpg" alt=""/></a>                    
 					<div class="desc">
-						<h3><a href="#">LAPTOP HP</a></h3>
-						<p>SONY</p>
+						<h3><a href="Laptop/Vaio.asp" class="colorlink3">LAPTOP VAIO</a></h3>
+						<p>VAIO</p>
 					</div>
 				</div>
 				<div class="col_1_of_4 span_1_of_4">
 	 	    		
-					<img src="images/pic7.jpg" alt=""/>
+					<img src="Images\Laptop\t-lap12.jpg" alt=""/>
 					<div class="desc">
-						<h3><a href="#">LAPTOP DELL</a></h3>
-					  <p>DELL</p>
+						<h3><a href="Laptop/Apple.asp" class="colorlink3">MACBOOK</a></h3>
+					  <p>APPLE</p>
 					</div>
 				</div>
 				<div class="col_1_of_4 span_1_of_4">
 	 	    		
-					<img src="images/pic12.jpg" alt=""/>
+					<img src="Images\Laptop\t-lap2.jpg" alt=""/>
 					<div class="desc">
-						<h3><a href="#">LAPTOP ASUS</a></h3>
+						<h3><a href="Laptop/ASus.asp" class="colorlink3">LAPTOP ASUS</a></h3>
 						<p>ASUS</p>
 					</div>
 				</div>
