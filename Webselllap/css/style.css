@@ -37,6 +37,7 @@ body{
 	color:#F30;
 	font-weight:bold;
 	font-size:28px;
+	text-transform:uppercase;
 	font-family:Georgia, "Times New Roman", Times, serif
 }
 .wrap{

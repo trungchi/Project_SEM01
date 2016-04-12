@@ -3,8 +3,8 @@
     <title>Cửa hàng máy tính | Đăng nhập :: Groupfour</title>
     <link rel="shortcut icon" href="images/icon.png">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
     <link href="css/login.css" rel="stylesheet" type="text/css" media="all" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
 
 <style>HTML,BODY{cursor: url("images/monkeyani.cur"), url("images/monkey-ani.gif"), auto;}</style>
 </head>
@@ -25,41 +25,45 @@
             Title = "Trang đăng nhập"
         end if
         if QStr="passfailed" then				
-            Content = Content & "<tr><td><P>Sai mật khẩu</P><A href=Javascript:history.go(-1) class=colorlink>Quay lại</A></td></tr>"
-        elseif QStr="createpassfailed" then		
-            Content = Content & "<tr><td><P>Sai mật khẩu</P><A href=Javascript:history.go(-1) class=colorlink>Quay lại</A><A HREF=login.asp>Hủy đăng ký</A></td></tr>"
+            Content = Content & "<P>Sai mật khẩu</P><A href=Javascript:history.go(-1) class=colorlink>Quay lại</A>"
+        elseif QStr="createpassfailed" then
+			Content = Content & "<div class=box>"		
+            Content = Content & "<div><p class=noti>Đăng ký thất bại!</p><A href=Javascript:history.go(-1) class=colorlink>Quay lại đăng ký</A></br><A HREF=login.asp class=colorlink>Hủy đăng ký</A></div>"
+			Content = Content & "</div>"
         elseif QStr="namefailed" then
-            Content = Content & "<tr><td><P>Tên tài khoản không hợp lệ!</P><A HREF=login.asp?login=createnew class=colorlink>Nhấp vào đây để đăng ký</A><br><br><A HREF=login.asp class=colorlink>Quay lại đăng nhập</A></td></tr>"
+		Content = Content & "<div class=box>"
+            Content = Content & "<p class=noti>Tên tài khoản không hợp lệ!</P><A HREF=login.asp?login=createnew class=colorlink>Nhấp vào đây để đăng ký</A><br><br><A HREF=login.asp class=colorlink>Quay lại đăng nhập</A>	"
+			Content = Content & "</div>"
         elseif QStr="createnamefailed" then
-            Content = Content & "<tr><td><P>Tên tài khoản không hợp lệ!</P><A HREF=Javascript:history.go(-1)>Quay lại</A><A HREF=login.asp>Hủy đăng ký</A></td></tr>"
+			Content = Content & "<div class=box>"	
+            Content = Content & "<p class=noti>Tên tài khoản không hợp lệ!</P><A HREF=Javascript:history.go(-1)>Quay lại</A><A HREF=login.asp>Hủy đăng ký</A>"
+			Content = Content & "</div>"
         elseif QStr="creatednew" then
-            Content = Content & "<tr><td><P>Tạo tài khoản thành công!</P><A HREF=login.asp>Đăng nhập</A></td></tr>"
+            Content = Content & "<p class=noti>Tạo tài khoản thành công!</p><A HREF=login.asp>Đăng nhập</A>"
         elseif QStr="createnew" then
             Content = Content & "<form name=frmCreate method=POST action=create.asp>"
-            Content = Content & "<tr><td>Tên đăng nhập<input type=text name=txtUsername></td></tr>"
-            Content = Content & "<tr><td>Mật khẩu <input type=password name=txtPassword></td></tr>"
-            Content = Content & "<tr><td>Email <input type=text name=txtEmail></td></tr>"
-            Content = Content & "<tr><td>Số điện thoại<input type=tell name=txtSDT></td></tr>"
-            Content = Content & "<tr><td><button type=submit name=cmdSubmit value=Đăng ký>Đăng ký</td></tr>"
-			Content = Content & "<tr><td><A href=login.asp class=colorlink>Quay lại đăng nhập</A></td></tr>"
+            Content = Content & "<input type=text name=txtUsername placeholder='Tên đăng nhập' required>"
+            Content = Content & "<input type=password name=txtPassword placeholder='Mật khẩu' required>"
+            Content = Content & "<input type=text name=txtEmail placeholder='Email' required>"
+            Content = Content & "<input type=tell name=txtSDT placeholder='Số điện thoại' required>"
+            Content = Content & "<button type=submit name=cmdSubmit value='Đăng ký'>Đăng ký</button>"
+			Content = Content & "</br></br><A href=login.asp class=colorlink>Quay lại đăng nhập</A>"
             Content = Content & "</form>"
         else
             Content = Content & "<form name=frmMain method=POST action=verify.asp>"
-            Content = Content & "<tr><td>Tên đăng nhập <input type=text name=txtUsername></td></tr>"
-            Content = Content & "<tr><td>Mật khẩu <input type=password name=txtPassword></td></tr>"
-            Content = Content & "<tr><td><button type=submit name=cmdSubmit value=Đăng nhập>Đăng nhập</td></tr>"
+            Content = Content & "<input type=text name=txtUsername placeholder='Tên đăng nhập' required>"
+            Content = Content & "<input type=password name=txtPassword placeholder='Mật khẩu' required>"
+            Content = Content & "<button type=submit name=cmdSubmit>Đăng nhập</button>"
             Content = Content & "</form>"
-            Content = Content & "<tr><td><A HREF=login.asp?login=createnew class=colorlink>Nhấp vào đây để đăng ký</A></td></tr>"
+            Content = Content & "</br></br><A HREF=login.asp?login=createnew class=colorlink>Nhấp vào đây để đăng ký</A>"
         end if
     
     %>
     <div align="center">
-    <table>
         <%
-        Response.Write("<tr class=title><td valign=top align=center><b>" & Title & "</b><br><br></td></tr>")
+        Response.Write("<p class=title><td align=center><b>" & Title & "</p>")
         Response.Write(Content)
-        %>			
-    </table>
+        %>
     </div>
 </div>
 </body>

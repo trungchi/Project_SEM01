@@ -195,7 +195,7 @@ end if
 	          <div class="m_contact"><span class="left_line1"> </span>Liên hệ<span class="right_line1"> </span></div>
               <p class="m_12">Để được tư vấn, giải đáp thắc mắc về các sản phẩm, Quý khách hàng hãy liên hệ với chúng tôi ở Văn phòng Group4 tại TP.Hồ Chí Minh.</p>
               <div class="contatct-top">
-               <form method="post" action="contact-post.html">
+               <form method="post" action="contact-post.asp">
 					<div class="to">
                      	<input type="text" class="text" value="Tên" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Tên';}">
 					 	<input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" style="margin-left: 10px">
