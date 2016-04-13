@@ -1,3 +1,27 @@
+<%@LANGUAGE="VBSCRIPT"%>
+<!--#include file="../Connections/Connection.asp" -->
+<%
+Dim SanPham
+Dim SanPham_cmd
+Dim SanPham_numRows
+
+Set SanPham_cmd = Server.CreateObject ("ADODB.Command")
+SanPham_cmd.ActiveConnection = MM_Connection_STRING
+SanPham_cmd.CommandText = "SELECT * FROM dbo.SanPham WHERE tinhtrang=1 ORDER BY MaSP desc" 
+SanPham_cmd.Prepared = true
+
+Set SanPham = SanPham_cmd.Execute
+SanPham_numRows = 0
+%>
+
+<%
+Dim Repeat1__numRows
+Dim Repeat1__index
+
+Repeat1__numRows = -1
+Repeat1__index = 0
+SanPham_numRows = SanPham_numRows + Repeat1__numRows
+%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -9,157 +33,59 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link href='http://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet">
-
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/templatemo_misc.css">
     <link rel="stylesheet" href="css/templatemo_style.css">
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-       <!---------------------------
-                     CLOCK
-        ---------------------------->
-    <link href="../css/style2.css" rel="stylesheet" />
-                <!-- JavaScript Includes -->
-            <script src="../js/jquery.min(v1.10.1).js"></script>
-            <script src="../js/moment.min.js"></script>
-            <script src="../js/script.js"></script>
-
 <script src="../js/jquery.min.js"></script>
-
-<style>HTML,BODY{cursor: url("../images/monkeyani.cur"), url("../images/monkey-ani.gif"), auto;}</style>
 </head>
 <body>
-    <div>
-        <div class="site-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 col-xs-6">
-                        <div id="templatemo_logo">
-                            <h1><a href="#">Admin</a></h1>
-                        </div> <!-- /.logo -->
-                    </div> <!-- /.col-md-4 -->
-                    <div class="col-md-8 col-sm-6 col-xs-6">
-                        <a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
-                        <div class="main-menu">
-                            <ul>
-                                <li><a href="#laptop">Laptop</a></li>
-                                <li><a href="#Desktop">Desktop</a></li>
-                                <li><a href="#Linhkien">Linh kiện</a></li>
-                                <li><a href="#Phukien">Phụ kiện</a></li>
-                            </ul>
-                        </div> <!-- /.main-menu -->
-                    </div> <!-- /.col-md-8 -->
-                </div> <!-- /.row -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="responsive">
-                            <div class="main-menu">
-                                <ul>
-                                     <li><a href="#laptop">Laptop</a></li>
-                                    <li><a href="#Desktop">Desktop</a></li>
-                                    <li><a href="#Linhkien">Linh kiện</a></li>
-                                    <li><a href="#Phukien">Phụ kiện</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- /.container -->
-        </div> <!-- /.site-header -->
-    </div> <!-- /#front -->
-    <div class="site-slider">
-        <ul class="bxslider">
-            <li>
-                <img src="images/slider/slide1.jpg" alt="slider image 1">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-right">
-                            <div class="slider-caption">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <img src="images/slider/slide2.jpg" alt="slider image 2">
-                <div class="container caption-wrapper">
-                    <div class="slider-caption">
-                    </div>
-                </div>
-            </li>
-            <li>
-                <img src="images/slider/slide3.jpg" alt="slider image 3">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-right">
-                            <div class="slider-caption">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <img src="images/slider/slide4.jpg" alt="slider image 4">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-right">
-                            <div class="slider-caption">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <img src="images/slider/slide5.jpg" alt="slider image 5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-right">
-                            <div class="slider-caption">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul> <!-- /.bxslider -->
-        <div class="bx-thumbnail-wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div id="bx-pager">
-                            <a data-slide-index="0" href=""><img src="images/slider/thumb1.jpg" alt="image 1" /></a>
-                            <a data-slide-index="1" href=""><img src="images/slider/thumb2.jpg" alt="image 2" /></a>
-                            <a data-slide-index="2" href=""><img src="images/slider/thumb3.jpg" alt="image 3" /></a>
-                            <a data-slide-index="3" href=""><img src="images/slider/thumb4.jpg" alt="image 4" /></a>
-                            <a data-slide-index="4" href=""><img src="images/slider/thumb5.jpg" alt="image 5" /></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> <!-- /.site-slider -->
+<div id="top"><p align="center">QUẢN LÝ SẢN PHẨM</p></div>
 <div class="clear"></div>
-<div id="laptop" class="content-section">
-</div>
-<div id="Desktop" class="content-section">
-</div>
-<div id="Linhkien" class="content-section">
-</div>
-<div id="Phukien" class="content-section">
-</div>
+<div id="laptop" class="product-item">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <% 
+While ((Repeat1__numRows <> 0) AND (NOT SanPham.EOF)) 
+%>
+  <tr>
+    <td width="10%"><p><img src="<%=(SanPham.Fields.Item("HinhAnh").Value)%>" alt="" name="" width="225" height="150"></p></td>
+    <td width="20%"><p><%=(SanPham.Fields.Item("TenSP").Value)%></p>
+      <p><%=(SanPham.Fields.Item("Gia").Value)%> VNĐ</p>
+      <p>Hiện có <%=(SanPham.Fields.Item("SoLuong").Value)%> sản phẩm</p></td>
+    <td width="20%"><form action="Editsp.asp" method="post" name="form1" id="form1">
+      <input name="MaSP" type="hidden" id="MaSP" value="<%=(SanPham.Fields.Item("MaSP").Value)%>">
+      <input name="Loai" type="hidden" id="Loai" value="<%=(SanPham.Fields.Item("Loai").Value)%>">
+      <input name="NSX" type="hidden" id="NSX" value="<%=(SanPham.Fields.Item("NSX").Value)%>">
+      <input type="submit" name="button" id="button" value="CẬP NHẬT">
+    </form></td>
+    <td width="20%"><form action="Removesp.asp" method="post" name="form1" id="form1">
+      <input name="MaSp" type="hidden" id="MaSp" value="<%=(SanPham.Fields.Item("MaSP").Value)%>">
+      <input type="submit" name="button2" id="button2" value="XÓA">
+    </form></td>
+  </tr>
+  <% 
+  Repeat1__index=Repeat1__index+1
+  Repeat1__numRows=Repeat1__numRows-1
+  SanPham.MoveNext()
+Wend
+%>
+  </table>
 
-    <script src="js/vendor/jquery-1.10.1.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
-    <script src="js/jquery.easing-1.3.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+</div>
+<div align="center" class="item"><a href="AddSp.asp" class="colorlink">Thêm sản phẩm mới</a></div>
+<script src="js/vendor/jquery-1.10.1.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
 <div class="footer-bar">
     <span class="article-wrapper">
         <span class="article-label">Trang quản lý</span>
-        <span class="article-link"><a href="#">Lên top</a></span>
+        <span class="article-link"><a href="#top">Lên top</a></span>
     </span>
 </div>
+<input name="Loai" type="hidden" id="Loai" value="<%=(SanPham.Fields.Item("Loai").Value)%>">
 </body>
 </html>
+<%
+SanPham.Close()
+Set SanPham = Nothing
+%>

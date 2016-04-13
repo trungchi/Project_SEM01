@@ -1,31 +1,30 @@
 <%@LANGUAGE="VBSCRIPT"%>
-<!--#include file="../Connections/Website.asp" -->
+<!--#include file="../Connections/Connection.asp" -->
 <%
 '*********************************
 '*                               *
-'*  INSERT RECORD AND UPLOAD     *
+'*  UPDATE RECORD AND UPLOAD     *
 '*  http://www.dwzone.it         *
 '*                               *
 '*********************************
-	server.ScriptTimeout = 5400
+	server.ScriptTimeout = 5400	
 
-	Dim RG_altVal, RG_columns, RG_Cong, RG_dbValues, RG_dbValuesTmp, RG_delim, RG_editCmd, RG_editQuery, RG_editQueryTmp, RG_emptyVal, RG_Ext, RG_Extensions, RG_fields, RG_FieldValueTmp, RG_FileDel, RG_FileExt, RG_formVal, RG_FS, RG_i, RG_L, RG_Len, RG_Max, RG_Name, RG_New, RG_newName, RG_Num, RG_Path, RG_Rec, RG_ret, RG_Save, RG_tableValues, RG_tableValuesTmp, RG_tst, RG_typeArray, RG_z, UploadStatus, NumFile
-	Dim RG_Connection, RG_editColumn, RG_recordId, Form, editAction, editRedirectUrl, RG_Files, RG_formName, UploadType, ParamVal, ParamList, MaxFieldNumber, TmpVal, x, y, Key, ProgressBar
-	Dim tmpField_Name(), tmpValue_Name(), tmpField_Size(), tmpValue_Size(), tmpField_Thumb(), tmpValue_Thumb(), QtyRecord, TotalFileSize, valueToRedirectSend
-	
+	Dim RG_Connection, RG_editColumn, RG_recordId, Form, editAction, editRedirectUrl, RG_Files, RG_formName, UploadType, ParamVal, ParamList, MaxFieldNumber, TmpVal, x, y, Key, ProgressBar, UploadStatus, NumFile
+	Dim RG_altVal, RG_columns, RG_Cong, RG_dbValues, RG_dbValuesTmp, RG_delim, RG_editCmd, RG_editQuery, RG_editQueryTmp, RG_emptyVal, RG_Ext, RG_Extensions, RG_fields, RG_FieldValueTmp, RG_FileDel, RG_FileExt, RG_formVal, RG_FS, RG_i, RG_L, RG_Len, RG_Max, RG_Name, RG_New, RG_newName, RG_Num, RG_Path, RG_Rec, RG_ret, RG_Save, RG_tableValues, RG_tableValuesTmp, RG_tst, RG_typeArray, RG_z, TotalFileSize, valueToRedirectSend
 	Set Form = New ASPForm
 	Dim UploadID
 	UploadID = Form.NewUploadID
 	ProgressBar = ""
 	TotalFileSize = ""
-  	editRedirectUrl = "../index.asp"
-	RG_Connection = MM_Website_STRING
-	RG_editTable = "dbo.SanPham"	
-	RG_Files = "/Images;1;;;;0;;1;;;;0;;;;;;txtHA@_@_@1@_@_@ @_@_@@_@_@../"
+	editRedirectUrl = "Products.asp"
+	RG_Connection = MM_Connection_STRING
+	RG_editTable = "dbo.SanPham"
+	RG_editColumn = "MaSP"
+	RG_Files = "/Images;1;;;;0;HinhAnh;1;;2;;0;;;;;;HinhAnh@_@_@0@_@_@ @_@_@@_@_@../"
 	RG_formName = "form1"
-	UploadType="Insert"
+	UploadType="Update"
 	UploadStatus = ""
-	valueToRedirectSend = "txtTinhtrang"
+	valueToRedirectSend = ""
 	NumFile = 0
 
 	if len(Request.QueryString("UploadID"))>0 then
@@ -55,16 +54,15 @@ If Form.State = fsCompletted Then
 			next
 		next
 		Form.Files.Save
-
-		RG_fieldsStr  = "txtTenSp|value|txtTinhtrang|value|txtNSX|value|txtGia|value|txtCauHinh|value|txtLoai|value|txtGhiChu|value"
-  		RG_columnsStr = "TenSP|',none,''|Tinhtrang|none,none,NULL|NSX|',none,''|Gia|none,none,NULL|CauHinh|',none,''|Loai|',none,''|GhiChu|',none,''"
-		Form.Files.DataBaseInsert
+		RG_fieldsStr  = "Loai|value|NSX|value|txtCauHinh|value|txtSoLuong|value|txtGia|value|txtGhiChu|value|MaSP|value"
+  		RG_columnsStr = "Loai|',none,''|NSX|',none,''|CauHinh|',none,''|SoLuong|none,none,NULL|Gia|none,none,NULL|GhiChu|',none,''|MaSP|none,none,NULL"
+		Form.Files.DataBaseUpdate
 
 		response.write(getRedirect())
 		response.end
   End If
 ElseIf Form.State > 10 then
-  response.write "<br><Font Color=red>Some form error.<br>Error code: " & Form.State & "<br>Error List:<br>0  Form was successfully processed. <br>1  Request method is NOT post <br>2  Zero length request (there are no data in a source form) <br>3  Form is in a middle of process. <br>5  Initial form state <br>11  Boundary of multipart/form-data is not specified. <br>12  Unknown source form (Content-type must be multipart/form-data) <br>15  Client was disconnected before upload was completted.<br>16  Unexpected error from Request.BinaryRead method (ASP error).<br></Font><br>"
+  response.write ""
 End If
 
 
@@ -72,189 +70,173 @@ function GetFolderName(str):  GetFolderName = Ris : end function
 
 function myGetFileName(str):  myGetFileName = Ris : end function
 %>
+<%
+Dim NSX
+Dim NSX_cmd
+Dim NSX_numRows
+
+Set NSX_cmd = Server.CreateObject ("ADODB.Command")
+NSX_cmd.ActiveConnection = MM_Connection_STRING
+NSX_cmd.CommandText = "SELECT * FROM dbo.NSX ORDER BY MaNSX ASC" 
+NSX_cmd.Prepared = true
+
+Set NSX = NSX_cmd.Execute
+NSX_numRows = 0
+%>
+<%
+Dim SanPham__MMColParam
+SanPham__MMColParam = "1"
+If (Request.Form("MaSP") <> "") Then 
+  SanPham__MMColParam = Request.Form("MaSP")
+End If
+%>
+<%
+Dim SanPham
+Dim SanPham_cmd
+Dim SanPham_numRows
+
+Set SanPham_cmd = Server.CreateObject ("ADODB.Command")
+SanPham_cmd.ActiveConnection = MM_Connection_STRING
+SanPham_cmd.CommandText = "SELECT * FROM dbo.SanPham WHERE MaSP = ?" 
+SanPham_cmd.Prepared = true
+SanPham_cmd.Parameters.Append SanPham_cmd.CreateParameter("param1", 5, 1, -1, SanPham__MMColParam) ' adDouble
+
+Set SanPham = SanPham_cmd.Execute
+SanPham_numRows = 0
+%>
 <!DOCTYPE HTML>
 <html>
 <head>
 <title>Quản trị viên :: Groupfour</title>
 <link rel="shortcut icon" href="../images/icon.png">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href='http://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
-<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
-	<!--jquery lightbox-->
-<script type="text/javascript" src="../js/jquery.lightbox.js"></script>
-<link rel="stylesheet" type="text/css" href="../css/lightbox.css" media="screen" />
-  <script type="text/javascript">
-    $(function() {
-        $('.gallery a').lightBox();
-    });
-   </script>
-
-        <!---------------------------
-                     CLOCK
-        ---------------------------->
-    <link href="../css/style2.css" rel="stylesheet" />
-                <!-- JavaScript Includes -->
-            <script src="../js/jquery.min(v1.10.1).js"></script>
-            <script src="../js/moment.min.js"></script>
-            <script src="../js/script.js"></script>
-
-<script src="../js/jquery.min.js"></script>
-
-<style>HTML,BODY{cursor: url("images/monkeyani.cur"), url("images/monkey-ani.gif"), auto;}</style>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/templatemo_misc.css">
+    <link rel="stylesheet" href="css/templatemo_style.css">
+ <script src="../js/jquery.min.js"></script>
 </head>
 <body>
-<div class="pages-top">
-    <div class="logo">
-        <a href="../index.asp"><img src="../images/logo.png" alt=""/></a>
+   <div>
+        <div class="site-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 col-xs-6">
+                        <div id="templatemo_logo">
+                            <h1><a href="products.asp">Admin</a></h1>
+                        </div> <!-- /.logo -->
+                    </div> <!-- /.col-md-4 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /.site-header -->
+    </div> <!-- /#front -->
+    <div class="site-slider">
     </div>
-		   <div class="clear"></div>	
-<div class="main">
-     <div class="item">
-    <form ACTION="<%=editAction%>" onsubmit="return ProgressBar()" method="post" enctype="multipart/form-data" name="form1">
-      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <td>Ten may tinh</td>
-          <td><label for="txtTenSp"></label>
-          <input type="text" name="txtTenSp" id="txtTenSp">
-          <input name="txtTinhtrang" type="hidden" id="txtTinhtrang" value="1"></td>
-        </tr>
-        <tr>
-          <td>NSX</td>
-          <td><label for="txtNSX"></label>
-            <select name="txtNSX" id="txtNSX">
-          </select></td>
-        </tr>
-        <tr>
-          <td>gia</td>
-          <td><label for="txtGia"></label>
-          <input type="text" name="txtGia" id="txtGia"></td>
-        </tr>
-        <tr>
-          <td>hinh anh</td>
-          <td><label for="txtHA"></label>
-          <input type="file" name="txtHA" id="txtHA"></td>
-        </tr>
-        <tr>
-          <td>cau hinh</td>
-          <td><label for="txtCauHinh"></label>
-          <input type="text" name="txtCauHinh" id="txtCauHinh"></td>
-        </tr>
-        <tr>
-          <td>loai</td>
-          <td><label for="txtLoai"></label>
-          <input type="text" name="txtLoai" id="txtLoai"></td>
-        </tr>
-        <tr>
-          <td>ghi chu</td>
-          <td><label for="txtGhiChu"></label>
-          <input type="text" name="txtGhiChu" id="txtGhiChu"></td>
-        </tr>
-        <tr>
-          <td><input type="submit" name="Submit" id="button" value="Thêm"></td>
-          <td><input type="reset" name="button2" id="button2" value="Hủy"></td>
-        </tr>
-      </table>
-      
-      </form>
+    <div id="top"></div>
+<div class="clear"></div>
+<div class="item">
+  <form ACTION="<%=editAction%>" onsubmit="return ProgressBar()" method="post" enctype="multipart/form-data" name="form1">
+    <table width="56%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="20%">Tên sản phẩm</td>
+        <td width="80%"><label for="textTenSP"></label>
+        <input name="textTenSP" type="text" id="textTenSP" value="<%=(SanPham.Fields.Item("TenSP").Value)%>"></td>
+      </tr>
+      <tr>
+        <td>Loại</td>
+        <td><label for="Loai"></label>
+          <select name="Loai" class="list-group-item-info" id="Loai">
+            <option value="1">LAPTOP</option>
+            <option value="2">DESKTOP</option>
+            <option value="3">LINH KIỆN</option>
+            <option value="4">PHỤ KIỆN</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td>NSX</td>
+        <td><label for="textfield2"></label>
+          <label for="NSX"></label>
+          <select name="NSX" class="list-group-item-info" id="NSX">
+            <%
+While (NOT NSX.EOF)
+%>
+            <option value="<%=(NSX.Fields.Item("MaNSX").Value)%>" <%If (Not isNull((NSX.Fields.Item("NSX").Value))) Then If (CStr(NSX.Fields.Item("MaNSX").Value) = CStr((NSX.Fields.Item("NSX").Value))) Then Response.Write("selected=""selected""") : Response.Write("")%> ><%=(NSX.Fields.Item("NSX").Value)%></option>
+            <%
+  NSX.MoveNext()
+Wend
+If (NSX.CursorType > 0) Then
+  NSX.MoveFirst
+Else
+  NSX.Requery
+End If
+%>
+        </select></td>
+      </tr>
+      <tr>
+        <td>Cấu hình</td>
+        <td><label for="txtCauHinh"></label>
+        <textarea  name="txtCauHinh" cols="50" rows="10" id="txtCauHinh" dir="ltr" lang="vi"><%=(SanPham.Fields.Item("CauHinh").Value)%></textarea></td>
+      </tr>
+      <tr>
+        <td>Hình ảnh</td>
+        <td><label for="HinhAnh"></label>
+        <input name="HinhAnh" type="file" id="fileHinhAnh"></td>
+      </tr>
+      <tr>
+        <td>Số lượng</td>
+        <td><label for="txtSoLuong"></label>
+        <input name="txtSoLuong" type="text" id="txtSoLuong" value="<%=(SanPham.Fields.Item("SoLuong").Value)%>"></td>
+      </tr>
+      <tr>
+        <td>Giá</td>
+        <td><label for="txtGia"></label>
+        <input name="txtGia" type="text" id="txtGia" value="<%=(SanPham.Fields.Item("Gia").Value)%>">
+        VNĐ</td>
+      </tr>
+      <tr>
+        <td>Ghi chú</td>
+        <td><label for="txtGhiChu"></label>
+        <input name="txtGhiChu" type="text" id="txtGhiChu" value="<%=(SanPham.Fields.Item("GhiChu").Value)%>"></td>
+      </tr>
+      <tr>
+        <td><input type="submit" name="button" id="button" value="CẬP NHẬT"></td>
+        <td><input type="submit" name="button2" id="button2" value="KHỞI TẠO"></td>
+      </tr>
+    </table>
+    <input name="MaSP" type="hidden" id="MaSP" value="<%=SanPham.Fields.Item("MaSP").Value%>">
+  </form>
 </div>
-        <!---------------------------
-                     CLOCK
-        ---------------------------->
-    <div id="clock" class="light">
-        <div class="display">
-            <div class="weekdays"></div>
-            <div class="ampm"></div>
-            <div class="alarm"></div>
-            <div class="digits"></div>
-        </div>
-    </div>
-           <!--END CLOCK-->
-        
-    <!---------------------------
-                BOTTOM
-    ---------------------------->
-        <div class="footer">
-			<div class="wrap">
-				<div class="footer-grid footer-grid1">
-					<div class="f-logo">
-				     <a href="../index.asp"><img src="images/logo.png" alt=""></a>
-			        </div>
-					<p>Nhóm gồm 4 thành viên sáng lập, mỗi thành viên điều rất nhiệt tình trong công việc mình đảm nhận.</p>
-				</div>
-				<div class="footer-grid footer-grid2">
-					<h4>Liên Hệ</h4>
-				    <ul>
-						<li><i class="pin"> </i><div class="extra-wrap">
-							<p>392-394 Hoàng Văn Thụ, P.4<br> TP.HCM</p>
-						</div></li>
-						<li><i class="phone"> </i><div class="extra-wrap">
-							<p>+849 3939 3423</p>
-						</div></li>
-						<li><i class="mail"> </i><div class="extra-wrap1">
-							<p>lopaccp1508@gmail.com</p>
-						</div></li>
-						<li><i class="earth"> </i><div class="extra-wrap1">
-							<p>nhom4@abc.com</p>
-						</div></li>
-					</ul>
-				</div>
-				<div class="footer-grid footer-grid3">
-					<h4>Tiêu Chí</h4>
-					<div class="recent-f">
-						<div class="recent-f-icon">
-							<span> </span>
-						</div>
-						<div class="recent-f-info">
-							<p>Uy Tín</p>
-						</div>
-						<div class="clear"> </div>
-					</div>
-					<div class="recent-f1">
-						<div class="recent-f-icon">
-							<span> </span>
-						</div>
-						<div class="recent-f-info">
-							<p>Chất Lượng</p>
-						</div>
-						<div class="clear"> </div>
-					</div><br />
-                    <div class="recent-f2">
-						<div class="recent-f-icon">
-							<span> </span>
-						</div>
-						<div class="recent-f-info">
-							<p>Chuyên Nghiệp</p>
-						</div>
-						<div class="clear"> </div>
-					</div>
-				</div>
-				<div class="footer-grid footer-grid4">
-					<h4>Nhận Tin Mới</h4>
-					<p>Nhập địa chỉ Email để nhận được những tin tức mới nhất về công nghệ</p>
-											<input type="text" value="Địa chỉ Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Địa chỉ Email';}">
-						<input type="submit" value="">
-				</div>
-				<div class="clear"> </div>
-			</div>
-		</div>
-		<div class="footer-bottom">
-	 		  <div class="wrap">
-	     	  	<div class="copy">
-				   <p>© 2016 Group Four Computer</p>
-			    </div>
-			    <div class="social">	
-				   <ul>	
-					  <li class="facebook"><a href="#"><span> </span></a></li>
-					  <li class="linkedin"><a href="#"><span> </span></a></li>
-					  <li class="twitter"><a href="#"><span> </span></a></li>		
-				   </ul>
-			    </div>
-			    <div class="clear"></div>
-			  </div>
-       </div>
-       
+<div id="Desktop" class="product-item">
+</div>
+<div id="Linhkien" class="product-item">
+</div>
+<div id="Phukien" class="product-item">
+</div>
+
+<script src="js/vendor/jquery-1.10.1.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<div class="footer-bar">
+    <span class="article-wrapper">
+        <span class="article-label">Trang quản lý</span>
+        <span class="article-link"><a href="#top">Lên top</a></span>
+    </span>
+</div>
 </body>
 </html>
 <!--#include file="../UploadFiles/Upload.asp" -->
 <!--#include file="../UploadFiles/UploadAdvanced.asp" -->
+<%
+NSX.Close()
+Set NSX = Nothing
+%>
+<%
+SanPham.Close()
+Set SanPham = Nothing
+%>

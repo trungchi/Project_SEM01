@@ -546,7 +546,10 @@ h6 {
     Products Styling
    ========================================================================== */
 .product-item {
-  margin-bottom: 30px;
+	margin-left:40px;
+	margin-right:40px;
+	margin-top:40px;
+	margin-bottom: 30px;
 }
 .product-item .item-thumb {
   -webkit-backface-visibility: hidden;
@@ -768,4 +771,55 @@ ul.social li a {
     opacity: 0;
     filter: alpha(opacity=0);
   }
+}
+/*-------------------------
+		Màu link
+--------------------------*/
+a.colorlink:link, a.colorlink:visited
+{
+color:#ff6300;
+text-decoration:none;
+font-size:24px;
+}
+ 
+a.colorlink:hover
+{
+color:#F09;
+}
+ 
+.colorlink:active
+{
+background:yellow;
+}
+/*Màu 2*/
+.colorlink2:link, a.colorlink2:visited
+{
+color:red;
+text-decoration:none;
+}
+ 
+.colorlink2:hover
+{
+color:#F09;
+}
+ 
+.colorlink2:active
+{
+background:#F96;
+}
+/*Màu 3*/
+.colorlink3:link, a.colorlink3:visited
+{
+color:Blue;
+text-decoration:none;
+}
+ 
+.colorlink3:hover
+{
+color:red;
+}
+ 
+.colorlink3:active
+{
+background:#F96;
 }

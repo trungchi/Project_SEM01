@@ -16,12 +16,12 @@
 	Set Form = New ASPForm
 	Dim UploadID
 	UploadID = Form.NewUploadID
-	ProgressBar = ""
+	ProgressBar = "progress-std.asp"
 	TotalFileSize = ""
   	editRedirectUrl = "Products.asp"
 	RG_Connection = MM_Connection_STRING
 	RG_editTable = "dbo.SanPham"	
-	RG_Files = "/Images;1;;;;0;;1;;;;0;;;;;;txtHinhAnh@_@_@1@_@_@ @_@_@@_@_@../"
+	RG_Files = "/Images;1;;;;0;HinhAnh;1;;;;0;;;;;;txtHinhAnh@_@_@1@_@_@ @_@_@@_@_@../"
 	RG_formName = "form1"
 	UploadType="Insert"
 	UploadStatus = ""
@@ -56,8 +56,8 @@ If Form.State = fsCompletted Then
 		next
 		Form.Files.Save
 
-		RG_fieldsStr  = "txtTenSp|value|txtTinhtrang|value|txtLoai|value|txtNSX|value|txtCauHinh|value|txtGia|value|txtGhiChu|value"
-  		RG_columnsStr = "TenSP|',none,''|Tinhtrang|none,none,NULL|Loai|',none,''|NSX|',none,''|CauHinh|',none,''|Gia|none,none,NULL|GhiChu|',none,''"
+		RG_fieldsStr  = "txtTenSp|value|txtTinhtrang|value|txtLoai|value|txtNSX|value|txtCauHinh|value|txtGia|value|txtGhiChu|value|txtSoLuong|value"
+  		RG_columnsStr = "TenSP|',none,''|Tinhtrang|none,none,NULL|Loai|',none,''|NSX|',none,''|CauHinh|',none,''|Gia|none,none,NULL|GhiChu|',none,''|SoLuong|none,none,NULL"
 		Form.Files.DataBaseInsert
 
 		response.write(getRedirect())
@@ -71,6 +71,19 @@ End If
 function GetFolderName(str):  GetFolderName = Ris : end function
 
 function myGetFileName(str):  myGetFileName = Ris : end function
+%>
+<%
+Dim NSX
+Dim NSX_cmd
+Dim NSX_numRows
+
+Set NSX_cmd = Server.CreateObject ("ADODB.Command")
+NSX_cmd.ActiveConnection = MM_Connection_STRING
+NSX_cmd.CommandText = "SELECT * FROM dbo.NSX ORDER BY MaNSX asc" 
+NSX_cmd.Prepared = true
+
+Set NSX = NSX_cmd.Execute
+NSX_numRows = 0
 %>
 <!DOCTYPE HTML>
 <html>
@@ -91,27 +104,7 @@ function myGetFileName(str):  myGetFileName = Ris : end function
     <link rel="stylesheet" href="css/templatemo_misc.css">
     <link rel="stylesheet" href="css/templatemo_style.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-       <!---------------------------
-                     CLOCK
-        ---------------------------->
-    <link href="../css/style2.css" rel="stylesheet" />
-                <!-- JavaScript Includes -->
-            <script src="../js/jquery.min(v1.10.1).js"></script>
-            <script src="../js/moment.min.js"></script>
-            <script src="../js/script.js"></script>
-
 <script src="../js/jquery.min.js"></script>
-
-<style>HTML,BODY{cursor: url("../images/monkeyani.cur"), url("../images/monkey-ani.gif"), auto;}</style>
-        <!---------------------------
-                     CLOCK
-        ---------------------------->
-    <link href="../css/style2.css" rel="stylesheet" />
-                <!-- JavaScript Includes -->
-            <script src="../js/jquery.min(v1.10.1).js"></script>
-            <script src="../js/moment.min.js"></script>
-            <script src="../js/script.js"></script>
-
 <script src="../js/jquery.min.js"></script>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -121,7 +114,6 @@ function myGetFileName(str):  myGetFileName = Ris : end function
     <link rel="stylesheet" href="css/templatemo_misc.css">
     <link rel="stylesheet" href="css/templatemo_style.css">
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-<style>HTML,BODY{cursor: url("images/monkeyani.cur"), url("images/monkey-ani.gif"), auto;}</style>
 </head>
 <body>
     <div>
@@ -133,47 +125,13 @@ function myGetFileName(str):  myGetFileName = Ris : end function
                             <h1><a href="products.asp">Admin</a></h1>
                         </div> <!-- /.logo -->
                     </div> <!-- /.col-md-4 -->
-                    <div class="col-md-8 col-sm-6 col-xs-6">
-                        <a href="products.asp" class="toggle-menu"><i class="fa fa-bars"></i></a>
-                        <div class="main-menu">
-                            <ul>
-                                <li><a href="#laptop">Laptop</a></li>
-                                <li><a href="#Desktop">Desktop</a></li>
-                                <li><a href="#Linhkien">Linh kiện</a></li>
-                                <li><a href="#Phukien">Phụ kiện</a></li>
-                            </ul>
-                        </div> <!-- /.main-menu -->
-                    </div> <!-- /.col-md-8 -->
                 </div> <!-- /.row -->
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="responsive">
-                            <div class="main-menu">
-                                <ul>
-                                     <li><a href="#laptop">Laptop</a></li>
-                                    <li><a href="#Desktop">Desktop</a></li>
-                                    <li><a href="#Linhkien">Linh kiện</a></li>
-                                    <li><a href="#Phukien">Phụ kiện</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div> <!-- /.container -->
         </div> <!-- /.site-header -->
     </div> <!-- /#front -->
     <div class="site-slider">
-  
-    </div> <!-- /.site-slider -->
+    </div>
 <div class="clear"></div>
-<div id="laptop" class="content-section">
-</div>
-<div id="Desktop" class="content-section">
-</div>
-<div id="Linhkien" class="content-section">
-</div>
-<div id="Phukien" class="content-section">
-</div>
     <div class="item">
     <form ACTION="<%=editAction%>" onsubmit="return ProgressBar()" method="post" enctype="multipart/form-data" name="form1" id="form1">
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -186,30 +144,36 @@ function myGetFileName(str):  myGetFileName = Ris : end function
         <tr>
           <td><p>Loại</p></td>
           <td><label for="txtLoai2"></label>
-            <select name="txtLoai" id="txtLoai" dir="ltr" lang="vi">
-              <option value="1">Laptop</option>
-              <option value="2">Desktop</option>
-              <option value="3">Linh kiện</option>
-              <option value="4">Phụ kiện</option>
+            <select name="txtLoai" class="list-group-item-info" id="txtLoai" dir="ltr" lang="vi">
+              <option value="1">LAPTOP</option>
+              <option value="2">DESKTOP</option>
+              <option value="3">LINH KIỆN</option>
+              <option value="4">PHỤ KIỆN</option>
           </select></td>
         </tr>
         <tr>
           <td><p>NSX</p></td>
           <td><label for="txtGia"></label>
-            <select name="txtNSX" id="txtNSX" dir="ltr" lang="vi">
-              <option value="DELL">DELL</option>
-              <option value="SONY">SONY</option>
-              <option value="ASUS">ASUS</option>
-              <option value="APPLE">APPLE</option>
-              <option value="HP">HP</option>
-              <option value="LENOVO">LENOVO</option>
-              <option value="ACER">ACER</option>
-            </select></td>
+            <select name="txtNSX" class="list-group-item-info" id="txtNSX" dir="ltr" lang="vi">
+              <%
+While (NOT NSX.EOF)
+%>
+              <option value="<%=(NSX.Fields.Item("MaNSX").Value)%>" <%If (Not isNull((NSX.Fields.Item("MaNSX").Value))) Then If (CStr(NSX.Fields.Item("MaNSX").Value) = CStr((NSX.Fields.Item("MaNSX").Value))) Then Response.Write("selected=""selected""") : Response.Write("")%> ><%=(NSX.Fields.Item("NSX").Value)%></option>
+              <%
+  NSX.MoveNext()
+Wend
+If (NSX.CursorType > 0) Then
+  NSX.MoveFirst
+Else
+  NSX.Requery
+End If
+%>
+          </select></td>
         </tr>
         <tr>
-          <td class="canhgiua" align="center" ><p>Cấu hình</p></td>
+          <td><p>Cấu hình</p></td>
           <td><label for="txtCauHinh"></label>
-            <textarea  name="txtCauHinh" cols="50" rows="10" id="txtCauHinh" dir="ltr" lang="vi">Nhập cấu hình...</textarea></td>
+            <textarea  name="txtCauHinh" cols="50" rows="10" id="txtCauHinh" dir="ltr" lang="vi"></textarea></td>
         </tr>
         <tr>
           <td><p>Hình ảnh</p></td>
@@ -218,30 +182,28 @@ function myGetFileName(str):  myGetFileName = Ris : end function
           </label></td>
         </tr>
         <tr>
+          <td><p>Số lượng </p></td>
+          <td><label for="txtGia">
+            <input name="txtSoLuong" type="text" id="txtSoLuong">
+          </label></td>
+        </tr>
+        <tr>
           <td><p>Giá</p></td>
-          <td><label for="txtGia"></label>
-          <input type="text" name="txtGia" id="txtGia"></td>
+          <td><label for="txtGhiChu">
+            <input type="text" name="txtGia" id="txtGia">
+          </label></td>
         </tr>
         <tr>
           <td><p>Ghi chú</p></td>
-          <td><label for="txtGhiChu"></label>
-          <input type="text" name="txtGhiChu" id="txtGhiChu"></td>
+          <td><input type="text" name="txtGhiChu" id="txtGhiChu"></td>
         </tr>
         <tr>
           <td><input type="submit" name="Submit" id="button" value="Thêm"></td>
-          <td><input type="reset" name="button2" id="button2" value="Hủy"></td>
+          <td><label for="txtSoLuong"></label>
+          <input type="reset" name="button2" id="button2" value="Hủy"></td>
         </tr>
       </table>
     </form>
-</div>
- <div class="clear"></div>
-<div id="laptop" class="content-section">
-</div>
-<div id="Desktop" class="content-section">
-</div>
-<div id="Linhkien" class="content-section">
-</div>
-<div id="Phukien" class="content-section">
 </div>
 
     <script src="js/vendor/jquery-1.10.1.min.js"></script>
@@ -260,3 +222,7 @@ function myGetFileName(str):  myGetFileName = Ris : end function
 </html>
 <!--#include file="../UploadFiles/Upload.asp" -->
 <!--#include file="../UploadFiles/UploadAdvanced.asp" -->
+<%
+NSX.Close()
+Set NSX = Nothing
+%>

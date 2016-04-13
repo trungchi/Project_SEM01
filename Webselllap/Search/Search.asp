@@ -1,4 +1,34 @@
-﻿<%@LANGUAGE="VBSCRIPT" %> 
+﻿<%@LANGUAGE="VBSCRIPT" %>
+<!--#include file="../Connections/Connection.asp" -->
+<%
+Dim SanPham__MMColParam
+SanPham__MMColParam = "a"
+If (Request.Form("txtSearch")   <> "") Then 
+  SanPham__MMColParam = Request.Form("txtSearch")  
+End If
+%>
+<%
+Dim SanPham
+Dim SanPham_cmd
+Dim SanPham_numRows
+
+Set SanPham_cmd = Server.CreateObject ("ADODB.Command")
+SanPham_cmd.ActiveConnection = MM_Connection_STRING
+SanPham_cmd.CommandText = "SELECT * FROM dbo.SanPham WHERE TenSP LIKE ? and tinhtrang=1" 
+SanPham_cmd.Prepared = true
+SanPham_cmd.Parameters.Append SanPham_cmd.CreateParameter("param1", 200, 1, 255, "%" + SanPham__MMColParam + "%") ' adVarChar
+
+Set SanPham = SanPham_cmd.Execute
+SanPham_numRows = 0
+%>
+<%
+Dim Repeat1__numRows
+Dim Repeat1__index
+
+Repeat1__numRows = -1
+Repeat1__index = 0
+SanPham_numRows = SanPham_numRows + Repeat1__numRows
+%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -6,6 +36,7 @@
 <link rel="shortcut icon" href="../images/icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href='http://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<!--jquery lightbox-->
 <script type="text/javascript" src="../js/jquery.lightbox.js"></script>
@@ -42,11 +73,23 @@ end if
 %>
 	</div>
 </div>
-
+   <!---------------------------
+                SEARCH
+    ---------------------------->
+    <div class="cntr">
+        <div class="cntr-innr">
+          <form  action="Search.asp" method="post" id="form1" class="search" for="inpt_search">
+                <input name="txtSearch" type="text" id="inpt_search" />
+          </form>
+            <p>Tìm kiếm</p>
+      </div>
+    </div>
 <div class="pages-top">
+
     <div class="logo">
         <a href="../index.asp"><img src="../images/logo.png" alt=""/></a>
     </div>
+
              
 		     <div class="h_menu4">
     <!---------------------------
@@ -55,7 +98,7 @@ end if
 				<ul class="nav">
 					<li class="active"><a href="../index.asp">Trang chủ</a></li>
 					<li><a href="../Laptop/Laptop.asp">Laptop</a>
-						<ul>
+						<ul class="listmenu">
 							<li>
                                 <form name="frmDell" method="post" action=laptop/Dell.asp>
                                 <a href="../Laptop/Dell.asp">DELL</a>
@@ -94,7 +137,7 @@ end if
 						</ul>
 					</li>
 					<li><a href="../Desktop/Desktop.asp">Desktop</a>
-						<ul>
+						<ul class="listmenu">
 							<li>
                                 <form name="frmDell" method="post" action=Desktop/Dell.asp>
                                 <a href="../Desktop/Dell.asp">DELL</a>
@@ -128,7 +171,7 @@ end if
          			   </ul>
 					</li>
 					<li><a href="../Linhkien/Linhkien.asp">Linh kiện</a>
-						<ul>
+						<ul class="listmenu">
                         	<li>
                                 <form name="frmRAM" method="post" action=Linhkien/RAM.asp>
                                 <a href="../Linhkien/RAM.asp">RAM</a>
@@ -152,7 +195,7 @@ end if
 						</ul>
 					</li>
 					<li><a href="../phukien/phukien.asp">Phụ kiện</a>
-						<ul>
+						<ul class="listmenu">
                         	<li>
                                 <form name="frmHP" method="post" action=Phukien/HP.asp>
                                 <a href="../Phukien/HP.asp">Headphones</a>
@@ -182,15 +225,28 @@ end if
 					</li>
 					<li><a href="../lienhe/lienhe.asp">Liên hệ</a></li>
 				</ul>
-				<script type="text/javascript" src="../js/nav.js"></script>
+			   <script type="text/javascript" src="../js/nav.js"></script>
 			</div>
             <!-- END MENU -->
-		   <div class="clear"></div>	
+<div class="clear"></div>	
 <div class="main">
-    <div class="item">
-    
+<% 
+While ((Repeat1__numRows <> 0) AND (NOT SanPham.EOF)) 
+%>
+  <div class="item">
+    <p><img src="<%=(SanPham.Fields.Item("HinhAnh").Value)%>" alt="" name="" width="225" height="150"></p>
+    <p><%=(SanPham.Fields.Item("TenSP").Value)%>
+      </p>
+    <p><%=(SanPham.Fields.Item("Gia").Value)%>VNĐ</p>
+    <p><%=(SanPham.Fields.Item("SoLuong").Value)%></p>
     </div>
-        <!---------------------------
+  <% 
+  Repeat1__index=Repeat1__index+1
+  Repeat1__numRows=Repeat1__numRows-1
+  SanPham.MoveNext()
+Wend
+%>
+<!---------------------------
                      CLOCK
         ---------------------------->
     <div id="clock" class="light">
@@ -200,7 +256,7 @@ end if
             <div class="alarm"></div>
             <div class="digits"></div>
         </div>
-    </div>
+</div>
            <!--END CLOCK-->
         
     <!---------------------------
@@ -290,3 +346,7 @@ end if
        
 </body>
 </html>
+<%
+SanPham.Close()
+Set SanPham = Nothing
+%>

@@ -1,4 +1,26 @@
 ﻿<%@LANGUAGE="VBSCRIPT" %>
+<!--#include file="../Connections/Connection.asp" -->
+<%
+Dim Laptop
+Dim Laptop_cmd
+Dim Laptop_numRows
+
+Set Laptop_cmd = Server.CreateObject ("ADODB.Command")
+Laptop_cmd.ActiveConnection = MM_Connection_STRING
+Laptop_cmd.CommandText = "SELECT * FROM dbo.SanPham WHERE Loai=1" 
+Laptop_cmd.Prepared = true
+
+Set Laptop = Laptop_cmd.Execute
+Laptop_numRows = 0
+%>
+<%
+Dim Repeat1__numRows
+Dim Repeat1__index
+
+Repeat1__numRows = -1
+Repeat1__index = 0
+Laptop_numRows = Laptop_numRows + Repeat1__numRows
+%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -161,6 +183,22 @@ end if
 	 		<div class="pages">
 				<div class="cont1 span_2_of_g1">
 					<div class="gallery">
+                      <% 
+While ((Repeat1__numRows <> 0) AND (NOT Laptop.EOF)) 
+%>
+  <div class="item">
+    <p><img src="<%=(Laptop.Fields.Item("HinhAnh").Value)%>" alt="" width="225" height="150"></p>
+    <p><%=(Laptop.Fields.Item("TenSP").Value)%></p>
+    <p><%=(Laptop.Fields.Item("Gia").Value)%>VNĐ</p>
+    <p>Hiện còn <%=(Laptop.Fields.Item("SoLuong").Value)%> sản phẩm</p>
+  </div>
+  <% 
+  Repeat1__index=Repeat1__index+1
+  Repeat1__numRows=Repeat1__numRows-1
+  Laptop.MoveNext()
+Wend
+%>
+                    </div>
                     <%     dim x 'biến này dùng để xác định xem cần hiển thị trang nào     
                         x=request.querystring("PageNumber") 'nhận lại PageNumber khi ngườidùng nhấn vào các nút "Trước" và "Tiếp"     
                         if x="" then 'đầu tiên sẽ hiển thị trang 1         
@@ -168,20 +206,16 @@ end if
                         end if     
                         dim conn     
                         set conn=server.createObject("ADODB.connection")     
-                        stringconn="DRIVER={SQL Server};SERVER=localhost;UID=sa;PWD=123456;DATABASE=WEBSITE_BAN_MAY_TINH;"     
+                        stringconn="DRIVER={SQL Server};SERVER=localhost;UID=sa;PWD=123456;DATABASE=CUA_HANG_MAY_TINH;"     
                         conn.open stringconn     
                         Dim RS     
                         set rs=server.createObject("ADODB.recordset")    
-                        SQLstring="select * from SanPham where TenSP LIKE '%lap%'"     
+                        SQLstring="select * from HINHANHSP where MaSP LIKE 'LVA%'"     
                         rs.pagesize= 9 'chỉ hiển thị 4 bản ghi/1 trang     
                         rs.open SQLstring ,conn,3,3     
                         rs.AbsolutePage=x 'trang cần hiển thị     
                         dem=0 'biến này để đảm bảo vòng lặp chỉ thực hiện tối đa 4 lần lặp     
                         do while not rs.EOF and dem<rs.pagesize
-                        if dem=2 or dem=5 or dem=8 then 
-                        Response.Write("<li class=last><a href="&RS("HinhAnh")&"><img src="&RS("DuongDan")&"></img></a><h3 align=center>"&RS("GhiChu")&"</h3></li>")
-                        else
-                        Response.Write("<li><a href="&RS("HinhAnh")&"><img src="&RS("HinhAnh")&"></img></a><h3 align=center>"&RS("GhiChu")&"</h3></li>") 
                         end if
                         dem=dem+1     
                         rs.movenext     
@@ -191,11 +225,11 @@ end if
                     <div class="phantrang">
                     <% 'Hiển thị nút "Trước"     
                         if x>1 then %>     
-                    <a href="laptop.asp?pageNumber=<%=x-1%>">Trước</a>     
+                    <a href="Vaio.asp?pageNumber=<%=x-1%>">Trước</a>     
                     <%end if%> 
                     <% 'Hiển thị nút "Tiếp"     
                         if not RS.EOF then %>        
-                    <a style="padding-left: 800px;" href="laptop.asp?pageNumber=<%=x+1%>">Tiếp</a>     
+                    <a style="padding-left: 800px;" href="Vaio.asp?pageNumber=<%=x+1%>">Tiếp</a>     
                     <%end if     
                         rs.close 'đóng recordset     
                         %>   
@@ -357,3 +391,7 @@ end if
        </div>
 </body>
 </html>
+<%
+Laptop.Close()
+Set Laptop = Nothing
+%>

@@ -77,17 +77,16 @@ end if
 	</div>
 </div>
 
-    <!---------------------------
+       <!---------------------------
                 SEARCH
     ---------------------------->
     <div class="cntr">
         <div class="cntr-innr">
-          <label class="search" for="inpt_search">
-                <input id="inpt_search" type="text" />
-            </label>
-            <form name="Search" method="post" action="Search.asp">
-            <p>Sờ vào để tìm thứ bạn cần.</p>
-        </div>
+          <form  action="Search/Search.asp" method="post" id="form1" class="search" for="inpt_search">
+                <input name="txtSearch" type="text" id="inpt_search" />
+            </form>
+            <p>Tìm kiếm</p>
+      </div>
     </div>
   
 <div class="pages-top">
