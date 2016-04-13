@@ -8,7 +8,7 @@
 	conn.Open "DRIVER={SQL Server};SERVER=localhost;UID=sa;PWD=123456;DATABASE=WEBSITE_BAN_MAY_TINH;"
 	set rs = server.CreateObject ("ADODB.Recordset")		
 	'Open record with entered username
-	rs.Open "SELECT * FROM TaikhoanKH where taikhoandangnhap='"& Username &"'", conn, 1 
+	rs.Open "SELECT * FROM KhachHang where TKKH='"& Username &"'", conn, 1 
 	
 	'If there is no record with the entered username, close connection
 	'and go back to login with QueryString
@@ -22,7 +22,7 @@
 	
 	'If entered password is right, close connection and open mainpage
 	if rs("matkhau") = Password then
-		Session("name") = rs("taikhoandangnhap")
+		Session("name") = rs("TKKH")
 		rs.Close
 		conn.Close
 		set rs=nothing

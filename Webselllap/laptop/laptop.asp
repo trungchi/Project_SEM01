@@ -172,16 +172,16 @@ end if
                         conn.open stringconn     
                         Dim RS     
                         set rs=server.createObject("ADODB.recordset")    
-                        SQLstring="select * from HINHANHSP where MaHASP LIKE 'LAP%'"     
+                        SQLstring="select * from SanPham where TenSP LIKE '%lap%'"     
                         rs.pagesize= 9 'chỉ hiển thị 4 bản ghi/1 trang     
                         rs.open SQLstring ,conn,3,3     
                         rs.AbsolutePage=x 'trang cần hiển thị     
                         dem=0 'biến này để đảm bảo vòng lặp chỉ thực hiện tối đa 4 lần lặp     
                         do while not rs.EOF and dem<rs.pagesize
                         if dem=2 or dem=5 or dem=8 then 
-                        Response.Write("<li class=last><a href="&RS("DuongDan")&"><img src="&RS("DuongDan")&"></img></a><h3 align=center>"&RS("GhiChu")&"</h3></li>")
+                        Response.Write("<li class=last><a href="&RS("HinhAnh")&"><img src="&RS("DuongDan")&"></img></a><h3 align=center>"&RS("GhiChu")&"</h3></li>")
                         else
-                        Response.Write("<li><a href="&RS("DuongDan")&"><img src="&RS("DuongDan")&"></img></a><h3 align=center>"&RS("GhiChu")&"</h3></li>") 
+                        Response.Write("<li><a href="&RS("HinhAnh")&"><img src="&RS("HinhAnh")&"></img></a><h3 align=center>"&RS("GhiChu")&"</h3></li>") 
                         end if
                         dem=dem+1     
                         rs.movenext     

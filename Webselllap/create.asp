@@ -14,7 +14,7 @@
 	conn.Open "DRIVER={SQL Server};SERVER=localhost;UID=sa;PWD=123456;DATABASE=WEBSITE_BAN_MAY_TINH;"
 	set rs = server.CreateObject ("ADODB.Recordset")
 	'Open all records
-	rs.Open "SELECT * FROM TaikhoanKH", conn, 3, 3 
+	rs.Open "SELECT * FROM KhachHang", conn, 3, 3 
 	
 	'Check if username doesn't already exist
 	do while not rs.EOF
@@ -29,7 +29,7 @@
 	'Add a record
 	rs.AddNew 
 	'Put username and password in record
-	rs("taikhoandangnhap")=Username
+	rs("TKKH")=Username
 	rs("matkhau")=Password
 	rs("Email")=Email
     rs("sdt")=SDT

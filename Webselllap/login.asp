@@ -24,8 +24,10 @@
         else
             Title = "Trang đăng nhập"
         end if
-        if QStr="passfailed" then				
-            Content = Content & "<P>Sai mật khẩu</P><A href=Javascript:history.go(-1) class=colorlink>Quay lại</A>"
+        if QStr="passfailed" then
+			Content = Content & "<div class=box>"				
+            Content = Content & "<p class=noti>Sai mật khẩu</P><A href=Javascript:history.go(-1) class=colorlink>Quay lại</A>"
+			Content = Content & "</div>"
         elseif QStr="createpassfailed" then
 			Content = Content & "<div class=box>"		
             Content = Content & "<div><p class=noti>Đăng ký thất bại!</p><A href=Javascript:history.go(-1) class=colorlink>Quay lại đăng ký</A></br><A HREF=login.asp class=colorlink>Hủy đăng ký</A></div>"
@@ -36,10 +38,12 @@
 			Content = Content & "</div>"
         elseif QStr="createnamefailed" then
 			Content = Content & "<div class=box>"	
-            Content = Content & "<p class=noti>Tên tài khoản không hợp lệ!</P><A HREF=Javascript:history.go(-1)>Quay lại</A><A HREF=login.asp>Hủy đăng ký</A>"
+            Content = Content & "<p class=noti>Tên tài khoản không hợp lệ!</P><A HREF=Javascript:history.go(-1)class=colorlink>Quay lại</A><A HREF=login.aspclass=colorlink>Hủy đăng ký</A>"
 			Content = Content & "</div>"
         elseif QStr="creatednew" then
-            Content = Content & "<p class=noti>Tạo tài khoản thành công!</p><A HREF=login.asp>Đăng nhập</A>"
+			Content = Content & "<div class=box>"
+            Content = Content & "<p class=noti>Tạo tài khoản thành công!</p><A HREF=login.asp class=colorlink>Đăng nhập</A>"
+			Content = Content & "</div>"
         elseif QStr="createnew" then
             Content = Content & "<form name=frmCreate method=POST action=create.asp>"
             Content = Content & "<input type=text name=txtUsername placeholder='Tên đăng nhập' required>"
