@@ -146,7 +146,7 @@ SanPham_numRows = 0
       <tr>
         <td width="20%">Tên sản phẩm</td>
         <td width="80%"><label for="textTenSP"></label>
-        <input name="textTenSP" type="text" id="textTenSP" value="<%=(SanPham.Fields.Item("TenSP").Value)%>"></td>
+        <input name="textTenSP" type="text" id="textTenSP" value="<%=(SanPham.Fields.Item("TenSP").Value)%>" /></td>
       </tr>
       <tr>
         <td>Loại</td>
@@ -186,39 +186,32 @@ End If
       <tr>
         <td>Hình ảnh</td>
         <td><label for="HinhAnh"></label>
-        <input name="HinhAnh" type="file" id="fileHinhAnh"></td>
+        <input name="HinhAnh" type="file" id="fileHinhAnh" /></td>
       </tr>
       <tr>
         <td>Số lượng</td>
         <td><label for="txtSoLuong"></label>
-        <input name="txtSoLuong" type="text" id="txtSoLuong" value="<%=(SanPham.Fields.Item("SoLuong").Value)%>"></td>
+        <input name="txtSoLuong" type="text" id="txtSoLuong" value="<%=(SanPham.Fields.Item("SoLuong").Value)%>" /></td>
       </tr>
       <tr>
         <td>Giá</td>
         <td><label for="txtGia"></label>
-        <input name="txtGia" type="text" id="txtGia" value="<%=(SanPham.Fields.Item("Gia").Value)%>">
+        <input name="txtGia" type="text" id="txtGia" value="<%=(SanPham.Fields.Item("Gia").Value)%>" />
         VNĐ</td>
       </tr>
       <tr>
         <td>Ghi chú</td>
         <td><label for="txtGhiChu"></label>
-        <input name="txtGhiChu" type="text" id="txtGhiChu" value="<%=(SanPham.Fields.Item("GhiChu").Value)%>"></td>
+        <input name="txtGhiChu" type="text" id="txtGhiChu" value="<%=(SanPham.Fields.Item("GhiChu").Value)%>" /></td>
       </tr>
       <tr>
-        <td><input type="submit" name="button" id="button" value="CẬP NHẬT"></td>
-        <td><input type="submit" name="button2" id="button2" value="KHỞI TẠO"></td>
+        <td><input type="submit" name="button" id="button" value="CẬP NHẬT" /></td>
+        <td><input type="submit" name="button2" id="button2" value="KHỞI TẠO" /></td>
       </tr>
     </table>
-    <input name="MaSP" type="hidden" id="MaSP" value="<%=SanPham.Fields.Item("MaSP").Value%>">
+    <input name="MaSP" type="hidden" id="MaSP" value="<%=SanPham.Fields.Item("MaSP").Value%>" />
   </form>
 </div>
-<div id="Desktop" class="product-item">
-</div>
-<div id="Linhkien" class="product-item">
-</div>
-<div id="Phukien" class="product-item">
-</div>
-
 <script src="js/vendor/jquery-1.10.1.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>

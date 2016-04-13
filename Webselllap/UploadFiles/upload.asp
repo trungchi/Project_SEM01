@@ -487,7 +487,7 @@ Class cFormFields
 			RG_editQuery = RG_editQuery & verFieldTableName(RG_columns(RG_i)) & " = " & RG_formVal
 	  	Next
   		RG_editQuery = RG_editQuery & RG_editQueryTmp & " where " & verFieldTableName(RG_editColumn) & " = " & UploadFormRequest("RG_recordId")
-		Set Conn = Server.CreateObject("AdoDb.Connection")
+		Set Conn = Server.CreateObject("ADODB.Connection")
 		Conn.Open RG_Connection
 		on error resume next
 		Conn.execute (RG_editQuery)
@@ -583,7 +583,7 @@ Class cFormFields
 			RG_dbValues = RG_dbValues & RG_formVal
 		Next
 		
-		Set Conn = Server.CreateObject("AdoDb.Connection")
+		Set Conn = Server.CreateObject("ADODB.Connection")
 		Conn.Open RG_Connection
 	
 		if isSingleRecord() then
@@ -625,43 +625,6 @@ Class cFormFields
 				end if
 			end if
 			on error goto 0
-		else
-			for J=1 to QtyRecord
-				RG_tableValuesTmp = ""
-				RG_dbValuesTmp = ""
-				cong = ","
-				if tmpField_Name(J)<>"" then
-					RG_tableValuesTmp = RG_tableValuesTmp & cong & tmpField_Name(J)
-					RG_dbValuesTmp = RG_dbValuesTmp & cong & tmpValue_Name(J)
-				end if
-				if tmpField_Size(J)<>"" then
-					RG_tableValuesTmp = RG_tableValuesTmp & cong & tmpField_Size(J)
-					RG_dbValuesTmp = RG_dbValuesTmp & cong & tmpValue_Size(J)
-				end if
-				if tmpField_Thumb(J)<>"" then
-					RG_tableValuesTmp = RG_tableValuesTmp & cong & tmpField_Thumb(J)
-					RG_dbValuesTmp = RG_dbValuesTmp & cong & tmpValue_Thumb(J)
-				end if				
-				RG_editQuery = "insert into " & verFieldTableName(RG_editTable) & " (" & RG_tableValues & RG_tableValuesTmp & ") values (" & RG_dbValues & RG_dbValuesTmp & ")"
-				on error resume next
-				Conn.execute (RG_editQuery)
-				if err.number<>0 then
-					FirstError = err.Description
-					err.clear
-					RG_editQuery = replace(replace(RG_editQuery,"[",""),"]","")
-					Conn.execute (RG_editQuery)
-					if err.number<>0 then
-						err.clear
-						RG_editQuery = replace(replace(RG_editQuery,"[","`"),"]","`")
-						Conn.execute (RG_editQuery)
-						if err.number<>0 then
-							response.write "I find an error in the sql:<br>" & replace(replace(RG_editQuery,"`",""),"`","") & "<br>" & "I find this error: " & FirstError
-							response.end
-						end if
-					end if
-				end if
-				on error goto 0
-			next
 		end if
 		Conn.close
 		Set Conn = nothing			

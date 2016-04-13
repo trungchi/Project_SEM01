@@ -198,41 +198,9 @@ While ((Repeat1__numRows <> 0) AND (NOT Laptop.EOF))
   Laptop.MoveNext()
 Wend
 %>
-                    </div>
-                    <%     dim x 'biến này dùng để xác định xem cần hiển thị trang nào     
-                        x=request.querystring("PageNumber") 'nhận lại PageNumber khi ngườidùng nhấn vào các nút "Trước" và "Tiếp"     
-                        if x="" then 'đầu tiên sẽ hiển thị trang 1         
-                        x=1     
-                        end if     
-                        dim conn     
-                        set conn=server.createObject("ADODB.connection")     
-                        stringconn="DRIVER={SQL Server};SERVER=localhost;UID=sa;PWD=123456;DATABASE=CUA_HANG_MAY_TINH;"     
-                        conn.open stringconn     
-                        Dim RS     
-                        set rs=server.createObject("ADODB.recordset")    
-                        SQLstring="select * from HINHANHSP where MaSP LIKE 'LVA%'"     
-                        rs.pagesize= 9 'chỉ hiển thị 4 bản ghi/1 trang     
-                        rs.open SQLstring ,conn,3,3     
-                        rs.AbsolutePage=x 'trang cần hiển thị     
-                        dem=0 'biến này để đảm bảo vòng lặp chỉ thực hiện tối đa 4 lần lặp     
-                        do while not rs.EOF and dem<rs.pagesize
-                        end if
-                        dem=dem+1     
-                        rs.movenext     
-                        loop 
-                        %> 
-				    </div>
-                    <div class="phantrang">
-                    <% 'Hiển thị nút "Trước"     
-                        if x>1 then %>     
-                    <a href="Vaio.asp?pageNumber=<%=x-1%>">Trước</a>     
-                    <%end if%> 
-                    <% 'Hiển thị nút "Tiếp"     
-                        if not RS.EOF then %>        
-                    <a style="padding-left: 800px;" href="Vaio.asp?pageNumber=<%=x+1%>">Tiếp</a>     
-                    <%end if     
-                        rs.close 'đóng recordset     
-                        %>   
+                   
+				    		</div>
+                    	</div>  
                     </div>
 		       </div>
 <!-- END gallary-->
@@ -283,28 +251,9 @@ Wend
 		   <div class="project-list1">
 			<div class="clear"></div>
 		   </div>
-		   <div class="project-list2">
-	     	<h4>Các thẻ chọn</h4>
-			<ul>
-				<li><a href="#">Web Design</a></li>
-				<li><a href="#">Html5</a></li>
-				<li><a href="#">Wordpress</a></li>
-				<li><a href="#">Logo</a></li>
-				<li><a href="#">Web Design</a></li>
-				<li><a href="#">Web Design</a></li>
-				<li><a href="#">Wordpress</a></li>
-				<li><a href="#">Web Design</a></li>
-				<li><a href="#">Html5</a></li>
-				<li><a href="#">Wordpress</a></li>
-				<li><a href="#">Logo</a></li>
-				<div class="clear"></div>
-			</ul>
-		   </div>
 		 </div>
 		   <div class="clear"></div>	
 		  </div>
-		  </div>
-		</div>
     <!---------------------------
                 BOTTOM
     ---------------------------->
@@ -389,6 +338,7 @@ Wend
 			    <div class="clear"></div>
 			  </div>
        </div>
+	</div>
 </body>
 </html>
 <%
