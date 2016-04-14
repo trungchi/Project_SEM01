@@ -136,6 +136,14 @@ SanPham_numRows = 0
  <script src="../js/jquery.min.js"></script>
 </head>
 <body>
+<%
+if Session("name") = "" then
+	Response.write("<a rel=nofollow href=login.asp?login=createnew class=colorlink2><span><ins>Đăng ký</ins></span></a>|<a rel=nofollow href=login.asp class=colorlink2><span><ins>Đăng Nhập</ins></span></a>")
+else
+	Response.write("Xin chào " & Session("name") & "," & "&nbsp;" & "<a href=logout.asp class=colorlink2 <ins>Thoát<ins></a>")
+	
+end if
+%>
    <div>
         <div class="site-header">
             <div class="container">

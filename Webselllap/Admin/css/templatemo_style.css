@@ -823,3 +823,15 @@ color:red;
 {
 background:#F96;
 }
+.gocphaimanhinhTV {
+	font-family:Tahoma, arial;
+	text-transform: capitalize;
+	font-size:13pt;
+	font-weight:bolder;
+	color:#FFF;
+	font-style:normal;
+	text-indent:0.2in;
+	line-height:20px;
+	text-align:right; 
+	margin: 5px 5px 7px 9px;
+}

@@ -119,16 +119,16 @@ LoaiSP_numRows = 0
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 <script src="../js/jquery.min.js"></script>
 <script src="../js/jquery.min.js"></script>
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/templatemo_misc.css">
-    <link rel="stylesheet" href="css/templatemo_style.css">
-    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
+<%
+if Session("name") = "" then
+	Response.write("<a rel=nofollow href=login.asp?login=createnew class=colorlink2><span><ins>Đăng ký</ins></span></a>|<a rel=nofollow href=login.asp class=colorlink2><span><ins>Đăng Nhập</ins></span></a>")
+else
+	Response.write("Xin chào " & Session("name") & "," & "&nbsp;" & "<a href=logout.asp class=colorlink2 <ins>Thoát<ins></a>")
+	
+end if
+%>
     <div>
         <div class="site-header">
             <div class="container">
