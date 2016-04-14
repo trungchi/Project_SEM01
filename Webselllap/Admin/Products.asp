@@ -54,7 +54,8 @@ While ((Repeat1__numRows <> 0) AND (NOT SanPham.EOF))
       <p>Hiện có <%=(SanPham.Fields.Item("SoLuong").Value)%> sản phẩm</p></td>
     <td width="20%"><form action="Editsp.asp" method="post" name="form1" id="form1">
       <input name="MaSP" type="hidden" id="MaSP" value="<%=(SanPham.Fields.Item("MaSP").Value)%>">
-      <input name="NSX" type="hidden" id="MaNSX" value="<%=(SanPham.Fields.Item("MaNSX").Value)%>">
+      <input name="NSX" type="hidden" id="NSX" value="<%=(SanPham.Fields.Item("MaNSX").Value)%>">
+      <input name="Loai" type="hidden" id="Loai" value="<%=(SanPham.Fields.Item("MaLoai").Value)%>">
       <input type="submit" name="button" id="button" value="CẬP NHẬT">
     </form></td>
     <td width="20%"><form action="Removesp.asp" method="post" name="form1" id="form1">

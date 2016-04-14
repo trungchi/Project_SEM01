@@ -6,5 +6,5 @@
 ' Catalog=""
 ' Schema=""
 Dim MM_Connection_STRING
-MM_Connection_STRING = "DRIVER={SQL Server};SERVER=RICKY;UID=sa;PWD=123456;DATABASE=CUA_HANG_MAY_TINH"
+MM_Connection_STRING = "DRIVER={SQL Server};SERVER=localhost;UID=sa;PWD=123456;DATABASE=CUA_HANG_MAY_TINH"
 %>

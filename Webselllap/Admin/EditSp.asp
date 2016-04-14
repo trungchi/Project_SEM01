@@ -1,4 +1,122 @@
 <%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
+<!--#include file="../Connections/Connection.asp" -->
+<%
+'*********************************
+'*                               *
+'*  UPDATE RECORD AND UPLOAD     *
+'*  http://www.dwzone.it         *
+'*                               *
+'*********************************
+	server.ScriptTimeout = 5400	
+
+	Dim RG_Connection, RG_editColumn, RG_recordId, Form, editAction, editRedirectUrl, RG_Files, RG_formName, UploadType, ParamVal, ParamList, MaxFieldNumber, TmpVal, x, y, Key, ProgressBar, UploadStatus, NumFile
+	Dim RG_altVal, RG_columns, RG_Cong, RG_dbValues, RG_dbValuesTmp, RG_delim, RG_editCmd, RG_editQuery, RG_editQueryTmp, RG_emptyVal, RG_Ext, RG_Extensions, RG_fields, RG_FieldValueTmp, RG_FileDel, RG_FileExt, RG_formVal, RG_FS, RG_i, RG_L, RG_Len, RG_Max, RG_Name, RG_New, RG_newName, RG_Num, RG_Path, RG_Rec, RG_ret, RG_Save, RG_tableValues, RG_tableValuesTmp, RG_tst, RG_typeArray, RG_z, TotalFileSize, valueToRedirectSend
+	Set Form = New ASPForm
+	Dim UploadID
+	UploadID = Form.NewUploadID
+	ProgressBar = ""
+	TotalFileSize = ""
+	editRedirectUrl = "Products.asp"
+	RG_Connection = MM_Connection_STRING
+	RG_editTable = "dbo.SanPham"
+	RG_editColumn = "MaSP"
+	RG_Files = "/Images;1;;;;0;HinhAnh;1;;2;;0;;;;;;HinhAnh@_@_@0@_@_@ @_@_@@_@_@../"
+	RG_formName = "form1"
+	UploadType="Update"
+	UploadStatus = ""
+	valueToRedirectSend = ""
+	NumFile = 0
+
+	if len(Request.QueryString("UploadID"))>0 then
+		Form.UploadID = Request.QueryString("UploadID")
+	end if
+	
+	if (Request.QueryString <> "") Then
+	 	editAction = CStr(Request.ServerVariables("SCRIPT_NAME")) & "?" & Request.QueryString & "&UploadID=" & UploadID
+	else
+	 	editAction = CStr(Request.ServerVariables("SCRIPT_NAME")) & "?UploadID=" & UploadID	
+	End If
+	
+Const fsCompletted  = 0
+
+If Form.State = fsCompletted Then 
+  if Form.State = 0 then
+
+		Set ParamVal = CreateObject("Scripting.Dictionary")
+		tmp = split(RG_Files,"@_@_@")
+		ParamList = split(tmp(0),"|")
+		MaxFieldNumber = ubound(ParamList)
+		for x=0 to Ubound(ParamList)
+			TmpVal = Split(ParamList(x),";")
+			for y=0 to ubound(TmpVal)
+				Key = right("00" & cstr(x),3) & cstr(y)
+				ParamVal.add Key, TmpVal(y)
+			next
+		next
+		Form.Files.Save
+		RG_fieldsStr  = "textTenSP|value|Loai|value|NSX|value|txtCauHinh|value|txtSoLuong|value|txtGia|value|txtGhiChu|value"
+  		RG_columnsStr = "TenSP|',none,''|MaLoai|none,none,NULL|MaNSX|none,none,NULL|CauHinh|',none,''|SoLuong|none,none,NULL|Gia|none,none,NULL|GhiChu|',none,''"
+		Form.Files.DataBaseUpdate
+
+		response.write(getRedirect())
+		response.end
+  End If
+ElseIf Form.State > 10 then
+  response.write ""
+End If
+
+
+function GetFolderName(str):  GetFolderName = Ris : end function
+
+function myGetFileName(str):  myGetFileName = Ris : end function
+%>
+<%
+Dim Loai
+Dim Loai_cmd
+Dim Loai_numRows
+
+Set Loai_cmd = Server.CreateObject ("ADODB.Command")
+Loai_cmd.ActiveConnection = MM_Connection_STRING
+Loai_cmd.CommandText = "SELECT * FROM dbo.LoaiSP ORDER BY MaLoai ASC" 
+Loai_cmd.Prepared = true
+
+Set Loai = Loai_cmd.Execute
+Loai_numRows = 0
+%>
+<%
+Dim NSX
+Dim NSX_cmd
+Dim NSX_numRows
+
+Set NSX_cmd = Server.CreateObject ("ADODB.Command")
+NSX_cmd.ActiveConnection = MM_Connection_STRING
+NSX_cmd.CommandText = "SELECT * FROM dbo.NSX ORDER BY MaNSX ASC" 
+NSX_cmd.Prepared = true
+
+Set NSX = NSX_cmd.Execute
+NSX_numRows = 0
+%>
+<%
+Dim SanPham__MMColParam
+SanPham__MMColParam = "1"
+If (Request.Form("MaSP") <> "") Then 
+  SanPham__MMColParam = Request.Form("MaSP")
+End If
+%>
+<%
+Dim SanPham
+Dim SanPham_cmd
+Dim SanPham_numRows
+
+Set SanPham_cmd = Server.CreateObject ("ADODB.Command")
+SanPham_cmd.ActiveConnection = MM_Connection_STRING
+SanPham_cmd.CommandText = "SELECT * FROM dbo.SanPham WHERE MaSP = ?" 
+SanPham_cmd.Prepared = true
+SanPham_cmd.Parameters.Append SanPham_cmd.CreateParameter("param1", 5, 1, -1, SanPham__MMColParam) ' adDouble
+
+Set SanPham = SanPham_cmd.Execute
+SanPham_numRows = 0
+%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -36,30 +154,56 @@
     <div id="top"></div>
 <div class="clear"></div>
 <div class="item">
-  <form onsubmit="return ProgressBar()" method="post" enctype="multipart/form-data" name="form1">
+  <form ACTION="<%=editAction%>" onsubmit="return ProgressBar()" method="post" enctype="multipart/form-data" name="form1">
     <table width="56%" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <td width="20%">Tên sản phẩm</td>
         <td width="80%"><label for="textTenSP"></label>
-        <input name="textTenSP" type="text" id="textTenSP" /></td>
+        <input name="textTenSP" type="text" id="textTenSP" value="<%=(SanPham.Fields.Item("TenSP").Value)%>" /></td>
       </tr>
       <tr>
         <td>Loại</td>
         <td><label for="Loai"></label>
           <select name="Loai" class="list-group-item-info" id="Loai">
-</select></td>
+            <%
+While (NOT Loai.EOF)
+%>
+            <option value="<%=(Loai.Fields.Item("MaLoai").Value)%>" <%If (Not isNull((Loai.Fields.Item("MaLoai").Value))) Then If (CStr(Loai.Fields.Item("MaLoai").Value) = CStr((Loai.Fields.Item("MaLoai").Value))) Then Response.Write("selected=""selected""") : Response.Write("")%> ><%=(Loai.Fields.Item("Loai").Value)%></option>
+            <%
+  Loai.MoveNext()
+Wend
+If (Loai.CursorType > 0) Then
+  Loai.MoveFirst
+Else
+  Loai.Requery
+End If
+%>
+          </select></td>
       </tr>
       <tr>
         <td>NSX</td>
         <td><label for="textfield2"></label>
           <label for="NSX"></label>
           <select name="NSX" class="list-group-item-info" id="NSX">
-</select></td>
+            <%
+While (NOT NSX.EOF)
+%>
+            <option value="<%=(NSX.Fields.Item("MaNSX").Value)%>" <%If (Not isNull((NSX.Fields.Item("MaNSX").Value))) Then If (CStr(NSX.Fields.Item("MaNSX").Value) = CStr((NSX.Fields.Item("MaNSX").Value))) Then Response.Write("selected=""selected""") : Response.Write("")%> ><%=(NSX.Fields.Item("NSX").Value)%></option>
+            <%
+  NSX.MoveNext()
+Wend
+If (NSX.CursorType > 0) Then
+  NSX.MoveFirst
+Else
+  NSX.Requery
+End If
+%>
+          </select></td>
       </tr>
       <tr>
         <td>Cấu hình</td>
         <td><label for="txtCauHinh"></label>
-        <textarea  name="txtCauHinh" cols="50" rows="10" id="txtCauHinh" dir="ltr" lang="vi"></textarea></td>
+        <textarea  name="txtCauHinh" cols="50" rows="10" id="txtCauHinh" dir="ltr" lang="vi"><%=(SanPham.Fields.Item("CauHinh").Value)%></textarea></td>
       </tr>
       <tr>
         <td>Hình ảnh</td>
@@ -69,25 +213,25 @@
       <tr>
         <td>Số lượng</td>
         <td><label for="txtSoLuong"></label>
-        <input name="txtSoLuong" type="text" id="txtSoLuong" /></td>
+        <input name="txtSoLuong" type="text" id="txtSoLuong" value="<%=(SanPham.Fields.Item("SoLuong").Value)%>" /></td>
       </tr>
       <tr>
         <td>Giá</td>
         <td><label for="txtGia"></label>
-        <input name="txtGia" type="text" id="txtGia" />
+        <input name="txtGia" type="text" id="txtGia" value="<%=(SanPham.Fields.Item("Gia").Value)%>" />
         VNĐ</td>
       </tr>
       <tr>
         <td>Ghi chú</td>
         <td><label for="txtGhiChu"></label>
-        <input name="txtGhiChu" type="text" id="txtGhiChu" /></td>
+        <input name="txtGhiChu" type="text" id="txtGhiChu" value="<%=(SanPham.Fields.Item("GhiChu").Value)%>" /></td>
       </tr>
       <tr>
         <td><input type="submit" name="button" id="button" value="CẬP NHẬT" /></td>
         <td><input type="reset" name="button2" id="button2" value="KHỞI TẠO" /></td>
       </tr>
     </table>
-    <input type="hidden" name="RG_recordId">
+    <input type="hidden" name="RG_recordId" value="<%= SanPham.Fields.Item("MaSP").Value %>">
   </form>
 </div>
 <script src="js/vendor/jquery-1.10.1.min.js"></script>
@@ -101,3 +245,17 @@
 </div>
 </body>
 </html>
+<!--#include file="../UploadFiles/Upload.asp" -->
+<!--#include file="../UploadFiles/UploadAdvanced.asp" -->
+<%
+Loai.Close()
+Set Loai = Nothing
+%>
+<%
+NSX.Close()
+Set NSX = Nothing
+%>
+<%
+SanPham.Close()
+Set SanPham = Nothing
+%>
