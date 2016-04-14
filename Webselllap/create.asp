@@ -11,14 +11,14 @@
 	
 	'Build connection
 	set conn = server.CreateObject ("ADODB.Connection")
-	conn.Open "DRIVER={SQL Server};SERVER=localhost;UID=sa;PWD=123456;DATABASE=WEBSITE_BAN_MAY_TINH;"
+	conn.Open "DRIVER={SQL Server};SERVER=localhost;UID=sa;PWD=123456;DATABASE=CUA_HANG_MAY_TINH;"
 	set rs = server.CreateObject ("ADODB.Recordset")
 	'Open all records
 	rs.Open "SELECT * FROM KhachHang", conn, 3, 3 
 	
 	'Check if username doesn't already exist
 	do while not rs.EOF
-		if rs("taikhoandangnhap")=Username then
+		if rs("TKKH")=Username then
 			set rs=nothing
 			set conn=nothing
 			Response.Redirect("login.asp?login=createnamefailed")

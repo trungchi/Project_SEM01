@@ -81,7 +81,6 @@ Wend
         <span class="article-link"><a href="#top">Lên top</a></span>
     </span>
 </div>
-<input name="Loai" type="hidden" id="Loai" value="<%=(SanPham.Fields.Item("Loai").Value)%>">
 </body>
 </html>
 <%

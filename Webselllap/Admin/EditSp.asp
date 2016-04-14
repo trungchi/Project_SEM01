@@ -206,7 +206,7 @@ End If
       </tr>
       <tr>
         <td><input type="submit" name="button" id="button" value="CẬP NHẬT" /></td>
-        <td><input type="submit" name="button2" id="button2" value="KHỞI TẠO" /></td>
+        <td><input type="reset" name="button2" id="button2" value="KHỞI TẠO" /></td>
       </tr>
     </table>
     <input name="MaSP" type="hidden" id="MaSP" value="<%=SanPham.Fields.Item("MaSP").Value%>" />
