@@ -1,4 +1,4 @@
-<%@LANGUAGE="VBSCRIPT"%>
+<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
 <!--#include file="../Connections/Connection.asp" -->
 <%
 '*********************************
@@ -56,8 +56,8 @@ If Form.State = fsCompletted Then
 		next
 		Form.Files.Save
 
-		RG_fieldsStr  = "txtTenSp|value|txtTinhtrang|value|txtLoai|value|txtNSX|value|txtCauHinh|value|txtGia|value|txtGhiChu|value|txtSoLuong|value"
-  		RG_columnsStr = "TenSP|',none,''|Tinhtrang|none,none,NULL|Loai|',none,''|NSX|',none,''|CauHinh|',none,''|Gia|none,none,NULL|GhiChu|',none,''|SoLuong|none,none,NULL"
+		RG_fieldsStr  = "txtTenSp|value|txtTinhtrang|value|txtLoai|value|txtNSX|value|txtCauHinh|value|txtSoLuong|value|txtGia|value|txtGhiChu|value"
+  		RG_columnsStr = "TenSP|',none,''|Tinhtrang|none,none,NULL|MaLoai|none,none,NULL|MaNSX|none,none,NULL|CauHinh|',none,''|SoLuong|none,none,NULL|Gia|none,none,NULL|GhiChu|',none,''"
 		Form.Files.DataBaseInsert
 
 		response.write(getRedirect())
@@ -79,11 +79,24 @@ Dim NSX_numRows
 
 Set NSX_cmd = Server.CreateObject ("ADODB.Command")
 NSX_cmd.ActiveConnection = MM_Connection_STRING
-NSX_cmd.CommandText = "SELECT * FROM dbo.NSX ORDER BY MaNSX asc" 
+NSX_cmd.CommandText = "SELECT * FROM dbo.NSX ORDER BY MaNSX ASC" 
 NSX_cmd.Prepared = true
 
 Set NSX = NSX_cmd.Execute
 NSX_numRows = 0
+%>
+<%
+Dim LoaiSP
+Dim LoaiSP_cmd
+Dim LoaiSP_numRows
+
+Set LoaiSP_cmd = Server.CreateObject ("ADODB.Command")
+LoaiSP_cmd.ActiveConnection = MM_Connection_STRING
+LoaiSP_cmd.CommandText = "SELECT * FROM dbo.LoaiSP ORDER BY MaLoai ASC" 
+LoaiSP_cmd.Prepared = true
+
+Set LoaiSP = LoaiSP_cmd.Execute
+LoaiSP_numRows = 0
 %>
 <!DOCTYPE HTML>
 <html>
@@ -145,10 +158,19 @@ NSX_numRows = 0
           <td><p>Loại</p></td>
           <td><label for="txtLoai2"></label>
             <select name="txtLoai" class="list-group-item-info" id="txtLoai" dir="ltr" lang="vi">
-              <option value="1">LAPTOP</option>
-              <option value="2">DESKTOP</option>
-              <option value="3">LINH KIỆN</option>
-              <option value="4">PHỤ KIỆN</option>
+              <%
+While (NOT LoaiSP.EOF)
+%>
+              <option value="<%=(LoaiSP.Fields.Item("MaLoai").Value)%>" <%If (Not isNull((LoaiSP.Fields.Item("MaLoai").Value))) Then If (CStr(LoaiSP.Fields.Item("MaLoai").Value) = CStr((LoaiSP.Fields.Item("MaLoai").Value))) Then Response.Write("selected=""selected""") : Response.Write("")%> ><%=(LoaiSP.Fields.Item("Loai").Value)%></option>
+              <%
+  LoaiSP.MoveNext()
+Wend
+If (LoaiSP.CursorType > 0) Then
+  LoaiSP.MoveFirst
+Else
+  LoaiSP.Requery
+End If
+%>
           </select></td>
         </tr>
         <tr>
@@ -225,4 +247,8 @@ End If
 <%
 NSX.Close()
 Set NSX = Nothing
+%>
+<%
+LoaiSP.Close()
+Set LoaiSP = Nothing
 %>
