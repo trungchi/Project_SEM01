@@ -42,6 +42,7 @@
             Content = Content & "<form name=frmCreate method=POST action=createAD.asp>"
             Content = Content & "<input type=text name=txtUsername placeholder='Tên đăng nhập' required>"
             Content = Content & "<input type=password name=txtPassword placeholder='Mật khẩu' required>"
+			Content = Content & "<input type=text name=txtTenThat placeholder='Tên Thật' required>"
             Content = Content & "<button type=submit name=cmdSubmit value='Đăng ký'>Đăng ký</button>"
 			Content = Content & "</br></br><A href=loginAD.asp class=colorlink>Quay lại đăng nhập</A>"
             Content = Content & "</form>"

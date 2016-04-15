@@ -136,6 +136,12 @@ SanPham_numRows = 0
  <script src="../js/jquery.min.js"></script>
 </head>
 <body>
+        <div class="site-header">
+        <div id="templatemo_logo" class="row col-md-4 col-sm-6 col-xs-6">
+                            <h1><a href="Products.asp">Admin</a></h1>
+            </div>
+            <div class="container">
+<div class="gocphaimanhinhTV">
 <%
 if Session("name") = "" then
 	Response.write("<a rel=nofollow href=login.asp?login=createnew class=colorlink2><span><ins>Đăng ký</ins></span></a>|<a rel=nofollow href=login.asp class=colorlink2><span><ins>Đăng Nhập</ins></span></a>")
@@ -144,22 +150,12 @@ else
 	
 end if
 %>
-   <div>
-        <div class="site-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 col-xs-6">
-                        <div id="templatemo_logo">
-                            <h1><a href="products.asp">Admin</a></h1>
-                        </div> <!-- /.logo -->
-                    </div> <!-- /.col-md-4 -->
-                </div> <!-- /.row -->
-            </div> <!-- /.container -->
+</div>
+<div id="top"><p align="center">QUẢN LÝ SẢN PHẨM</p></div>	
+                         <!-- /.container -->
         </div> <!-- /.site-header -->
-    </div> <!-- /#front -->
-    <div class="site-slider">
-    </div>
-    <div id="top"></div>
+</div> <!-- /#front -->
+<div class="site-slider"></div>
 <div class="clear"></div>
 <div class="item">
   <form ACTION="<%=editAction%>" onsubmit="return ProgressBar()" method="post" enctype="multipart/form-data" name="form1">

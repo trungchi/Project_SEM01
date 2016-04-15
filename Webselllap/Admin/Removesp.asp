@@ -80,6 +80,13 @@ SanPham_numRows = 0
  <script src="../js/jquery.min.js"></script>
 </head>
 <body>
+<body>
+        <div class="site-header">
+        <div id="templatemo_logo" class="row col-md-4 col-sm-6 col-xs-6">
+                            <h1><a href="Products.asp">Admin</a></h1>
+            </div>
+            <div class="container">
+<div class="gocphaimanhinhTV">
 <%
 if Session("name") = "" then
 	Response.write("<a rel=nofollow href=login.asp?login=createnew class=colorlink2><span><ins>Đăng ký</ins></span></a>|<a rel=nofollow href=login.asp class=colorlink2><span><ins>Đăng Nhập</ins></span></a>")
@@ -88,22 +95,14 @@ else
 	
 end if
 %>
-    <div id="top">
-        <div class="site-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 col-sm-6 col-xs-6">
-                        <div id="templatemo_logo">
-                            <h1><a href="Products.asp">Admin</a></h1>
-                        </div>
-                    </div>
-                </div>
-            </div> <!-- /.container -->
+</div>
+<div id="top"><p align="center">QUẢN LÝ SẢN PHẨM</p></div>	
+                         <!-- /.container -->
         </div> <!-- /.site-header -->
 </div> <!-- /#front -->
 <div class="site-slider"></div>
+<div class="clear"></div>
 <div class="product-item">
-<form name="form1" method="POST" action="<%=MM_editAction%>">
   <input type="hidden" name="MM_delete" value="form1">
   <input type="hidden" name="MM_recordId" value="<%= SanPham.Fields.Item("MaSP").Value %>">
   <table width="60%" border="0" cellspacing="0" cellpadding="0">
@@ -116,15 +115,16 @@ end if
         <p>Cấu hình<%=(SanPham.Fields.Item("CauHinh").Value)%></p>
         <p>NSX <%=(SanPham.Fields.Item("SoLuong").Value)%></p></td>
       <td width="5%"><p>&nbsp;</p>
-        <p>
+		<form name="form1" method="POST" action="<%=MM_editAction%>">
           <input type="submit" name="button" id="button" value="XÓA">
+		</form>
         </p>
-        <p>
-          <input type="reset" name="button2" id="button2" value="HỦY">
-        </p></td>
+        <form name="form2" method="post" action="Products.asp">
+          <input type="submit" name="button2" id="button2" value="HỦY">
+        </form>
+        <p>&nbsp;</p></td>
     </tr>
   </table>
-</form>
 </div>
 <div class="clear"></div>
 <script src="js/vendor/jquery-1.10.1.min.js"></script>

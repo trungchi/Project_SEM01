@@ -1,4 +1,4 @@
-<%@LANGUAGE="VBSCRIPT"%>
+<%@LANGUAGE="VBSCRIPT"  CODEPAGE="65001"%>
 <!--#include file="../Connections/Connection.asp" -->
 <%
 Dim SanPham
@@ -41,21 +41,22 @@ SanPham_numRows = SanPham_numRows + Repeat1__numRows
 </head>
 <body>
         <div class="site-header">
+        <div id="templatemo_logo" class="row col-md-4 col-sm-6 col-xs-6">
+                            <h1><a href="Products.asp">Admin</a></h1>
+            </div>
             <div class="container">
 <div class="gocphaimanhinhTV">
 <%
 if Session("name") = "" then
 	Response.write("<a rel=nofollow href=login.asp?login=createnew class=colorlink2><span><ins>Đăng ký</ins></span></a>|<a rel=nofollow href=login.asp class=colorlink2><span><ins>Đăng Nhập</ins></span></a>")
 else
-	Response.write("Xin chào " & Session("name") & "," & "&nbsp;" & "<a href=logout.asp class=colorlink2 <ins>Thoát<ins></a>")
+	Response.write("Xin chào " & Session("name") & "," & "&nbsp;" & "<a href=loginAD.asp class=colorlink2 <ins>Thoát<ins></a>")
 	
 end if
 %>
 </div>
 <div id="top"><p align="center">QUẢN LÝ SẢN PHẨM</p></div>	
-                        <div id="templatemo_logo" class="row col-md-4 col-sm-6 col-xs-6">
-                            <h1><a href="Products.asp">Admin</a></h1>
-            </div> <!-- /.container -->
+                         <!-- /.container -->
         </div> <!-- /.site-header -->
 </div> <!-- /#front -->
 <div class="site-slider"></div>

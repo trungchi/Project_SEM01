@@ -2,6 +2,7 @@
 	'Save entered username and password
 	Username = Request.Form("txtUsername")
 	Password = Request.Form("txtPassword")
+	TenThat  = Request.Form("txtTenThat")
 		
 	'Check if username and password are entered
 	if Username = "" then Response.redirect("loginAD.asp?loginAD=createnew")
@@ -16,7 +17,7 @@
 	
 	'Check if username doesn't already exist
 	do while not rs.EOF
-		if rs("TaiKhoan")=Username then
+		if rs("TaiKhoanAD")=Username then
 			set rs=nothing
 			set conn=nothing
 			Response.Redirect("loginAD.asp?loginAD=createnamefailed")
@@ -27,8 +28,9 @@
 	'Add a record
 	rs.AddNew 
 	'Put username and password in record
-	rs("TaiKhoan")=Username
+	rs("TaiKhoanAD")=Username
 	rs("MatKhau")=Password
+	rs("TenTK")=TenThat
 	'Save record
 	rs.Update 
 	
