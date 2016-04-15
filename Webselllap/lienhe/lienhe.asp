@@ -1,4 +1,61 @@
-﻿<%@LANGUAGE="VBSCRIPT" %> 
+﻿<%@LANGUAGE="VBSCRIPT" %>
+<!--#include file="../Connections/Connection.asp" -->
+<%
+Dim MM_editAction
+MM_editAction = CStr(Request.ServerVariables("SCRIPT_NAME"))
+If (Request.QueryString <> "") Then
+  MM_editAction = MM_editAction & "?" & Server.HTMLEncode(Request.QueryString)
+End If
+
+' boolean to abort record edit
+Dim MM_abortEdit
+MM_abortEdit = false
+%>
+<%
+If (CStr(Request("MM_insert")) = "form1") Then
+  If (Not MM_abortEdit) Then
+    ' execute the insert
+    Dim MM_editCmd
+
+    Set MM_editCmd = Server.CreateObject ("ADODB.Command")
+    MM_editCmd.ActiveConnection = MM_Connection_STRING
+    MM_editCmd.CommandText = "INSERT INTO dbo.YKKH (TenKH, Email, DC, DC, NoiDung) VALUES (?, ?, ?, ?, ?)" 
+    MM_editCmd.Prepared = true
+    MM_editCmd.Parameters.Append MM_editCmd.CreateParameter("param1", 201, 1, 50, Request.Form("txtTen")) ' adLongVarChar
+    MM_editCmd.Parameters.Append MM_editCmd.CreateParameter("param2", 201, 1, 50, Request.Form("txtEmail")) ' adLongVarChar
+    MM_editCmd.Parameters.Append MM_editCmd.CreateParameter("param3", 202, 1, 100, Request.Form("txtDC")) ' adVarWChar
+    MM_editCmd.Parameters.Append MM_editCmd.CreateParameter("param4", 202, 1, 100, Request.Form("txtSDT")) ' adVarWChar
+    MM_editCmd.Parameters.Append MM_editCmd.CreateParameter("param5", 202, 1, 4000, Request.Form("txtRP")) ' adVarWChar
+    MM_editCmd.Execute
+    MM_editCmd.ActiveConnection.Close
+
+    ' append the query string to the redirect URL
+    Dim MM_editRedirectUrl
+    MM_editRedirectUrl = "../index.asp"
+    If (Request.QueryString <> "") Then
+      If (InStr(1, MM_editRedirectUrl, "?", vbTextCompare) = 0) Then
+        MM_editRedirectUrl = MM_editRedirectUrl & "?" & Request.QueryString
+      Else
+        MM_editRedirectUrl = MM_editRedirectUrl & "&" & Request.QueryString
+      End If
+    End If
+    Response.Redirect(MM_editRedirectUrl)
+  End If
+End If
+%>
+<%
+Dim RP
+Dim RP_cmd
+Dim RP_numRows
+
+Set RP_cmd = Server.CreateObject ("ADODB.Command")
+RP_cmd.ActiveConnection = MM_Connection_STRING
+RP_cmd.CommandText = "SELECT * FROM dbo.YKKH" 
+RP_cmd.Prepared = true
+
+Set RP = RP_cmd.Execute
+RP_numRows = 0
+%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -32,7 +89,8 @@ end if
 %>
 	</div>
 </div>
-    <!---------------------------
+ 
+   <!---------------------------
                 SEARCH
     ---------------------------->
     <div class="cntr">
@@ -43,7 +101,6 @@ end if
             <p>Tìm kiếm</p>
       </div>
     </div>
-  
 <div class="pages-top">
     <div class="logo">
         <a href="../index.asp"><img src="../images/logo.png" alt=""/></a>
@@ -58,126 +115,82 @@ end if
 					<li><a href="../Laptop/Laptop.asp">Laptop</a>
 						<ul class="listmenu">
 							<li>
-                                <form name="frmDell" method="post" action=laptop/Dell.asp>
                                 <a href="../Laptop/Dell.asp">DELL</a>
-                                </form>
                             </li>
                             <li>
-                                <form name="frmHp" method="post" action=laptop/Hp.asp>
                                 <a href="../Laptop/Hp.asp">HP</a>
-                                </form>
                             </li>
                             <li>
-                                <form name="frmApple" method="post" action=laptop/Apple.asp>
                                 <a href="../Laptop/Apple.asp">APPLE</a>
-                                </form>
                             </li>
                             <li>
-                                <form name="frmAsus" method="post" action=laptop/sus.asp>
                                 <a href="../Laptop/Asus.asp">ASUS</a>
-                                </form>
                             </li>
                             <li>
-                                <form name="frmAcer" method="post" action=laptop/Acer.asp>
                                 <a href="../Laptop/Acer.asp">ACER</a>
-                                </form>
                             </li>
                             <li>
-                                <form name="Lenovo" method="post" action=laptop/Lenovo.asp>
                                 <a href="../Laptop/Lenovo.asp">LENOVO</a>
-                                </form>
                             </li>
                             <li>
-                                <form name="frmVaio" method="post" action=laptop/Vaio.asp>
                                 <a href="../Laptop/Vaio.asp">VAIO</a>
-                                </form>
                             </li>
 						</ul>
 					</li>
 					<li><a href="../Desktop/Desktop.asp">Desktop</a>
 						<ul class="listmenu">
 							<li>
-                                <form name="frmDell" method="post" action=Desktop/Dell.asp>
                                 <a href="../Desktop/Dell.asp">DELL</a>
-                                </form>
                             </li>
 							<li>
-                                <form name="frmHp" method="post" action=Desktop/Hp.asp>
                                 <a href="../Desktop/Hp.asp">HP</a>
-                                </form>
                             </li>
 							<li>
-                                <form name="frmApple" method="post" action=Desktop/Apple.asp>
                                 <a href="../Desktop/Apple.asp">APPLE</a>
-                                </form>
                             </li>
                             <li>
-                                <form name="frmAsus" method="post" action=Desktop/Asus.asp>
                                 <a href="../Desktop/Asus.asp">ASUS</a>
-                                </form>
                             </li>
                             <li>
-                                <form name="frmAcer" method="post" action=Desktop/Acer.asp>
                                 <a href="../Desktop/Acer.asp">ACER</a>
-                                </form>
                             </li>
                             <li>
-                                <form name="Lenovo" method="post" action=Desktop/Lenovo.asp>
                                 <a href="../Desktop/Lenovo.asp">LENOVO</a>
-                         	   </form>
 							</li>
          			   </ul>
 					</li>
 					<li><a href="../Linhkien/Linhkien.asp">Linh kiện</a>
 						<ul class="listmenu">
                         	<li>
-                                <form name="frmRAM" method="post" action=Linhkien/RAM.asp>
                                 <a href="../Linhkien/RAM.asp">RAM</a>
-                                </form>
                             </li>
 							<li>
-                                <form name="frmVGA" method="post" action=Linhkien/RAM.asp>
                                 <a href="../Linhkien/VGA.asp">Card VGA</a>
-                                </form>
                             </li>
                             <li>
-                                <form name="frmM" method="post" action=Linhkien/RAM.asp>
                                 <a href="../Linhkien/M.asp">Mainboard</a>
-                                </form>
                             </li>
                             <li>
-                                <form name="frmSC" method="post" action=Linhkien/RAM.asp>
                                 <a href="../Linhkien/SC.asp">Card âm thanh</a>
-                                </form>
                             </li>
 						</ul>
 					</li>
 					<li><a href="../phukien/phukien.asp">Phụ kiện</a>
 						<ul class="listmenu">
                         	<li>
-                                <form name="frmHP" method="post" action=Phukien/HP.asp>
                                 <a href="../Phukien/HP.asp">Headphones</a>
-                                </form>
                             </li>
                             <li>
-                                <form name="frmEP" method="post" action=Phukien/EP.asp>
                                 <a href="../Phukien/EP.asp">Earphones</a>
-                                </form>
                             </li>
                             <li>
-                                <form name="frmCQ" method="post" action=Phukien/CQ.asp>
                                 <a href="../Phukien/CQ.asp">Chuột</a>
-                                </form>
                             </li>
                             <li>
-                                <form name="frmBP" method="post" action=Phukien/BP.asp>
                                 <a href="../Phukien/BP.asp">Bàn Phím</a>
-                                </form>
                             </li>
                             <li>
-                                <form name="frmUSB" method="post" action=Phukien/USB.asp>
                                 <a href="../Phukien/USB.asp">USB</a>
-                                </form>
                             </li>
 						</ul>
 					</li>
@@ -196,21 +209,22 @@ end if
 	          <div class="m_contact"><span class="left_line1"> </span>Liên hệ<span class="right_line1"> </span></div>
               <p class="m_12">Để được tư vấn, giải đáp thắc mắc về các sản phẩm, Quý khách hàng hãy liên hệ với chúng tôi ở Văn phòng Group4 tại TP.Hồ Chí Minh.</p>
               <div class="contatct-top">
-               <form method="post" action="contact-post.asp">
+               <form name="form1" action="<%=MM_editAction%>" method="POST" id="form1">
 					<div class="to">
-                     	<input type="text" class="text" value="Tên" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Tên';}">
-					 	<input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" style="margin-left: 10px">
+                     	<input name="txtTen" type="text" class="text" id="txtTen" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Tên';}" value="Tên">
+					 	<input name="txtEmail" type="text" class="text" id="txtEmail" style="margin-left: 10px" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" value="Email">
 					</div>
 					<div class="to">
-                     	<input type="text" class="text" value="Địa chỉ" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Địa chỉ';}">
-					 	<input type="text" class="text" value="Số điện thoại" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Số điện thoại';}" style="margin-left: 10px">
-					</div>
-					<div class="text">
-	                   <textarea value="Lời nhắn..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Lời nhắn...';}">Lời nhắn...</textarea>
-	                </div>
+                     	<input name="txtDC" type="text" class="text" id="txtDC" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Địa chỉ';}" value="Địa chỉ">
+					 	<input name="txtSDT" type="text" class="text" id="txtSDT" style="margin-left: 10px" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Số điện thoại';}" value="Số điện thoại">
+				 </div>
+				<div class="text">
+	                   <textarea name="txtRP" id="txtRP" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Lời nhắn...';}" value="Lời nhắn...">Lời nhắn...</textarea>
+                 </div>
 	                <div>
-	               		<input type="submit" value="Gửi">
+	                  <input type="submit" value="Gửi">
 	                </div>
+                    <input type="hidden" name="MM_insert" value="form1">
                </form>
                <div class="map">
 			     <iframe src="https://www.google.com/maps/d/embed?mid=z1j46M5Vtics.kKEfvly1qvlw" width="100%" height="480"></iframe>
@@ -218,7 +232,7 @@ end if
 		       </div>		
             </div>
 		   </div>
-		</div>
+	   </div>
 		</div>
         
 <!---------------------------
@@ -282,10 +296,8 @@ end if
 				<div class="footer-grid footer-grid4">
 					<h4>Nhận Tin Mới</h4>
 					<p>Nhập địa chỉ Email để nhận được những tin tức mới nhất về công nghệ</p>
-					<form>
 						<input type="text" value="Địa chỉ Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Địa chỉ Email';}">
 						<input type="submit" value="">
-					</form>
 				</div>
 				<div class="clear"> </div>
 			</div>
@@ -308,3 +320,7 @@ end if
        
 </body>
 </html>
+<%
+RP.Close()
+Set RP = Nothing
+%>
