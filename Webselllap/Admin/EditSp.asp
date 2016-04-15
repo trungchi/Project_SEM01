@@ -144,9 +144,9 @@ SanPham_numRows = 0
 <div class="gocphaimanhinhTV">
 <%
 if Session("name") = "" then
-	Response.write("<a rel=nofollow href=login.asp?login=createnew class=colorlink2><span><ins>Đăng ký</ins></span></a>|<a rel=nofollow href=login.asp class=colorlink2><span><ins>Đăng Nhập</ins></span></a>")
+	Response.Redirect("loginAD.asp")
 else
-	Response.write("Xin chào " & Session("name") & "," & "&nbsp;" & "<a href=logout.asp class=colorlink2 <ins>Thoát<ins></a>")
+	Response.write("Xin chào " & Session("name") & "," & "&nbsp;" & "<a href=logoutAD.asp class=colorlink2 <ins>Thoát<ins></a>")
 	
 end if
 %>
@@ -157,6 +157,7 @@ end if
 </div> <!-- /#front -->
 <div class="site-slider"></div>
 <div class="clear"></div>
+    <div id="top"></div>
 <div class="item">
   <form ACTION="<%=editAction%>" onsubmit="return ProgressBar()" method="post" enctype="multipart/form-data" name="form1">
     <table width="56%" border="0" cellspacing="0" cellpadding="0">
