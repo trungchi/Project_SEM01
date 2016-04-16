@@ -121,7 +121,7 @@ LoaiSP_numRows = 0
 <script src="../js/jquery.min.js"></script>
 </head>
 <body>
-        <div class="site-header">
+        <div id="top" class="site-header">
         <div id="templatemo_logo" class="row col-md-4 col-sm-6 col-xs-6">
                             <h1><a href="Products.asp">Admin</a></h1>
             </div>

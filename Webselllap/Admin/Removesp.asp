@@ -103,8 +103,6 @@ end if
 <div class="site-slider"></div>
 <div class="clear"></div>
 <div class="product-item">
-  <input type="hidden" name="MM_delete" value="form1">
-  <input type="hidden" name="MM_recordId" value="<%= SanPham.Fields.Item("MaSP").Value %>">
   <table width="60%" border="0" cellspacing="0" cellpadding="0">
     <tr>
       <td width="20%"></td>
@@ -117,7 +115,9 @@ end if
       <td width="5%"><p>&nbsp;</p>
 		<form name="form1" method="POST" action="<%=MM_editAction%>">
           <input type="submit" name="button" id="button" value="XÓA">
-		</form>
+          <input type="hidden" name="MM_delete" value="form1">
+          <input type="hidden" name="MM_recordId" value="<%= SanPham.Fields.Item("MaSP").Value %>">
+        </form>
         </p>
         <form name="form2" method="post" action="Products.asp">
           <input type="submit" name="button2" id="button2" value="HỦY">
