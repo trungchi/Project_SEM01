@@ -1,61 +1,4 @@
 ﻿<%@LANGUAGE="VBSCRIPT" %>
-<!--#include file="../Connections/Connection.asp" -->
-<%
-Dim MM_editAction
-MM_editAction = CStr(Request.ServerVariables("SCRIPT_NAME"))
-If (Request.QueryString <> "") Then
-  MM_editAction = MM_editAction & "?" & Server.HTMLEncode(Request.QueryString)
-End If
-
-' boolean to abort record edit
-Dim MM_abortEdit
-MM_abortEdit = false
-%>
-<%
-If (CStr(Request("MM_insert")) = "form1") Then
-  If (Not MM_abortEdit) Then
-    ' execute the insert
-    Dim MM_editCmd
-
-    Set MM_editCmd = Server.CreateObject ("ADODB.Command")
-    MM_editCmd.ActiveConnection = MM_Connection_STRING
-    MM_editCmd.CommandText = "INSERT INTO dbo.YKKH (TenKH, Email, DC, DC, NoiDung) VALUES (?, ?, ?, ?, ?)" 
-    MM_editCmd.Prepared = true
-    MM_editCmd.Parameters.Append MM_editCmd.CreateParameter("param1", 201, 1, 50, Request.Form("txtTen")) ' adLongVarChar
-    MM_editCmd.Parameters.Append MM_editCmd.CreateParameter("param2", 201, 1, 50, Request.Form("txtEmail")) ' adLongVarChar
-    MM_editCmd.Parameters.Append MM_editCmd.CreateParameter("param3", 202, 1, 100, Request.Form("txtDC")) ' adVarWChar
-    MM_editCmd.Parameters.Append MM_editCmd.CreateParameter("param4", 202, 1, 100, Request.Form("txtSDT")) ' adVarWChar
-    MM_editCmd.Parameters.Append MM_editCmd.CreateParameter("param5", 202, 1, 4000, Request.Form("txtRP")) ' adVarWChar
-    MM_editCmd.Execute
-    MM_editCmd.ActiveConnection.Close
-
-    ' append the query string to the redirect URL
-    Dim MM_editRedirectUrl
-    MM_editRedirectUrl = "../index.asp"
-    If (Request.QueryString <> "") Then
-      If (InStr(1, MM_editRedirectUrl, "?", vbTextCompare) = 0) Then
-        MM_editRedirectUrl = MM_editRedirectUrl & "?" & Request.QueryString
-      Else
-        MM_editRedirectUrl = MM_editRedirectUrl & "&" & Request.QueryString
-      End If
-    End If
-    Response.Redirect(MM_editRedirectUrl)
-  End If
-End If
-%>
-<%
-Dim RP
-Dim RP_cmd
-Dim RP_numRows
-
-Set RP_cmd = Server.CreateObject ("ADODB.Command")
-RP_cmd.ActiveConnection = MM_Connection_STRING
-RP_cmd.CommandText = "SELECT * FROM dbo.YKKH" 
-RP_cmd.Prepared = true
-
-Set RP = RP_cmd.Execute
-RP_numRows = 0
-%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -209,7 +152,7 @@ end if
 	          <div class="m_contact"><span class="left_line1"> </span>Liên hệ<span class="right_line1"> </span></div>
               <p class="m_12">Để được tư vấn, giải đáp thắc mắc về các sản phẩm, Quý khách hàng hãy liên hệ với chúng tôi ở Văn phòng Group4 tại TP.Hồ Chí Minh.</p>
               <div class="contatct-top">
-               <form name="form1" action="<%=MM_editAction%>" method="POST" id="form1">
+               <form name="form1" id="form1">
 					<div class="to">
                      	<input name="txtTen" type="text" class="text" id="txtTen" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Tên';}" value="Tên">
 					 	<input name="txtEmail" type="text" class="text" id="txtEmail" style="margin-left: 10px" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" value="Email">
@@ -224,7 +167,6 @@ end if
 	                <div>
 	                  <input type="submit" value="Gửi">
 	                </div>
-                    <input type="hidden" name="MM_insert" value="form1">
                </form>
                <div class="map">
 			     <iframe src="https://www.google.com/maps/d/embed?mid=z1j46M5Vtics.kKEfvly1qvlw" width="100%" height="480"></iframe>
@@ -234,7 +176,7 @@ end if
 		   </div>
 	   </div>
 		</div>
-        
+
 <!---------------------------
                 BOTTOM
     ---------------------------->
@@ -320,7 +262,3 @@ end if
        
 </body>
 </html>
-<%
-RP.Close()
-Set RP = Nothing
-%>

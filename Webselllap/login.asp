@@ -46,6 +46,7 @@
 			Content = Content & "</div>"
         elseif QStr="createnew" then
             Content = Content & "<form name=frmCreate method=POST action=create.asp>"
+			Content = Content & "<input type=text name=txtFullname placeholder='Họ và tên' required>"
             Content = Content & "<input type=text name=txtUsername placeholder='Tên đăng nhập' required>"
             Content = Content & "<input type=password name=txtPassword placeholder='Mật khẩu' required>"
             Content = Content & "<input type=text name=txtEmail placeholder='Email' required>"
@@ -65,7 +66,7 @@
     %>
     <div align="center">
         <%
-        Response.Write("<p class=title><td align=center><b>" & Title & "</p>")
+        Response.Write("<p class=title align=center><b>" & Title & "</p>")
         Response.Write(Content)
         %>
     </div>

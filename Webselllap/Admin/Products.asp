@@ -50,36 +50,41 @@ SanPham_numRows = SanPham_numRows + Repeat1__numRows
 if Session("name") = "" then
 	Response.Redirect("loginAD.asp")
 else
-	Response.write("Xin chào " & Session("name") & "," & "&nbsp;" & "<a href=logoutAD.asp class=colorlink2 <ins>Thoát<ins></a>")
+	Response.write("Xin chào, <b class=tentk>" & Session("name") & "</b><b class=to> |</b>" & "<a href=logoutAD.asp class=colorlink2 <ins>Thoát<ins></a>")
 	
 end if
 %>
 </div>
-<div id="top"><p align="center">QUẢN LÝ SẢN PHẨM</p></div>	
+<div id="top"><p class=title align=center>QUẢN LÝ SẢN PHẨM</p></div>
                          <!-- /.container -->
         </div> <!-- /.site-header -->
 </div> <!-- /#front -->
 <div class="site-slider"></div>
 <div class="clear"></div>
-<div id="laptop" class="product-item">
-  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<div align="center" class="item">
+    	<a href="AddSp.asp" class="colorlink">
+        <button type="submit" name=cmdSubmit>Thêm sản phẩm mới</button>
+        </a>
+    </div>
+<div class="product-item">
+  <table width="85	%" border="0" cellspacing="0" cellpadding="0" align="center">
     <% 
 While ((Repeat1__numRows <> 0) AND (NOT SanPham.EOF)) 
 %>
   <tr>
     <td width="10%"><p><img src="<%=(SanPham.Fields.Item("HinhAnh").Value)%>" alt="" name="" width="225" height="150"></p></td>
-    <td width="20%"><p><%=(SanPham.Fields.Item("TenSP").Value)%></p>
+    <td width="35%"><p><%=(SanPham.Fields.Item("TenSP").Value)%></p>
       <p><%=(SanPham.Fields.Item("Gia").Value)%> VNĐ</p>
       <p>Hiện có <%=(SanPham.Fields.Item("SoLuong").Value)%> sản phẩm</p></td>
     <td width="20%"><form action="Editsp.asp" method="post" name="form1" id="form1">
       <input name="MaSP" type="hidden" id="MaSP" value="<%=(SanPham.Fields.Item("MaSP").Value)%>">
       <input name="NSX" type="hidden" id="NSX" value="<%=(SanPham.Fields.Item("MaNSX").Value)%>">
       <input name="Loai" type="hidden" id="Loai" value="<%=(SanPham.Fields.Item("MaLoai").Value)%>">
-      <input type="submit" name="button" id="button" value="CẬP NHẬT">
+      <button type="submit" name="button" id="button" value="CẬP NHẬT">CẬP NHẬT</button>
     </form></td>
     <td width="20%"><form action="Removesp.asp" method="post" name="form1" id="form1">
       <input name="MaSp" type="hidden" id="MaSp" value="<%=(SanPham.Fields.Item("MaSP").Value)%>">
-      <input type="submit" name="button2" id="button2" value="XÓA">
+      <button type="submit" name="button2" id="button2" value="XÓA">XÓA</button>
     </form></td>
   </tr>
   <% 
@@ -91,7 +96,6 @@ Wend
   </table>
 
 </div>
-<div align="center" class="item"><a href="AddSp.asp" class="colorlink">Thêm sản phẩm mới</a></div>
 <script src="js/vendor/jquery-1.10.1.min.js"></script>
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>

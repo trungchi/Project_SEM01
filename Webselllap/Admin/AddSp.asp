@@ -1,12 +1,6 @@
 <%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
 <!--#include file="../Connections/Connection.asp" -->
 <%
-'*********************************
-'*                               *
-'*  INSERT RECORD AND UPLOAD     *
-'*  http://www.dwzone.it         *
-'*                               *
-'*********************************
 	server.ScriptTimeout = 5400
 
 	Dim RG_altVal, RG_columns, RG_Cong, RG_dbValues, RG_dbValuesTmp, RG_delim, RG_editCmd, RG_editQuery, RG_editQueryTmp, RG_emptyVal, RG_Ext, RG_Extensions, RG_fields, RG_FieldValueTmp, RG_FileDel, RG_FileExt, RG_formVal, RG_FS, RG_i, RG_L, RG_Len, RG_Max, RG_Name, RG_New, RG_newName, RG_Num, RG_Path, RG_Rec, RG_ret, RG_Save, RG_tableValues, RG_tableValuesTmp, RG_tst, RG_typeArray, RG_z, UploadStatus, NumFile
@@ -121,7 +115,7 @@ LoaiSP_numRows = 0
 <script src="../js/jquery.min.js"></script>
 </head>
 <body>
-        <div id="top" class="site-header">
+        <div class="site-header">
         <div id="templatemo_logo" class="row col-md-4 col-sm-6 col-xs-6">
                             <h1><a href="Products.asp">Admin</a></h1>
             </div>
@@ -131,12 +125,12 @@ LoaiSP_numRows = 0
 if Session("name") = "" then
 	Response.Redirect("loginAD.asp")
 else
-	Response.write("Xin chào " & Session("name") & "," & "&nbsp;" & "<a href=logoutAD.asp class=colorlink2 <ins>Thoát<ins></a>")
+	Response.write("Xin chào, <b class=tentk>" & Session("name") & "</b><b class=to> |</b>" & "<a href=logoutAD.asp class=colorlink2 <ins>Thoát<ins></a>")
 	
 end if
 %>
 </div>
-<div id="top"><p align="center">QUẢN LÝ SẢN PHẨM</p></div>	
+<div id="top"><p class=title align=center>QUẢN LÝ SẢN PHẨM</p></div>
                          <!-- /.container -->
         </div> <!-- /.site-header -->
 </div> <!-- /#front -->
@@ -172,7 +166,7 @@ End If
         </tr>
         <tr>
           <td><p>NSX</p></td>
-          <td><label for="txtGia"></label>
+          <td><label for="txtNSX"></label>
             <select name="txtNSX" class="list-group-item-info" id="txtNSX" dir="ltr" lang="vi">
               <%
 While (NOT NSX.EOF)
@@ -202,24 +196,34 @@ End If
         </tr>
         <tr>
           <td><p>Số lượng </p></td>
-          <td><label for="txtGia">
+          <td>
+			<label for="txtSoLuong"></label>
             <input name="txtSoLuong" type="text" id="txtSoLuong">
           </label></td>
         </tr>
         <tr>
           <td><p>Giá</p></td>
-          <td><label for="txtGhiChu">
-            <input type="text" name="txtGia" id="txtGia">
-          </label></td>
+			<td>
+                <label for="txtGia">
+                <input type="text" name="txtGia" id="txtGia">
+                </label>
+			</td>
         </tr>
         <tr>
-          <td><p>Ghi chú</p></td>
-          <td><input type="text" name="txtGhiChu" id="txtGhiChu"></td>
+		<td><p>Ghi chú</p></td>
+		<td>
+        	<label for="txtGhiChu">
+          	<input type="text" name="txtGhiChu" id="txtGhiChu">
+            </label>
+		</td>
         </tr>
         <tr>
-          <td><input type="submit" name="Submit" id="button" value="Thêm"></td>
-          <td><label for="txtSoLuong"></label>
-          <input type="reset" name="button2" id="button2" value="Hủy"></td>
+        <td align="right">
+            <button type="submit" name="Submit" id="button" value="Thêm">Thêm</button>
+        </td>
+        <td align="center">
+          <button type="reset" name="button2" id="button2" value="Hủy">Hủy</button>
+        </td>
         </tr>
       </table>
     </form>

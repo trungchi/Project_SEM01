@@ -146,12 +146,12 @@ SanPham_numRows = 0
 if Session("name") = "" then
 	Response.Redirect("loginAD.asp")
 else
-	Response.write("Xin chào " & Session("name") & "," & "&nbsp;" & "<a href=logoutAD.asp class=colorlink2 <ins>Thoát<ins></a>")
+	Response.write("Xin chào, <b class=tentk>" & Session("name") & "</b><b class=to> |</b>" & "<a href=logoutAD.asp class=colorlink2 <ins>Thoát<ins></a>")
 	
 end if
 %>
 </div>
-<div id="top"><p align="center">QUẢN LÝ SẢN PHẨM</p></div>	
+<div id="top"><p class=title align=center>QUẢN LÝ SẢN PHẨM</p></div>
                          <!-- /.container -->
         </div> <!-- /.site-header -->
 </div> <!-- /#front -->
@@ -160,10 +160,10 @@ end if
     <div id="top"></div>
 <div class="item">
   <form ACTION="<%=editAction%>" onsubmit="return ProgressBar()" method="post" enctype="multipart/form-data" name="form1">
-    <table width="56%" border="0" cellspacing="0" cellpadding="0">
+    <table width="85%" border="0" cellspacing="0" cellpadding="0" align="center">
       <tr>
-        <td width="20%">Tên sản phẩm</td>
-        <td width="80%"><label for="textTenSP"></label>
+        <td width="25%">Tên sản phẩm</td>
+        <td width="60%"><label for="textTenSP"></label>
         <input name="textTenSP" type="text" id="textTenSP" value="<%=(SanPham.Fields.Item("TenSP").Value)%>" /></td>
       </tr>
       <tr>
@@ -232,8 +232,9 @@ End If
         <input name="txtGhiChu" type="text" id="txtGhiChu" value="<%=(SanPham.Fields.Item("GhiChu").Value)%>" /></td>
       </tr>
       <tr>
-        <td><input type="submit" name="button" id="button" value="CẬP NHẬT" /></td>
-        <td><input type="reset" name="button2" id="button2" value="KHỞI TẠO" /></td>
+      <td>
+      </td>
+        <td align="center"><button type="submit" name="button" id="button" value="CẬP NHẬT" >CẬP NHẬT</button></td>
       </tr>
     </table>
     <input type="hidden" name="RG_recordId" value="<%= SanPham.Fields.Item("MaSP").Value %>">

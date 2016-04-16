@@ -1,4 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<info>
-	<infoitem key="UD_RP" value="name:TKKH;datatype:varchar,name:TenKH;datatype:varchar,name:NoiDung;datatype:varchar,name:Email;datatype:varchar,name:SDT;datatype:varchar,name:DC;datatype:varchar" />
-</info>

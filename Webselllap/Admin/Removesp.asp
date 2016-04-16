@@ -80,7 +80,6 @@ SanPham_numRows = 0
  <script src="../js/jquery.min.js"></script>
 </head>
 <body>
-<body>
         <div class="site-header">
         <div id="templatemo_logo" class="row col-md-4 col-sm-6 col-xs-6">
                             <h1><a href="Products.asp">Admin</a></h1>
@@ -91,12 +90,12 @@ SanPham_numRows = 0
 if Session("name") = "" then
 	Response.Redirect("loginAD.asp")
 else
-	Response.write("Xin chào " & Session("name") & "," & "&nbsp;" & "<a href=logoutAD.asp class=colorlink2 <ins>Thoát<ins></a>")
+	Response.write("Xin chào, <b class=tentk>" & Session("name") & "</b><b class=to> |</b>" & "<a href=logoutAD.asp class=colorlink2 <ins>Thoát<ins></a>")
 	
 end if
 %>
 </div>
-<div id="top"><p align="center">QUẢN LÝ SẢN PHẨM</p></div>	
+<div id="top"><p class=title align=center>QUẢN LÝ SẢN PHẨM</p></div>
                          <!-- /.container -->
         </div> <!-- /.site-header -->
 </div> <!-- /#front -->

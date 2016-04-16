@@ -3,7 +3,7 @@
     <title>Cửa hàng máy tính | Đăng nhập :: Groupfour</title>
     <link rel="shortcut icon" href="../images/icon.png">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="../css/login.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/login.css" rel="stylesheet" type="text/css" media="all" />
     <link href='http://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
 
 </head>
@@ -11,13 +11,7 @@
 <div class="cntr">
     <%
         Content = ""							
-        QStr = Request.QueryString("loginAD")		
-    
-        if ucase(left(QStr,6))="CREATE" then 
-            Title = "Trang đăng ký"
-        else
-            Title = "Trang đăng nhập"
-        end if
+        QStr = Request.QueryString("loginAD")
         if QStr="passfailed" then
 			Content = Content & "<div class=box>"				
             Content = Content & "<p class=noti>Sai mật khẩu</P><A href=Javascript:history.go(-1) class=colorlink>Quay lại</A>"
@@ -37,9 +31,9 @@
     
     %>
     <div align="center">
+    	<p class=title align=center><b>Trang đăng nhập</br>Quản trị viên</b></p>
         <%
-        Response.Write("<p class=title><td align=center><b>" & Title & "</p>")
-        Response.Write(Content)
+       		Response.Write(Content)
         %>
     </div>
 </div>

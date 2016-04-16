@@ -835,3 +835,39 @@ background:#F96;
 	text-align:right; 
 	margin: 5px 5px 7px 9px;
 }
+p.title{
+	margin-top: 20px;
+	margin-right: 200px;
+	text-shadow: -4.5px 0px #6baaf8;
+	color:#FFF;
+	font-weight:bold;
+	font-size: 45px;
+	text-transform:uppercase;
+	font-family:'roboto', sans-serif;
+}
+b.to{
+	color:#999;
+	font-size:24px;
+}
+b.tentk{
+	color:#FF6;
+	font-size:21px;
+}
+button {
+  border: none;
+  background: #3892ff;
+  cursor: pointer;
+  border-radius: 3px;
+  margin:0 auto;
+  padding: 20px;
+  padding-left:40px;
+  padding-right:40px;
+  width: auto;
+  color: white;
+  font-size:15pt;
+  box-shadow: 2px 3px 6px 2px #b3d4fc;
+}
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 3px 6px 6px 3px #6baaf8;
+}
