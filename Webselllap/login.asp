@@ -38,7 +38,7 @@
 			Content = Content & "</div>"
         elseif QStr="createnamefailed" then
 			Content = Content & "<div class=box>"	
-            Content = Content & "<p class=noti>Tên tài khoản không hợp lệ!</P><A HREF=Javascript:history.go(-1)class=colorlink>Quay lại</A><A HREF=login.aspclass=colorlink>Hủy đăng ký</A>"
+            Content = Content & "<p class=noti>Tên tài khoản không hợp lệ!</P><A href=Javascript:history.go(-1) class=colorlink>Quay lại</A><br><A HREF=login.asp class=colorlink>Hủy đăng ký</A>"
 			Content = Content & "</div>"
         elseif QStr="creatednew" then
 			Content = Content & "<div class=box>"
