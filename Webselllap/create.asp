@@ -23,11 +23,6 @@
 			set conn=nothing
 			Response.Redirect("login.asp?login=createnamefailed")
 		end if
-		if rs("Email")=Email then
-			set rs=nothing
-			set conn=nothing
-			Response.Redirect("login.asp?login=createemailfailed")
-		end if
 		rs.MoveNext
 	loop
 		

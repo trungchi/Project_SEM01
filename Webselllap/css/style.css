@@ -926,6 +926,7 @@ li.twitter a span {
 .cont1 {
 	display: block;
 	float: left;
+	text-align: left;
 }
 .col_1_of_about-box:first-child {
 	margin-left: 0;

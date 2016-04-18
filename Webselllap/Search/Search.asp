@@ -237,8 +237,8 @@ While ((Repeat1__numRows <> 0) AND (NOT SanPham.EOF))
     <p><img src="<%=(SanPham.Fields.Item("HinhAnh").Value)%>" alt="" name="" width="225" height="150"></p>
     <p><%=(SanPham.Fields.Item("TenSP").Value)%>
       </p>
-    <p><%=(SanPham.Fields.Item("Gia").Value)%>VNĐ</p>
-    <p><%=(SanPham.Fields.Item("SoLuong").Value)%></p>
+    <p><%=(SanPham.Fields.Item("Gia").Value)%> VNĐ</p>
+    <p>Hiện có <%=(SanPham.Fields.Item("SoLuong").Value)%> sản phẩm</p>
     </div>
   <% 
   Repeat1__index=Repeat1__index+1

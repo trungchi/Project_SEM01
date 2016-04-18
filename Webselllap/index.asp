@@ -1,4 +1,4 @@
-﻿<%@LANGUAGE="VBSCRIPT" %>
+﻿<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -76,6 +76,7 @@ end if
 %>
 	</div>
 </div>
+
     <!---------------------------
                 SEARCH
     ---------------------------->

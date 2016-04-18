@@ -74,6 +74,7 @@ While ((Repeat1__numRows <> 0) AND (NOT SanPham.EOF))
   <tr>
     <td width="10%"><p><img src="<%=(SanPham.Fields.Item("HinhAnh").Value)%>" alt="" name="" width="225" height="150"></p></td>
     <td width="35%"><p><%=(SanPham.Fields.Item("TenSP").Value)%></p>
+      <p><%=(SanPham.Fields.Item("MaLoai").Value)%></p>
       <p><%=(SanPham.Fields.Item("Gia").Value)%> VNĐ</p>
       <p>Hiện có <%=(SanPham.Fields.Item("SoLuong").Value)%> sản phẩm</p></td>
     <td width="20%"><form action="Editsp.asp" method="post" name="form1" id="form1">

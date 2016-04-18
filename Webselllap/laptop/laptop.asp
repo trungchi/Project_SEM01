@@ -1,34 +1,313 @@
-﻿<%@LANGUAGE="VBSCRIPT" %>
+﻿<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
 <!--#include file="../Connections/Connection.asp" -->
 <%
-Dim Laptop
-Dim Laptop_cmd
-Dim Laptop_numRows
+Dim LAPTOP
+Dim LAPTOP_cmd
+Dim LAPTOP_numRows
 
-Set Laptop_cmd = Server.CreateObject ("ADODB.Command")
-Laptop_cmd.ActiveConnection = MM_Connection_STRING
-Laptop_cmd.CommandText = "SELECT * FROM dbo.SanPham WHERE Loai=1" 
-Laptop_cmd.Prepared = true
+Set LAPTOP_cmd = Server.CreateObject ("ADODB.Command")
+LAPTOP_cmd.ActiveConnection = MM_Connection_STRING
+LAPTOP_cmd.CommandText = "SELECT * FROM dbo.SanPham WHERE Tinhtrang = 1 and MaLoai = 1" 
+LAPTOP_cmd.Prepared = true
 
-Set Laptop = Laptop_cmd.Execute
-Laptop_numRows = 0
+Set LAPTOP = LAPTOP_cmd.Execute
+LAPTOP_numRows = 0
 %>
 <%
 Dim Repeat1__numRows
 Dim Repeat1__index
 
-Repeat1__numRows = -1
+Repeat1__numRows = 6
 Repeat1__index = 0
-Laptop_numRows = Laptop_numRows + Repeat1__numRows
+LAPTOP_numRows = LAPTOP_numRows + Repeat1__numRows
+%>
+<%
+'  *** Recordset Stats, Move To Record, and Go To Record: declare stats variables
+
+Dim LAPTOP_total
+Dim LAPTOP_first
+Dim LAPTOP_last
+
+' set the record count
+LAPTOP_total = LAPTOP.RecordCount
+
+' set the number of rows displayed on this page
+If (LAPTOP_numRows < 0) Then
+  LAPTOP_numRows = LAPTOP_total
+Elseif (LAPTOP_numRows = 0) Then
+  LAPTOP_numRows = 1
+End If
+
+' set the first and last displayed record
+LAPTOP_first = 1
+LAPTOP_last  = LAPTOP_first + LAPTOP_numRows - 1
+
+' if we have the correct record count, check the other stats
+If (LAPTOP_total <> -1) Then
+  If (LAPTOP_first > LAPTOP_total) Then
+    LAPTOP_first = LAPTOP_total
+  End If
+  If (LAPTOP_last > LAPTOP_total) Then
+    LAPTOP_last = LAPTOP_total
+  End If
+  If (LAPTOP_numRows > LAPTOP_total) Then
+    LAPTOP_numRows = LAPTOP_total
+  End If
+End If
+%>
+<%
+Dim MM_paramName 
+%>
+<%
+' *** Move To Record and Go To Record: declare variables
+
+Dim MM_rs
+Dim MM_rsCount
+Dim MM_size
+Dim MM_uniqueCol
+Dim MM_offset
+Dim MM_atTotal
+Dim MM_paramIsDefined
+
+Dim MM_param
+Dim MM_index
+
+Set MM_rs    = LAPTOP
+MM_rsCount   = LAPTOP_total
+MM_size      = LAPTOP_numRows
+MM_uniqueCol = ""
+MM_paramName = ""
+MM_offset = 0
+MM_atTotal = false
+MM_paramIsDefined = false
+If (MM_paramName <> "") Then
+  MM_paramIsDefined = (Request.QueryString(MM_paramName) <> "")
+End If
+%>
+<%
+' *** Move To Record: handle 'index' or 'offset' parameter
+
+if (Not MM_paramIsDefined And MM_rsCount <> 0) then
+
+  ' use index parameter if defined, otherwise use offset parameter
+  MM_param = Request.QueryString("index")
+  If (MM_param = "") Then
+    MM_param = Request.QueryString("offset")
+  End If
+  If (MM_param <> "") Then
+    MM_offset = Int(MM_param)
+  End If
+
+  ' if we have a record count, check if we are past the end of the recordset
+  If (MM_rsCount <> -1) Then
+    If (MM_offset >= MM_rsCount Or MM_offset = -1) Then  ' past end or move last
+      If ((MM_rsCount Mod MM_size) > 0) Then         ' last page not a full repeat region
+        MM_offset = MM_rsCount - (MM_rsCount Mod MM_size)
+      Else
+        MM_offset = MM_rsCount - MM_size
+      End If
+    End If
+  End If
+
+  ' move the cursor to the selected record
+  MM_index = 0
+  While ((Not MM_rs.EOF) And (MM_index < MM_offset Or MM_offset = -1))
+    MM_rs.MoveNext
+    MM_index = MM_index + 1
+  Wend
+  If (MM_rs.EOF) Then 
+    MM_offset = MM_index  ' set MM_offset to the last possible record
+  End If
+
+End If
+%>
+<%
+' *** Move To Record: if we dont know the record count, check the display range
+
+If (MM_rsCount = -1) Then
+
+  ' walk to the end of the display range for this page
+  MM_index = MM_offset
+  While (Not MM_rs.EOF And (MM_size < 0 Or MM_index < MM_offset + MM_size))
+    MM_rs.MoveNext
+    MM_index = MM_index + 1
+  Wend
+
+  ' if we walked off the end of the recordset, set MM_rsCount and MM_size
+  If (MM_rs.EOF) Then
+    MM_rsCount = MM_index
+    If (MM_size < 0 Or MM_size > MM_rsCount) Then
+      MM_size = MM_rsCount
+    End If
+  End If
+
+  ' if we walked off the end, set the offset based on page size
+  If (MM_rs.EOF And Not MM_paramIsDefined) Then
+    If (MM_offset > MM_rsCount - MM_size Or MM_offset = -1) Then
+      If ((MM_rsCount Mod MM_size) > 0) Then
+        MM_offset = MM_rsCount - (MM_rsCount Mod MM_size)
+      Else
+        MM_offset = MM_rsCount - MM_size
+      End If
+    End If
+  End If
+
+  ' reset the cursor to the beginning
+  If (MM_rs.CursorType > 0) Then
+    MM_rs.MoveFirst
+  Else
+    MM_rs.Requery
+  End If
+
+  ' move the cursor to the selected record
+  MM_index = 0
+  While (Not MM_rs.EOF And MM_index < MM_offset)
+    MM_rs.MoveNext
+    MM_index = MM_index + 1
+  Wend
+End If
+%>
+<%
+' *** Move To Record: update recordset stats
+
+' set the first and last displayed record
+LAPTOP_first = MM_offset + 1
+LAPTOP_last  = MM_offset + MM_size
+
+If (MM_rsCount <> -1) Then
+  If (LAPTOP_first > MM_rsCount) Then
+    LAPTOP_first = MM_rsCount
+  End If
+  If (LAPTOP_last > MM_rsCount) Then
+    LAPTOP_last = MM_rsCount
+  End If
+End If
+
+' set the boolean used by hide region to check if we are on the last record
+MM_atTotal = (MM_rsCount <> -1 And MM_offset + MM_size >= MM_rsCount)
+%>
+<%
+' *** Go To Record and Move To Record: create strings for maintaining URL and Form parameters
+
+Dim MM_keepNone
+Dim MM_keepURL
+Dim MM_keepForm
+Dim MM_keepBoth
+
+Dim MM_removeList
+Dim MM_item
+Dim MM_nextItem
+
+' create the list of parameters which should not be maintained
+MM_removeList = "&index="
+If (MM_paramName <> "") Then
+  MM_removeList = MM_removeList & "&" & MM_paramName & "="
+End If
+
+MM_keepURL=""
+MM_keepForm=""
+MM_keepBoth=""
+MM_keepNone=""
+
+' add the URL parameters to the MM_keepURL string
+For Each MM_item In Request.QueryString
+  MM_nextItem = "&" & MM_item & "="
+  If (InStr(1,MM_removeList,MM_nextItem,1) = 0) Then
+    MM_keepURL = MM_keepURL & MM_nextItem & Server.URLencode(Request.QueryString(MM_item))
+  End If
+Next
+
+' add the Form variables to the MM_keepForm string
+For Each MM_item In Request.Form
+  MM_nextItem = "&" & MM_item & "="
+  If (InStr(1,MM_removeList,MM_nextItem,1) = 0) Then
+    MM_keepForm = MM_keepForm & MM_nextItem & Server.URLencode(Request.Form(MM_item))
+  End If
+Next
+
+' create the Form + URL string and remove the intial '&' from each of the strings
+MM_keepBoth = MM_keepURL & MM_keepForm
+If (MM_keepBoth <> "") Then 
+  MM_keepBoth = Right(MM_keepBoth, Len(MM_keepBoth) - 1)
+End If
+If (MM_keepURL <> "")  Then
+  MM_keepURL  = Right(MM_keepURL, Len(MM_keepURL) - 1)
+End If
+If (MM_keepForm <> "") Then
+  MM_keepForm = Right(MM_keepForm, Len(MM_keepForm) - 1)
+End If
+
+' a utility function used for adding additional parameters to these strings
+Function MM_joinChar(firstItem)
+  If (firstItem <> "") Then
+    MM_joinChar = "&"
+  Else
+    MM_joinChar = ""
+  End If
+End Function
+%>
+<%
+' *** Move To Record: set the strings for the first, last, next, and previous links
+
+Dim MM_keepMove
+Dim MM_moveParam
+Dim MM_moveFirst
+Dim MM_moveLast
+Dim MM_moveNext
+Dim MM_movePrev
+
+Dim MM_urlStr
+Dim MM_paramList
+Dim MM_paramIndex
+Dim MM_nextParam
+
+MM_keepMove = MM_keepBoth
+MM_moveParam = "index"
+
+' if the page has a repeated region, remove 'offset' from the maintained parameters
+If (MM_size > 1) Then
+  MM_moveParam = "offset"
+  If (MM_keepMove <> "") Then
+    MM_paramList = Split(MM_keepMove, "&")
+    MM_keepMove = ""
+    For MM_paramIndex = 0 To UBound(MM_paramList)
+      MM_nextParam = Left(MM_paramList(MM_paramIndex), InStr(MM_paramList(MM_paramIndex),"=") - 1)
+      If (StrComp(MM_nextParam,MM_moveParam,1) <> 0) Then
+        MM_keepMove = MM_keepMove & "&" & MM_paramList(MM_paramIndex)
+      End If
+    Next
+    If (MM_keepMove <> "") Then
+      MM_keepMove = Right(MM_keepMove, Len(MM_keepMove) - 1)
+    End If
+  End If
+End If
+
+' set the strings for the move to links
+If (MM_keepMove <> "") Then 
+  MM_keepMove = Server.HTMLEncode(MM_keepMove) & "&"
+End If
+
+MM_urlStr = Request.ServerVariables("URL") & "?" & MM_keepMove & MM_moveParam & "="
+
+MM_moveFirst = MM_urlStr & "0"
+MM_moveLast  = MM_urlStr & "-1"
+MM_moveNext  = MM_urlStr & CStr(MM_offset + MM_size)
+If (MM_offset - MM_size < 0) Then
+  MM_movePrev = MM_urlStr & "0"
+Else
+  MM_movePrev = MM_urlStr & CStr(MM_offset - MM_size)
+End If
 %>
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Cửa hàng máy tính | Laptop :: Groupfour</title>
+<title>Cửa hàng máy tính | Desktop :: Groupfour</title>
 <link rel="shortcut icon" href="../images/icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/myStyle.css" type="text/css" rel="stylesheet" >
+<link href='http://fonts.googleapis.com/css?family=Lato:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <script src="../js/jquery.min.js"></script>
 
         <!---------------------------
@@ -49,30 +328,32 @@ Laptop_numRows = Laptop_numRows + Repeat1__numRows
     <div class="gocphaimanhinhTV">
 <%
 if Session("name") = "" then
-	Response.write("<a rel=nofollow href=../login.asp?login=createnew class=colorlink2><span><ins>Đăng ký</ins></span></a>|<a rel=nofollow href=../login.asp class=colorlink2><span><ins>Đăng Nhập</ins></span></a>")
+	Response.write("<a rel=nofollow href=login.asp?login=createnew class=colorlink2><span><ins>Đăng ký</ins></span></a>|<a rel=nofollow href=login.asp class=colorlink2><span><ins>Đăng Nhập</ins></span></a>")
 else
-	Response.write("Xin chào " & Session("name") & "," & "&nbsp;" & "<a href=../logout.asp class=colorlink2 <ins>Thoát<ins></a>")
+	Response.write("Xin chào " & Session("name") & "," & "&nbsp;" & "<a href=logout.asp class=colorlink2 <ins>Thoát<ins></a>")
 	
 end if
 %>
 	</div>
 </div>
 
-    <!---------------------------
+       <!---------------------------
                 SEARCH
     ---------------------------->
     <div class="cntr">
         <div class="cntr-innr">
-          <label class="search" for="inpt_search">
-                <input id="inpt_search" type="text" />
-            </label>
-            <p>Sờ vào để tìm thứ bạn cần.</p>
-        </div>
+          <form  action="../Search/Search.asp" method="post" id="form1" class="search" for="inpt_search">
+                <input name="txtSearch" type="text" id="inpt_search" />
+            </form>
+            <p>Tìm kiếm</p>
+      </div>
     </div>
-	<div class="pages-top">
-	        <div class="logo">
-				<a href="../index.asp"><img src="../images/logo.png" alt=""/></a>
-			 </div>
+  
+<div class="pages-top">
+    <div class="logo">
+        <a href="index.asp"><img src="../images/logo.png" alt=""/></a>
+    </div>
+             
 		     <div class="h_menu4">
     <!---------------------------
                 MENU
@@ -182,27 +463,34 @@ end if
 	 	<div class="wrap">
 	 		<div class="pages">
 				<div class="cont1 span_2_of_g1">
-					<div class="gallery">
-                      <% 
-While ((Repeat1__numRows <> 0) AND (NOT Laptop.EOF)) 
+				  <p>CÁC SẢN PHẨM LAPTOP MỚI NHẤT</p>
+				  <p>&nbsp;</p>
+                  <% 
+While ((Repeat1__numRows <> 0) AND (NOT LAPTOP.EOF)) 
 %>
-  <div class="item">
-    <p><img src="<%=(Laptop.Fields.Item("HinhAnh").Value)%>" alt="" width="225" height="150"></p>
-    <p><%=(Laptop.Fields.Item("TenSP").Value)%></p>
-    <p><%=(Laptop.Fields.Item("Gia").Value)%>VNĐ</p>
-    <p>Hiện còn <%=(Laptop.Fields.Item("SoLuong").Value)%> sản phẩm</p>
+  <div class="oneItem">
+    <p align="center"><img src="<%=(LAPTOP.Fields.Item("HinhAnh").Value)%>" alt="" width="225" height="150">Sản phẩm: <%=(LAPTOP.Fields.Item("TenSP").Value)%></p>
+    <p align="center">Giá: <%=(LAPTOP.Fields.Item("Gia").Value)%></p>
+    <p align="center">Hiện còn <%=(LAPTOP.Fields.Item("SoLuong").Value)%> sản phẩm</p>
+    <p align="center">&nbsp;</p>
+    <form name="form1" method="post" action="ctspLaptop.asp">
+      <input name="MaSP" type="hidden" id="MaSP" value="<%=(LAPTOP.Fields.Item("MaSP").Value)%>">
+      <label>
+        <input type="submit" name="btnchitiet" id="btnchitiet" value="Xem chi tiết sản phẩm...">
+        </label>
+      </form>
   </div>
   <% 
   Repeat1__index=Repeat1__index+1
   Repeat1__numRows=Repeat1__numRows-1
-  Laptop.MoveNext()
+  LAPTOP.MoveNext()
 Wend
 %>
-                   
-				    		</div>
-                    	</div>  
-                    </div>
-		       </div>
+                </div>
+ </div>
+       </div>
+               
+              
 <!-- END gallary-->
         <div class="labout span_1_of_g1">
 		  <div class="project-list">
@@ -247,14 +535,32 @@ Wend
                 </li>
 			</ul>
 			<div class="clear"></div>
-		   </div>
+	      </div>
 		   <div class="project-list1">
 			<div class="clear"></div>
 		   </div>
-		 </div>
-		   <div class="clear"></div>	
-		  </div>
-    <!---------------------------
+		   <div class="project-list2">
+	     	<h4>Các thẻ chọn</h4>
+			<ul>
+				<li><a href="#">Web Design</a></li>
+				<li><a href="#">Html5</a></li>
+				<li><a href="#">Wordpress</a></li>
+				<li><a href="#">Logo</a></li>
+				<li><a href="#">Web Design</a></li>
+				<li><a href="#">Web Design</a></li>
+				<li><a href="#">Wordpress</a></li>
+				<li><a href="#">Web Design</a></li>
+				<li><a href="#">Html5</a></li>
+				<li><a href="#">Wordpress</a></li>
+				<li><a href="#">Logo</a></li>
+				<div class="clear"></div>
+			</ul>
+		   </div>
+	   </div>
+		   <div class="clear"></div>
+		   <p>&nbsp;<A HREF="<%=MM_moveFirst%>">&lt;&lt;Trang đầu </A><A HREF="<%=MM_movePrev%>">&lt;&lt;Trước </A>**** <A HREF="<%=MM_moveNext%>">Tiếp&gt;&gt;</A> <A HREF="<%=MM_moveLast%>">Trang cuối&gt;&gt;</A></p>
+</div>
+<!---------------------------
                 BOTTOM
     ---------------------------->
         <div class="footer">
@@ -338,10 +644,10 @@ Wend
 			    <div class="clear"></div>
 			  </div>
        </div>
-	</div>
+       
 </body>
 </html>
 <%
-Laptop.Close()
-Set Laptop = Nothing
+LAPTOP.Close()
+Set LAPTOP = Nothing
 %>

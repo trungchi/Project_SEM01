@@ -1,13 +1,315 @@
-﻿<%@LANGUAGE="VBSCRIPT" %> 
+﻿<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
+<!--#include file="../Connections/Connection.asp" -->
+<%
+Dim LAPTOP_HP
+Dim LAPTOP_HP_cmd
+Dim LAPTOP_HP_numRows
+
+Set LAPTOP_HP_cmd = Server.CreateObject ("ADODB.Command")
+LAPTOP_HP_cmd.ActiveConnection = MM_Connection_STRING
+LAPTOP_HP_cmd.CommandText = "SELECT * FROM dbo.SanPham WHERE Tinhtrang = 1 and MaLoai = 1  and MaNSX = 4" 
+LAPTOP_HP_cmd.Prepared = true
+
+Set LAPTOP_HP = LAPTOP_HP_cmd.Execute
+LAPTOP_HP_numRows = 0
+%>
+<%
+Dim Repeat1__numRows
+Dim Repeat1__index
+
+Repeat1__numRows = 9
+Repeat1__index = 0
+LAPTOP_HP_numRows = LAPTOP_HP_numRows + Repeat1__numRows
+%>
+<%
+'  *** Recordset Stats, Move To Record, and Go To Record: declare stats variables
+
+Dim LAPTOP_HP_total
+Dim LAPTOP_HP_first
+Dim LAPTOP_HP_last
+
+' set the record count
+LAPTOP_HP_total = LAPTOP_HP.RecordCount
+
+' set the number of rows displayed on this page
+If (LAPTOP_HP_numRows < 0) Then
+  LAPTOP_HP_numRows = LAPTOP_HP_total
+Elseif (LAPTOP_HP_numRows = 0) Then
+  LAPTOP_HP_numRows = 1
+End If
+
+' set the first and last displayed record
+LAPTOP_HP_first = 1
+LAPTOP_HP_last  = LAPTOP_HP_first + LAPTOP_HP_numRows - 1
+
+' if we have the correct record count, check the other stats
+If (LAPTOP_HP_total <> -1) Then
+  If (LAPTOP_HP_first > LAPTOP_HP_total) Then
+    LAPTOP_HP_first = LAPTOP_HP_total
+  End If
+  If (LAPTOP_HP_last > LAPTOP_HP_total) Then
+    LAPTOP_HP_last = LAPTOP_HP_total
+  End If
+  If (LAPTOP_HP_numRows > LAPTOP_HP_total) Then
+    LAPTOP_HP_numRows = LAPTOP_HP_total
+  End If
+End If
+%>
+<%
+Dim MM_paramName 
+%>
+<%
+' *** Move To Record and Go To Record: declare variables
+
+Dim MM_rs
+Dim MM_rsCount
+Dim MM_size
+Dim MM_uniqueCol
+Dim MM_offset
+Dim MM_atTotal
+Dim MM_paramIsDefined
+
+Dim MM_param
+Dim MM_index
+
+Set MM_rs    = LAPTOP_HP
+MM_rsCount   = LAPTOP_HP_total
+MM_size      = LAPTOP_HP_numRows
+MM_uniqueCol = ""
+MM_paramName = ""
+MM_offset = 0
+MM_atTotal = false
+MM_paramIsDefined = false
+If (MM_paramName <> "") Then
+  MM_paramIsDefined = (Request.QueryString(MM_paramName) <> "")
+End If
+%>
+<%
+' *** Move To Record: handle 'index' or 'offset' parameter
+
+if (Not MM_paramIsDefined And MM_rsCount <> 0) then
+
+  ' use index parameter if defined, otherwise use offset parameter
+  MM_param = Request.QueryString("index")
+  If (MM_param = "") Then
+    MM_param = Request.QueryString("offset")
+  End If
+  If (MM_param <> "") Then
+    MM_offset = Int(MM_param)
+  End If
+
+  ' if we have a record count, check if we are past the end of the recordset
+  If (MM_rsCount <> -1) Then
+    If (MM_offset >= MM_rsCount Or MM_offset = -1) Then  ' past end or move last
+      If ((MM_rsCount Mod MM_size) > 0) Then         ' last page not a full repeat region
+        MM_offset = MM_rsCount - (MM_rsCount Mod MM_size)
+      Else
+        MM_offset = MM_rsCount - MM_size
+      End If
+    End If
+  End If
+
+  ' move the cursor to the selected record
+  MM_index = 0
+  While ((Not MM_rs.EOF) And (MM_index < MM_offset Or MM_offset = -1))
+    MM_rs.MoveNext
+    MM_index = MM_index + 1
+  Wend
+  If (MM_rs.EOF) Then 
+    MM_offset = MM_index  ' set MM_offset to the last possible record
+  End If
+
+End If
+%>
+<%
+' *** Move To Record: if we dont know the record count, check the display range
+
+If (MM_rsCount = -1) Then
+
+  ' walk to the end of the display range for this page
+  MM_index = MM_offset
+  While (Not MM_rs.EOF And (MM_size < 0 Or MM_index < MM_offset + MM_size))
+    MM_rs.MoveNext
+    MM_index = MM_index + 1
+  Wend
+
+  ' if we walked off the end of the recordset, set MM_rsCount and MM_size
+  If (MM_rs.EOF) Then
+    MM_rsCount = MM_index
+    If (MM_size < 0 Or MM_size > MM_rsCount) Then
+      MM_size = MM_rsCount
+    End If
+  End If
+
+  ' if we walked off the end, set the offset based on page size
+  If (MM_rs.EOF And Not MM_paramIsDefined) Then
+    If (MM_offset > MM_rsCount - MM_size Or MM_offset = -1) Then
+      If ((MM_rsCount Mod MM_size) > 0) Then
+        MM_offset = MM_rsCount - (MM_rsCount Mod MM_size)
+      Else
+        MM_offset = MM_rsCount - MM_size
+      End If
+    End If
+  End If
+
+  ' reset the cursor to the beginning
+  If (MM_rs.CursorType > 0) Then
+    MM_rs.MoveFirst
+  Else
+    MM_rs.Requery
+  End If
+
+  ' move the cursor to the selected record
+  MM_index = 0
+  While (Not MM_rs.EOF And MM_index < MM_offset)
+    MM_rs.MoveNext
+    MM_index = MM_index + 1
+  Wend
+End If
+%>
+<%
+' *** Move To Record: update recordset stats
+
+' set the first and last displayed record
+LAPTOP_HP_first = MM_offset + 1
+LAPTOP_HP_last  = MM_offset + MM_size
+
+If (MM_rsCount <> -1) Then
+  If (LAPTOP_HP_first > MM_rsCount) Then
+    LAPTOP_HP_first = MM_rsCount
+  End If
+  If (LAPTOP_HP_last > MM_rsCount) Then
+    LAPTOP_HP_last = MM_rsCount
+  End If
+End If
+
+' set the boolean used by hide region to check if we are on the last record
+MM_atTotal = (MM_rsCount <> -1 And MM_offset + MM_size >= MM_rsCount)
+%>
+<%
+' *** Go To Record and Move To Record: create strings for maintaining URL and Form parameters
+
+Dim MM_keepNone
+Dim MM_keepURL
+Dim MM_keepForm
+Dim MM_keepBoth
+
+Dim MM_removeList
+Dim MM_item
+Dim MM_nextItem
+
+' create the list of parameters which should not be maintained
+MM_removeList = "&index="
+If (MM_paramName <> "") Then
+  MM_removeList = MM_removeList & "&" & MM_paramName & "="
+End If
+
+MM_keepURL=""
+MM_keepForm=""
+MM_keepBoth=""
+MM_keepNone=""
+
+' add the URL parameters to the MM_keepURL string
+For Each MM_item In Request.QueryString
+  MM_nextItem = "&" & MM_item & "="
+  If (InStr(1,MM_removeList,MM_nextItem,1) = 0) Then
+    MM_keepURL = MM_keepURL & MM_nextItem & Server.URLencode(Request.QueryString(MM_item))
+  End If
+Next
+
+' add the Form variables to the MM_keepForm string
+For Each MM_item In Request.Form
+  MM_nextItem = "&" & MM_item & "="
+  If (InStr(1,MM_removeList,MM_nextItem,1) = 0) Then
+    MM_keepForm = MM_keepForm & MM_nextItem & Server.URLencode(Request.Form(MM_item))
+  End If
+Next
+
+' create the Form + URL string and remove the intial '&' from each of the strings
+MM_keepBoth = MM_keepURL & MM_keepForm
+If (MM_keepBoth <> "") Then 
+  MM_keepBoth = Right(MM_keepBoth, Len(MM_keepBoth) - 1)
+End If
+If (MM_keepURL <> "")  Then
+  MM_keepURL  = Right(MM_keepURL, Len(MM_keepURL) - 1)
+End If
+If (MM_keepForm <> "") Then
+  MM_keepForm = Right(MM_keepForm, Len(MM_keepForm) - 1)
+End If
+
+' a utility function used for adding additional parameters to these strings
+Function MM_joinChar(firstItem)
+  If (firstItem <> "") Then
+    MM_joinChar = "&"
+  Else
+    MM_joinChar = ""
+  End If
+End Function
+%>
+<%
+' *** Move To Record: set the strings for the first, last, next, and previous links
+
+Dim MM_keepMove
+Dim MM_moveParam
+Dim MM_moveFirst
+Dim MM_moveLast
+Dim MM_moveNext
+Dim MM_movePrev
+
+Dim MM_urlStr
+Dim MM_paramList
+Dim MM_paramIndex
+Dim MM_nextParam
+
+MM_keepMove = MM_keepBoth
+MM_moveParam = "index"
+
+' if the page has a repeated region, remove 'offset' from the maintained parameters
+If (MM_size > 1) Then
+  MM_moveParam = "offset"
+  If (MM_keepMove <> "") Then
+    MM_paramList = Split(MM_keepMove, "&")
+    MM_keepMove = ""
+    For MM_paramIndex = 0 To UBound(MM_paramList)
+      MM_nextParam = Left(MM_paramList(MM_paramIndex), InStr(MM_paramList(MM_paramIndex),"=") - 1)
+      If (StrComp(MM_nextParam,MM_moveParam,1) <> 0) Then
+        MM_keepMove = MM_keepMove & "&" & MM_paramList(MM_paramIndex)
+      End If
+    Next
+    If (MM_keepMove <> "") Then
+      MM_keepMove = Right(MM_keepMove, Len(MM_keepMove) - 1)
+    End If
+  End If
+End If
+
+' set the strings for the move to links
+If (MM_keepMove <> "") Then 
+  MM_keepMove = Server.HTMLEncode(MM_keepMove) & "&"
+End If
+
+MM_urlStr = Request.ServerVariables("URL") & "?" & MM_keepMove & MM_moveParam & "="
+
+MM_moveFirst = MM_urlStr & "0"
+MM_moveLast  = MM_urlStr & "-1"
+MM_moveNext  = MM_urlStr & CStr(MM_offset + MM_size)
+If (MM_offset - MM_size < 0) Then
+  MM_movePrev = MM_urlStr & "0"
+Else
+  MM_movePrev = MM_urlStr & CStr(MM_offset - MM_size)
+End If
+%>
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Cửa hàng máy tính | Laptop :: Groupfour</title>
+<title>Cửa hàng máy tính | Desktop :: Groupfour</title>
 <link rel="shortcut icon" href="../images/icon.png">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="../css/myStyle.css" type="text/css" rel="stylesheet" >
+<link href='http://fonts.googleapis.com/css?family=Lato:400,300,600,700,800' rel='stylesheet' type='text/css'>
 <script src="../js/jquery.min.js"></script>
+
         <!---------------------------
                   LIGHTBOX
         ---------------------------->
@@ -55,43 +357,49 @@ end if
                 MENU
     ---------------------------->
 				<ul class="nav">
-                    <li><a href="../index.asp">Trang chủ</a></li>
-                    <li class="active"><a href="../Laptop/Laptop.asp">Laptop</a>
-                    <li><a href="../Desktop/Desktop.asp">Desktop</a>
-						<ul>
+				  <li><a href="../index.asp">Trang chủ</a></li>
+			  <li><a href="../Laptop/Laptop.asp">Laptop</a>
+						<ul class="listmenu">
 							<li>
-                                <form name="frmDell" method="post" action=Desktop/Dell.asp>
-                                <a href="../Desktop/Dell.asp">DELL</a>
-                                </form>
-                            </li>
-							<li>
-                                <form name="frmHp" method="post" action=Desktop/Hp.asp>
-                                <a href="../Desktop/Hp.asp">HP</a>
-                                </form>
-                            </li>
-							<li>
-                                <form name="frmApple" method="post" action=Desktop/Apple.asp>
-                                <a href="../Desktop/Apple.asp">APPLE</a>
+                                <form name="frmDell" method="post" action=laptop/Dell.asp>
+                                <a href="../Laptop/Dell.asp">DELL</a>
                                 </form>
                             </li>
                             <li>
-                                <form name="frmAsus" method="post" action=Desktop/Asus.asp>
-                                <a href="../Desktop/Asus.asp">ASUS</a>
+                                <form name="frmHp" method="post" action=laptop/Hp.asp>
+                                <a href="../Laptop/Hp.asp">HP</a>
                                 </form>
                             </li>
                             <li>
-                                <form name="frmAcer" method="post" action=Desktop/Acer.asp>
-                                <a href="../Desktop/Acer.asp">ACER</a>
+                                <form name="frmApple" method="post" action=laptop/Apple.asp>
+                                <a href="../Laptop/Apple.asp">APPLE</a>
                                 </form>
                             </li>
                             <li>
-                                <form name="Lenovo" method="post" action=Desktop/Lenovo.asp>
-                                <a href="../Desktop/Lenovo.asp">LENOVO</a>
-                         	   </form>
-							</li>
-         			   </ul>
-					</li>
-					<li><a href="Linhkien/Linhkien.asp">Linh kiện</a>
+                                <form name="frmAsus" method="post" action=laptop/sus.asp>
+                                <a href="../Laptop/Asus.asp">ASUS</a>
+                                </form>
+                            </li>
+                            <li>
+                                <form name="frmAcer" method="post" action=laptop/Acer.asp>
+                                <a href="../Laptop/Acer.asp">ACER</a>
+                                </form>
+                            </li>
+                            <li>
+                                <form name="Lenovo" method="post" action=laptop/Lenovo.asp>
+                                <a href="../Laptop/Lenovo.asp">LENOVO</a>
+                                </form>
+                            </li>
+                            <li>
+                                <form name="frmVaio" method="post" action=laptop/Vaio.asp>
+                                <a href="../Laptop/Vaio.asp">VAIO</a>
+                                </form>
+                            </li>
+
+				</ul>
+				  </li>
+	        <li class="active"><a href="Desktop.asp">Desktop</a></li>
+					<li><a href="../Linhkien/Linhkien.asp">Linh kiện</a>
 						<ul class="listmenu">
                         	<li>
                                 <form name="frmRAM" method="post" action=Linhkien/RAM.asp>
@@ -146,61 +454,57 @@ end if
 					</li>
 					<li><a href="../Lienhe/Lienhe.asp">Liên hệ</a></li>
 				</ul>
-				<script type="text/javascript" src="../js/nav.js"></script>
+<script type="text/javascript" src="../js/nav.js"></script>
 			</div>
             <!-- END MENU -->
 			<div class="clear"></div>
 		</div>
-		<!-- end header_main4 -->
+        <!-- End header main -->
+     </div>
 <!--gallary-->
 
 	 <div class="main">
 	 	<div class="wrap">
 	 		<div class="pages">
 				<div class="cont1 span_2_of_g1">
-					<div class="gallery">
-                    <%     dim x 'biến này dùng để xác định xem cần hiển thị trang nào     
-                        x=request.querystring("PageNumber") 'nhận lại PageNumber khi ngườidùng nhấn vào các nút "Trước" và "Tiếp"     
-                        if x="" then 'đầu tiên sẽ hiển thị trang 1         
-                        x=1     
-                        end if     
-                        dim conn     
-                        set conn=server.createObject("ADODB.connection")     
-                        stringconn="DRIVER={SQL Server};SERVER=localhost;UID=sa;PWD=123456;DATABASE=WEBSITE_BAN_MAY_TINH;"     
-                        conn.open stringconn     
-                        Dim RS     
-                        set rs=server.createObject("ADODB.recordset")    
-                        SQLstring="select * from HINHANHSP where MaSP LIKE 'LHP%'"     
-                        rs.pagesize= 9 'chỉ hiển thị 4 bản ghi/1 trang     
-                        rs.open SQLstring ,conn,3,3     
-                        rs.AbsolutePage=x 'trang cần hiển thị     
-                        dem=0 'biến này để đảm bảo vòng lặp chỉ thực hiện tối đa 4 lần lặp     
-                        do while not rs.EOF and dem<rs.pagesize
-                        if dem=2 or dem=5 or dem=8 then 
-                        Response.Write("<li class=last><a href="&RS("DuongDan")&"><img src="&RS("DuongDan")&"></img></a><h3 align=center>"&RS("GhiChu")&"</h3></li>")
-                        else
-                        Response.Write("<li><a href="&RS("DuongDan")&"><img src="&RS("DuongDan")&"></img></a><h3 align=center>"&RS("GhiChu")&"</h3></li>") 
-                        end if
-                        dem=dem+1     
-                        rs.movenext     
-                        loop 
-                        %> 
-				    </div>
-                    <div class="phantrang">
-                    <% 'Hiển thị nút "Trước"     
-                        if x>1 then %>     
-                    <a href="Hp.asp?pageNumber=<%=x-1%>">Trước</a>     
-                    <%end if%> 
-                    <% 'Hiển thị nút "Tiếp"     
-                        if not RS.EOF then %>        
-                    <a style="padding-left: 800px;" href="Hp.asp?pageNumber=<%=x+1%>">Tiếp</a>     
-                    <%end if     
-                        rs.close 'đóng recordset     
-                        %>   
-                    </div>
-		       </div>
+				  <p>CÁC SẢN PHẨM LAPTOP HP MỚI NHẤT</p>
+				  <p>&nbsp;</p>
+                  <% 
+While ((Repeat1__numRows <> 0) AND (NOT LAPTOP_HP.EOF)) 
+%>
+  <div class="oneItem">
+    <p><img src="<%=(LAPTOP_HP.Fields.Item("HinhAnh").Value)%>" alt="" width="225" height="150">Sản phẩm: <%=(LAPTOP_HP.Fields.Item("TenSP").Value)%></p>
+    <p>Giá: <%=(LAPTOP_HP.Fields.Item("Gia").Value)%></p>
+    <p>Hiện còn <%=(LAPTOP_HP.Fields.Item("SoLuong").Value)%> sản phẩm</p>
+    <p>&nbsp;</p>
+    <form name="form1" method="post" action="ctspLaptop.asp">
+      <input name="MaSP" type="hidden" id="MaSP" value="<%=(LAPTOP_HP.Fields.Item("MaSP").Value)%>">
+      <label>
+        <input type="submit" name="btnchitiet" id="btnchitiet" value="Xem chi tiết sản phẩm...">
+      </label>
+    </form>
+    
+  </div>
+  
+<% 
+  Repeat1__index=Repeat1__index+1
+  Repeat1__numRows=Repeat1__numRows-1
+  LAPTOP_HP.MoveNext()
+Wend
+%>
+             <div style="margin-top:10px; margin-bottom:10px; float:left">
+              <p>&nbsp;<A HREF="<%=MM_moveFirst%>">&lt;&lt;Trang đầu </A><A HREF="<%=MM_movePrev%>">&lt;&lt;Trước </A>**** <A HREF="<%=MM_moveNext%>">Tiếp&gt;&gt;</A> <A HREF="<%=MM_moveLast%>">Trang cuối&gt;&gt;</A></p>
+              </div>
+
+              </div>
+              
+  
+ </div>
+       </div>
+               
+              
 <!-- END gallary-->
-<div class="labout span_1_of_g1">
+        <div class="labout span_1_of_g1">
 		  <div class="project-list">
 	     	<h4>Loại</h4>
 			<ul class="blog-list">
@@ -236,14 +540,9 @@ end if
                     <a href="Lenovo.asp">LENOVO</a>
                     </form>
                 </li>
-                <li>
-                    <form name="frmVaio" method="post" action=Vaio.asp>
-                    <a href="Vaio.asp">VAIO</a>
-                    </form>
-                </li>
 			</ul>
 			<div class="clear"></div>
-		   </div>
+	      </div>
 		   <div class="project-list1">
 			<div class="clear"></div>
 		   </div>
@@ -264,12 +563,12 @@ end if
 				<div class="clear"></div>
 			</ul>
 		   </div>
-</div>
+	   </div>
 		   <div class="clear"></div>	
+</div>
 		  </div>
-		  </div>
-		</div>
-    <!---------------------------
+</div>
+<!---------------------------
                 BOTTOM
     ---------------------------->
         <div class="footer">
@@ -331,7 +630,7 @@ end if
 					<h4>Nhận Tin Mới</h4>
 					<p>Nhập địa chỉ Email để nhận được những tin tức mới nhất về công nghệ</p>
 					<form>
-						<input type="text" value="Địa chỉ Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Địa chỉ Email';}">
+						<input type="text" value="Địa chỉ Email" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Địa chỉ Email';}">
 						<input type="submit" value="">
 					</form>
 				</div>
@@ -353,5 +652,10 @@ end if
 			    <div class="clear"></div>
 			  </div>
        </div>
+       
 </body>
 </html>
+<%
+LAPTOP_HP.Close()
+Set LAPTOP_HP = Nothing
+%>
