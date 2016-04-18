@@ -136,6 +136,7 @@ end if
 </div> <!-- /#front -->
 <div class="site-slider"></div>
 <div class="clear"></div>
+<h1 style="color:#0CF" size="300%" align="center">Thêm Sản Phẩm</h1>
     <div class="item">
     <form ACTION="<%=editAction%>" onsubmit="return ProgressBar()" method="post" enctype="multipart/form-data" name="form1" id="form1">
       <table width="100%" border="0" cellspacing="0" cellpadding="0">

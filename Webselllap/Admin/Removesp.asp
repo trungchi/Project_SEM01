@@ -101,6 +101,7 @@ end if
 </div> <!-- /#front -->
 <div class="site-slider"></div>
 <div class="clear"></div>
+<h1 style="color:#0CF" size="300%" align="center">Xóa Sản Phẩm</h1>
 <div class="product-item">
   <table width="60%" border="0" cellspacing="0" cellpadding="0">
     <tr>

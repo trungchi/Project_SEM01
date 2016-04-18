@@ -1,8 +1,10 @@
 ﻿<%
 	'Save entered username and password
+	Fullname = Request.Form("txtFullname")
 	Username = Request.Form("txtUsername")
 	Password = Request.Form("txtPassword")
 	Email = Request.Form("txtEmail")
+	Address = Request.Form("txtAddress")
     Phone = Request.Form("txtPhone")
 		
 	'Check if username and password are entered
@@ -29,10 +31,12 @@
 	'Add a record
 	rs.AddNew 
 	'Put username and password in record
+	rs("TenKH")=Fullname
 	rs("TKKH")=Username
 	rs("matkhau")=Password
 	rs("Email")=Email
-    rs("sdt")=SDT
+	rs("DiaChi")=Address
+    rs("SDT")=Phone
 	'Save record
 	rs.Update 
 	

@@ -48,8 +48,14 @@
             Content = Content & "<form name=frmCreate method=POST action=create.asp>"
             Content = Content & "<input type=text name=txtUsername placeholder='Tên đăng nhập' required>"
             Content = Content & "<input type=password name=txtPassword placeholder='Mật khẩu' required>"
+<<<<<<< HEAD
             Content = Content & "<input type=text name=txtEmail placeholder='Email' required>"
             Content = Content & "<input type=tell name=txtSDT placeholder='Số điện thoại' required>"
+=======
+            Content = Content & "<input type=email name=txtEmail placeholder='Email' required>"
+			Content = Content & "<input type=text name=txtAddress placeholder='Địa chỉ' required>"
+            Content = Content & "<input type=tell name=txtPhone placeholder='Số điện thoại' required>"
+>>>>>>> origin/master
             Content = Content & "<button type=submit name=cmdSubmit value='Đăng ký'>Đăng ký</button>"
 			Content = Content & "</br></br><A href=login.asp class=colorlink>Quay lại đăng nhập</A>"
             Content = Content & "</form>"

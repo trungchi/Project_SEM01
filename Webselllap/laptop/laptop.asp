@@ -5,10 +5,17 @@ Dim LAPTOP
 Dim LAPTOP_cmd
 Dim LAPTOP_numRows
 
+<<<<<<< HEAD
 Set LAPTOP_cmd = Server.CreateObject ("ADODB.Command")
 LAPTOP_cmd.ActiveConnection = MM_Connection_STRING
 LAPTOP_cmd.CommandText = "SELECT * FROM dbo.SanPham WHERE Tinhtrang = 1 and MaLoai = 1" 
 LAPTOP_cmd.Prepared = true
+=======
+Set Laptop_cmd = Server.CreateObject ("ADODB.Command")
+Laptop_cmd.ActiveConnection = MM_Connection_STRING
+Laptop_cmd.CommandText = "SELECT * FROM dbo.SanPham WHERE MaLoai='1'" 
+Laptop_cmd.Prepared = true
+>>>>>>> origin/master
 
 Set LAPTOP = LAPTOP_cmd.Execute
 LAPTOP_numRows = 0
