@@ -158,6 +158,7 @@ end if
 <div class="site-slider"></div>
 <div class="clear"></div>
     <div id="top"></div>
+    <h1 style="color:#0CF" size="300%" align="center">Cập Nhật</h1>
 <div class="item">
   <form ACTION="<%=editAction%>" onsubmit="return ProgressBar()" method="post" enctype="multipart/form-data" name="form1">
     <table width="85%" border="0" cellspacing="0" cellpadding="0" align="center">

@@ -1,4 +1,4 @@
-﻿<%@LANGUAGE="VBSCRIPT" %>
+﻿<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
 <!--#include file="../Connections/Connection.asp" -->
 <%
 Dim Laptop
@@ -7,7 +7,7 @@ Dim Laptop_numRows
 
 Set Laptop_cmd = Server.CreateObject ("ADODB.Command")
 Laptop_cmd.ActiveConnection = MM_Connection_STRING
-Laptop_cmd.CommandText = "SELECT * FROM dbo.SanPham WHERE Loai=1" 
+Laptop_cmd.CommandText = "SELECT * FROM dbo.SanPham WHERE MaLoai='1'" 
 Laptop_cmd.Prepared = true
 
 Set Laptop = Laptop_cmd.Execute
