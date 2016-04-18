@@ -22,7 +22,7 @@
 	
 	'If entered password is right, close connection and open mainpage
 	if rs("matkhau") = Password then
-		Session("name") = rs("TKKH")
+		Session("name") = rs("TenKH")
 		rs.Close
 		conn.Close
 		set rs=nothing

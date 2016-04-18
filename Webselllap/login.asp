@@ -38,7 +38,11 @@
 			Content = Content & "</div>"
         elseif QStr="createnamefailed" then
 			Content = Content & "<div class=box>"	
-            Content = Content & "<p class=noti>Tên tài khoản không hợp lệ!</P><A HREF=Javascript:history.go(-1)class=colorlink>Quay lại</A><A HREF=login.aspclass=colorlink>Hủy đăng ký</A>"
+            Content = Content & "<p class=noti>Tên tài khoản đã được dùng!!!</P><A HREF=Javascript:history.go(-1) class=colorlink>Quay lại</A></br><A HREF=index.asp class=colorlink>Hủy đăng ký</A>"
+			Content = Content & "</div>"
+		elseif QStr="createemailfailed" then
+			Content = Content & "<div class=box>"	
+            Content = Content & "<p class=noti>Email đã được sử dụng!!!</P><A HREF=Javascript:history.go(-1) class=colorlink>Quay lại</A></br><A HREF=index.asp class=colorlink>Hủy đăng ký</A>"
 			Content = Content & "</div>"
         elseif QStr="creatednew" then
 			Content = Content & "<div class=box>"
@@ -46,16 +50,12 @@
 			Content = Content & "</div>"
         elseif QStr="createnew" then
             Content = Content & "<form name=frmCreate method=POST action=create.asp>"
+			Content = Content & "<input type=text name=txtFullname placeholder='Họ và Tên' required>"
             Content = Content & "<input type=text name=txtUsername placeholder='Tên đăng nhập' required>"
             Content = Content & "<input type=password name=txtPassword placeholder='Mật khẩu' required>"
-<<<<<<< HEAD
-            Content = Content & "<input type=text name=txtEmail placeholder='Email' required>"
-            Content = Content & "<input type=tell name=txtSDT placeholder='Số điện thoại' required>"
-=======
             Content = Content & "<input type=email name=txtEmail placeholder='Email' required>"
 			Content = Content & "<input type=text name=txtAddress placeholder='Địa chỉ' required>"
             Content = Content & "<input type=tell name=txtPhone placeholder='Số điện thoại' required>"
->>>>>>> origin/master
             Content = Content & "<button type=submit name=cmdSubmit value='Đăng ký'>Đăng ký</button>"
 			Content = Content & "</br></br><A href=login.asp class=colorlink>Quay lại đăng nhập</A>"
             Content = Content & "</form>"
