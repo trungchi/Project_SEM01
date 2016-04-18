@@ -24,30 +24,32 @@
     <div class="gocphaimanhinhTV">
 <%
 if Session("name") = "" then
-	Response.write("<a rel=nofollow href=../login.asp class=colorlink2 <span><ins>Đăng ký</ins></span></a>|<a rel=nofollow href=../login.asp class=colorlink2 <span><ins>Đăng Nhập</ins></span>")
+	Response.write("<a rel=nofollow href=login.asp?login=createnew class=colorlink2><span><ins>Đăng ký</ins></span></a>|<a rel=nofollow href=login.asp class=colorlink2><span><ins>Đăng Nhập</ins></span></a>")
 else
-	Response.write("Xin chào " & Session("name") & "," & "&nbsp;" & "<a href=../logout.asp class=colorlink2 <ins>Thoát<ins></a>")
-
+	Response.write("Xin chào " & Session("name") & "," & "&nbsp;" & "<a href=logout.asp class=colorlink2 <ins>Thoát<ins></a>")
+	
 end if
 %>
 	</div>
 </div>
 
-    <!---------------------------
+       <!---------------------------
                 SEARCH
     ---------------------------->
     <div class="cntr">
         <div class="cntr-innr">
-          <label class="search" for="inpt_search">
-                <input id="inpt_search" type="text" />
-            </label>
-            <p>Sờ vào để tìm thứ bạn cần.</p>
-        </div>
+          <form  action="../Search/Search.asp" method="post" id="form1" class="search" for="inpt_search">
+                <input name="txtSearch" type="text" id="inpt_search" />
+            </form>
+            <p>Tìm kiếm</p>
+      </div>
     </div>
-	<div class="pages-top">
-	        <div class="logo">
-				<a href="../index.asp"><img src="../images/logo.png" alt=""/></a>
-			 </div>
+  
+<div class="pages-top">
+    <div class="logo">
+        <a href="index.asp"><img src="../images/logo.png" alt=""/></a>
+    </div>
+             
 		     <div class="h_menu4">
     <!---------------------------
                 MENU
