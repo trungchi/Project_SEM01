@@ -38,10 +38,10 @@
 			Content = Content & "</div>"
         elseif QStr="createnamefailed" then
 			Content = Content & "<div class=box>"	
-            Content = Content & "<p class=noti>Tên tài khoản đã được sử dụng!!!</P><A href=Javascript:history.go(-1) class=colorlink>Quay lại</A><br><A HREF=login.asp class=colorlink>Hủy đăng ký</A>"
+            Content = Content & "<p class=noti>Tên tài khoản đã được sử dụng!!!</P><A href=Javascript:history.go(-1) class=colorlink>Quay lại</A><br><A HREF=index.asp class=colorlink>Hủy đăng ký</A>"
 		elseif QStr="createemailfailed" then
 			Content = Content & "<div class=box>"	
-            Content = Content & "<p class=noti>Email đã được sử dụng!!!</P><A href=Javascript:history.go(-1) class=colorlink>Quay lại</A><br><A HREF=login.asp class=colorlink>Hủy đăng ký</A>"
+            Content = Content & "<p class=noti>Email đã được sử dụng!!!</P><A href=Javascript:history.go(-1) class=colorlink>Quay lại</A><br><A HREF=index.asp class=colorlink>Hủy đăng ký</A>"
 			Content = Content & "</div>"
         elseif QStr="creatednew" then
 			Content = Content & "<div class=box>"
